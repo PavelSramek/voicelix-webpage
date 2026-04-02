@@ -396,6 +396,441 @@
 
   <!-- Email form -->
   <div class="form-wrap">
+    <form
+      name="early-access"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      id="earlyAccessForm"
+    >
+      <input type="hidden" name="form-name" value="early-access">
+      <input type="hidden" name="bot-field">
+      <div class="form-row" id="formRow">
+        <input
+          class="email-input"
+          type="email"
+          name="email"
+          id="emailInput"
+          placeholder="vas@email.cz"
+          autocomplete="email"
+          inputmode="email"
+          required
+        >
+        <button class="submit-btn" type="submit">
+          Chci být první
+        </button>
+      </div>
+    </form>
+    <div class="success-msg" id="successMsg">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <path d="M3 9l4.5 4.5L15 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Děkujeme! Dáme vám vědět jako prvním.
+    </div>
+    <p class="form-note" id="formNote">Bez spamu. Pouze oznámení o spuštění.</p>
+  </div>
+
+  <!-- Divider -->
+  <div class="divider"></div>
+
+  <!-- Socials -->
+  <div class="socials">
+
+    <!-- LinkedIn -->
+    <a class="social-link" href="https://www.linkedin.com/company/112520045" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    </a>
+
+    <!-- X / Twitter -->
+    <a class="social-link" href="https://x.com/VoicelixAi" target="_blank" rel="noopener" aria-label="X (Twitter)">
+      <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
+
+    <!-- Instagram -->
+    <a class="social-link" href="https://instagram.com/voicelix.ai" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+    </a>
+
+    <!-- Facebook -->
+    <a class="social-link" href="https://facebook.com/61578527411821" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+    </a>
+
+  </div>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>© 2026 Voicelix s.r.o. &nbsp;·&nbsp; <a href="mailto:voicelix.ai@gmail.com">voicelix.ai@gmail.com</a></p>
+</footer>
+
+<script>
+  const form = document.getElementById('earlyAccessForm');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const input = document.getElementById('emailInput');
+    const email = input.value.trim();
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!re.test(email)) {
+      input.style.borderLeft = '2px solid #ff6b6b';
+      input.focus();
+      return;
+    }
+
+    const data = new FormData(form);
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(data).toString()
+    })
+    .then(() => {
+      document.getElementById('formRow').style.display = 'none';
+      document.getElementById('formNote').style.display = 'none';
+      document.getElementById('successMsg').style.display = 'flex';
+    })
+    .catch(() => {
+      input.style.borderLeft = '2px solid #ff6b6b';
+    });
+  });
+</script>
+
+</body>
+</html>    position: relative;
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+    min-height: 100vh;
+  }
+
+  /* ── Logo ── */
+  .logo-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 3.5rem;
+    animation: fadeUp 0.8s ease both;
+  }
+
+  .wordmark {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--white);
+    opacity: 0.95;
+  }
+
+  /* ── Animated Waveform ── */
+  .waveform {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 52px;
+  }
+
+  .bar {
+    width: 4px;
+    border-radius: 2px;
+    background: var(--teal);
+    animation: pulse var(--dur) ease-in-out infinite alternate;
+    animation-delay: var(--delay);
+    transform-origin: bottom;
+    opacity: var(--op);
+  }
+
+  /* Bar heights and timing - mimicking the logo waveform */
+  .bar:nth-child(1)  { height: 10px; --dur: 1.4s; --delay: 0.0s; --op: 0.5; background: #1e3a5f; }
+  .bar:nth-child(2)  { height: 16px; --dur: 1.2s; --delay: 0.1s; --op: 0.6; background: #1e3a6a; }
+  .bar:nth-child(3)  { height: 10px; --dur: 1.5s; --delay: 0.2s; --op: 0.5; background: #1e4070; }
+  .bar:nth-child(4)  { height: 22px; --dur: 1.1s; --delay: 0.05s; --op: 0.75; background: #1a5a7a; }
+  .bar:nth-child(5)  { height: 36px; --dur: 0.9s; --delay: 0.15s; --op: 0.9; background: #007a6e; }
+  .bar:nth-child(6)  { height: 48px; --dur: 0.8s; --delay: 0.0s;  --op: 1.0; background: var(--teal); }
+  .bar:nth-child(7)  { height: 42px; --dur: 1.0s; --delay: 0.2s;  --op: 0.95; background: #00b898; }
+  .bar:nth-child(8)  { height: 30px; --dur: 1.2s; --delay: 0.1s;  --op: 0.85; background: #009e84; }
+  .bar:nth-child(9)  { height: 42px; --dur: 0.85s; --delay: 0.25s; --op: 0.95; background: #00b898; }
+  .bar:nth-child(10) { height: 48px; --dur: 0.9s; --delay: 0.05s; --op: 1.0; background: var(--teal); }
+  .bar:nth-child(11) { height: 36px; --dur: 1.0s; --delay: 0.15s; --op: 0.9; background: #007a6e; }
+  .bar:nth-child(12) { height: 22px; --dur: 1.3s; --delay: 0.0s;  --op: 0.75; background: #1a5a7a; }
+  .bar:nth-child(13) { height: 10px; --dur: 1.4s; --delay: 0.2s;  --op: 0.5; background: #1e4070; }
+  .bar:nth-child(14) { height: 16px; --dur: 1.2s; --delay: 0.1s;  --op: 0.6; background: #1e3a6a; }
+  .bar:nth-child(15) { height: 10px; --dur: 1.5s; --delay: 0.0s;  --op: 0.5; background: #1e3a5f; }
+
+  @keyframes pulse {
+    from { transform: scaleY(0.4); }
+    to   { transform: scaleY(1.0); }
+  }
+
+  /* ── Badge ── */
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--teal-dim);
+    border: 1px solid rgba(0, 201, 167, 0.25);
+    color: var(--teal);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+    animation: fadeUp 0.8s 0.1s ease both;
+  }
+
+  .badge-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--teal);
+    animation: blink 1.8s ease-in-out infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  /* ── Headline ── */
+  .headline {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    text-align: center;
+    max-width: 680px;
+    margin-bottom: 1.25rem;
+    animation: fadeUp 0.8s 0.2s ease both;
+    color: #f0f4ff;
+  }
+
+  .headline em {
+    font-style: italic;
+    color: var(--teal);
+  }
+
+  /* ── Subtext ── */
+  .subtext {
+    font-size: 1.05rem;
+    color: var(--white-60);
+    text-align: center;
+    max-width: 480px;
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+    animation: fadeUp 0.8s 0.3s ease both;
+  }
+
+  /* ── Email form ── */
+  .form-wrap {
+    width: 100%;
+    max-width: 440px;
+    animation: fadeUp 0.8s 0.4s ease both;
+    margin-bottom: 3rem;
+  }
+
+  .form-row {
+    display: flex;
+    gap: 0;
+    background: var(--white-10);
+    border: 1px solid var(--white-30);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+
+  .form-row:focus-within {
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px rgba(0, 201, 167, 0.12);
+  }
+
+  .email-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 14px 18px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.95rem;
+    color: var(--white);
+    min-width: 0;
+  }
+
+  .email-input::placeholder {
+    color: var(--white-30);
+  }
+
+  .submit-btn {
+    background: var(--teal);
+    color: var(--navy);
+    border: none;
+    padding: 14px 22px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s, transform 0.1s;
+    letter-spacing: 0.01em;
+  }
+
+  .submit-btn:hover { background: #00e0bb; }
+  .submit-btn:active { transform: scale(0.97); }
+
+  .form-note {
+    font-size: 0.78rem;
+    color: var(--white-30);
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  /* ── Success state ── */
+  .success-msg {
+    display: none;
+    align-items: center;
+    gap: 8px;
+    color: var(--teal);
+    font-size: 0.95rem;
+    font-weight: 500;
+    justify-content: center;
+    padding: 14px 0;
+  }
+
+  .success-msg svg { flex-shrink: 0; }
+
+  /* ── Divider ── */
+  .divider {
+    width: 40px;
+    height: 1px;
+    background: var(--white-30);
+    margin: 0 auto 2.5rem;
+    animation: fadeUp 0.8s 0.5s ease both;
+  }
+
+  /* ── Social icons ── */
+  .socials {
+    display: flex;
+    gap: 16px;
+    animation: fadeUp 0.8s 0.55s ease both;
+    margin-bottom: 3.5rem;
+  }
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--white-30);
+    color: var(--white-60);
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+  }
+
+  .social-link:hover {
+    border-color: var(--teal);
+    color: var(--teal);
+    background: var(--teal-glow);
+  }
+
+  .social-link svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 1.25rem 1.5rem;
+    border-top: 1px solid var(--white-10);
+    animation: fadeUp 0.8s 0.6s ease both;
+  }
+
+  .footer p {
+    font-size: 0.78rem;
+    color: var(--white-30);
+    letter-spacing: 0.02em;
+  }
+
+  .footer a {
+    color: var(--teal);
+    text-decoration: none;
+    opacity: 0.8;
+  }
+
+  .footer a:hover { opacity: 1; }
+
+  /* ── Animations ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 480px) {
+    .form-row {
+      flex-direction: column;
+      border-radius: 12px;
+    }
+    .submit-btn {
+      padding: 13px 22px;
+      text-align: center;
+    }
+    .headline { font-size: 2.1rem; }
+  }
+</style>
+</head>
+<body>
+
+<main class="page">
+
+  <!-- Logo -->
+  <div class="logo-wrap">
+    <div class="waveform" aria-hidden="true">
+      <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+      <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+      <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+      <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+      <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+    </div>
+    <div class="wordmark">Voicelix</div>
+  </div>
+
+  <!-- Badge -->
+  <div class="badge">
+    <span class="badge-dot"></span>
+    Brzy spouštíme
+  </div>
+
+  <!-- Headline -->
+  <h1 class="headline">
+    Váš telefon vždy zvedne<br>
+    <em>někdo chytrý.</em>
+  </h1>
+
+  <!-- Subtext -->
+  <p class="subtext">
+    Voicelix přináší AI hlasové asistenty pro české firmy. 
+    Přijímá hovory, rezervuje termíny a posílá potvrzení — 
+    24 hodin denně, bez přestávky.
+  </p>
+
+  <!-- Email form -->
+  <div class="form-wrap">
     <div class="form-row" id="formRow">
       <input
         class="email-input"
