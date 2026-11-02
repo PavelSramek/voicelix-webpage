@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Voicelix | AI tým pro vaši firmu</title>
-<meta name="description" content="Voicelix zvedne každý hovor vaší firmy, zarezervuje termín a zapíše ho do kalendáře. Hlasoví AI agenti v češtině, web, emaily a automatizace od jednoho partnera.">
+<title>Voicelix | AI asistent, který zvedne každý hovor</title>
+<meta name="description" content="Voicelix zvedne každý hovor vaší firmy, zarezervuje termín a zapíše ho do kalendáře. Hlasové AI asistenty v češtině navrhuje a staví osobně architekt s právním vzděláním, v souladu s GDPR a AI Actem. K tomu celé IT od A do Z.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -229,6 +229,32 @@ footer a{text-decoration:none}
 footer a:hover{color:var(--teal)}
 .fbot{padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.85rem}
 
+.founder{background:var(--navy-deep);color:#fff}
+.founder .lead{color:#B9C6DC}
+.fd{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
+.fcard{background:var(--navy);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-l);padding:32px}
+.fphoto{width:96px;height:96px;border-radius:50%;background:var(--teal);color:var(--navy);display:grid;place-items:center;font-weight:800;font-size:2rem;margin-bottom:20px;overflow:hidden}
+.fphoto img{width:100%;height:100%;object-fit:cover}
+.fcard h3{font-size:1.5rem}
+.fcard .role{color:var(--muted-dark);margin:4px 0 22px}
+.creds{list-style:none}
+.creds li{display:flex;gap:12px;padding:12px 0;border-top:1px solid rgba(255,255,255,.08);font-size:.95rem;color:#D5DDEB}
+.creds svg{width:18px;height:18px;color:var(--teal);flex-shrink:0;margin-top:4px}
+.flinks{display:flex;gap:18px;margin-top:20px;flex-wrap:wrap}
+.flinks a{color:var(--teal);text-decoration:none;font-weight:600;font-size:.95rem}
+.quote{font-size:clamp(1.35rem,2.4vw,1.8rem);font-weight:700;line-height:1.3;letter-spacing:-0.02em;padding-left:22px;border-left:3px solid var(--teal);margin-bottom:36px}
+.fpts{display:grid;grid-template-columns:1fr 1fr;gap:28px 32px}
+.fpts h3{font-size:1.1rem;margin-bottom:8px}
+.fpts p{color:var(--muted-dark);font-size:.95rem}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.trust{border:1px solid var(--line);border-radius:var(--r-m);padding:26px 22px}
+.trust .vicon{margin-bottom:18px}
+.trust h3{font-size:1.1rem;margin-bottom:8px}
+.trust p{color:var(--muted);font-size:.95rem}
+.legal{margin-top:28px;font-size:.85rem;color:var(--muted);max-width:80ch}
+@media (max-width:1024px){.trust-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:860px){.fd,.fpts{grid-template-columns:1fr;gap:32px}}
+@media (max-width:520px){.trust-grid{grid-template-columns:1fr}}
 @media (max-width:1024px){
   .tgrid{grid-template-columns:repeat(3,1fr)}
   .flow{grid-template-columns:1fr;gap:28px;max-width:560px}
@@ -284,6 +310,11 @@ footer a:hover{color:var(--teal)}
   <symbol id="i-star" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.8z"/></symbol>
   <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M20 14.5A8 8 0 1 1 9.5 4 6.5 6.5 0 0 0 20 14.5z"/></symbol>
   <symbol id="i-layers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></g></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M7 21h10M4 7h16M4 7l-2.5 6a3 3 0 0 0 5 0zM20 7l-2.5 6a3 3 0 0 0 5 0z"/></g></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></g></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></g></symbol>
+  <symbol id="i-globe2" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/></g></symbol>
 </svg>
 
 <header class="hdr">
@@ -296,6 +327,7 @@ footer a:hover{color:var(--teal)}
       <a href="#sluzby">Služby</a>
       <a href="#jak-to-funguje">Jak to funguje</a>
       <a href="#srovnani">Proč Voicelix</a>
+      <a href="#zakladatel">Kdo za tím stojí</a>
       <a href="#cenik">Ceník</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
@@ -310,6 +342,8 @@ footer a:hover{color:var(--teal)}
     <a href="#sluzby">Služby</a>
     <a href="#jak-to-funguje">Jak to funguje</a>
     <a href="#srovnani">Proč Voicelix</a>
+    <a href="#zakladatel">Kdo za tím stojí</a>
+    <a href="#data">Data a legislativa</a>
     <a href="#tym">Tým</a>
     <a href="#cenik">Ceník</a>
     <a href="#kontakt">Kontakt</a>
@@ -323,10 +357,10 @@ footer a:hover{color:var(--teal)}
     <div>
       <div class="live"><i></i>Klára je právě na lince. Vyzkoušejte ji.</div>
       <h1>Zvedneme každý hovor vaší firmy.</h1>
-      <p class="lead">AI recepční přijme hovor v češtině, zarezervuje termín a zapíše ho do vašeho kalendáře. Ve dne, v noci i o víkendu. K tomu web, emaily a automatizace od jednoho partnera.</p>
+      <p class="lead">AI recepční přijme hovor v češtině, zarezervuje termín a zapíše ho do vašeho kalendáře. Ve dne, v noci i o víkendu. Navrhuje a staví ji osobně architekt s právním vzděláním, bezpečně a v souladu s GDPR a AI Actem.</p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="tel:+420910926750"><svg><use href="#i-phone"/></svg>Zavolat Kláře</a>
-        <a class="btn btn-ghost" href="#jak-to-funguje">Jak to funguje</a>
+        <a class="btn btn-ghost" href="#zakladatel">Kdo za tím stojí</a>
       </div>
       <p class="hero-note">+420 910 926 750. Živá ukázka bez registrace. Nebo si <a href="https://calendly.com/pavelsramek" target="_blank" rel="noopener">rezervujte demo s Pavlem</a>.</p>
     </div>
@@ -340,7 +374,7 @@ footer a:hover{color:var(--teal)}
         <div class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
       </div>
       <div class="lines" id="lines">
-        <div class="ln k"><small>Klára</small>Dobrý den, salon Petra, tady Klára. Jak vám mohu pomoci?</div>
+        <div class="ln k"><small>Klára</small>Dobrý den, salon Petra, tady Klára, AI asistentka. Jak vám mohu pomoci?</div>
         <div class="ln c"><small>Zákaznice</small>Chtěla bych se objednat na střih, ideálně ve čtvrtek odpoledne.</div>
         <div class="ln k"><small>Klára</small>Ve čtvrtek mám volno ve 14:00 nebo v 15:30. Který čas vám vyhovuje?</div>
         <div class="ln c"><small>Zákaznice</small>Půl čtvrté je ideální.</div>
@@ -358,7 +392,7 @@ footer a:hover{color:var(--teal)}
 <div class="sectors">
   <div class="wrap">
     <span>Pro firmy, kde telefon znamená tržby:</span>
-    <b>Kadeřnictví a kosmetika</b><b>Ordinace</b><b>Autoservisy</b><b>Advokátní kanceláře</b><b>Řemeslníci</b>
+    <b>Kadeřnictví a kosmetika</b><b>Ordinace</b><b>Autoservisy</b><b>Advokátní kanceláře</b><b>Řemeslníci</b><b>Call centra</b>
   </div>
 </div>
 
@@ -382,7 +416,7 @@ footer a:hover{color:var(--teal)}
       <div class="vitem">
         <div class="vicon"><svg><use href="#i-layers"/></svg></div>
         <h3>Jeden partner místo pěti</h3>
-        <p>Hlasový agent, web, firemní email, rezervace i automatizace. Jedna faktura, jeden kontakt, jedna odpovědnost.</p>
+        <p>Hlasový agent, web, firemní email, CRM, integrace i IT servis. Jedna faktura, jeden kontakt, jedna odpovědnost.</p>
       </div>
     </div>
   </div>
@@ -392,13 +426,13 @@ footer a:hover{color:var(--teal)}
   <div class="wrap">
     <div class="sec-head">
       <h2>Vše, co vaše firma potřebuje</h2>
-      <p class="lead">Hlasový agent otevře dveře. Pak zařídíme vše ostatní, co malá firma potřebuje, aby fungovala jako velká.</p>
+      <p class="lead">Hlasový agent otevře dveře. Pak se postaráme o celé IT od A do Z: web, CRM, integrace, automatizace i aplikace na míru.</p>
     </div>
     <div class="svc">
       <details open>
         <summary><div class="sicon"><svg><use href="#i-phone"/></svg></div><div><h3>AI zákaznická péče po telefonu</h3><div class="st on">V provozu</div></div><span class="plus"><svg><use href="#i-plus"/></svg></span></summary>
         <div class="sbody">Klára přijímá hovory, Tomáš vede obchodní rozhovory a Jana sbírá zpětnou vazbu. Tři agenti, kteří si hovor předávají jako sehraný tým.
-          <ul><li>Rezervace, přesun a zrušení termínu</li><li>Odpovědi na časté dotazy o vaší firmě</li><li>Zápis do Google Kalendáře a potvrzení zákazníkovi</li></ul>
+          <ul><li>Rezervace, přesun a zrušení termínu</li><li>Odpovědi na časté dotazy o vaší firmě</li><li>Zápis do Google Kalendáře a potvrzení zákazníkovi</li><li>Představí se jako AI asistent, jak vyžaduje AI Act</li></ul>
         </div>
       </details>
       <details>
@@ -424,9 +458,16 @@ footer a:hover{color:var(--teal)}
         <div class="sbody">Chat nebo hlasový asistent na vašem webu. Odpoví na dotazy návštěvníků a dovede je až k rezervaci.</div>
       </details>
       <details>
-        <summary><div class="sicon"><svg><use href="#i-gear"/></svg></div><div><h3>Automatizace a integrace</h3><div class="st on">V provozu</div></div><span class="plus"><svg><use href="#i-plus"/></svg></span></summary>
-        <div class="sbody">Propojíme nástroje, které už používáte.
-          <ul><li>Připomínky termínů a fakturace (Fakturoid, iDoklad)</li><li>CRM a email marketing (Mailchimp, Brevo)</li><li>AI odpovědi na Google recenze, reporting, GDPR</li></ul>
+        <summary><div class="sicon"><svg><use href="#i-gear"/></svg></div><div><h3>IT, integrace a aplikace na míru</h3><div class="st on">V provozu</div></div><span class="plus"><svg><use href="#i-plus"/></svg></span></summary>
+        <div class="sbody">Celé IT firmy od A do Z. Propojíme nástroje, které už používáte, nasadíme nové a postavíme, co na trhu chybí.
+          <ul><li>Nasazení a správa CRM, od tabulky po Salesforce</li><li>Integrace přes API: fakturace, účetnictví, e-shop, kalendáře</li><li>Interní aplikace a dashboardy na míru</li><li>Automatizace: připomínky, fakturace, email marketing, odpovědi na recenze</li><li>IT servis a procesní audit</li></ul>
+        </div>
+      </details>
+      <details>
+        <summary><div class="sicon"><svg><use href="#i-shield"/></svg></div><div><h3>AI Act a GDPR audit</h3><div class="st">Nově</div></div><span class="plus"><svg><use href="#i-plus"/></svg></span></summary>
+        <div class="sbody">Pro firmy, které už AI nebo automatizaci používají, od nás nebo od jiného dodavatele.
+          <ul><li>Inventura AI systémů a datových toků</li><li>Kontrola transparentnosti podle čl. 50 AI Actu</li><li>Smlouvy o zpracování, nahrávání a retence</li><li>Zpráva s doporučenými úpravami</li></ul>
+          <p style="margin-top:10px;font-size:.88rem">Technicko-organizační posouzení, ne právní služba.</p>
         </div>
       </details>
     </div>
@@ -481,6 +522,8 @@ footer a:hover{color:var(--teal)}
           <tr><td>Více rolí v jednom hovoru</td><td class="us"><span class="y"><svg><use href="#i-check"/></svg>Recepce, obchod, zpětná vazba</span></td><td><span class="n"><svg><use href="#i-x"/></svg>Jeden agent</span></td><td><span class="p"><svg><use href="#i-part"/></svg>Podle počtu lidí</span></td></tr>
           <tr><td>Web, email, rezervace, automatizace</td><td class="us"><span class="y"><svg><use href="#i-check"/></svg>Vše od jednoho partnera</span></td><td><span class="n"><svg><use href="#i-x"/></svg>Jen telefon</span></td><td><span class="n"><svg><use href="#i-x"/></svg>Ne</span></td></tr>
           <tr><td>Zápis do kalendáře</td><td class="us"><span class="y"><svg><use href="#i-check"/></svg>Automaticky</span></td><td><span class="p"><svg><use href="#i-part"/></svg>Podle dodavatele</span></td><td><span class="p"><svg><use href="#i-part"/></svg>Ručně</span></td></tr>
+          <tr><td>GDPR a AI Act</td><td class="us"><span class="y"><svg><use href="#i-check"/></svg>Řešeno od prvního návrhu</span></td><td><span class="p"><svg><use href="#i-part"/></svg>Podle dodavatele</span></td><td><span class="p"><svg><use href="#i-part"/></svg>Řeší firma sama</span></td></tr>
+          <tr><td>Kdo řešení staví</td><td class="us"><span class="y"><svg><use href="#i-check"/></svg>Zakladatel osobně</span></td><td><span class="p"><svg><use href="#i-part"/></svg>Šablona a podpora</span></td><td><span class="p"><svg><use href="#i-part"/></svg>Externí firma</span></td></tr>
           <tr><td>Měsíční náklady</td><td class="us">od 2 500 Kč</td><td>Podobné, ale jen za telefon</td><td>Mzda a odvody</td></tr>
         </tbody>
       </table>
@@ -488,8 +531,56 @@ footer a:hover{color:var(--teal)}
     <div class="diff">
       <div><h3>Tým, ne robot</h3><p>Klára, Tomáš a Jana si hovor předávají podle toho, co zákazník potřebuje. Jako na dobré recepci.</p></div>
       <div><h3>Nastaveno na vaši firmu</h3><p>Žádná šablona. Agent zná vaše služby, ceny a pravidla a mluví tak, jak mluvíte vy.</p></div>
-      <div><h3>Člověk, který ručí za výsledek</h3><p>Za každým nasazením stojí Pavel. Víte, komu zavolat, když chcete něco změnit.</p></div>
+      <div><h3>Člověk, který ručí za výsledek</h3><p>Za každým nasazením stojí Pavel, architekt a právník. Víte, komu zavolat, když chcete něco změnit.</p></div>
     </div>
+  </div>
+</section>
+
+<section class="founder" id="zakladatel">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Architekt a právník. Staví osobně.</h2>
+      <p class="lead">Za Voicelixem nestojí obchodníci ani subdodavatelé. Každé řešení navrhuje, staví a předává zakladatel.</p>
+    </div>
+    <div class="fd">
+      <div class="fcard">
+        <div class="fphoto" aria-label="Pavel Šrámek">PŠ</div>
+        <h3>Mgr. Pavel Šrámek</h3>
+        <div class="role">Zakladatel a AI architekt</div>
+        <ul class="creds">
+          <li><svg><use href="#i-scale"/></svg><span>Magistr práv: právo EU, finanční právo, regulace kryptoaktiv, účetní předpisy</span></li>
+          <li><svg><use href="#i-shield"/></svg><span>IAPP AIGP (AI governance): certifikace v přípravě</span></li>
+          <li><svg><use href="#i-globe2"/></svg><span>4 roky Monstarlab: enterprise integrace Salesforce a vedení mezinárodních týmů</span></li>
+          <li><svg><use href="#i-star"/></svg><span>6,5 roku Allianz: klientský servis a obchod</span></li>
+        </ul>
+        <div class="flinks"><a href="mailto:pavel@voicelix.ai">pavel@voicelix.ai</a><a href="https://linkedin.com/in/pavel-šrámek-636823b7" target="_blank" rel="noopener">LinkedIn</a></div>
+      </div>
+      <div>
+        <p class="quote">Nejsem prostředník a práci nepředávám juniorům. Každé řešení navrhuji, stavím a předávám sám. A ručím za to, jak zachází s vašimi daty.</p>
+        <div class="fpts">
+          <div><h3>CEO, který staví</h3><p>S kým mluvíte na konzultaci, ten vám systém postaví a bude ho spravovat. Žádné předávání dál.</p></div>
+          <div><h3>Právní pohled od prvního dne</h3><p>GDPR, AI Act, nahrávání hovorů, smlouvy s dodavateli. Problémy řešíme v návrhu, ne až po kontrole.</p></div>
+          <div><h3>Enterprise zkušenost pro malé firmy</h3><p>Roky integrací Salesforce a vedení vývojářských týmů v globální agentuře. Stejné postupy pro salon, ordinaci i B2B firmu.</p></div>
+          <div><h3>Testuji to na sobě</h3><p>Voicelix sám běží na vlastních agentech. Když zavoláte na naše číslo, mluvíte se stejnou Klárou, jakou dostanete vy.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="data" id="data">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Data a legislativa: compliance by design</h2>
+      <p class="lead">AI pracuje s hovory, jmény a telefonními čísly vašich zákazníků. Proto na legislativu myslíme od prvního návrhu, ne až po spuštění.</p>
+    </div>
+    <div class="trust-grid">
+      <div class="trust"><div class="vicon"><svg><use href="#i-chat"/></svg></div><h3>Transparentnost podle AI Actu</h3><p>Od 2. 8. 2026 musí volající vědět, že mluví s AI (čl. 50 AI Actu). Naši asistenti to splňují od začátku.</p></div>
+      <div class="trust"><div class="vicon"><svg><use href="#i-lock"/></svg></div><h3>GDPR v architektuře</h3><p>Sbíráme jen data, která agent potřebuje. Nahrávání, retenci a přístupy nastavíme tak, aby obstály i při kontrole.</p></div>
+      <div class="trust"><div class="vicon"><svg><use href="#i-doc"/></svg></div><h3>Smlouvy a dokumentace</h3><p>Smlouva o zpracování osobních údajů je součástí každé spolupráce. Pomůžeme i se záznamy o činnostech zpracování.</p></div>
+      <div class="trust"><div class="vicon"><svg><use href="#i-shield"/></svg></div><h3>AI governance</h3><p>Pavel se připravuje na mezinárodní certifikaci IAPP AIGP. Firmám, které už AI používají, nabízíme AI Act a GDPR audit.</p></div>
+    </div>
+    <p class="legal">Voicelix neposkytuje právní služby ve smyslu zákona o advokacii. Řešení navrhujeme v souladu s legislativou. Pro závazné právní stanovisko vám doporučíme advokáta.</p>
   </div>
 </section>
 
@@ -498,7 +589,7 @@ footer a:hover{color:var(--teal)}
     <div class="team-head">
       <div>
         <h2>Tým, který nikdy nespí</h2>
-        <p class="lead">Čtyři AI kolegové a jeden člověk. Každý má svou roli a svou odpovědnost.</p>
+        <p class="lead">Čtyři AI kolegové a jeden člověk, který je navrhl a ručí za ně. Všichni AI kolegové se představí jako AI.</p>
       </div>
       <a class="btn btn-dark" href="tel:+420910926750"><svg><use href="#i-phone"/></svg>Poznat Kláru naživo</a>
     </div>
@@ -524,9 +615,9 @@ footer a:hover{color:var(--teal)}
         <details><summary>Více o Honzovi</summary><p>Najde vhodné firmy, prostuduje jejich web a napíše osobní email. Otevřeně se představuje jako AI. <a href="mailto:honza@voicelix.ai">honza@voicelix.ai</a></p></details>
       </article>
       <article class="tcard human">
-        <div class="tav">P</div><h3>Pavel Šrámek</h3><div class="role">Zakladatel</div>
+        <div class="tav">P</div><h3>Pavel Šrámek</h3><div class="role">Zakladatel, architekt a právník</div>
         <p>Navrhuje, staví a ručí za výsledek.</p>
-        <details><summary>Více o Pavlovi</summary><p>Čtyři roky produktový manažer v globální digitální agentuře Monstarlab, šest let klientské péče v Allianz, vystudovaný právník. <a href="https://linkedin.com/in/pavel-šrámek-636823b7" target="_blank" rel="noopener">LinkedIn</a></p></details>
+        <details><summary>Více o Pavlovi</summary><p>Magistr práv se zaměřením na právo EU, finanční právo a regulaci kryptoaktiv, připravuje certifikaci IAPP AIGP. Čtyři roky produktový manažer v globální agentuře Monstarlab, šest a půl roku v Allianz. <a href="#zakladatel">Víc o Pavlovi</a> · <a href="https://linkedin.com/in/pavel-šrámek-636823b7" target="_blank" rel="noopener">LinkedIn</a></p></details>
       </article>
     </div>
   </div>
@@ -577,7 +668,7 @@ footer a:hover{color:var(--teal)}
         <a class="btn btn-line" href="#kontakt">Chci Partner</a>
       </div>
     </div>
-    <p class="pnote">Potřebujete jen hlasového agenta? Samostatně od 2 500 Kč měsíčně. Agenturám a franšízám nabízíme partnerský program.</p>
+    <p class="pnote">V každém balíčku: AI transparentnost, nastavení GDPR a smlouva o zpracování osobních údajů. Potřebujete jen hlasového agenta? Samostatně od 2 500 Kč měsíčně. Agenturám, franšízám a call centrům nabízíme partnerský program.</p>
   </div>
 </section>
 
@@ -602,7 +693,7 @@ footer a:hover{color:var(--teal)}
       <ul class="clist">
         <li><svg><use href="#i-phone"/></svg><div><span>Telefon, živá ukázka</span><a href="tel:+420910926750">+420 910 926 750</a></div></li>
         <li><svg><use href="#i-mail"/></svg><div><span>Email</span><a href="mailto:info@voicelix.ai">info@voicelix.ai</a></div></li>
-        <li><svg><use href="#i-cal"/></svg><div><span>Demo schůzka s Pavlem</span><a href="https://calendly.com/pavelsramek" target="_blank" rel="noopener">Vybrat termín</a></div></li>
+        <li><svg><use href="#i-cal"/></svg><div><span>Konzultace s Pavlem, 30 minut zdarma</span><a href="https://calendly.com/pavelsramek" target="_blank" rel="noopener">Vybrat termín</a></div></li>
       </ul>
     </div>
     <div>
@@ -620,7 +711,7 @@ footer a:hover{color:var(--teal)}
         <div class="field"><label for="f-sector">Obor</label>
           <select id="f-sector" name="sector">
             <option value="">Vyberte obor</option>
-            <option>Kadeřnictví a kosmetika</option><option>Ordinace a zdravotnictví</option><option>Autoservis</option><option>Advokátní kancelář</option><option>Řemeslník</option><option>B2B firma nebo agentura</option><option>Jiný obor</option>
+            <option>Kadeřnictví a kosmetika</option><option>Ordinace a zdravotnictví</option><option>Autoservis</option><option>Advokátní kancelář</option><option>Řemeslník</option><option>Call centrum nebo telemarketing</option><option>B2B firma nebo agentura</option><option>Jiný obor</option>
           </select>
         </div>
         <div class="field"><label for="f-msg">S čím vám můžeme pomoci?</label><textarea id="f-msg" name="message" placeholder="Například: nestíháme brát telefony, chceme online rezervace"></textarea></div>
@@ -639,13 +730,13 @@ footer a:hover{color:var(--teal)}
     <div class="fgrid">
       <div>
         <a href="#top" class="logo" style="margin-bottom:14px">Voicelix</a>
-        <p>AI tým pro vaši firmu. Jeden partner, vše pod kontrolou.</p>
+        <p>AI asistent, který zvedne každý hovor. Staví osobně architekt s právním vzděláním. Jeden partner, vše pod kontrolou.</p>
       </div>
-      <div><h4>Služby</h4><ul><li><a href="#sluzby">AI recepční</a></li><li><a href="#sluzby">AI obchodník</a></li><li><a href="#sluzby">Web a email</a></li><li><a href="#sluzby">Automatizace</a></li></ul></div>
-      <div><h4>Firma</h4><ul><li><a href="#jak-to-funguje">Jak to funguje</a></li><li><a href="#srovnani">Proč Voicelix</a></li><li><a href="#tym">Tým</a></li><li><a href="#cenik">Ceník</a></li></ul></div>
+      <div><h4>Služby</h4><ul><li><a href="#sluzby">AI recepční</a></li><li><a href="#sluzby">AI obchodník</a></li><li><a href="#sluzby">Web a email</a></li><li><a href="#sluzby">IT a integrace</a></li><li><a href="#sluzby">AI Act a GDPR audit</a></li></ul></div>
+      <div><h4>Firma</h4><ul><li><a href="#jak-to-funguje">Jak to funguje</a></li><li><a href="#srovnani">Proč Voicelix</a></li><li><a href="#zakladatel">Kdo za tím stojí</a></li><li><a href="#data">Data a legislativa</a></li><li><a href="#tym">Tým</a></li><li><a href="#cenik">Ceník</a></li></ul></div>
       <div><h4>Kontakt</h4><ul><li><a href="tel:+420910926750">+420 910 926 750</a></li><li><a href="mailto:info@voicelix.ai">info@voicelix.ai</a></li><li><a href="https://linkedin.com/company/112520045" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://instagram.com/voicelix.ai" target="_blank" rel="noopener">Instagram</a></li></ul></div>
     </div>
-    <div class="fbot"><span>© 2026 Voicelix</span><span>Nastavíme jednou. Funguje nonstop.</span></div>
+    <div class="fbot"><span>© 2026 Voicelix</span><span>Naši AI asistenti se vždy představí jako AI.</span></div>
   </div>
 </footer>
 
