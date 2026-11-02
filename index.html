@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Voicelix | AI asistent, který zvedne každý hovor</title>
 <meta name="description" content="Voicelix zvedne každý hovor vaší firmy, zarezervuje termín a zapíše ho do kalendáře. Hlasové AI asistenty v češtině navrhuje a staví osobně architekt s právním vzděláním, v souladu s GDPR a AI Actem. K tomu celé IT od A do Z.">
+<meta property="og:title" content="Voicelix | AI asistent, který zvedne každý hovor">
+<meta property="og:description" content="Hlasové AI asistenty v češtině navrhuje a staví osobně architekt s právním vzděláním, v souladu s GDPR a AI Actem.">
+<meta property="og:url" content="https://voicelix.ai">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -165,7 +168,8 @@ td:first-child{font-weight:600;width:26%}
 .tcard{background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:24px 20px}
 .tcard.human{background:var(--navy);color:#fff;border-color:var(--navy)}
 .tav{width:52px;height:52px;border-radius:50%;background:var(--teal-soft);color:var(--teal-ink);display:grid;place-items:center;font-weight:700;font-size:1.2rem;margin-bottom:18px}
-.human .tav{background:var(--teal);color:var(--navy)}
+.human .tav{background:var(--teal);color:var(--navy);overflow:hidden}
+.tav img{width:100%;height:100%;object-fit:cover}
 .tcard h3{font-size:1.2rem}
 .role{font-size:.88rem;color:var(--muted);margin:2px 0 12px}
 .human .role{color:var(--muted-dark)}
@@ -233,7 +237,7 @@ footer a:hover{color:var(--teal)}
 .founder .lead{color:#B9C6DC}
 .fd{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
 .fcard{background:var(--navy);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-l);padding:32px}
-.fphoto{width:96px;height:96px;border-radius:50%;background:var(--teal);color:var(--navy);display:grid;place-items:center;font-weight:800;font-size:2rem;margin-bottom:20px;overflow:hidden}
+.fphoto{width:132px;height:132px;border:3px solid var(--teal);border-radius:50%;background:var(--teal);color:var(--navy);display:grid;place-items:center;font-weight:800;font-size:2rem;margin-bottom:20px;overflow:hidden}
 .fphoto img{width:100%;height:100%;object-fit:cover}
 .fcard h3{font-size:1.5rem}
 .fcard .role{color:var(--muted-dark);margin:4px 0 22px}
@@ -544,14 +548,15 @@ footer a:hover{color:var(--teal)}
     </div>
     <div class="fd">
       <div class="fcard">
-        <div class="fphoto" aria-label="Pavel Šrámek">PŠ</div>
+        <div class="fphoto"><img src="pavel-sramek.jpg" alt="Mgr. Pavel Šrámek, zakladatel Voicelixu" width="480" height="480" loading="lazy"></div>
         <h3>Mgr. Pavel Šrámek</h3>
         <div class="role">Zakladatel a AI architekt</div>
         <ul class="creds">
           <li><svg><use href="#i-scale"/></svg><span>Magistr práv: právo EU, finanční právo, regulace kryptoaktiv, účetní předpisy</span></li>
           <li><svg><use href="#i-shield"/></svg><span>IAPP AIGP (AI governance): certifikace v přípravě</span></li>
-          <li><svg><use href="#i-globe2"/></svg><span>4 roky Monstarlab: enterprise integrace Salesforce a vedení mezinárodních týmů</span></li>
-          <li><svg><use href="#i-star"/></svg><span>6,5 roku Allianz: klientský servis a obchod</span></li>
+          <li><svg><use href="#i-globe2"/></svg><span>4 roky Monstarlab: produktový a projektový vlastník a částečně architekt platformy pro 27 firem skupiny na všech kontinentech</span></li>
+          <li><svg><use href="#i-layers"/></svg><span>Integrace Salesforce, FinancialForce a Conga: alokace lidí, řízení projektů, finance, forecasting a HR databáze</span></li>
+          <li><svg><use href="#i-star"/></svg><span>6,5 roku Allianz: klientský servis a obchod. Nadporučík Armády ČR.</span></li>
         </ul>
         <div class="flinks"><a href="mailto:pavel@voicelix.ai">pavel@voicelix.ai</a><a href="https://linkedin.com/in/pavel-šrámek-636823b7" target="_blank" rel="noopener">LinkedIn</a></div>
       </div>
@@ -560,7 +565,7 @@ footer a:hover{color:var(--teal)}
         <div class="fpts">
           <div><h3>CEO, který staví</h3><p>S kým mluvíte na konzultaci, ten vám systém postaví a bude ho spravovat. Žádné předávání dál.</p></div>
           <div><h3>Právní pohled od prvního dne</h3><p>GDPR, AI Act, nahrávání hovorů, smlouvy s dodavateli. Problémy řešíme v návrhu, ne až po kontrole.</p></div>
-          <div><h3>Enterprise zkušenost pro malé firmy</h3><p>Roky integrací Salesforce a vedení vývojářských týmů v globální agentuře. Stejné postupy pro salon, ordinaci i B2B firmu.</p></div>
+          <div><h3>Enterprise zkušenost pro malé firmy</h3><p>V Monstarlabu (1 200+ lidí, kótováno na tokijské burze) jsem pomáhal stavět platformu, na které běželo 27 firem skupiny: alokace, projekty, finance i lidé. Stejnou disciplínu dnes dostane salon, ordinace i B2B firma.</p></div>
           <div><h3>Testuji to na sobě</h3><p>Voicelix sám běží na vlastních agentech. Když zavoláte na naše číslo, mluvíte se stejnou Klárou, jakou dostanete vy.</p></div>
         </div>
       </div>
@@ -615,9 +620,9 @@ footer a:hover{color:var(--teal)}
         <details><summary>Více o Honzovi</summary><p>Najde vhodné firmy, prostuduje jejich web a napíše osobní email. Otevřeně se představuje jako AI. <a href="mailto:honza@voicelix.ai">honza@voicelix.ai</a></p></details>
       </article>
       <article class="tcard human">
-        <div class="tav">P</div><h3>Pavel Šrámek</h3><div class="role">Zakladatel, architekt a právník</div>
+        <div class="tav"><img src="pavel-sramek.jpg" alt="Pavel Šrámek" width="480" height="480" loading="lazy"></div><h3>Pavel Šrámek</h3><div class="role">Zakladatel, architekt a právník</div>
         <p>Navrhuje, staví a ručí za výsledek.</p>
-        <details><summary>Více o Pavlovi</summary><p>Magistr práv se zaměřením na právo EU, finanční právo a regulaci kryptoaktiv, připravuje certifikaci IAPP AIGP. Čtyři roky produktový manažer v globální agentuře Monstarlab, šest a půl roku v Allianz. <a href="#zakladatel">Víc o Pavlovi</a> · <a href="https://linkedin.com/in/pavel-šrámek-636823b7" target="_blank" rel="noopener">LinkedIn</a></p></details>
+        <details><summary>Více o Pavlovi</summary><p>Magistr práv se zaměřením na právo EU, finanční právo a regulaci kryptoaktiv, připravuje certifikaci IAPP AIGP. V Monstarlabu spoluvytvářel platformu pro 27 firem skupiny na všech kontinentech, šest a půl roku v Allianz. <a href="#zakladatel">Víc o Pavlovi</a> · <a href="https://linkedin.com/in/pavel-šrámek-636823b7" target="_blank" rel="noopener">LinkedIn</a></p></details>
       </article>
     </div>
   </div>
