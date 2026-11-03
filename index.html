@@ -95,6 +95,16 @@ h2{font-size:clamp(2rem,4vw,3rem);max-width:18ch}
 .booked strong{display:block;font-size:.95rem}
 .booked p{font-size:.82rem;color:var(--muted)}
 .call-foot{font-size:.78rem;color:var(--muted-dark);margin-top:14px;text-align:center}
+.tabs{display:flex;gap:6px;background:rgba(255,255,255,.05);border-radius:10px;padding:4px;margin-bottom:18px}
+.tabs button{flex:1;background:none;border:0;border-radius:7px;padding:9px 10px;font:600 .85rem/1.2 var(--font);color:var(--muted-dark);cursor:pointer;transition:background .2s,color .2s}
+.tabs button[aria-selected="true"]{background:var(--teal);color:var(--navy)}
+.tabs button:not([aria-selected="true"]):hover{color:#fff}
+.scenes{display:grid}
+.scn{grid-area:1/1}
+.scn.off{visibility:hidden}
+.av.out{background:#8AB4FF}
+.lead-ic{width:44px;height:48px;border-radius:8px;background:var(--teal-soft);color:var(--teal-ink);display:grid;place-items:center;flex-shrink:0}
+.lead-ic svg{width:22px;height:22px}
 
 .sectors{background:var(--navy);color:var(--muted-dark);padding:26px 0}
 .sectors .wrap{display:flex;align-items:center;gap:14px 30px;flex-wrap:wrap;justify-content:center;font-size:.95rem}
@@ -369,7 +379,13 @@ footer a:hover{color:var(--teal)}
       <p class="hero-note">+420 910 926 750. Živá ukázka bez registrace. Nebo si <a href="https://calendly.com/pavelsramek" target="_blank" rel="noopener">rezervujte demo s Pavlem</a>.</p>
     </div>
 
-    <div class="call" aria-label="Ukázka průběhu hovoru s Klárou">
+    <div class="call" aria-label="Ukázky průběhu hovorů s AI asistenty">
+      <div class="tabs" role="tablist" aria-label="Typ hovoru">
+        <button role="tab" id="tab-in" aria-selected="true" aria-controls="scn-in">Příchozí: rezervace</button>
+        <button role="tab" id="tab-out" aria-selected="false" aria-controls="scn-out">Odchozí: obchodní hovor</button>
+      </div>
+      <div class="scenes">
+      <div class="scn" id="scn-in" role="tabpanel" aria-labelledby="tab-in">
       <div class="call-top">
         <div class="caller">
           <div class="av">K</div>
@@ -377,18 +393,40 @@ footer a:hover{color:var(--teal)}
         </div>
         <div class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
       </div>
-      <div class="lines" id="lines">
+      <div class="lines">
         <div class="ln k"><small>Klára</small>Dobrý den, salon Petra, tady Klára, AI asistentka. Jak vám mohu pomoci?</div>
         <div class="ln c"><small>Zákaznice</small>Chtěla bych se objednat na střih, ideálně ve čtvrtek odpoledne.</div>
         <div class="ln k"><small>Klára</small>Ve čtvrtek mám volno ve 14:00 nebo v 15:30. Který čas vám vyhovuje?</div>
         <div class="ln c"><small>Zákaznice</small>Půl čtvrté je ideální.</div>
         <div class="ln k"><small>Klára</small>Hotovo, jste objednaná. Potvrzení vám přijde zprávou. Hezký večer!</div>
       </div>
-      <div class="booked" id="booked">
+      <div class="booked">
         <div class="cal"><b>ČT</b><span>14</span></div>
         <div><strong>Rezervace zapsána do kalendáře</strong><p>Střih, 15:30. Potvrzení odesláno zákaznici.</p></div>
       </div>
-      <p class="call-foot">Ilustrační průběh hovoru. Stejný scénář si můžete vyzkoušet naživo.</p>
+      </div>
+      <div class="scn off" id="scn-out" role="tabpanel" aria-labelledby="tab-out">
+      <div class="call-top">
+        <div class="caller">
+          <div class="av out">T</div>
+          <div><b>Tomáš, AI obchodník</b><span>Odchozí hovor, 10:15</span></div>
+        </div>
+        <div class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="lines">
+        <div class="ln k"><small>Tomáš</small>Dobrý den, tady Tomáš, AI asistent firmy Energo Servis. Firmám zdarma porovnáváme ceny energií. Máte minutku?</div>
+        <div class="ln c"><small>Majitel firmy</small>Zajímá mě to, ale teď nemám čas.</div>
+        <div class="ln k"><small>Tomáš</small>Rozumím. Může vám zavolat náš obchodní zástupce? Hodí se čtvrtek v 10:00, nebo pátek ve 14:00?</div>
+        <div class="ln c"><small>Majitel firmy</small>Čtvrtek v deset.</div>
+        <div class="ln k"><small>Tomáš</small>Výborně, pan Novák vám zavolá ve čtvrtek v 10:00. Hezký den!</div>
+      </div>
+      <div class="booked">
+        <div class="lead-ic"><svg><use href="#i-send"/></svg></div>
+        <div><strong>Lead předán obchodníkovi</strong><p>Zpětné volání čt 10:00. Shrnutí hovoru uloženo do CRM.</p></div>
+      </div>
+      </div>
+      </div>
+      <p class="call-foot">Ilustrační průběh hovorů, firma Energo Servis je smyšlená. Příchozí scénář si můžete vyzkoušet naživo.</p>
     </div>
   </div>
 </section>
@@ -752,16 +790,28 @@ burger.addEventListener('click',()=>{const o=mnav.classList.toggle('open');burge
 mnav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mnav.classList.remove('open');burger.setAttribute('aria-expanded','false')}));
 
 (function(){
-  const lines=[...document.querySelectorAll('#lines .ln')],booked=document.getElementById('booked');
-  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-  const step=1500,start=600;
-  function run(){
+  const ids=['in','out'];
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const step=1500,start=600,hold=4500;
+  let timers=[],cur=0;
+  function clear(){timers.forEach(clearTimeout);timers=[]}
+  function show(i,auto){
+    clear();cur=i;
+    ids.forEach((id,j)=>{
+      document.getElementById('scn-'+id).classList.toggle('off',j!==i);
+      document.getElementById('tab-'+id).setAttribute('aria-selected',j===i);
+    });
+    const scn=document.getElementById('scn-'+ids[i]);
+    const lines=[...scn.querySelectorAll('.ln')],booked=scn.querySelector('.booked');
+    if(reduce){lines.forEach(l=>l.classList.add('show'));booked.classList.add('show');return}
     lines.forEach(l=>l.classList.remove('show'));booked.classList.remove('show');
-    lines.forEach((l,i)=>setTimeout(()=>l.classList.add('show'),start+i*step));
-    setTimeout(()=>booked.classList.add('show'),start+lines.length*step);
-    setTimeout(run,start+lines.length*step+5000);
+    lines.forEach((l,k)=>timers.push(setTimeout(()=>l.classList.add('show'),start+k*step)));
+    const end=start+lines.length*step;
+    timers.push(setTimeout(()=>booked.classList.add('show'),end));
+    timers.push(setTimeout(()=>show((i+1)%ids.length,true),end+hold));
   }
-  run();
+  ids.forEach((id,j)=>document.getElementById('tab-'+id).addEventListener('click',()=>show(j)));
+  show(0);
 })();
 
 const form=document.getElementById('leadForm');
