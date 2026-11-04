@@ -216,6 +216,17 @@ td:first-child{font-weight:600;width:26%}
 .pilot .acts{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
 
 .contact{background:var(--paper)}
+.booking{background:#fff}
+.bgrid{display:grid;grid-template-columns:.75fr 1.25fr;gap:56px;align-items:start}
+.bsteps{list-style:none;margin-top:28px;display:flex;flex-direction:column;gap:16px}
+.bsteps li{display:flex;gap:14px;align-items:flex-start;color:var(--muted)}
+.bsteps b{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--teal-soft);color:var(--teal-ink);display:grid;place-items:center;font-size:.85rem}
+.bframe{border:1px solid var(--line);border-radius:var(--r-l);overflow:hidden;background:#fff}
+.bframe iframe{display:block;width:100%;height:680px;border:0}
+.bfall{padding:56px 32px;text-align:center;color:var(--muted)}
+.bfall h3{color:var(--ink);font-size:1.2rem;margin-bottom:10px}
+.bfall .btn{margin-top:20px}
+@media (max-width:860px){.bgrid{grid-template-columns:1fr;gap:32px}.bframe iframe{height:760px}}
 .cgrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px}
 .clist{list-style:none;margin-top:36px}
 .clist li{display:flex;gap:16px;padding:18px 0;border-top:1px solid var(--line)}
@@ -376,7 +387,7 @@ footer a:hover{color:var(--teal)}
         <a class="btn btn-primary" href="tel:+420910926750"><svg><use href="#i-phone"/></svg>Zavolat Kláře</a>
         <a class="btn btn-ghost" href="#zakladatel">Kdo za tím stojí</a>
       </div>
-      <p class="hero-note">+420 910 926 750. Živá ukázka bez registrace. Nebo si <a href="https://calendly.com/pavelsramek" target="_blank" rel="noopener">rezervujte demo s Pavlem</a>.</p>
+      <p class="hero-note">+420 910 926 750. Živá ukázka bez registrace. Nebo si <a href="#rezervace">rovnou rezervujte konzultaci s Pavlem</a>.</p>
     </div>
 
     <div class="call" aria-label="Ukázky průběhu hovorů s AI asistenty">
@@ -729,6 +740,27 @@ footer a:hover{color:var(--teal)}
   </div>
 </section>
 
+<section class="booking" id="rezervace">
+  <div class="wrap bgrid">
+    <div>
+      <h2>Rezervujte si konzultaci s Pavlem</h2>
+      <p class="lead">30 minut zdarma, online. Vyberte termín, který vám sedí. Potvrzení i odkaz na videohovor vám přijdou emailem.</p>
+      <ul class="bsteps">
+        <li><b>1</b><span>Projdeme, kde vaše firma ztrácí hovory, čas a data.</span></li>
+        <li><b>2</b><span>Ukážu vám, jak by asistent fungoval právě u vás, včetně ochrany dat.</span></li>
+        <li><b>3</b><span>Dostanete návrh řešení s pevnou cenou: technika i compliance v jednom dokumentu.</span></li>
+      </ul>
+    </div>
+    <div class="bframe" id="bframe">
+      <div class="bfall" id="bfall">
+        <h3>Termín vám domluví i Klára</h3>
+        <p>Zavolejte na +420 910 926 750, nebo nám napište přes formulář níže. Ozveme se do jednoho pracovního dne.</p>
+        <a class="btn btn-primary" href="tel:+420910926750"><svg><use href="#i-phone"/></svg>Zavolat Kláře</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="contact" id="kontakt">
   <div class="wrap cgrid">
     <div>
@@ -737,7 +769,7 @@ footer a:hover{color:var(--teal)}
       <ul class="clist">
         <li><svg><use href="#i-phone"/></svg><div><span>Telefon, živá ukázka</span><a href="tel:+420910926750">+420 910 926 750</a></div></li>
         <li><svg><use href="#i-mail"/></svg><div><span>Email</span><a href="mailto:info@voicelix.ai">info@voicelix.ai</a></div></li>
-        <li><svg><use href="#i-cal"/></svg><div><span>Konzultace s Pavlem, 30 minut zdarma</span><a href="https://calendly.com/pavelsramek" target="_blank" rel="noopener">Vybrat termín</a></div></li>
+        <li><svg><use href="#i-cal"/></svg><div><span>Konzultace s Pavlem, 30 minut zdarma</span><a href="#rezervace">Vybrat termín</a></div></li>
       </ul>
     </div>
     <div>
@@ -812,6 +844,26 @@ mnav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mnav.class
   }
   ids.forEach((id,j)=>document.getElementById('tab-'+id).addEventListener('click',()=>show(j)));
   show(0);
+})();
+
+// Google Calendar appointment schedule (Kalendář → Vytvořit → Plán schůzek → Sdílet → Vložit na web)
+const BOOKING_URL='';
+(function(){
+  const box=document.getElementById('bframe');
+  if(!BOOKING_URL||!box)return;
+  const src=BOOKING_URL+(BOOKING_URL.includes('?')?'&':'?')+'gv=true';
+  function load(){
+    if(box.dataset.loaded)return;box.dataset.loaded='1';
+    const f=document.createElement('iframe');
+    f.src=src;f.title='Rezervace konzultace s Pavlem Šrámkem';f.loading='lazy';
+    f.addEventListener('load',()=>{const fb=document.getElementById('bfall');if(fb)fb.remove()});
+    box.appendChild(f);
+  }
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(e=>{if(e.some(x=>x.isIntersecting)){load();io.disconnect()}},{rootMargin:'600px'});
+    io.observe(box);
+  }else load();
+  if(location.hash==='#rezervace')load();
 })();
 
 const form=document.getElementById('leadForm');
