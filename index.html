@@ -230,7 +230,7 @@ td:first-child{font-weight:600;width:26%}
 .bcard p{color:var(--muted-dark);max-width:46ch}
 .bcard .btn{margin-top:26px;font-size:1.05rem;padding:18px 28px}
 .bcard .balt{margin-top:18px;font-size:.92rem;color:var(--muted-dark)}
-.bcard .balt a{color:var(--teal);text-decoration:none;font-weight:600}
+.bcard .balt a{color:var(--teal);text-decoration:none;font-weight:600;white-space:nowrap}
 .bdlg{border:0;padding:0;border-radius:var(--r-l);width:min(980px,94vw);height:min(820px,90vh);max-width:none;max-height:none;background:#fff;box-shadow:0 30px 80px rgba(10,21,48,.45);overflow:hidden}
 .bdlg::backdrop{background:rgba(10,21,48,.72);backdrop-filter:blur(3px)}
 .bdlg-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 16px 14px 22px;background:var(--navy);color:#fff}
@@ -327,6 +327,46 @@ footer a:hover{color:var(--teal)}
   *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
   .ln,.booked{opacity:1;transform:none}
 }
+
+/* ── Klára Chat ── */
+.cb-fab{position:fixed;right:22px;bottom:22px;z-index:110;display:flex;align-items:center;gap:10px;background:var(--teal);color:var(--navy);border:0;border-radius:999px;padding:14px 20px 14px 16px;font:700 .98rem/1 var(--font);cursor:pointer;box-shadow:0 12px 32px rgba(10,21,48,.28);transition:transform .2s,box-shadow .2s}
+.cb-fab:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(10,21,48,.34)}
+.cb-fab svg{width:22px;height:22px}
+.cb-dot{width:9px;height:9px;border-radius:50%;background:var(--navy);box-shadow:0 0 0 3px rgba(15,30,60,.18)}
+.cb-fab[aria-expanded="true"]{display:none}
+.cb{position:fixed;right:22px;bottom:22px;z-index:120;margin:0;width:min(400px,calc(100vw - 32px));height:min(620px,calc(100vh - 44px));background:#fff;border-radius:var(--r-l);box-shadow:0 30px 80px rgba(10,21,48,.35);display:flex;flex-direction:column;overflow:hidden;opacity:0;transform:translateY(16px) scale(.98);pointer-events:none;transition:opacity .2s,transform .2s}
+.cb.open{opacity:1;transform:none;pointer-events:auto}
+.cb-head{background:var(--navy);color:#fff;padding:16px 16px 16px 20px;display:flex;align-items:center;gap:12px}
+.cb-head .av{flex-shrink:0}
+.cb-head b{display:block;font-size:1rem}
+.cb-head small{color:var(--muted-dark);font-size:.8rem}
+.cb-x{margin-left:auto;background:rgba(255,255,255,.1);border:0;color:#fff;width:36px;height:36px;border-radius:10px;font-size:1.3rem;line-height:1;cursor:pointer}
+.cb-x:hover{background:var(--teal);color:var(--navy)}
+.cb-body{flex:1;overflow-y:auto;padding:18px 16px;display:flex;flex-direction:column;gap:10px;background:var(--paper)}
+.cb-msg{max-width:86%;padding:11px 14px;border-radius:14px;font-size:.95rem;line-height:1.5;white-space:pre-wrap;word-wrap:break-word}
+.cb-msg.a{background:#fff;border:1px solid var(--line);color:var(--ink);border-bottom-left-radius:4px;align-self:flex-start}
+.cb-msg.u{background:var(--navy);color:#fff;border-bottom-right-radius:4px;align-self:flex-end}
+.cb-msg .btn{margin-top:10px;padding:11px 16px;font-size:.92rem;white-space:normal}
+.cb-typing{align-self:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 16px;display:flex;gap:5px}
+.cb-typing i{width:7px;height:7px;border-radius:50%;background:var(--muted-dark);animation:cbt 1s infinite ease-in-out}
+.cb-typing i:nth-child(2){animation-delay:.15s}.cb-typing i:nth-child(3){animation-delay:.3s}
+@keyframes cbt{0%,80%,100%{opacity:.3;transform:translateY(0)}40%{opacity:1;transform:translateY(-3px)}}
+.cb-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:2px}
+.cb-chips button{background:#fff;border:1px solid var(--teal);color:var(--teal-ink);border-radius:999px;padding:8px 13px;font:600 .85rem/1.2 var(--font);cursor:pointer}
+.cb-chips button:hover{background:var(--teal-soft)}
+.cb-form{display:flex;gap:8px;padding:12px;margin:0;border:0;border-top:1px solid var(--line);border-radius:0;background:#fff;box-shadow:none}
+.cb-form textarea{flex:1;resize:none;border:1px solid var(--line);border-radius:12px;padding:11px 13px;font:400 .95rem/1.4 var(--font);color:var(--ink);max-height:110px;min-height:44px}
+.cb-form textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(0,201,167,.15)}
+.cb-send{flex-shrink:0;width:44px;height:44px;border-radius:12px;border:0;background:var(--teal);color:var(--navy);display:grid;place-items:center;cursor:pointer}
+.cb-send:disabled{opacity:.45;cursor:default}
+.cb-send svg{width:20px;height:20px}
+.cb-note{padding:0 14px 10px;background:#fff;font-size:.74rem;color:var(--muted);line-height:1.4}
+@media (max-width:600px){
+  .cb-fab{right:14px;bottom:14px;padding:13px}
+  .cb-fab span{display:none}
+  .cb{right:0;bottom:0;width:100vw;height:100dvh;border-radius:0}
+}
+@media (prefers-reduced-motion:reduce){.cb,.cb-fab{transition:none}.cb-typing i{animation:none}}
 </style>
 </head>
 <body>
@@ -833,6 +873,25 @@ footer a:hover{color:var(--teal)}
   </div>
 </footer>
 
+
+<button class="cb-fab" id="cbFab" type="button" aria-controls="cb" aria-expanded="false"><i class="cb-dot" aria-hidden="true"></i><svg aria-hidden="true"><use href="#i-chat"/></svg><span>Napište Kláře</span></button>
+<div class="cb" id="cb" role="dialog" aria-modal="false" aria-labelledby="cbTitle" aria-hidden="true">
+  <div class="cb-head">
+    <div class="av">K</div>
+    <div><b id="cbTitle">Klára, AI asistentka</b><small>Odpovídá hned, 24/7</small></div>
+    <button class="cb-x" id="cbClose" type="button" aria-label="Zavřít chat">&times;</button>
+  </div>
+  <div class="cb-body" id="cbBody" aria-live="polite"></div>
+  <form class="cb-form" id="cbForm">
+    <label for="cbInput" class="sr-only" style="position:absolute;left:-9999px">Vaše zpráva</label>
+    <textarea id="cbInput" rows="1" maxlength="1000" placeholder="Napište dotaz…" required></textarea>
+    <button class="cb-send" id="cbSend" type="submit" aria-label="Odeslat"><svg><use href="#i-send"/></svg></button>
+  </form>
+  <p class="cb-note">Chat obsluhuje AI (model Claude od Anthropic). Konverzace neukládáme. Kontakt předáme Pavlovi, jen pokud nám ho sami pošlete. Nepište prosím citlivé údaje.</p>
+</div>
+<form name="chat-lead" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input name="bot-field"><input name="name"><input name="contact"><input name="company"><textarea name="need"></textarea><textarea name="transcript"></textarea>
+</form>
 <script>
 const burger=document.getElementById('burger'),mnav=document.getElementById('mnav');
 burger.addEventListener('click',()=>{const o=mnav.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
@@ -885,6 +944,68 @@ const BOOKING_URL='https://calendar.google.com/calendar/appointments/schedules/A
   dlg.querySelector('[data-close]').addEventListener('click',close);
   dlg.addEventListener('click',e=>{if(e.target===dlg)close()});
   links.forEach(a=>a.addEventListener('click',open));
+})();
+
+// ── Klára Chat ──
+(function(){
+  const fab=document.getElementById('cbFab'),box=document.getElementById('cb'),body=document.getElementById('cbBody'),
+        form=document.getElementById('cbForm'),input=document.getElementById('cbInput'),send=document.getElementById('cbSend');
+  if(!fab)return;
+  const KEY='vx-chat';
+  let msgs=[];try{msgs=JSON.parse(sessionStorage.getItem(KEY)||'[]')}catch(e){}
+  let busy=false;
+  const GREET='Dobrý den, jsem Klára, AI asistentka Voicelixu. Ptejte se na cokoli o našich službách, nebo si rovnou domluvte konzultaci s Pavlem.';
+  const CHIPS=['Co všechno umíte?','Kolik to stojí?','Je to v souladu s GDPR?','Chci konzultaci'];
+  function save(){try{sessionStorage.setItem(KEY,JSON.stringify(msgs.slice(-40)))}catch(e){}}
+  function bubble(role,text){
+    const d=document.createElement('div');d.className='cb-msg '+(role==='user'?'u':'a');
+    const book=/\[\[REZERVACE\]\]/.test(text);
+    d.textContent=text.replace(/\s*\[\[REZERVACE\]\]\s*/g,'').trim();
+    if(book&&role!=='user'){
+      const b=document.createElement('a');b.className='btn btn-primary js-book';b.href='#rezervace';
+      b.innerHTML='<svg><use href="#i-cal"/></svg>Vybrat termín konzultace';
+      b.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector('.bcard .js-book');if(t)t.click();else location.hash='rezervace'});
+      d.appendChild(document.createElement('br'));d.appendChild(b);
+    }
+    body.appendChild(d);body.scrollTop=body.scrollHeight;return d;
+  }
+  function chips(){
+    const c=document.createElement('div');c.className='cb-chips';c.id='cbChips';
+    CHIPS.forEach(t=>{const b=document.createElement('button');b.type='button';b.textContent=t;b.addEventListener('click',()=>ask(t));c.appendChild(b)});
+    body.appendChild(c);
+  }
+  function render(){
+    body.innerHTML='';bubble('assistant',GREET);
+    msgs.forEach(m=>bubble(m.role,m.content));
+    if(!msgs.length)chips();
+  }
+  function setOpen(o){
+    box.classList.toggle('open',o);box.setAttribute('aria-hidden',!o);fab.setAttribute('aria-expanded',o);
+    if(o){if(!body.childElementCount)render();setTimeout(()=>input.focus(),150)}else fab.focus();
+  }
+  async function ask(text){
+    text=text.trim();if(!text||busy)return;
+    const ch=document.getElementById('cbChips');if(ch)ch.remove();
+    msgs.push({role:'user',content:text});save();bubble('user',text);
+    input.value='';busy=true;send.disabled=true;
+    const t=document.createElement('div');t.className='cb-typing';t.innerHTML='<i></i><i></i><i></i>';body.appendChild(t);body.scrollTop=body.scrollHeight;
+    let reply;
+    try{
+      const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:msgs})});
+      const j=await r.json().catch(()=>({}));
+      if(r.ok&&j.reply)reply=j.reply;
+      else if(r.status===429)reply='Teď toho na mě bylo trochu moc. Zkuste to prosím za pár minut, nebo zavolejte na +420 910 926 750.';
+      else reply='Omlouvám se, chat je teď nedostupný. Zavolejte prosím na +420 910 926 750, nebo nám napište přes formulář na stránce.';
+    }catch(e){reply='Omlouvám se, nepodařilo se spojit. Zavolejte prosím na +420 910 926 750, nebo nám napište přes formulář na stránce.'}
+    t.remove();msgs.push({role:'assistant',content:reply});save();bubble('assistant',reply);
+    busy=false;send.disabled=false;input.focus();
+  }
+  fab.addEventListener('click',()=>setOpen(true));
+  document.getElementById('cbClose').addEventListener('click',()=>setOpen(false));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&box.classList.contains('open')&&!document.querySelector('dialog[open]'))setOpen(false)});
+  form.addEventListener('submit',e=>{e.preventDefault();ask(input.value)});
+  input.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();ask(input.value)}});
+  input.addEventListener('input',()=>{input.style.height='auto';input.style.height=Math.min(input.scrollHeight,110)+'px'});
 })();
 
 const form=document.getElementById('leadForm');
