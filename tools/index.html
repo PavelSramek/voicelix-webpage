@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Toolkit: nástroje, se kterými pracujeme | Voicelix</title>
+<meta name="description" content="Hlasoví AI asistenti, weby, CRM, rezervace, fakturace i email marketing. Přehled nástrojů, které Voicelix umí nasadit, propojit a spravovat, v souladu s GDPR a AI Actem.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://voicelix.ai/tools/">
+<meta property="og:title" content="Voicelix Toolkit: nástroje, se kterými pracujeme">
+<meta property="og:description" content="Co všechno umíme nasadit, propojit a spravovat. Jeden partner, vše pod kontrolou.">
+<meta property="og:url" content="https://voicelix.ai/tools/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0F1E3C; --navy-deep:#0A1530; --navy-2:#16294F;
+  --teal:#00C9A7; --teal-ink:#008C75; --teal-soft:#E0F7F2; --sky:#8AB4FF;
+  --paper:#F4F7FB; --white:#FFFFFF; --line:#DDE4EE;
+  --ink:#13223F; --muted:#5B6B85; --muted-dark:#9AA9C4;
+  --r-s:8px; --r-m:14px;
+  --font:'Onest','Segoe UI',system-ui,-apple-system,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--font);color:var(--ink);background:var(--paper);line-height:1.55;font-size:16px;-webkit-font-smoothing:antialiased}
+a{color:var(--teal-ink)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.hdr{background:var(--navy);padding:18px 0}
+.hdr .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:700;font-size:1.25rem;letter-spacing:-.02em}
+.logo svg{height:22px;width:auto}
+.hnav{display:flex;align-items:center;gap:22px}
+.hnav .hl{color:var(--muted-dark);text-decoration:none;font-size:.95rem;font-weight:500}
+.hnav .hl:hover{color:#fff}
+.hcta{background:var(--teal);color:var(--navy);font-weight:700;font-size:.9rem;text-decoration:none;padding:10px 16px;border-radius:var(--r-s);white-space:nowrap}
+.who{background:var(--navy);padding:0 0 40px}
+.who .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.wcard{display:flex;flex-direction:column;gap:6px;background:var(--navy-2);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-m);padding:18px 20px;text-decoration:none;color:#fff;transition:border-color .15s}
+.wcard:hover{border-color:var(--teal)}
+.wcard b{font-size:1rem;letter-spacing:-.01em}
+.wcard span{color:var(--muted-dark);font-size:.92rem}
+.wcard em{font-style:normal;color:var(--teal);font-size:.88rem;font-weight:600;margin-top:auto;padding-top:6px}
+.cta-acts{display:flex;gap:10px;flex-wrap:wrap}
+.cta-acts a{font-weight:700;text-decoration:none;padding:12px 20px;border-radius:var(--r-s);white-space:nowrap}
+.cta-acts .b1{background:var(--teal);color:var(--navy)}
+.cta-acts .b2{border:1.5px solid rgba(255,255,255,.3);color:#fff}
+.cta-acts .b2:hover{border-color:var(--teal);color:var(--teal)}
+@media (max-width:860px){.who .wrap{grid-template-columns:1fr}.hnav .hl{display:none}}
+.hero{background:var(--navy);color:#fff;padding:36px 0 48px}
+.eyebrow{display:inline-block;color:var(--teal);font-weight:700;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+.hero h1{font-size:clamp(1.9rem,5vw,2.9rem);line-height:1.08;letter-spacing:-.03em;max-width:760px}
+.hero h1 em{font-style:normal;color:var(--teal)}
+.hero p{color:var(--muted-dark);margin-top:14px;max-width:640px;font-size:1.05rem}
+.stats{display:flex;gap:28px;margin-top:22px;flex-wrap:wrap}
+.stats div{color:var(--muted-dark);font-size:.9rem}
+.stats b{display:block;color:#fff;font-size:1.6rem;letter-spacing:-.02em}
+.bar{position:sticky;top:0;z-index:5;background:rgba(244,247,251,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:14px 0}
+.search{width:100%;font:inherit;font-size:1rem;padding:12px 16px;border:1px solid var(--line);border-radius:var(--r-s);background:#fff;color:var(--ink)}
+.search:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-soft)}
+.chips{display:flex;gap:8px;margin-top:10px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;font:inherit;font-size:.88rem;border:1px solid var(--line);background:#fff;color:var(--ink);padding:6px 12px;border-radius:999px;cursor:pointer;white-space:nowrap}
+.chip span{color:var(--muted);font-size:.8rem;margin-left:2px}
+.chip.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.chip.on span{color:var(--teal)}
+main{padding:8px 0 64px}
+.cat h2{font-size:1.25rem;letter-spacing:-.015em;margin:36px 0 14px;display:flex;align-items:center;gap:10px}
+.cat h2::before{content:"";width:4px;height:20px;border-radius:2px;background:var(--teal)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:18px 18px 14px;display:flex;flex-direction:column;transition:border-color .15s,transform .15s}
+.card:hover{border-color:var(--teal);transform:translateY(-2px)}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.card h3{font-size:1.08rem;letter-spacing:-.01em}
+.own{flex:0 0 auto;font-size:.72rem;font-weight:600;color:var(--teal-ink);background:var(--teal-soft);padding:3px 8px;border-radius:999px}
+.what{color:var(--muted);font-size:.93rem;margin-top:4px}
+.we{font-size:.95rem;margin-top:10px;flex:1}
+.we b{font-weight:600}
+.foot{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;margin-top:14px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:.74rem;color:var(--navy);background:var(--paper);border:1px solid var(--line);padding:2px 8px;border-radius:6px}
+.foot a{font-size:.85rem;text-decoration:none;white-space:nowrap}
+.foot a:hover{text-decoration:underline}
+.empty{display:none;text-align:center;color:var(--muted);padding:48px 0}
+.cta{background:var(--navy);color:#fff;border-radius:var(--r-m);padding:28px;margin-top:48px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.cta h2{font-size:1.3rem;letter-spacing:-.015em}
+.cta p{color:var(--muted-dark);margin-top:6px;max-width:560px}
+.note{color:var(--muted);font-size:.85rem;margin-top:18px}
+footer{background:var(--navy-deep);color:var(--muted-dark);padding:28px 0;font-size:.85rem}
+footer a{color:var(--muted-dark)}
+footer a:hover{color:var(--teal)}
+.hide{display:none!important}
+@media (max-width:600px){.grid{grid-template-columns:1fr}.cta{padding:22px}.stats{gap:20px}}
+@media print{
+  .hdr,.bar,.who,.cta a,footer{display:none}
+  body{background:#fff;font-size:11pt}
+  .hero{background:#fff;color:var(--ink);padding:0 0 12px}
+  .hero p,.stats div{color:var(--muted)} .stats b{color:var(--ink)}
+  .card{break-inside:avoid;transform:none!important}
+  .cta{background:#fff;color:var(--ink);border:1px solid var(--line)}
+  .hide{display:block!important}
+}
+</style>
+</head>
+<body>
+<header class="hdr"><div class="wrap">
+  <a class="logo" href="/" aria-label="Voicelix, úvod">
+    <svg viewBox="0 0 40 22" aria-hidden="true"><g fill="#00C9A7"><rect x="0" y="8" width="3" height="6" rx="1.5" opacity=".45"/><rect x="6" y="5" width="3" height="12" rx="1.5" opacity=".7"/><rect x="12" y="1" width="3" height="20" rx="1.5"/><rect x="18" y="4" width="3" height="14" rx="1.5"/><rect x="24" y="0" width="3" height="22" rx="1.5"/><rect x="30" y="6" width="3" height="10" rx="1.5" opacity=".7"/><rect x="36" y="9" width="3" height="4" rx="1.5" opacity=".45"/></g></svg>
+    Voicelix
+  </a>
+  <nav class="hnav" aria-label="Navigace">
+    <a href="/#sluzby" class="hl">Služby</a>
+    <a href="/#zakladatel" class="hl">Kdo za tím stojí</a>
+    <a href="tel:+420910926750" class="hcta">Zavolat Kláře</a>
+  </nav>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <span class="eyebrow">Voicelix Toolkit</span>
+  <h1>Nástroje, které umíme <em>rozjet, propojit a spravovat</em></h1>
+  <p>Voicelix staví AI asistenty a celé IT pro české firmy. Tady najdete nástroje, se kterými pracujeme: co všechno vám umíme nasadit, napojit na to, co už používáte, a dlouhodobě spravovat.</p>
+  <div class="stats">
+    <div><b>26</b>nástrojů</div>
+    <div><b>8</b>oblastí</div>
+    <div><b>1</b>odpovědný člověk</div>
+  </div>
+</div></section>
+
+<section class="who" aria-label="Kdo jsme"><div class="wrap">
+  <a class="wcard" href="/#zakladatel">
+    <b>Staví osobně architekt s právním vzděláním</b>
+    <span>Žádní subdodavatelé. Kdo s vámi řešení navrhne, ten ho postaví a spravuje.</span>
+    <em>Kdo za tím stojí →</em>
+  </a>
+  <a class="wcard" href="/#tym">
+    <b>AI tým, který zvedne každý hovor</b>
+    <span>Klára, Tomáš, Jana a Honza. Všichni se představí jako AI, jak vyžaduje AI Act.</span>
+    <em>Poznat tým →</em>
+  </a>
+  <a class="wcard" href="/#data">
+    <b>Compliance by design</b>
+    <span>GDPR, AI Act a smlouva o zpracování osobních údajů jsou součástí každého nasazení.</span>
+    <em>Data a legislativa →</em>
+  </a>
+</div></section>
+
+<div class="bar"><div class="wrap">
+  <input class="search" id="q" type="search" placeholder="Hledat nástroj nebo potřebu, třeba „faktury“ nebo „hovory“" aria-label="Hledat v nástrojích" autocomplete="off">
+  <div class="chips" role="group" aria-label="Filtrovat podle oblasti">
+    <button type="button" class="chip on" data-f="all">Vše</button>
+    <button type="button" class="chip" data-f="hlas">Hlas a AI <span>6</span></button>
+    <button type="button" class="chip" data-f="agenti">AI agenti a automatizace <span>4</span></button>
+    <button type="button" class="chip" data-f="web">Web a domény <span>6</span></button>
+    <button type="button" class="chip" data-f="kancelar">Email a kancelář <span>1</span></button>
+    <button type="button" class="chip" data-f="rezervace">Rezervace <span>3</span></button>
+    <button type="button" class="chip" data-f="crm">CRM a data <span>2</span></button>
+    <button type="button" class="chip" data-f="fakturace">Fakturace <span>2</span></button>
+    <button type="button" class="chip" data-f="marketing">Email marketing <span>2</span></button>
+  </div>
+</div></div>
+
+<main><div class="wrap">
+  <section class="cat" data-c="hlas">
+    <h2>Hlas a AI</h2>
+    <div class="grid">
+      <article class="card" data-s="vapi platforma pro hlasové ai asistenty. postavíme asistenta, který zvedne hovor, odpoví na dotazy a zarezervuje termín. hlas a ai hlasový asistent">
+        <div class="top"><h3>Vapi</h3><span class="own" title="Tento nástroj používáme i ve vlastním provozu">Běží i u nás</span></div>
+        <p class="what">Platforma pro hlasové AI asistenty.</p>
+        <p class="we"><b>Co uděláme:</b> Postavíme asistenta, který zvedne hovor, odpoví na dotazy a zarezervuje termín.</p>
+        <div class="foot"><div class="tags"><span class="tag">Hlasový asistent</span></div><a href="https://vapi.ai" target="_blank" rel="noopener noreferrer" aria-label="Web Vapi">web ↗</a></div>
+      </article>
+      <article class="card" data-s="elevenlabs přirozené hlasy, převod textu na řeč. vybereme a vyladíme český hlas asistenta včetně výslovnosti vašich názvů. hlas a ai hlasový asistent web asistent">
+        <div class="top"><h3>ElevenLabs</h3><span class="own" title="Tento nástroj používáme i ve vlastním provozu">Běží i u nás</span></div>
+        <p class="what">Přirozené hlasy, převod textu na řeč.</p>
+        <p class="we"><b>Co uděláme:</b> Vybereme a vyladíme český hlas asistenta včetně výslovnosti vašich názvů.</p>
+        <div class="foot"><div class="tags"><span class="tag">Hlasový asistent</span><span class="tag">Web asistent</span></div><a href="https://elevenlabs.io" target="_blank" rel="noopener noreferrer" aria-label="Web ElevenLabs">web ↗</a></div>
+      </article>
+      <article class="card" data-s="deepgram převod řeči na text, i v češtině. nastavíme rozpoznávání řeči a odborné výrazy vašeho oboru. hlas a ai hlasový asistent">
+        <div class="top"><h3>Deepgram</h3><span class="own" title="Tento nástroj používáme i ve vlastním provozu">Běží i u nás</span></div>
+        <p class="what">Převod řeči na text, i v češtině.</p>
+        <p class="we"><b>Co uděláme:</b> Nastavíme rozpoznávání řeči a odborné výrazy vašeho oboru.</p>
+        <div class="foot"><div class="tags"><span class="tag">Hlasový asistent</span></div><a href="https://deepgram.com" target="_blank" rel="noopener noreferrer" aria-label="Web Deepgram">web ↗</a></div>
+      </article>
+      <article class="card" data-s="twilio telefonní čísla a hovory přes internet. zřídíme české číslo nebo napojíme přesměrování z toho stávajícího. hlas a ai hlasový asistent">
+        <div class="top"><h3>Twilio</h3><span class="own" title="Tento nástroj používáme i ve vlastním provozu">Běží i u nás</span></div>
+        <p class="what">Telefonní čísla a hovory přes internet.</p>
+        <p class="we"><b>Co uděláme:</b> Zřídíme české číslo nebo napojíme přesměrování z toho stávajícího.</p>
+        <div class="foot"><div class="tags"><span class="tag">Hlasový asistent</span></div><a href="https://www.twilio.com" target="_blank" rel="noopener noreferrer" aria-label="Web Twilio">web ↗</a></div>
+      </article>
+      <article class="card" data-s="claude (anthropic) jazykový model, mozek našich asistentů. napíšeme a otestujeme instrukce, aby asistent mluvil k věci a v souladu s ai actem. hlas a ai hlasový asistent email agent web asistent">
+        <div class="top"><h3>Claude (Anthropic)</h3><span class="own" title="Tento nástroj používáme i ve vlastním provozu">Běží i u nás</span></div>
+        <p class="what">Jazykový model, mozek našich asistentů.</p>
+        <p class="we"><b>Co uděláme:</b> Napíšeme a otestujeme instrukce, aby asistent mluvil k věci a v souladu s AI Actem.</p>
+        <div class="foot"><div class="tags"><span class="tag">Hlasový asistent</span><span class="tag">Email agent</span><span class="tag">Web asistent</span></div><a href="https://www.anthropic.com/claude" target="_blank" rel="noopener noreferrer" aria-label="Web Claude (Anthropic)">web ↗</a></div>
+      </article>
+      <article class="card" data-s="openai jazykové modely gpt. využijeme je pro psaní textů a emailů v automatizacích. hlas a ai outreach agent email agent">
+        <div class="top"><h3>OpenAI</h3><span class="own" title="Tento nástroj používáme i ve vlastním provozu">Běží i u nás</span></div>
+        <p class="what">Jazykové modely GPT.</p>
+        <p class="we"><b>Co uděláme:</b> Využijeme je pro psaní textů a emailů v automatizacích.</p>
+        <div class="foot"><div class="tags"><span class="tag">Outreach agent</span><span class="tag">Email agent</span></div><a href="https://openai.com" target="_blank" rel="noopener noreferrer" aria-label="Web OpenAI">web ↗</a></div>
+      </article>
+    </div>
+  </section>
+  <section class="cat" data-c="agenti">
+    <h2>AI agenti a automatizace</h2>
+    <div class="grid">
+      <article class="card" data-s="relevance ai platforma pro samostatně pracující ai agenty. postavíme agenta, který hledá klienty, třídí emaily nebo připravuje odpovědi. ai agenti a automatizace outreach agent email agent">
+        <div class="top"><h3>Relevance AI</h3><span class="own" title="Tento nástroj používáme i ve vlastním provozu">Běží i u nás</span></div>
+        <p class="what">Platforma pro samostatně pracující AI agenty.</p>
+        <p class="we"><b>Co uděláme:</b> Postavíme agenta, který hledá klienty, třídí emaily nebo připravuje odpovědi.</p>
+        <div class="foot"><div class="tags"><span class="tag">Outreach agent</span><span class="tag">Email agent</span></div><a href="https://relevanceai.com" target="_blank" rel="noopener noreferrer" aria-label="Web Relevance AI">web ↗</a></div>
+      </article>
+      <article class="card" data-s="make.com vizuální automatizace mezi aplikacemi. propojíme formuláře, crm, kalendář a fakturaci, ať nic nepřepisujete ručně. ai agenti a automatizace it a integrace">
+        <div class="top"><h3>Make.com</h3><span class="own" title="Tento nástroj používáme i ve vlastním provozu">Běží i u nás</span></div>
+        <p class="what">Vizuální automatizace mezi aplikacemi.</p>
+        <p class="we"><b>Co uděláme:</b> Propojíme formuláře, CRM, kalendář a fakturaci, ať nic nepřepisujete ručně.</p>
+        <div class="foot"><div class="tags"><span class="tag">IT a integrace</span></div><a href="https://www.make.com" target="_blank" rel="noopener noreferrer" aria-label="Web Make.com">web ↗</a></div>
+      </article>
+      <article class="card" data-s="firecrawl čtení a vytěžování obsahu webových stránek. agent si o firmě před oslovením sám zjistí, čím se zabývá. ai agenti a automatizace outreach agent">
+        <div class="top"><h3>Firecrawl</h3><span class="own" title="Tento nástroj používáme i ve vlastním provozu">Běží i u nás</span></div>
+        <p class="what">Čtení a vytěžování obsahu webových stránek.</p>
+        <p class="we"><b>Co uděláme:</b> Agent si o firmě před oslovením sám zjistí, čím se zabývá.</p>
+        <div class="foot"><div class="tags"><span class="tag">Outreach agent</span></div><a href="https://www.firecrawl.dev" target="_blank" rel="noopener noreferrer" aria-label="Web Firecrawl">web ↗</a></div>
+      </article>
+      <article class="card" data-s="google maps platform data o firmách a místech z map google. agent podle oboru a města najde firmy, které stojí za oslovení. ai agenti a automatizace outreach agent">
+        <div class="top"><h3>Google Maps Platform</h3><span class="own" title="Tento nástroj používáme i ve vlastním provozu">Běží i u nás</span></div>
+        <p class="what">Data o firmách a místech z Map Google.</p>
+        <p class="we"><b>Co uděláme:</b> Agent podle oboru a města najde firmy, které stojí za oslovení.</p>
+        <div class="foot"><div class="tags"><span class="tag">Outreach agent</span></div><a href="https://mapsplatform.google.com" target="_blank" rel="noopener noreferrer" aria-label="Web Google Maps Platform">web ↗</a></div>
+      </article>
+    </div>
+  </section>
+  <section class="cat" data-c="web">
+    <h2>Web a domény</h2>
+    <div class="grid">
+      <article class="card" data-s="netlify hosting rychlých a bezpečných webů. nasadíme a hostujeme váš web včetně https a formulářů. web a domény web">
+        <div class="top"><h3>Netlify</h3><span class="own" title="Tento nástroj používáme i ve vlastním provozu">Běží i u nás</span></div>
+        <p class="what">Hosting rychlých a bezpečných webů.</p>
+        <p class="we"><b>Co uděláme:</b> Nasadíme a hostujeme váš web včetně HTTPS a formulářů.</p>
+        <div class="foot"><div class="tags"><span class="tag">Web</span></div><a href="https://www.netlify.com" target="_blank" rel="noopener noreferrer" aria-label="Web Netlify">web ↗</a></div>
+      </article>
+      <article class="card" data-s="github správa kódu a jeho verzí. kód webu a aplikací vedeme ve verzích, každou změnu jde dohledat i vrátit. web a domény web it a integrace">
+        <div class="top"><h3>GitHub</h3><span class="own" title="Tento nástroj používáme i ve vlastním provozu">Běží i u nás</span></div>
+        <p class="what">Správa kódu a jeho verzí.</p>
+        <p class="we"><b>Co uděláme:</b> Kód webu a aplikací vedeme ve verzích, každou změnu jde dohledat i vrátit.</p>
+        <div class="foot"><div class="tags"><span class="tag">Web</span><span class="tag">IT a integrace</span></div><a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="Web GitHub">web ↗</a></div>
+      </article>
+      <article class="card" data-s="namecheap registrace domén .ai, .com a dalších. zaregistrujeme doménu a nastavíme dns pro web i email. web a domény web">
+        <div class="top"><h3>Namecheap</h3><span class="own" title="Tento nástroj používáme i ve vlastním provozu">Běží i u nás</span></div>
+        <p class="what">Registrace domén .ai, .com a dalších.</p>
+        <p class="we"><b>Co uděláme:</b> Zaregistrujeme doménu a nastavíme DNS pro web i email.</p>
+        <div class="foot"><div class="tags"><span class="tag">Web</span></div><a href="https://www.namecheap.com" target="_blank" rel="noopener noreferrer" aria-label="Web Namecheap">web ↗</a></div>
+      </article>
+      <article class="card" data-s="czechia.com české domény a dns (.cz, .eu). převedeme nebo zaregistrujeme českou doménu a nastavíme záznamy. web a domény web">
+        <div class="top"><h3>czechia.com</h3><span class="own" title="Tento nástroj používáme i ve vlastním provozu">Běží i u nás</span></div>
+        <p class="what">České domény a DNS (.cz, .eu).</p>
+        <p class="we"><b>Co uděláme:</b> Převedeme nebo zaregistrujeme českou doménu a nastavíme záznamy.</p>
+        <div class="foot"><div class="tags"><span class="tag">Web</span></div><a href="https://www.czechia.com" target="_blank" rel="noopener noreferrer" aria-label="Web czechia.com">web ↗</a></div>
+      </article>
+      <article class="card" data-s="profil firmy na googlu vaše firma v mapách a výsledcích hledání google. založíme a vyplníme profil, aby vás zákazníci našli i s otevírací dobou. web a domény web">
+        <div class="top"><h3>Profil firmy na Googlu</h3></div>
+        <p class="what">Vaše firma v Mapách a výsledcích hledání Google.</p>
+        <p class="we"><b>Co uděláme:</b> Založíme a vyplníme profil, aby vás zákazníci našli i s otevírací dobou.</p>
+        <div class="foot"><div class="tags"><span class="tag">Web</span></div><a href="https://business.google.com" target="_blank" rel="noopener noreferrer" aria-label="Web Profil firmy na Googlu">web ↗</a></div>
+      </article>
+      <article class="card" data-s="canva grafika pro web a sociální sítě. připravíme vizuály a šablony, které si pak upravíte sami. web a domény web">
+        <div class="top"><h3>Canva</h3><span class="own" title="Tento nástroj používáme i ve vlastním provozu">Běží i u nás</span></div>
+        <p class="what">Grafika pro web a sociální sítě.</p>
+        <p class="we"><b>Co uděláme:</b> Připravíme vizuály a šablony, které si pak upravíte sami.</p>
+        <div class="foot"><div class="tags"><span class="tag">Web</span></div><a href="https://www.canva.com" target="_blank" rel="noopener noreferrer" aria-label="Web Canva">web ↗</a></div>
+      </article>
+    </div>
+  </section>
+  <section class="cat" data-c="kancelar">
+    <h2>Email a kancelář</h2>
+    <div class="grid">
+      <article class="card" data-s="google workspace firemní email, disk, kalendář a dokumenty. zřídíme emaily na vaší doméně včetně spf, dkim a dmarc, aby nepadaly do spamu. email a kancelář web it a integrace">
+        <div class="top"><h3>Google Workspace</h3><span class="own" title="Tento nástroj používáme i ve vlastním provozu">Běží i u nás</span></div>
+        <p class="what">Firemní email, disk, kalendář a dokumenty.</p>
+        <p class="we"><b>Co uděláme:</b> Zřídíme emaily na vaší doméně včetně SPF, DKIM a DMARC, aby nepadaly do spamu.</p>
+        <div class="foot"><div class="tags"><span class="tag">Web</span><span class="tag">IT a integrace</span></div><a href="https://workspace.google.com" target="_blank" rel="noopener noreferrer" aria-label="Web Google Workspace">web ↗</a></div>
+      </article>
+    </div>
+  </section>
+  <section class="cat" data-c="rezervace">
+    <h2>Rezervace</h2>
+    <div class="grid">
+      <article class="card" data-s="google kalendář kalendář, do kterého zapisuje i asistent. propojíme kalendář s hlasovým asistentem, termíny se zapisují samy. rezervace hlasový asistent rezervace">
+        <div class="top"><h3>Google Kalendář</h3><span class="own" title="Tento nástroj používáme i ve vlastním provozu">Běží i u nás</span></div>
+        <p class="what">Kalendář, do kterého zapisuje i asistent.</p>
+        <p class="we"><b>Co uděláme:</b> Propojíme kalendář s hlasovým asistentem, termíny se zapisují samy.</p>
+        <div class="foot"><div class="tags"><span class="tag">Hlasový asistent</span><span class="tag">Rezervace</span></div><a href="https://calendar.google.com" target="_blank" rel="noopener noreferrer" aria-label="Web Google Kalendář">web ↗</a></div>
+      </article>
+      <article class="card" data-s="cal.com online rezervace termínů, open source. vložíme rezervační widget na váš web s potvrzením a připomínkami. rezervace rezervace">
+        <div class="top"><h3>Cal.com</h3></div>
+        <p class="what">Online rezervace termínů, open source.</p>
+        <p class="we"><b>Co uděláme:</b> Vložíme rezervační widget na váš web s potvrzením a připomínkami.</p>
+        <div class="foot"><div class="tags"><span class="tag">Rezervace</span></div><a href="https://cal.com" target="_blank" rel="noopener noreferrer" aria-label="Web Cal.com">web ↗</a></div>
+      </article>
+      <article class="card" data-s="calendly online rezervace schůzek. nastavíme typy schůzek a napojíme je na váš kalendář a web. rezervace rezervace">
+        <div class="top"><h3>Calendly</h3></div>
+        <p class="what">Online rezervace schůzek.</p>
+        <p class="we"><b>Co uděláme:</b> Nastavíme typy schůzek a napojíme je na váš kalendář a web.</p>
+        <div class="foot"><div class="tags"><span class="tag">Rezervace</span></div><a href="https://calendly.com" target="_blank" rel="noopener noreferrer" aria-label="Web Calendly">web ↗</a></div>
+      </article>
+    </div>
+  </section>
+  <section class="cat" data-c="crm">
+    <h2>CRM a data</h2>
+    <div class="grid">
+      <article class="card" data-s="google tabulky jednoduché crm a přehledy bez licencí navíc. navrhneme tabulku leadů a zákazníků, do které zapisují i ai agenti. crm a data it a integrace">
+        <div class="top"><h3>Google Tabulky</h3><span class="own" title="Tento nástroj používáme i ve vlastním provozu">Běží i u nás</span></div>
+        <p class="what">Jednoduché CRM a přehledy bez licencí navíc.</p>
+        <p class="we"><b>Co uděláme:</b> Navrhneme tabulku leadů a zákazníků, do které zapisují i AI agenti.</p>
+        <div class="foot"><div class="tags"><span class="tag">IT a integrace</span></div><a href="https://www.google.com/sheets/about/" target="_blank" rel="noopener noreferrer" aria-label="Web Google Tabulky">web ↗</a></div>
+      </article>
+      <article class="card" data-s="salesforce crm pro větší firmy a obchodní týmy. pomůžeme s nasazením, napojením a úpravami podle vašich procesů. crm a data it a integrace">
+        <div class="top"><h3>Salesforce</h3></div>
+        <p class="what">CRM pro větší firmy a obchodní týmy.</p>
+        <p class="we"><b>Co uděláme:</b> Pomůžeme s nasazením, napojením a úpravami podle vašich procesů.</p>
+        <div class="foot"><div class="tags"><span class="tag">IT a integrace</span></div><a href="https://www.salesforce.com" target="_blank" rel="noopener noreferrer" aria-label="Web Salesforce">web ↗</a></div>
+      </article>
+    </div>
+  </section>
+  <section class="cat" data-c="fakturace">
+    <h2>Fakturace</h2>
+    <div class="grid">
+      <article class="card" data-s="fakturoid online fakturace pro české firmy. automatizujeme vystavení faktury a upomínky po dokončené zakázce. fakturace it a integrace">
+        <div class="top"><h3>Fakturoid</h3></div>
+        <p class="what">Online fakturace pro české firmy.</p>
+        <p class="we"><b>Co uděláme:</b> Automatizujeme vystavení faktury a upomínky po dokončené zakázce.</p>
+        <div class="foot"><div class="tags"><span class="tag">IT a integrace</span></div><a href="https://www.fakturoid.cz" target="_blank" rel="noopener noreferrer" aria-label="Web Fakturoid">web ↗</a></div>
+      </article>
+      <article class="card" data-s="idoklad online fakturace a evidence dokladů. napojíme fakturaci na crm nebo rezervace, ať doklady vznikají samy. fakturace it a integrace">
+        <div class="top"><h3>iDoklad</h3></div>
+        <p class="what">Online fakturace a evidence dokladů.</p>
+        <p class="we"><b>Co uděláme:</b> Napojíme fakturaci na CRM nebo rezervace, ať doklady vznikají samy.</p>
+        <div class="foot"><div class="tags"><span class="tag">IT a integrace</span></div><a href="https://www.idoklad.cz" target="_blank" rel="noopener noreferrer" aria-label="Web iDoklad">web ↗</a></div>
+      </article>
+    </div>
+  </section>
+  <section class="cat" data-c="marketing">
+    <h2>Email marketing</h2>
+    <div class="grid">
+      <article class="card" data-s="mailchimp newslettery a emailové kampaně. nastavíme seznamy kontaktů, šablony a automatické kampaně. email marketing it a integrace">
+        <div class="top"><h3>Mailchimp</h3></div>
+        <p class="what">Newslettery a emailové kampaně.</p>
+        <p class="we"><b>Co uděláme:</b> Nastavíme seznamy kontaktů, šablony a automatické kampaně.</p>
+        <div class="foot"><div class="tags"><span class="tag">IT a integrace</span></div><a href="https://mailchimp.com" target="_blank" rel="noopener noreferrer" aria-label="Web Mailchimp">web ↗</a></div>
+      </article>
+      <article class="card" data-s="brevo email a sms marketing z eu. napojíme formuláře a crm, ať se kontakty plní samy, se souhlasy podle gdpr. email marketing it a integrace">
+        <div class="top"><h3>Brevo</h3></div>
+        <p class="what">Email a SMS marketing z EU.</p>
+        <p class="we"><b>Co uděláme:</b> Napojíme formuláře a CRM, ať se kontakty plní samy, se souhlasy podle GDPR.</p>
+        <div class="foot"><div class="tags"><span class="tag">IT a integrace</span></div><a href="https://www.brevo.com" target="_blank" rel="noopener noreferrer" aria-label="Web Brevo">web ↗</a></div>
+      </article>
+    </div>
+  </section>
+  <p class="empty" id="empty">Nic takového tu zatím není. Napište nám, nejspíš to umíme napojit.</p>
+
+  <div class="cta">
+    <div>
+      <h2>Používáte nástroj, který tu chybí?</h2>
+      <p>Většinu aplikací s API umíme napojit. Na konzultaci projdeme, co používáte, a navrhneme, co propojit nebo automatizovat.</p>
+    </div>
+    <div class="cta-acts">
+      <a class="b1" href="/#rezervace">Konzultace zdarma</a>
+      <a class="b2" href="tel:+420910926750">Zavolat Kláře</a>
+    </div>
+  </div>
+  <p class="note">Štítek „Běží i u nás“ označuje nástroje, které používáme ve vlastním provozu. Uvedené názvy a ochranné známky patří jejich vlastníkům. Voicelix není jejich oficiálním partnerem, pokud není uvedeno jinak.</p>
+</div></main>
+
+<footer><div class="wrap">© 2026 Voicelix · Pavel Šrámek, IČO 05378567, Slovanské údolí 1016/47, 318 00 Plzeň · <a href="/">voicelix.ai</a> · <a href="/ochrana-osobnich-udaju.html">Ochrana osobních údajů</a></div></footer>
+
+<script>
+(function(){
+  var q=document.getElementById('q'),chips=[].slice.call(document.querySelectorAll('.chip')),
+      cats=[].slice.call(document.querySelectorAll('.cat')),empty=document.getElementById('empty'),f='all';
+  function norm(s){return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+  cats.forEach(function(c){[].forEach.call(c.querySelectorAll('.card'),function(k){k._s=norm(k.getAttribute('data-s'));});});
+  function run(){
+    var t=norm(q.value.trim()),any=false;
+    cats.forEach(function(c){
+      var on=(f==='all'||c.getAttribute('data-c')===f),shown=0;
+      [].forEach.call(c.querySelectorAll('.card'),function(k){
+        var ok=on&&(!t||k._s.indexOf(t)>-1);k.classList.toggle('hide',!ok);if(ok)shown++;
+      });
+      c.classList.toggle('hide',!shown);if(shown)any=true;
+    });
+    empty.style.display=any?'none':'block';
+  }
+  q.addEventListener('input',run);
+  chips.forEach(function(b){b.addEventListener('click',function(){
+    f=b.getAttribute('data-f');chips.forEach(function(x){x.classList.toggle('on',x===b);});run();
+  });});
+})();
+</script>
+</body>
+</html>
