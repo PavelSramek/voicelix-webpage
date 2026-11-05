@@ -51,6 +51,10 @@ h2{font-size:clamp(2rem,4vw,3rem);max-width:18ch}
 .logo svg{height:22px;width:auto}
 .nav{display:flex;gap:30px}
 .nav a{color:var(--muted-dark);text-decoration:none;font-size:.95rem;font-weight:500}
+.nav a{white-space:nowrap}
+@media (max-width:1180px){.nav{gap:18px}.nav a{font-size:.9rem}}
+@media (max-width:1040px){.nav{gap:14px}.t-long{display:none}}
+@media (max-width:960px){.nav a[href="#srovnani"]{display:none}}
 .nav a:hover{color:#fff}
 .hdr-right{display:flex;align-items:center;gap:6px}
 .hdr-cta{padding:11px 18px;font-size:.92rem}
@@ -217,6 +221,7 @@ td:first-child{font-weight:600;width:26%}
 .plan li svg{width:18px;height:18px;color:var(--teal-ink);flex-shrink:0;margin-top:3px}
 .plan.hl li svg{color:var(--teal)}
 .pnote{margin-top:28px;color:var(--muted);font-size:.93rem}
+@media (max-width:1100px){.plan{padding:30px 22px}.price{font-size:2.1rem}}
 
 .pilot{background:var(--teal);color:var(--navy);padding:88px 0}
 .pilot .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
@@ -416,6 +421,7 @@ footer a:hover{color:var(--teal)}
     </a>
     <nav class="nav" aria-label="Hlavní navigace">
       <a href="#sluzby">Služby</a>
+      <a href="/tools/">Toolkit</a>
       <a href="#jak-to-funguje">Jak to funguje</a>
       <a href="#srovnani">Proč Voicelix</a>
       <a href="#zakladatel">Kdo za tím stojí</a>
@@ -431,6 +437,7 @@ footer a:hover{color:var(--teal)}
   </div>
   <nav class="mnav" id="mnav" aria-label="Mobilní navigace">
     <a href="#sluzby">Služby</a>
+    <a href="/tools/">Toolkit</a>
     <a href="#jak-to-funguje">Jak to funguje</a>
     <a href="#srovnani">Proč Voicelix</a>
     <a href="#zakladatel">Kdo za tím stojí</a>
