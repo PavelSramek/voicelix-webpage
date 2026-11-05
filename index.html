@@ -137,6 +137,15 @@ h2{font-size:clamp(2rem,4vw,3rem);max-width:18ch}
 .sbody li{margin-bottom:4px}
 .svc-cta{margin-top:40px;display:flex;gap:14px;flex-wrap:wrap}
 
+.tk{padding:72px 0;background:#fff;border-bottom:1px solid var(--line)}
+.tk .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.tk h2{font-size:clamp(1.6rem,3vw,2.2rem);max-width:20ch}
+.tk .lead{margin-top:14px}
+.tk-cloud{display:flex;flex-wrap:wrap;gap:8px}
+.tk-cloud span{font-size:.9rem;font-weight:600;color:var(--navy);background:var(--paper);border:1px solid var(--line);padding:7px 13px;border-radius:999px}
+.tk-cloud span.more{background:var(--teal-soft);border-color:transparent;color:var(--teal-ink)}
+.tk .btn{margin-top:26px}
+@media (max-width:860px){.tk{padding:56px 0}.tk .wrap{grid-template-columns:1fr;gap:28px}}
 .how{background:var(--navy-deep);color:#fff}
 .how .lead{color:#B9C6DC}
 .flow{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);position:relative}
@@ -584,7 +593,19 @@ footer a:hover{color:var(--teal)}
     <div class="svc-cta">
       <a class="btn btn-dark" href="#kontakt">Zjistit, co se hodí pro mou firmu</a>
       <a class="btn btn-line" href="#cenik">Zobrazit ceník</a>
-      <a class="btn btn-line" href="/tools/">Nástroje, se kterými pracujeme</a>
+    </div>
+  </div>
+</section>
+
+<section class="tk" id="nastroje" aria-labelledby="tk-title">
+  <div class="wrap">
+    <div>
+      <h2 id="tk-title">Nástroje, které propojíme v&nbsp;jeden celek</h2>
+      <p class="lead">Telefon, kalendář, CRM, fakturace i email marketing. Nasadíme je, propojíme mezi sebou i&nbsp;s&nbsp;tím, co už ve firmě používáte, a&nbsp;postaráme se o&nbsp;ně. Vy nic neopisujete ručně.</p>
+      <a class="btn btn-dark" href="/tools/">Prohlédnout Toolkit</a>
+    </div>
+    <div class="tk-cloud" aria-label="Příklady nástrojů">
+      <span>Vapi</span><span>Twilio</span><span>ElevenLabs</span><span>Claude</span><span>Google Workspace</span><span>Google Kalendář</span><span>Cal.com</span><span>Calendly</span><span>Relevance AI</span><span>Make.com</span><span>Salesforce</span><span>Fakturoid</span><span>iDoklad</span><span>Brevo</span><span>Mailchimp</span><span>Netlify</span><span class="more">a&nbsp;dalších 10</span>
     </div>
   </div>
 </section>
