@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Toolkit: nástroje, se kterými pracujeme | Voicelix</title>
-<meta name="description" content="Hlasoví AI asistenti, weby, CRM, rezervace, fakturace i email marketing. Přehled nástrojů, které Voicelix umí nasadit, propojit a spravovat, v souladu s GDPR a AI Actem.">
+<meta name="description" content="Hlasoví AI asistenti, weby, CRM, rezervace, fakturace i email marketing. Přehled nástrojů, které Voicelix umí nasadit, vzájemně propojit a spravovat, v souladu s GDPR a AI Actem.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://voicelix.ai/tools/">
 <meta property="og:title" content="Voicelix Toolkit: nástroje, se kterými pracujeme">
@@ -43,6 +43,20 @@ a{color:var(--teal-ink)}
 .wcard b{font-size:1rem;letter-spacing:-.01em}
 .wcard span{color:var(--muted-dark);font-size:.92rem}
 .wcard em{font-style:normal;color:var(--teal);font-size:.88rem;font-weight:600;margin-top:auto;padding-top:6px}
+.integ{background:#fff;border-bottom:1px solid var(--line);padding:48px 0 40px}
+.ihead{max-width:760px;margin-bottom:24px}
+.integ .eyebrow{color:var(--teal-ink)}
+.ihead h2{font-size:clamp(1.5rem,3.4vw,2.1rem);line-height:1.15;letter-spacing:-.025em}
+.ihead p{color:var(--muted);margin-top:10px;font-size:1.02rem}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
+.flow{border:1px solid var(--line);border-radius:var(--r-m);padding:18px;background:var(--paper)}
+.flow h3{font-size:1.02rem;letter-spacing:-.01em}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:12px 0 10px}
+.node{font-size:.8rem;font-weight:600;color:var(--navy);background:#fff;border:1px solid var(--line);padding:4px 9px;border-radius:999px}
+.arr{color:var(--teal-ink);font-weight:700}
+.flow p{color:var(--muted);font-size:.93rem}
+.inote{color:var(--muted);font-size:.85rem;margin-top:14px}
+@media (max-width:600px){.fgrid{grid-template-columns:1fr}}
 .cta-acts{display:flex;gap:10px;flex-wrap:wrap}
 .cta-acts a{font-weight:700;text-decoration:none;padding:12px 20px;border-radius:var(--r-s);white-space:nowrap}
 .cta-acts .b1{background:var(--teal);color:var(--navy)}
@@ -124,7 +138,7 @@ footer a:hover{color:var(--teal)}
   <div class="stats">
     <div><b>26</b>nástrojů</div>
     <div><b>8</b>oblastí</div>
-    <div><b>1</b>odpovědný člověk</div>
+    <div><b>5</b>AI agentů v týmu</div>
   </div>
 </div></section>
 
@@ -136,7 +150,7 @@ footer a:hover{color:var(--teal)}
   </a>
   <a class="wcard" href="/#tym">
     <b>AI tým, který zvedne každý hovor</b>
-    <span>Klára, Tomáš, Jana a Honza. Všichni se představí jako AI, jak vyžaduje AI Act.</span>
+    <span>Klára, Tomáš, Jana, Honza a Bára. Všichni se představí jako AI, jak vyžaduje AI Act.</span>
     <em>Poznat tým →</em>
   </a>
   <a class="wcard" href="/#data">
@@ -144,6 +158,47 @@ footer a:hover{color:var(--teal)}
     <span>GDPR, AI Act a smlouva o zpracování osobních údajů jsou součástí každého nasazení.</span>
     <em>Data a legislativa →</em>
   </a>
+</div></section>
+
+<section class="integ" id="integrace"><div class="wrap">
+  <div class="ihead">
+    <span class="eyebrow">Integrace</span>
+    <h2>Nástroje nenecháme žít odděleně. Propojíme je.</h2>
+    <p>Největší úspora nevzniká v jedné aplikaci, ale mezi nimi. Propojíme nástroje z tohoto přehledu mezi sebou i s tím, co už ve firmě používáte, přes API, webhooky nebo automatizace. Data mezi nimi tečou sama, nic neopisujete ručně a každý tok navrhujeme v souladu s GDPR.</p>
+  </div>
+  <div class="fgrid">
+    <article class="flow">
+      <div class="top"><h3>Hovor rovnou do kalendáře</h3><span class="own">Běží i u nás</span></div>
+      <div class="chain" aria-label="Twilio → Vapi → Google Kalendář"><span class="node">Twilio</span><span class="arr" aria-hidden="true">→</span><span class="node">Vapi</span><span class="arr" aria-hidden="true">→</span><span class="node">Google Kalendář</span></div>
+      <p>Zákazník zavolá, AI asistent ověří volné termíny a rezervaci zapíše do kalendáře i s pozvánkou.</p>
+    </article>
+    <article class="flow">
+      <div class="top"><h3>Od nalezení firmy po hotový email</h3><span class="own">Běží i u nás</span></div>
+      <div class="chain" aria-label="Google Maps → Firecrawl → OpenAI → Gmail"><span class="node">Google Maps</span><span class="arr" aria-hidden="true">→</span><span class="node">Firecrawl</span><span class="arr" aria-hidden="true">→</span><span class="node">OpenAI</span><span class="arr" aria-hidden="true">→</span><span class="node">Gmail</span></div>
+      <p>Agent najde vhodné firmy, prostuduje jejich web a připraví osobní email ke schválení.</p>
+    </article>
+    <article class="flow">
+      <div class="top"><h3>Formulář z webu do CRM</h3></div>
+      <div class="chain" aria-label="Netlify → Google Tabulky → Gmail"><span class="node">Netlify</span><span class="arr" aria-hidden="true">→</span><span class="node">Google Tabulky</span><span class="arr" aria-hidden="true">→</span><span class="node">Gmail</span></div>
+      <p>Poptávka z webu se sama zapíše do CRM a vám i zákazníkovi přijde potvrzení.</p>
+    </article>
+    <article class="flow">
+      <div class="top"><h3>Rezervace s připomínkou</h3></div>
+      <div class="chain" aria-label="Cal.com / Calendly → Google Kalendář → Brevo"><span class="node">Cal.com / Calendly</span><span class="arr" aria-hidden="true">→</span><span class="node">Google Kalendář</span><span class="arr" aria-hidden="true">→</span><span class="node">Brevo</span></div>
+      <p>Online rezervace se propíše do kalendáře a zákazník dostane včas připomínku.</p>
+    </article>
+    <article class="flow">
+      <div class="top"><h3>Hotová zakázka, hotová faktura</h3></div>
+      <div class="chain" aria-label="Google Tabulky → Make.com → Fakturoid / iDoklad"><span class="node">Google Tabulky</span><span class="arr" aria-hidden="true">→</span><span class="node">Make.com</span><span class="arr" aria-hidden="true">→</span><span class="node">Fakturoid / iDoklad</span></div>
+      <p>Jakmile zakázku označíte jako hotovou, faktura se vystaví a odešle sama.</p>
+    </article>
+    <article class="flow">
+      <div class="top"><h3>Příchozí pošta roztříděná</h3></div>
+      <div class="chain" aria-label="Gmail → Relevance AI → Claude"><span class="node">Gmail</span><span class="arr" aria-hidden="true">→</span><span class="node">Relevance AI</span><span class="arr" aria-hidden="true">→</span><span class="node">Claude</span></div>
+      <p>Agent přečte příchozí emaily, roztřídí je a na běžné dotazy připraví odpověď.</p>
+    </article>
+  </div>
+  <p class="inote">Ukázky. Každé propojení navrhujeme na míru podle toho, jak vaše firma skutečně funguje.</p>
 </div></section>
 
 <div class="bar"><div class="wrap">
