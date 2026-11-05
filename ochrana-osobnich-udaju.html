@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ochrana osobních údajů | Voicelix</title>
+<meta name="description" content="Jak Voicelix zpracovává osobní údaje návštěvníků webu, volajících a obchodních kontaktů.">
+<meta name="robots" content="index,follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0F1E3C; --navy-deep:#0A1530;
+  --teal:#00C9A7; --teal-ink:#008C75; --teal-soft:#E0F7F2;
+  --paper:#F4F7FB; --white:#FFFFFF; --line:#DDE4EE;
+  --ink:#13223F; --muted:#5B6B85; --muted-dark:#9AA9C4;
+  --r-s:8px; --r-m:14px;
+  --font:'Onest','Segoe UI',system-ui,-apple-system,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:24px}
+body{font-family:var(--font);color:var(--ink);background:var(--white);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+a{color:var(--teal-ink)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:4px}
+.wrap{max-width:820px;margin:0 auto;padding:0 24px}
+.hdr{background:var(--navy);color:#fff;padding:18px 0}
+.hdr .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.logo{color:#fff;text-decoration:none;font-weight:800;font-size:1.3rem;letter-spacing:-.02em}
+.back{color:var(--muted-dark);text-decoration:none;font-size:.95rem}
+.back:hover{color:var(--teal)}
+.hero{background:var(--navy);color:#fff;padding:40px 0 56px}
+.hero h1{font-size:clamp(2rem,5vw,2.8rem);line-height:1.1;letter-spacing:-.025em}
+.hero p{color:var(--muted-dark);margin-top:12px}
+main{padding:48px 0 72px}
+.toc{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-m);padding:22px 26px;margin-bottom:40px}
+.toc b{display:block;margin-bottom:8px}
+.toc ol{padding-left:20px;columns:2;column-gap:32px}
+.toc li{margin-bottom:4px;font-size:.95rem;break-inside:avoid}
+h2{font-size:1.4rem;line-height:1.25;letter-spacing:-.015em;margin:44px 0 12px}
+h3{font-size:1.05rem;margin:22px 0 6px}
+p,ul{margin-bottom:12px}
+ul{padding-left:22px}
+li{margin-bottom:6px}
+.tbl{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:var(--r-s)}
+table{border-collapse:collapse;width:100%;font-size:.93rem;min-width:600px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}
+th{background:var(--paper);font-weight:600}
+tr:last-child td{border-bottom:0}
+.box{background:var(--teal-soft);border-radius:var(--r-m);padding:18px 22px;margin:18px 0;color:var(--navy)}
+footer{background:var(--navy-deep);color:var(--muted-dark);padding:32px 0;font-size:.85rem}
+footer a{color:var(--muted-dark)}
+footer a:hover{color:var(--teal)}
+@media (max-width:600px){.toc ol{columns:1}body{font-size:16px}}
+</style>
+</head>
+<body>
+<header class="hdr"><div class="wrap"><a class="logo" href="/">Voicelix</a><a class="back" href="/">Zpět na web</a></div></header>
+<section class="hero"><div class="wrap">
+  <h1>Ochrana osobních údajů</h1>
+  <p>Platné od 5. 11. 2026. Popisujeme, jaké údaje zpracováváme, proč, jak dlouho a jaká máte práva.</p>
+</div></section>
+
+<main><div class="wrap">
+  <nav class="toc" aria-label="Obsah">
+    <b>Obsah</b>
+    <ol>
+      <li><a href="#spravce">Kdo je správce</a></li>
+      <li><a href="#prehled">Co zpracováváme a proč</a></li>
+      <li><a href="#chat">AI chat na webu</a></li>
+      <li><a href="#telefon">Telefonní AI asistenti</a></li>
+      <li><a href="#osloveni">Obchodní oslovení</a></li>
+      <li><a href="#prijemci">Kdo údaje zpracovává pro nás</a></li>
+      <li><a href="#predani">Předání mimo EU</a></li>
+      <li><a href="#cookies">Cookies a úložiště prohlížeče</a></li>
+      <li><a href="#prava">Vaše práva</a></li>
+      <li><a href="#zmeny">Změny těchto zásad</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="spravce">1. Kdo je správce</h2>
+  <p>Správcem osobních údajů je <b>Pavel Šrámek</b>, IČO 05378567, se sídlem Slovanské údolí 1016/47, 318 00 Plzeň, fyzická osoba podnikající pod značkou Voicelix (dále „my“).</p>
+  <p>Ve všech otázkách ochrany osobních údajů nás kontaktujte na <a href="mailto:pavel@voicelix.ai">pavel@voicelix.ai</a> nebo poštou na adrese sídla. Pověřence pro ochranu osobních údajů nemáme jmenovaného, protože nám to zákon neukládá. Na dotazy odpovídá přímo Pavel Šrámek.</p>
+
+  <h2 id="prehled">2. Co zpracováváme a proč</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Situace</th><th>Údaje</th><th>Účel a právní základ</th><th>Jak dlouho</th></tr></thead>
+    <tbody>
+      <tr><td>Poptávkový formulář</td><td>jméno, firma, email, telefon, obor, text zprávy</td><td>odpověď na poptávku a jednání o smlouvě, čl. 6 odst. 1 písm. b) GDPR</td><td>2 roky od posledního kontaktu, pokud nevznikne smlouva</td></tr>
+      <tr><td>AI chat na webu</td><td>text konverzace; pokud nám kontakt sami pošlete: jméno, email nebo telefon, firma, potřeba a přepis konverzace</td><td>odpovědi na dotazy a jednání o smlouvě, čl. 6 odst. 1 písm. b) GDPR</td><td>bez předání kontaktu neukládáme; s kontaktem 2 roky od posledního kontaktu</td></tr>
+      <tr><td>Rezervace konzultace</td><td>jméno, email, zvolený termín, případná poznámka</td><td>uskutečnění konzultace, čl. 6 odst. 1 písm. b) GDPR</td><td>2 roky od konzultace, pokud nevznikne smlouva</td></tr>
+      <tr><td>Telefonát s AI asistentem</td><td>telefonní číslo, obsah hovoru (přepis, případně zvukový záznam), údaje k rezervaci</td><td>vyřízení hovoru a rezervace, čl. 6 odst. 1 písm. b) GDPR; kontrola kvality a bezpečnosti služby, oprávněný zájem podle čl. 6 odst. 1 písm. f) GDPR</td><td>přepisy a záznamy 90 dní; rezervace jako u konzultace</td></tr>
+      <tr><td>Email a další komunikace</td><td>údaje, které nám pošlete</td><td>vyřízení vaší zprávy, čl. 6 odst. 1 písm. b) nebo f) GDPR</td><td>2 roky od posledního kontaktu</td></tr>
+      <tr><td>Obchodní oslovení firem</td><td>název firmy, obor, adresa, veřejný firemní email a telefon, web</td><td>nabídka našich služeb firmám, oprávněný zájem podle čl. 6 odst. 1 písm. f) GDPR</td><td>do vaší námitky, nejdéle 2 roky</td></tr>
+      <tr><td>Návštěva webu</td><td>IP adresa, typ prohlížeče, čas a adresa požadavku (technické logy)</td><td>provoz a zabezpečení webu, oprávněný zájem podle čl. 6 odst. 1 písm. f) GDPR</td><td>podle nastavení poskytovatele hostingu, obvykle desítky dní</td></tr>
+      <tr><td>Klienti</td><td>kontaktní a fakturační údaje</td><td>plnění smlouvy a účetní a daňové povinnosti, čl. 6 odst. 1 písm. b) a c) GDPR</td><td>po dobu smlouvy, účetní doklady 10 let</td></tr>
+    </tbody>
+  </table></div>
+  <p>Pokud nám osobní údaje neposkytnete, nemůžeme vám odpovědět nebo domluvit schůzku. Jinou povinnost je poskytnout nemáte. Automatizované rozhodování s právními účinky podle čl. 22 GDPR neprovádíme.</p>
+  <p>Na delší dobu, než uvádíme, údaje uchováme jen tehdy, pokud je potřebujeme k ochraně svých práv (například ve sporu).</p>
+
+  <h2 id="chat">3. AI chat na webu</h2>
+  <p>Chat na webu obsluhuje AI asistentka, nikoli člověk. Na přímou otázku to vždy potvrdí. Vaše zprávy posíláme k vytvoření odpovědi jazykovému modelu Claude od společnosti Anthropic.</p>
+  <ul>
+    <li>Konverzaci sami neukládáme. Během návštěvy je uložená jen ve vašem prohlížeči (sessionStorage) a po zavření karty zmizí.</li>
+    <li>Kontakt a přepis konverzace uložíme, jen pokud nám kontakt sami pošlete a souhlasíte s tím, že se vám ozveme.</li>
+    <li>Anthropic podle svých obchodních podmínek nepoužívá data z API k trénování modelů. Po omezenou dobu je může uchovávat kvůli bezpečnosti a prevenci zneužití.</li>
+    <li>Do chatu prosím nepište citlivé údaje (zdravotní údaje, rodná čísla, čísla karet, hesla).</li>
+  </ul>
+
+  <h2 id="telefon">4. Telefonní AI asistenti</h2>
+  <p>Na čísle +420 910 926 750 vám odpoví AI asistenti Voicelix (Klára, Tomáš, Jana). Na začátku hovoru se představí jako AI. Hovor zpracováváme takto: řeč převedeme na text, jazykový model připraví odpověď a ta se převede zpět na hlas. Pro kontrolu kvality ukládáme přepis a případně zvukový záznam hovoru po dobu 90 dní.</p>
+  <p>Pokud si přes asistenta zarezervujete schůzku, zapíše se do kalendáře Pavla Šrámka a pošleme vám potvrzení.</p>
+
+  <h2 id="osloveni">5. Obchodní oslovení</h2>
+  <p>Firmám, kterým by naše služby mohly pomoci, posíláme personalizované nabídkové emaily. Oslovení připravuje AI agent a před odesláním ho kontroluje člověk. Údaje čerpáme z veřejných zdrojů: z webů firem, z firemních profilů na Google Maps a z veřejných rejstříků. Oslovujeme jen firemní kontakty.</p>
+  <p>Proti oslovení můžete kdykoli vznést námitku, stačí odpovědět na náš email nebo napsat na <a href="mailto:pavel@voicelix.ai">pavel@voicelix.ai</a>. Pak vás už neoslovíme a vaše údaje si ponecháme jen v rozsahu nutném k tomu, abychom vás znovu neoslovili.</p>
+
+  <h2 id="prijemci">6. Kdo údaje zpracovává pro nás</h2>
+  <p>Údaje neprodáváme. Pro provoz služeb využíváme tyto zpracovatele, kteří s údaji smějí nakládat jen podle našich pokynů:</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Zpracovatel</th><th>K čemu</th><th>Kde</th></tr></thead>
+    <tbody>
+      <tr><td>Netlify, Inc.</td><td>hosting webu, formuláře, provoz chatu</td><td>USA</td></tr>
+      <tr><td>Anthropic, PBC</td><td>jazykový model pro chat a telefonní asistenty</td><td>USA</td></tr>
+      <tr><td>Google (Google Ireland Ltd. a Google LLC)</td><td>firemní email, kalendář a rezervace, tabulky (CRM), písma webu</td><td>EU a USA</td></tr>
+      <tr><td>Vapi Inc.</td><td>platforma hlasových asistentů</td><td>USA</td></tr>
+      <tr><td>Twilio Inc.</td><td>telefonní čísla a přenos hovorů</td><td>USA</td></tr>
+      <tr><td>ElevenLabs Inc.</td><td>převod textu na hlas</td><td>USA</td></tr>
+      <tr><td>Deepgram, Inc.</td><td>převod řeči na text</td><td>USA</td></tr>
+      <tr><td>Relevance AI, OpenAI, Firecrawl</td><td>příprava obchodních oslovení (vyhledání firmy, analýza webu, návrh emailu)</td><td>USA a Austrálie</td></tr>
+    </tbody>
+  </table></div>
+  <p>Údaje můžeme předat také orgánům veřejné moci, pokud nám to ukládá zákon, a svému účetnímu nebo daňovému poradci.</p>
+
+  <h2 id="predani">7. Předání mimo EU</h2>
+  <p>Část zpracovatelů sídlí mimo Evropský hospodářský prostor. Údaje jim předáváme na základě rozhodnutí Evropské komise o odpovídající ochraně (u USA rámec EU-US Data Privacy Framework, pokud je příjemce certifikován), jinak na základě standardních smluvních doložek schválených Evropskou komisí. Kopii těchto záruk vám na žádost poskytneme.</p>
+
+  <h2 id="cookies">8. Cookies a úložiště prohlížeče</h2>
+  <p>Web nepoužívá reklamní ani analytické cookies, a proto se vás neptáme na souhlas. Pro chod chatu ukládáme konverzaci do sessionStorage vašeho prohlížeče, a to jen po dobu otevřené karty.</p>
+  <p>Písmo webu se načítá ze služby Google Fonts, takže se vaše IP adresa dostane ke Googlu. Když otevřete rezervační kalendář, načte se stránka Google Kalendáře a Google může použít vlastní cookies podle svých zásad.</p>
+
+  <h2 id="prava">9. Vaše práva</h2>
+  <p>Máte právo:</p>
+  <ul>
+    <li>na přístup ke svým údajům a jejich kopii,</li>
+    <li>na opravu nepřesných údajů,</li>
+    <li>na výmaz, pokud údaje už nepotřebujeme nebo je zpracováváme neoprávněně,</li>
+    <li>na omezení zpracování,</li>
+    <li>na přenositelnost údajů, které jste nám poskytli na základě smlouvy,</li>
+    <li>vznést námitku proti zpracování na základě oprávněného zájmu, včetně obchodního oslovení,</li>
+    <li>podat stížnost u Úřadu pro ochranu osobních údajů, Pplk. Sochora 27, 170 00 Praha 7, <a href="https://uoou.gov.cz" rel="noopener">uoou.gov.cz</a>.</li>
+  </ul>
+  <div class="box">Žádost pošlete na <a href="mailto:pavel@voicelix.ai">pavel@voicelix.ai</a>. Odpovíme bez zbytečného odkladu, nejpozději do jednoho měsíce. Abychom údaje nevydali někomu jinému, můžeme vás požádat o ověření totožnosti.</div>
+
+  <h2 id="zmeny">10. Změny těchto zásad</h2>
+  <p>Zásady aktualizujeme, když změníme služby nebo dodavatele. Aktuální znění najdete vždy na této stránce, datum účinnosti je uvedené nahoře.</p>
+</div></main>
+
+<footer><div class="wrap">© 2026 Voicelix · Pavel Šrámek, IČO 05378567, Slovanské údolí 1016/47, 318 00 Plzeň · <a href="/">voicelix.ai</a></div></footer>
+</body>
+</html>

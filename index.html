@@ -255,6 +255,8 @@ input,select,textarea{width:100%;font:inherit;font-size:1rem;padding:13px 14px;b
 input:focus,select:focus,textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(0,201,167,.18)}
 textarea{min-height:110px;resize:vertical}
 .hp{position:absolute;left:-9999px}
+.fnote{font-size:.82rem;color:var(--muted);margin-top:10px}
+.fnote a,.cb-note a{color:var(--teal-ink)}
 .fok{display:none;padding:22px;border-radius:var(--r-m);background:var(--teal-soft);color:var(--teal-ink);font-weight:600}
 .ferr{display:none;color:#C24A4A;font-size:.9rem;margin-top:10px}
 
@@ -847,6 +849,7 @@ footer a:hover{color:var(--teal)}
         </div>
         <div class="field"><label for="f-msg">S čím vám můžeme pomoci?</label><textarea id="f-msg" name="message" placeholder="Například: nestíháme brát telefony, chceme online rezervace"></textarea></div>
         <button class="btn btn-primary" type="submit" style="width:100%">Odeslat poptávku</button>
+        <p class="fnote">Údaje použijeme jen k odpovědi na vaši poptávku. <a href="/ochrana-osobnich-udaju.html">Ochrana osobních údajů</a></p>
         <p class="ferr" id="ferr">Poptávku se nepodařilo odeslat. Zkuste to znovu, nebo napište na info@voicelix.ai.</p>
       </form>
       <div class="fok" id="fok" role="status">Poptávka odeslána. Ozveme se vám do jednoho pracovního dne.</div>
@@ -872,7 +875,7 @@ footer a:hover{color:var(--teal)}
       <div><h4>Kontakt</h4><ul><li><a href="tel:+420910926750">+420 910 926 750</a></li><li><a href="mailto:info@voicelix.ai">info@voicelix.ai</a></li><li><a href="https://linkedin.com/company/112520045" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://instagram.com/voicelix.ai" target="_blank" rel="noopener">Instagram</a></li></ul></div>
     </div>
     <p class="flegal"><b>Provozovatel:</b> Pavel Šrámek, IČO 05378567, se sídlem Slovanské údolí 1016/47, 318 00 Plzeň. Fyzická osoba podnikající podle živnostenského zákona, zapsaná v živnostenském rejstříku. Kontakt: <a href="mailto:pavel@voicelix.ai">pavel@voicelix.ai</a>. Voicelix neposkytuje právní služby ve smyslu zákona o advokacii.</p>
-    <div class="fbot"><span>© 2026 Voicelix</span><span>Naši AI asistenti se vždy představí jako AI.</span></div>
+    <div class="fbot"><span>© 2026 Voicelix · <a href="/ochrana-osobnich-udaju.html">Ochrana osobních údajů</a></span><span>Naši AI asistenti se vždy představí jako AI.</span></div>
   </div>
 </footer>
 
@@ -890,7 +893,7 @@ footer a:hover{color:var(--teal)}
     <textarea id="cbInput" rows="1" maxlength="1000" placeholder="Napište dotaz…" required></textarea>
     <button class="cb-send" id="cbSend" type="submit" aria-label="Odeslat"><svg><use href="#i-send"/></svg></button>
   </form>
-  <p class="cb-note">Chat obsluhuje AI (model Claude od Anthropic). Konverzace neukládáme. Kontakt předáme Pavlovi, jen pokud nám ho sami pošlete. Nepište prosím citlivé údaje.</p>
+  <p class="cb-note">Chat obsluhuje AI (model Claude od Anthropic). Konverzace neukládáme. Kontakt předáme Pavlovi, jen pokud nám ho sami pošlete. Nepište prosím citlivé údaje. <a href="/ochrana-osobnich-udaju.html#chat" target="_blank" rel="noopener">Více o ochraně údajů</a></p>
 </div>
 <form name="chat-lead" data-netlify="true" netlify-honeypot="bot-field" hidden>
   <input name="bot-field"><input name="name"><input name="contact"><input name="company"><textarea name="need"></textarea><textarea name="transcript"></textarea>
