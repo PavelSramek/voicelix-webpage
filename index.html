@@ -8,6 +8,10 @@
 <meta property="og:title" content="Voicelix | AI asistent, který zvedne každý hovor">
 <meta property="og:description" content="Hlasové AI asistenty v češtině navrhuje a staví osobně architekt s právním vzděláním, v souladu s GDPR a AI Actem.">
 <meta property="og:url" content="https://voicelix.ai">
+<link rel="canonical" href="https://voicelix.ai/">
+<link rel="alternate" hreflang="cs" href="https://voicelix.ai/">
+<link rel="alternate" hreflang="en" href="https://voicelix.ai/en/">
+<link rel="alternate" hreflang="x-default" href="https://voicelix.ai/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -385,6 +389,14 @@ footer a:hover{color:var(--teal)}
   .cb{right:0;bottom:0;width:100vw;height:100dvh;border-radius:0}
 }
 @media (prefers-reduced-motion:reduce){.cb,.cb-fab{transition:none}.cb-typing i{animation:none}}
+
+.lang{display:inline-flex;border:1px solid rgba(255,255,255,.18);border-radius:8px;overflow:hidden;flex-shrink:0;margin-right:8px}
+.lang a{color:var(--muted-dark);text-decoration:none;font-size:.8rem;font-weight:700;letter-spacing:.04em;padding:8px 9px;line-height:1}
+.lang a:hover{color:#fff}
+.lang a[aria-current]{background:rgba(255,255,255,.12);color:#fff}
+@media (max-width:400px){.lang{margin-right:4px}.lang a{padding:8px 7px}.hdr-cta{padding:11px 12px}}
+@media (max-width:380px){.hdr-cta>span{display:none}.hdr-cta{padding:11px}}
+@media (max-width:1000px){.price{font-size:1.85rem}}
 </style>
 </head>
 <body>
@@ -429,6 +441,7 @@ footer a:hover{color:var(--teal)}
       <a href="#kontakt">Kontakt</a>
     </nav>
     <div class="hdr-right">
+      <div class="lang" role="group" aria-label="Jazyk"><a href="/" aria-current="true">CZ</a><a href="/en/" hreflang="en" lang="en" aria-label="English">EN</a></div>
       <a class="btn btn-primary hdr-cta" href="tel:+420910926750"><svg><use href="#i-phone"/></svg><span>Zavolat<span class="t-long"> Kláře</span></span></a>
       <button class="burger" aria-label="Otevřít menu" aria-expanded="false" aria-controls="mnav" id="burger">
         <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -861,6 +874,7 @@ footer a:hover{color:var(--teal)}
     <div>
       <form name="early-access" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="leadForm">
         <input type="hidden" name="form-name" value="early-access">
+        <input type="hidden" name="lang" value="cs">
         <p class="hp"><label>Nevyplňujte <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
         <div class="frow">
           <div class="field"><label for="f-name">Jméno</label><input id="f-name" name="name" autocomplete="name" required></div>
@@ -904,7 +918,7 @@ footer a:hover{color:var(--teal)}
       <div><h4>Kontakt</h4><ul><li><a href="tel:+420910926750">+420 910 926 750</a></li><li><a href="mailto:info@voicelix.ai">info@voicelix.ai</a></li><li><a href="https://linkedin.com/company/112520045" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://instagram.com/voicelix.ai" target="_blank" rel="noopener">Instagram</a></li></ul></div>
     </div>
     <p class="flegal"><b>Provozovatel:</b> Pavel Šrámek, IČO 05378567, se sídlem Slovanské údolí 1016/47, 318 00 Plzeň. Fyzická osoba podnikající podle živnostenského zákona, zapsaná v živnostenském rejstříku. Kontakt: <a href="mailto:pavel@voicelix.ai">pavel@voicelix.ai</a>. Voicelix neposkytuje právní služby ve smyslu zákona o advokacii.</p>
-    <div class="fbot"><span>© 2026 Voicelix · <a href="/ochrana-osobnich-udaju.html">Ochrana osobních údajů</a></span><span>Naši AI asistenti se vždy představí jako AI.</span></div>
+    <div class="fbot"><span>© 2026 Voicelix · <a href="/ochrana-osobnich-udaju.html">Ochrana osobních údajů</a> · <a href="/en/" hreflang="en" lang="en">English</a></span><span>Naši AI asistenti se vždy představí jako AI.</span></div>
   </div>
 </footer>
 
@@ -1026,7 +1040,7 @@ const BOOKING_URL='https://calendar.google.com/calendar/appointments/schedules/A
     const t=document.createElement('div');t.className='cb-typing';t.innerHTML='<i></i><i></i><i></i>';body.appendChild(t);body.scrollTop=body.scrollHeight;
     let reply;
     try{
-      const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:msgs})});
+      const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:msgs,lang:'cs'})});
       const j=await r.json().catch(()=>({}));
       if(r.ok&&j.reply)reply=j.reply;
       else if(r.status===429)reply='Teď toho na mě bylo trochu moc. Zkuste to prosím za pár minut, nebo zavolejte na +420 910 926 750.';

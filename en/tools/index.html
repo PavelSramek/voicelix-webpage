@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Toolkit: the tools we work with | Voicelix</title>
+<meta name="description" content="AI voice assistants, websites, CRM, booking, invoicing and email marketing. The tools Voicelix sets up, connects and manages for businesses, in line with GDPR and the EU AI Act.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://voicelix.ai/en/tools/">
+<link rel="alternate" hreflang="cs" href="https://voicelix.ai/tools/">
+<link rel="alternate" hreflang="en" href="https://voicelix.ai/en/tools/">
+<link rel="alternate" hreflang="x-default" href="https://voicelix.ai/tools/">
+<meta property="og:title" content="Voicelix Toolkit: the tools we work with">
+<meta property="og:description" content="Everything we can set up, connect and manage for you. One partner, everything under control.">
+<meta property="og:url" content="https://voicelix.ai/en/tools/">
+<meta property="og:locale" content="en_US">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0F1E3C; --navy-deep:#0A1530; --navy-2:#16294F;
+  --teal:#00C9A7; --teal-ink:#008C75; --teal-soft:#E0F7F2; --sky:#8AB4FF;
+  --paper:#F4F7FB; --white:#FFFFFF; --line:#DDE4EE;
+  --ink:#13223F; --muted:#5B6B85; --muted-dark:#9AA9C4;
+  --r-s:8px; --r-m:14px;
+  --font:'Onest','Segoe UI',system-ui,-apple-system,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--font);color:var(--ink);background:var(--paper);line-height:1.55;font-size:16px;-webkit-font-smoothing:antialiased}
+a{color:var(--teal-ink)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.hdr{background:var(--navy);padding:18px 0}
+.hdr .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:700;font-size:1.25rem;letter-spacing:-.02em}
+.logo svg{height:22px;width:auto}
+.hnav{display:flex;align-items:center;gap:22px}
+.hnav .hl{color:var(--muted-dark);text-decoration:none;font-size:.95rem;font-weight:500}
+.hnav .hl:hover{color:#fff}
+.hcta{background:var(--teal);color:var(--navy);font-weight:700;font-size:.9rem;text-decoration:none;padding:10px 16px;border-radius:var(--r-s);white-space:nowrap}
+.lang{display:inline-flex;border:1px solid rgba(255,255,255,.18);border-radius:8px;overflow:hidden;flex-shrink:0}
+.lang a{color:var(--muted-dark);text-decoration:none;font-size:.8rem;font-weight:700;letter-spacing:.04em;padding:7px 9px;line-height:1}
+.lang a:hover{color:#fff}
+.lang a[aria-current]{background:rgba(255,255,255,.12);color:#fff}
+.who{background:var(--navy);padding:0 0 40px}
+.who .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.wcard{display:flex;flex-direction:column;gap:6px;background:var(--navy-2);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-m);padding:18px 20px;text-decoration:none;color:#fff;transition:border-color .15s}
+.wcard:hover{border-color:var(--teal)}
+.wcard b{font-size:1rem;letter-spacing:-.01em}
+.wcard span{color:var(--muted-dark);font-size:.92rem}
+.wcard em{font-style:normal;color:var(--teal);font-size:.88rem;font-weight:600;margin-top:auto;padding-top:6px}
+.integ{background:#fff;border-bottom:1px solid var(--line);padding:48px 0 40px}
+.ihead{max-width:760px;margin-bottom:24px}
+.integ .eyebrow{color:var(--teal-ink)}
+.ihead h2{font-size:clamp(1.5rem,3.4vw,2.1rem);line-height:1.15;letter-spacing:-.025em}
+.ihead p{color:var(--muted);margin-top:10px;font-size:1.02rem}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
+.flow{border:1px solid var(--line);border-radius:var(--r-m);padding:18px;background:var(--paper)}
+.flow h3{font-size:1.02rem;letter-spacing:-.01em}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:12px 0 10px}
+.node{font-size:.8rem;font-weight:600;color:var(--navy);background:#fff;border:1px solid var(--line);padding:4px 9px;border-radius:999px}
+.arr{color:var(--teal-ink);font-weight:700}
+.flow p{color:var(--muted);font-size:.93rem}
+.inote{color:var(--muted);font-size:.85rem;margin-top:14px}
+@media (max-width:600px){.fgrid{grid-template-columns:1fr}}
+.cta-acts{display:flex;gap:10px;flex-wrap:wrap}
+.cta-acts a{font-weight:700;text-decoration:none;padding:12px 20px;border-radius:var(--r-s);white-space:nowrap}
+.cta-acts .b1{background:var(--teal);color:var(--navy)}
+.cta-acts .b2{border:1.5px solid rgba(255,255,255,.3);color:#fff}
+.cta-acts .b2:hover{border-color:var(--teal);color:var(--teal)}
+@media (max-width:860px){.who .wrap{grid-template-columns:1fr}.hnav .hl{display:none}}
+@media (max-width:440px){.hnav{gap:10px}.hcta{padding:10px 12px}.hcta .t-long{display:none}}
+@media (max-width:340px){.logo{font-size:1.1rem}.logo svg{height:18px}}
+.hero{background:var(--navy);color:#fff;padding:36px 0 48px}
+.eyebrow{display:inline-block;color:var(--teal);font-weight:700;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+.hero h1{font-size:clamp(1.9rem,5vw,2.9rem);line-height:1.08;letter-spacing:-.03em;max-width:760px}
+.hero h1 em{font-style:normal;color:var(--teal)}
+.hero p{color:var(--muted-dark);margin-top:14px;max-width:640px;font-size:1.05rem}
+.stats{display:flex;gap:28px;margin-top:22px;flex-wrap:wrap}
+.stats div{color:var(--muted-dark);font-size:.9rem}
+.stats b{display:block;color:#fff;font-size:1.6rem;letter-spacing:-.02em}
+.bar{position:sticky;top:0;z-index:5;background:rgba(244,247,251,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:14px 0}
+.search{width:100%;font:inherit;font-size:1rem;padding:12px 16px;border:1px solid var(--line);border-radius:var(--r-s);background:#fff;color:var(--ink)}
+.search:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-soft)}
+.chips{display:flex;gap:8px;margin-top:10px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;font:inherit;font-size:.88rem;border:1px solid var(--line);background:#fff;color:var(--ink);padding:6px 12px;border-radius:999px;cursor:pointer;white-space:nowrap}
+.chip span{color:var(--muted);font-size:.8rem;margin-left:2px}
+.chip.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.chip.on span{color:var(--teal)}
+main{padding:8px 0 64px}
+.cat h2{font-size:1.25rem;letter-spacing:-.015em;margin:36px 0 14px;display:flex;align-items:center;gap:10px}
+.cat h2::before{content:"";width:4px;height:20px;border-radius:2px;background:var(--teal)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:18px 18px 14px;display:flex;flex-direction:column;transition:border-color .15s,transform .15s}
+.card:hover{border-color:var(--teal);transform:translateY(-2px)}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.card h3{font-size:1.08rem;letter-spacing:-.01em}
+.own{flex:0 0 auto;font-size:.72rem;font-weight:600;color:var(--teal-ink);background:var(--teal-soft);padding:3px 8px;border-radius:999px}
+.what{color:var(--muted);font-size:.93rem;margin-top:4px}
+.we{font-size:.95rem;margin-top:10px;flex:1}
+.we b{font-weight:600}
+.foot{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;margin-top:14px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:.74rem;color:var(--navy);background:var(--paper);border:1px solid var(--line);padding:2px 8px;border-radius:6px}
+.foot a{font-size:.85rem;text-decoration:none;white-space:nowrap}
+.foot a:hover{text-decoration:underline}
+.empty{display:none;text-align:center;color:var(--muted);padding:48px 0}
+.cta{background:var(--navy);color:#fff;border-radius:var(--r-m);padding:28px;margin-top:48px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.cta h2{font-size:1.3rem;letter-spacing:-.015em}
+.cta p{color:var(--muted-dark);margin-top:6px;max-width:560px}
+.note{color:var(--muted);font-size:.85rem;margin-top:18px}
+footer{background:var(--navy-deep);color:var(--muted-dark);padding:28px 0;font-size:.85rem}
+footer a{color:var(--muted-dark)}
+footer a:hover{color:var(--teal)}
+.hide{display:none!important}
+@media (max-width:600px){.grid{grid-template-columns:1fr}.cta{padding:22px}.stats{gap:20px}}
+@media print{
+  .hdr,.bar,.who,.cta a,footer{display:none}
+  body{background:#fff;font-size:11pt}
+  .hero{background:#fff;color:var(--ink);padding:0 0 12px}
+  .hero p,.stats div{color:var(--muted)} .stats b{color:var(--ink)}
+  .card{break-inside:avoid;transform:none!important}
+  .cta{background:#fff;color:var(--ink);border:1px solid var(--line)}
+  .hide{display:block!important}
+}
+</style>
+</head>
+<body>
+<header class="hdr"><div class="wrap">
+  <a class="logo" href="/en/" aria-label="Voicelix, home">
+    <svg viewBox="0 0 40 22" aria-hidden="true"><g fill="#00C9A7"><rect x="0" y="8" width="3" height="6" rx="1.5" opacity=".45"/><rect x="6" y="5" width="3" height="12" rx="1.5" opacity=".7"/><rect x="12" y="1" width="3" height="20" rx="1.5"/><rect x="18" y="4" width="3" height="14" rx="1.5"/><rect x="24" y="0" width="3" height="22" rx="1.5"/><rect x="30" y="6" width="3" height="10" rx="1.5" opacity=".7"/><rect x="36" y="9" width="3" height="4" rx="1.5" opacity=".45"/></g></svg>
+    Voicelix
+  </a>
+  <nav class="hnav" aria-label="Navigation">
+    <a href="/en/#services" class="hl">Services</a>
+    <a href="/en/#founder" class="hl">Who's behind it</a>
+    <div class="lang" role="group" aria-label="Language"><a href="/tools/" hreflang="cs" lang="cs" aria-label="Česky">CZ</a><a href="/en/tools/" aria-current="true">EN</a></div>
+    <a href="tel:+420910926750" class="hcta">Call<span class="t-long"> Klára</span></a>
+  </nav>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <span class="eyebrow">Voicelix Toolkit</span>
+  <h1>Tools we <em>set up, connect and manage</em></h1>
+  <p>Voicelix builds AI assistants and complete IT for Czech businesses. Here are the tools we work with: what we can set up for you, connect to what you already use, and look after in the long run.</p>
+  <div class="stats">
+    <div><b>26</b>tools</div>
+    <div><b>8</b>areas</div>
+    <div><b>5</b>AI agents on the team</div>
+  </div>
+</div></section>
+
+<section class="who" aria-label="Who we are"><div class="wrap">
+  <a class="wcard" href="/en/#founder">
+    <b>Built personally by an architect with a law degree</b>
+    <span>No subcontractors. The person who designs your solution builds and runs it.</span>
+    <em>Who&#x27;s behind it →</em>
+  </a>
+  <a class="wcard" href="/en/#team">
+    <b>An AI team that answers every call</b>
+    <span>Klára, Tomáš, Jana, Honza and Bára. All of them introduce themselves as AI, as the AI Act requires.</span>
+    <em>Meet the team →</em>
+  </a>
+  <a class="wcard" href="/en/#data">
+    <b>Compliance by design</b>
+    <span>GDPR, the AI Act and a data processing agreement are part of every deployment.</span>
+    <em>Data and compliance →</em>
+  </a>
+</div></section>
+
+<section class="integ" id="integrations"><div class="wrap">
+  <div class="ihead">
+    <span class="eyebrow">Integrations</span>
+    <h2>We don&#x27;t let your tools live in silos. We connect them.</h2>
+    <p>The biggest savings don&#x27;t come from a single app, but from what happens between apps. We connect the tools in this overview to each other and to what your business already uses, via APIs, webhooks or automation. Data flows on its own, nothing is retyped by hand, and every flow is designed in line with GDPR.</p>
+  </div>
+  <div class="fgrid">
+    <article class="flow">
+      <div class="top"><h3>From call straight to calendar</h3><span class="own">We run it too</span></div>
+      <div class="chain" aria-label="Twilio → Vapi → Google Calendar"><span class="node">Twilio</span><span class="arr" aria-hidden="true">→</span><span class="node">Vapi</span><span class="arr" aria-hidden="true">→</span><span class="node">Google Calendar</span></div>
+      <p>A customer calls, the AI assistant checks free slots and writes the booking into the calendar with an invite.</p>
+    </article>
+    <article class="flow">
+      <div class="top"><h3>From finding a company to a ready email</h3><span class="own">We run it too</span></div>
+      <div class="chain" aria-label="Google Maps → Firecrawl → OpenAI → Gmail"><span class="node">Google Maps</span><span class="arr" aria-hidden="true">→</span><span class="node">Firecrawl</span><span class="arr" aria-hidden="true">→</span><span class="node">OpenAI</span><span class="arr" aria-hidden="true">→</span><span class="node">Gmail</span></div>
+      <p>The agent finds suitable companies, studies their website and drafts a personal email for approval.</p>
+    </article>
+    <article class="flow">
+      <div class="top"><h3>Website form to CRM</h3></div>
+      <div class="chain" aria-label="Netlify → Google Sheets → Gmail"><span class="node">Netlify</span><span class="arr" aria-hidden="true">→</span><span class="node">Google Sheets</span><span class="arr" aria-hidden="true">→</span><span class="node">Gmail</span></div>
+      <p>An inquiry from your website lands in the CRM automatically, and both you and the customer get a confirmation.</p>
+    </article>
+    <article class="flow">
+      <div class="top"><h3>Booking with a reminder</h3></div>
+      <div class="chain" aria-label="Cal.com / Calendly → Google Calendar → Brevo"><span class="node">Cal.com / Calendly</span><span class="arr" aria-hidden="true">→</span><span class="node">Google Calendar</span><span class="arr" aria-hidden="true">→</span><span class="node">Brevo</span></div>
+      <p>An online booking shows up in the calendar and the customer gets a timely reminder.</p>
+    </article>
+    <article class="flow">
+      <div class="top"><h3>Job done, invoice done</h3></div>
+      <div class="chain" aria-label="Google Sheets → Make.com → Fakturoid / iDoklad"><span class="node">Google Sheets</span><span class="arr" aria-hidden="true">→</span><span class="node">Make.com</span><span class="arr" aria-hidden="true">→</span><span class="node">Fakturoid / iDoklad</span></div>
+      <p>As soon as you mark a job as done, the invoice is issued and sent automatically.</p>
+    </article>
+    <article class="flow">
+      <div class="top"><h3>Incoming mail, sorted</h3></div>
+      <div class="chain" aria-label="Gmail → Relevance AI → Claude"><span class="node">Gmail</span><span class="arr" aria-hidden="true">→</span><span class="node">Relevance AI</span><span class="arr" aria-hidden="true">→</span><span class="node">Claude</span></div>
+      <p>The agent reads incoming email, sorts it and drafts replies to routine questions.</p>
+    </article>
+  </div>
+  <p class="inote">Examples. Every integration is tailored to how your business really works.</p>
+</div></section>
+
+<div class="bar"><div class="wrap">
+  <input class="search" id="q" type="search" placeholder="Search for a tool or a need, e.g. “invoices” or “calls”" aria-label="Search tools" autocomplete="off">
+  <div class="chips" role="group" aria-label="Filter by area">
+    <button type="button" class="chip on" data-f="all">All</button>
+    <button type="button" class="chip" data-f="hlas">Voice and AI <span>6</span></button>
+    <button type="button" class="chip" data-f="agenti">AI agents and automation <span>4</span></button>
+    <button type="button" class="chip" data-f="web">Web and domains <span>6</span></button>
+    <button type="button" class="chip" data-f="kancelar">Email and office <span>1</span></button>
+    <button type="button" class="chip" data-f="rezervace">Booking <span>3</span></button>
+    <button type="button" class="chip" data-f="crm">CRM and data <span>2</span></button>
+    <button type="button" class="chip" data-f="fakturace">Invoicing <span>2</span></button>
+    <button type="button" class="chip" data-f="marketing">Email marketing <span>2</span></button>
+  </div>
+</div></div>
+
+<main><div class="wrap">
+  <section class="cat" data-c="hlas">
+    <h2>Voice and AI</h2>
+    <div class="grid">
+      <article class="card" data-s="vapi platform for voice ai assistants. we build an assistant that answers the call, handles questions and books the appointment. voice and ai voice assistant">
+        <div class="top"><h3>Vapi</h3><span class="own" title="We use this tool in our own operations">We run it too</span></div>
+        <p class="what">Platform for voice AI assistants.</p>
+        <p class="we"><b>What we do:</b> We build an assistant that answers the call, handles questions and books the appointment.</p>
+        <div class="foot"><div class="tags"><span class="tag">Voice assistant</span></div><a href="https://vapi.ai" target="_blank" rel="noopener noreferrer" aria-label="Website of Vapi">site ↗</a></div>
+      </article>
+      <article class="card" data-s="elevenlabs natural voices, text to speech. we choose and tune the assistant&#x27;s czech voice, including how it pronounces your names. voice and ai voice assistant web assistant">
+        <div class="top"><h3>ElevenLabs</h3><span class="own" title="We use this tool in our own operations">We run it too</span></div>
+        <p class="what">Natural voices, text to speech.</p>
+        <p class="we"><b>What we do:</b> We choose and tune the assistant&#x27;s Czech voice, including how it pronounces your names.</p>
+        <div class="foot"><div class="tags"><span class="tag">Voice assistant</span><span class="tag">Web assistant</span></div><a href="https://elevenlabs.io" target="_blank" rel="noopener noreferrer" aria-label="Website of ElevenLabs">site ↗</a></div>
+      </article>
+      <article class="card" data-s="deepgram speech to text, czech included. we configure speech recognition and the terminology of your industry. voice and ai voice assistant">
+        <div class="top"><h3>Deepgram</h3><span class="own" title="We use this tool in our own operations">We run it too</span></div>
+        <p class="what">Speech to text, Czech included.</p>
+        <p class="we"><b>What we do:</b> We configure speech recognition and the terminology of your industry.</p>
+        <div class="foot"><div class="tags"><span class="tag">Voice assistant</span></div><a href="https://deepgram.com" target="_blank" rel="noopener noreferrer" aria-label="Website of Deepgram">site ↗</a></div>
+      </article>
+      <article class="card" data-s="twilio phone numbers and calls over the internet. we set up a czech number or forward calls from your existing one. voice and ai voice assistant">
+        <div class="top"><h3>Twilio</h3><span class="own" title="We use this tool in our own operations">We run it too</span></div>
+        <p class="what">Phone numbers and calls over the internet.</p>
+        <p class="we"><b>What we do:</b> We set up a Czech number or forward calls from your existing one.</p>
+        <div class="foot"><div class="tags"><span class="tag">Voice assistant</span></div><a href="https://www.twilio.com" target="_blank" rel="noopener noreferrer" aria-label="Website of Twilio">site ↗</a></div>
+      </article>
+      <article class="card" data-s="claude (anthropic) language model, the brain of our assistants. we write and test the instructions so the assistant stays on point and complies with the ai act. voice and ai voice assistant email agent web assistant">
+        <div class="top"><h3>Claude (Anthropic)</h3><span class="own" title="We use this tool in our own operations">We run it too</span></div>
+        <p class="what">Language model, the brain of our assistants.</p>
+        <p class="we"><b>What we do:</b> We write and test the instructions so the assistant stays on point and complies with the AI Act.</p>
+        <div class="foot"><div class="tags"><span class="tag">Voice assistant</span><span class="tag">Email agent</span><span class="tag">Web assistant</span></div><a href="https://www.anthropic.com/claude" target="_blank" rel="noopener noreferrer" aria-label="Website of Claude (Anthropic)">site ↗</a></div>
+      </article>
+      <article class="card" data-s="openai gpt language models. we use them to write texts and emails inside automations. voice and ai outreach agent email agent">
+        <div class="top"><h3>OpenAI</h3><span class="own" title="We use this tool in our own operations">We run it too</span></div>
+        <p class="what">GPT language models.</p>
+        <p class="we"><b>What we do:</b> We use them to write texts and emails inside automations.</p>
+        <div class="foot"><div class="tags"><span class="tag">Outreach agent</span><span class="tag">Email agent</span></div><a href="https://openai.com" target="_blank" rel="noopener noreferrer" aria-label="Website of OpenAI">site ↗</a></div>
+      </article>
+    </div>
+  </section>
+  <section class="cat" data-c="agenti">
+    <h2>AI agents and automation</h2>
+    <div class="grid">
+      <article class="card" data-s="relevance ai platform for autonomous ai agents. we build an agent that finds clients, sorts email or drafts replies. ai agents and automation outreach agent email agent">
+        <div class="top"><h3>Relevance AI</h3><span class="own" title="We use this tool in our own operations">We run it too</span></div>
+        <p class="what">Platform for autonomous AI agents.</p>
+        <p class="we"><b>What we do:</b> We build an agent that finds clients, sorts email or drafts replies.</p>
+        <div class="foot"><div class="tags"><span class="tag">Outreach agent</span><span class="tag">Email agent</span></div><a href="https://relevanceai.com" target="_blank" rel="noopener noreferrer" aria-label="Website of Relevance AI">site ↗</a></div>
+      </article>
+      <article class="card" data-s="make.com visual automation between apps. we connect forms, crm, calendar and invoicing so nothing is retyped by hand. ai agents and automation it and integrations">
+        <div class="top"><h3>Make.com</h3><span class="own" title="We use this tool in our own operations">We run it too</span></div>
+        <p class="what">Visual automation between apps.</p>
+        <p class="we"><b>What we do:</b> We connect forms, CRM, calendar and invoicing so nothing is retyped by hand.</p>
+        <div class="foot"><div class="tags"><span class="tag">IT and integrations</span></div><a href="https://www.make.com" target="_blank" rel="noopener noreferrer" aria-label="Website of Make.com">site ↗</a></div>
+      </article>
+      <article class="card" data-s="firecrawl reading and extracting website content. before reaching out, the agent finds out what a company does on its own. ai agents and automation outreach agent">
+        <div class="top"><h3>Firecrawl</h3><span class="own" title="We use this tool in our own operations">We run it too</span></div>
+        <p class="what">Reading and extracting website content.</p>
+        <p class="we"><b>What we do:</b> Before reaching out, the agent finds out what a company does on its own.</p>
+        <div class="foot"><div class="tags"><span class="tag">Outreach agent</span></div><a href="https://www.firecrawl.dev" target="_blank" rel="noopener noreferrer" aria-label="Website of Firecrawl">site ↗</a></div>
+      </article>
+      <article class="card" data-s="google maps platform business and place data from google maps. the agent finds companies worth contacting by industry and city. ai agents and automation outreach agent">
+        <div class="top"><h3>Google Maps Platform</h3><span class="own" title="We use this tool in our own operations">We run it too</span></div>
+        <p class="what">Business and place data from Google Maps.</p>
+        <p class="we"><b>What we do:</b> The agent finds companies worth contacting by industry and city.</p>
+        <div class="foot"><div class="tags"><span class="tag">Outreach agent</span></div><a href="https://mapsplatform.google.com" target="_blank" rel="noopener noreferrer" aria-label="Website of Google Maps Platform">site ↗</a></div>
+      </article>
+    </div>
+  </section>
+  <section class="cat" data-c="web">
+    <h2>Web and domains</h2>
+    <div class="grid">
+      <article class="card" data-s="netlify hosting for fast, secure websites. we deploy and host your website, including https and forms. web and domains website">
+        <div class="top"><h3>Netlify</h3><span class="own" title="We use this tool in our own operations">We run it too</span></div>
+        <p class="what">Hosting for fast, secure websites.</p>
+        <p class="we"><b>What we do:</b> We deploy and host your website, including HTTPS and forms.</p>
+        <div class="foot"><div class="tags"><span class="tag">Website</span></div><a href="https://www.netlify.com" target="_blank" rel="noopener noreferrer" aria-label="Website of Netlify">site ↗</a></div>
+      </article>
+      <article class="card" data-s="github code and version management. we keep website and app code under version control, so every change can be traced and rolled back. web and domains website it and integrations">
+        <div class="top"><h3>GitHub</h3><span class="own" title="We use this tool in our own operations">We run it too</span></div>
+        <p class="what">Code and version management.</p>
+        <p class="we"><b>What we do:</b> We keep website and app code under version control, so every change can be traced and rolled back.</p>
+        <div class="foot"><div class="tags"><span class="tag">Website</span><span class="tag">IT and integrations</span></div><a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="Website of GitHub">site ↗</a></div>
+      </article>
+      <article class="card" data-s="namecheap registration of .ai, .com and other domains. we register the domain and set up dns for web and email. web and domains website">
+        <div class="top"><h3>Namecheap</h3><span class="own" title="We use this tool in our own operations">We run it too</span></div>
+        <p class="what">Registration of .ai, .com and other domains.</p>
+        <p class="we"><b>What we do:</b> We register the domain and set up DNS for web and email.</p>
+        <div class="foot"><div class="tags"><span class="tag">Website</span></div><a href="https://www.namecheap.com" target="_blank" rel="noopener noreferrer" aria-label="Website of Namecheap">site ↗</a></div>
+      </article>
+      <article class="card" data-s="czechia.com czech domains and dns (.cz, .eu). we transfer or register a czech domain and set up the records. web and domains website">
+        <div class="top"><h3>czechia.com</h3><span class="own" title="We use this tool in our own operations">We run it too</span></div>
+        <p class="what">Czech domains and DNS (.cz, .eu).</p>
+        <p class="we"><b>What we do:</b> We transfer or register a Czech domain and set up the records.</p>
+        <div class="foot"><div class="tags"><span class="tag">Website</span></div><a href="https://www.czechia.com" target="_blank" rel="noopener noreferrer" aria-label="Website of czechia.com">site ↗</a></div>
+      </article>
+      <article class="card" data-s="google business profile your business in google maps and search results. we create and complete your profile so customers find you, opening hours included. web and domains website">
+        <div class="top"><h3>Google Business Profile</h3></div>
+        <p class="what">Your business in Google Maps and search results.</p>
+        <p class="we"><b>What we do:</b> We create and complete your profile so customers find you, opening hours included.</p>
+        <div class="foot"><div class="tags"><span class="tag">Website</span></div><a href="https://business.google.com" target="_blank" rel="noopener noreferrer" aria-label="Website of Google Business Profile">site ↗</a></div>
+      </article>
+      <article class="card" data-s="canva graphics for web and social media. we prepare visuals and templates you can then edit yourself. web and domains website">
+        <div class="top"><h3>Canva</h3><span class="own" title="We use this tool in our own operations">We run it too</span></div>
+        <p class="what">Graphics for web and social media.</p>
+        <p class="we"><b>What we do:</b> We prepare visuals and templates you can then edit yourself.</p>
+        <div class="foot"><div class="tags"><span class="tag">Website</span></div><a href="https://www.canva.com" target="_blank" rel="noopener noreferrer" aria-label="Website of Canva">site ↗</a></div>
+      </article>
+    </div>
+  </section>
+  <section class="cat" data-c="kancelar">
+    <h2>Email and office</h2>
+    <div class="grid">
+      <article class="card" data-s="google workspace business email, drive, calendar and documents. we set up email on your domain with spf, dkim and dmarc so it doesn&#x27;t land in spam. email and office website it and integrations">
+        <div class="top"><h3>Google Workspace</h3><span class="own" title="We use this tool in our own operations">We run it too</span></div>
+        <p class="what">Business email, drive, calendar and documents.</p>
+        <p class="we"><b>What we do:</b> We set up email on your domain with SPF, DKIM and DMARC so it doesn&#x27;t land in spam.</p>
+        <div class="foot"><div class="tags"><span class="tag">Website</span><span class="tag">IT and integrations</span></div><a href="https://workspace.google.com" target="_blank" rel="noopener noreferrer" aria-label="Website of Google Workspace">site ↗</a></div>
+      </article>
+    </div>
+  </section>
+  <section class="cat" data-c="rezervace">
+    <h2>Booking</h2>
+    <div class="grid">
+      <article class="card" data-s="google calendar the calendar the assistant writes into. we connect the calendar to the voice assistant, so appointments are entered automatically. booking voice assistant booking">
+        <div class="top"><h3>Google Calendar</h3><span class="own" title="We use this tool in our own operations">We run it too</span></div>
+        <p class="what">The calendar the assistant writes into.</p>
+        <p class="we"><b>What we do:</b> We connect the calendar to the voice assistant, so appointments are entered automatically.</p>
+        <div class="foot"><div class="tags"><span class="tag">Voice assistant</span><span class="tag">Booking</span></div><a href="https://calendar.google.com" target="_blank" rel="noopener noreferrer" aria-label="Website of Google Calendar">site ↗</a></div>
+      </article>
+      <article class="card" data-s="cal.com open-source online booking. we add a booking widget to your website, with confirmations and reminders. booking booking">
+        <div class="top"><h3>Cal.com</h3></div>
+        <p class="what">Open-source online booking.</p>
+        <p class="we"><b>What we do:</b> We add a booking widget to your website, with confirmations and reminders.</p>
+        <div class="foot"><div class="tags"><span class="tag">Booking</span></div><a href="https://cal.com" target="_blank" rel="noopener noreferrer" aria-label="Website of Cal.com">site ↗</a></div>
+      </article>
+      <article class="card" data-s="calendly online meeting scheduling. we set up meeting types and connect them to your calendar and website. booking booking">
+        <div class="top"><h3>Calendly</h3></div>
+        <p class="what">Online meeting scheduling.</p>
+        <p class="we"><b>What we do:</b> We set up meeting types and connect them to your calendar and website.</p>
+        <div class="foot"><div class="tags"><span class="tag">Booking</span></div><a href="https://calendly.com" target="_blank" rel="noopener noreferrer" aria-label="Website of Calendly">site ↗</a></div>
+      </article>
+    </div>
+  </section>
+  <section class="cat" data-c="crm">
+    <h2>CRM and data</h2>
+    <div class="grid">
+      <article class="card" data-s="google sheets simple crm and reports with no extra licences. we design a leads and customers sheet that the ai agents write into as well. crm and data it and integrations">
+        <div class="top"><h3>Google Sheets</h3><span class="own" title="We use this tool in our own operations">We run it too</span></div>
+        <p class="what">Simple CRM and reports with no extra licences.</p>
+        <p class="we"><b>What we do:</b> We design a leads and customers sheet that the AI agents write into as well.</p>
+        <div class="foot"><div class="tags"><span class="tag">IT and integrations</span></div><a href="https://www.google.com/sheets/about/" target="_blank" rel="noopener noreferrer" aria-label="Website of Google Sheets">site ↗</a></div>
+      </article>
+      <article class="card" data-s="salesforce crm for larger companies and sales teams. we help with rollout, integration and customization to fit your processes. crm and data it and integrations">
+        <div class="top"><h3>Salesforce</h3></div>
+        <p class="what">CRM for larger companies and sales teams.</p>
+        <p class="we"><b>What we do:</b> We help with rollout, integration and customization to fit your processes.</p>
+        <div class="foot"><div class="tags"><span class="tag">IT and integrations</span></div><a href="https://www.salesforce.com" target="_blank" rel="noopener noreferrer" aria-label="Website of Salesforce">site ↗</a></div>
+      </article>
+    </div>
+  </section>
+  <section class="cat" data-c="fakturace">
+    <h2>Invoicing</h2>
+    <div class="grid">
+      <article class="card" data-s="fakturoid online invoicing for czech businesses. we automate invoices and payment reminders once a job is done. invoicing it and integrations">
+        <div class="top"><h3>Fakturoid</h3></div>
+        <p class="what">Online invoicing for Czech businesses.</p>
+        <p class="we"><b>What we do:</b> We automate invoices and payment reminders once a job is done.</p>
+        <div class="foot"><div class="tags"><span class="tag">IT and integrations</span></div><a href="https://www.fakturoid.cz" target="_blank" rel="noopener noreferrer" aria-label="Website of Fakturoid">site ↗</a></div>
+      </article>
+      <article class="card" data-s="idoklad online invoicing and document records. we connect invoicing to your crm or bookings so documents are created automatically. invoicing it and integrations">
+        <div class="top"><h3>iDoklad</h3></div>
+        <p class="what">Online invoicing and document records.</p>
+        <p class="we"><b>What we do:</b> We connect invoicing to your CRM or bookings so documents are created automatically.</p>
+        <div class="foot"><div class="tags"><span class="tag">IT and integrations</span></div><a href="https://www.idoklad.cz" target="_blank" rel="noopener noreferrer" aria-label="Website of iDoklad">site ↗</a></div>
+      </article>
+    </div>
+  </section>
+  <section class="cat" data-c="marketing">
+    <h2>Email marketing</h2>
+    <div class="grid">
+      <article class="card" data-s="mailchimp newsletters and email campaigns. we set up contact lists, templates and automated campaigns. email marketing it and integrations">
+        <div class="top"><h3>Mailchimp</h3></div>
+        <p class="what">Newsletters and email campaigns.</p>
+        <p class="we"><b>What we do:</b> We set up contact lists, templates and automated campaigns.</p>
+        <div class="foot"><div class="tags"><span class="tag">IT and integrations</span></div><a href="https://mailchimp.com" target="_blank" rel="noopener noreferrer" aria-label="Website of Mailchimp">site ↗</a></div>
+      </article>
+      <article class="card" data-s="brevo email and sms marketing from the eu. we connect forms and crm so contacts flow in automatically, with gdpr-compliant consent. email marketing it and integrations">
+        <div class="top"><h3>Brevo</h3></div>
+        <p class="what">Email and SMS marketing from the EU.</p>
+        <p class="we"><b>What we do:</b> We connect forms and CRM so contacts flow in automatically, with GDPR-compliant consent.</p>
+        <div class="foot"><div class="tags"><span class="tag">IT and integrations</span></div><a href="https://www.brevo.com" target="_blank" rel="noopener noreferrer" aria-label="Website of Brevo">site ↗</a></div>
+      </article>
+    </div>
+  </section>
+  <p class="empty" id="empty">Nothing like that here yet. Write to us, we can most likely connect it.</p>
+
+  <div class="cta">
+    <div>
+      <h2>Using a tool that isn&#x27;t listed?</h2>
+      <p>We can connect most apps that have an API. At a consultation we&#x27;ll go through what you use and propose what to connect or automate.</p>
+    </div>
+    <div class="cta-acts">
+      <a class="b1" href="/en/#booking">Free consultation</a>
+      <a class="b2" href="tel:+420910926750">Call Klára</a>
+    </div>
+  </div>
+  <p class="note">The “We run it too” label marks tools we use in our own operations. All names and trademarks belong to their owners. Voicelix is not their official partner unless stated otherwise.</p>
+</div></main>
+
+<footer><div class="wrap">© 2026 Voicelix · Pavel Šrámek, Company ID 05378567, Slovanské údolí 1016/47, 318 00 Plzeň, Czech Republic · <a href="/en/">voicelix.ai</a> · <a href="/en/privacy/">Privacy policy</a> · <a href="/tools/" hreflang="cs" lang="cs">Česky</a></div></footer>
+
+<script>
+(function(){
+  var q=document.getElementById('q'),chips=[].slice.call(document.querySelectorAll('.chip')),
+      cats=[].slice.call(document.querySelectorAll('.cat')),empty=document.getElementById('empty'),f='all';
+  function norm(s){return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');}
+  cats.forEach(function(c){[].forEach.call(c.querySelectorAll('.card'),function(k){k._s=norm(k.getAttribute('data-s'));});});
+  function run(){
+    var t=norm(q.value.trim()),any=false;
+    cats.forEach(function(c){
+      var on=(f==='all'||c.getAttribute('data-c')===f),shown=0;
+      [].forEach.call(c.querySelectorAll('.card'),function(k){
+        var ok=on&&(!t||k._s.indexOf(t)>-1);k.classList.toggle('hide',!ok);if(ok)shown++;
+      });
+      c.classList.toggle('hide',!shown);if(shown)any=true;
+    });
+    empty.style.display=any?'none':'block';
+  }
+  q.addEventListener('input',run);
+  chips.forEach(function(b){b.addEventListener('click',function(){
+    f=b.getAttribute('data-f');chips.forEach(function(x){x.classList.toggle('on',x===b);});run();
+  });});
+})();
+</script>
+</body>
+</html>

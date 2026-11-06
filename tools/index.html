@@ -7,9 +7,13 @@
 <meta name="description" content="Hlasoví AI asistenti, weby, CRM, rezervace, fakturace i email marketing. Přehled nástrojů, které Voicelix umí nasadit, vzájemně propojit a spravovat, v souladu s GDPR a AI Actem.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://voicelix.ai/tools/">
+<link rel="alternate" hreflang="cs" href="https://voicelix.ai/tools/">
+<link rel="alternate" hreflang="en" href="https://voicelix.ai/en/tools/">
+<link rel="alternate" hreflang="x-default" href="https://voicelix.ai/tools/">
 <meta property="og:title" content="Voicelix Toolkit: nástroje, se kterými pracujeme">
 <meta property="og:description" content="Co všechno umíme nasadit, propojit a spravovat. Jeden partner, vše pod kontrolou.">
 <meta property="og:url" content="https://voicelix.ai/tools/">
+<meta property="og:locale" content="cs_CZ">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -36,6 +40,10 @@ a{color:var(--teal-ink)}
 .hnav .hl{color:var(--muted-dark);text-decoration:none;font-size:.95rem;font-weight:500}
 .hnav .hl:hover{color:#fff}
 .hcta{background:var(--teal);color:var(--navy);font-weight:700;font-size:.9rem;text-decoration:none;padding:10px 16px;border-radius:var(--r-s);white-space:nowrap}
+.lang{display:inline-flex;border:1px solid rgba(255,255,255,.18);border-radius:8px;overflow:hidden;flex-shrink:0}
+.lang a{color:var(--muted-dark);text-decoration:none;font-size:.8rem;font-weight:700;letter-spacing:.04em;padding:7px 9px;line-height:1}
+.lang a:hover{color:#fff}
+.lang a[aria-current]{background:rgba(255,255,255,.12);color:#fff}
 .who{background:var(--navy);padding:0 0 40px}
 .who .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .wcard{display:flex;flex-direction:column;gap:6px;background:var(--navy-2);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-m);padding:18px 20px;text-decoration:none;color:#fff;transition:border-color .15s}
@@ -63,6 +71,8 @@ a{color:var(--teal-ink)}
 .cta-acts .b2{border:1.5px solid rgba(255,255,255,.3);color:#fff}
 .cta-acts .b2:hover{border-color:var(--teal);color:var(--teal)}
 @media (max-width:860px){.who .wrap{grid-template-columns:1fr}.hnav .hl{display:none}}
+@media (max-width:440px){.hnav{gap:10px}.hcta{padding:10px 12px}.hcta .t-long{display:none}}
+@media (max-width:340px){.logo{font-size:1.1rem}.logo svg{height:18px}}
 .hero{background:var(--navy);color:#fff;padding:36px 0 48px}
 .eyebrow{display:inline-block;color:var(--teal);font-weight:700;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
 .hero h1{font-size:clamp(1.9rem,5vw,2.9rem);line-height:1.08;letter-spacing:-.03em;max-width:760px}
@@ -127,7 +137,8 @@ footer a:hover{color:var(--teal)}
   <nav class="hnav" aria-label="Navigace">
     <a href="/#sluzby" class="hl">Služby</a>
     <a href="/#zakladatel" class="hl">Kdo za tím stojí</a>
-    <a href="tel:+420910926750" class="hcta">Zavolat Kláře</a>
+    <div class="lang" role="group" aria-label="Jazyk"><a href="/tools/" aria-current="true">CZ</a><a href="/en/tools/" hreflang="en" lang="en" aria-label="English">EN</a></div>
+    <a href="tel:+420910926750" class="hcta">Zavolat<span class="t-long"> Kláře</span></a>
   </nav>
 </div></header>
 
@@ -428,13 +439,13 @@ footer a:hover{color:var(--teal)}
   <p class="note">Štítek „Běží i u nás“ označuje nástroje, které používáme ve vlastním provozu. Uvedené názvy a ochranné známky patří jejich vlastníkům. Voicelix není jejich oficiálním partnerem, pokud není uvedeno jinak.</p>
 </div></main>
 
-<footer><div class="wrap">© 2026 Voicelix · Pavel Šrámek, IČO 05378567, Slovanské údolí 1016/47, 318 00 Plzeň · <a href="/">voicelix.ai</a> · <a href="/ochrana-osobnich-udaju.html">Ochrana osobních údajů</a></div></footer>
+<footer><div class="wrap">© 2026 Voicelix · Pavel Šrámek, IČO 05378567, Slovanské údolí 1016/47, 318 00 Plzeň · <a href="/">voicelix.ai</a> · <a href="/ochrana-osobnich-udaju.html">Ochrana osobních údajů</a> · <a href="/en/tools/" hreflang="en" lang="en">English</a></div></footer>
 
 <script>
 (function(){
   var q=document.getElementById('q'),chips=[].slice.call(document.querySelectorAll('.chip')),
       cats=[].slice.call(document.querySelectorAll('.cat')),empty=document.getElementById('empty'),f='all';
-  function norm(s){return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+  function norm(s){return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');}
   cats.forEach(function(c){[].forEach.call(c.querySelectorAll('.card'),function(k){k._s=norm(k.getAttribute('data-s'));});});
   function run(){
     var t=norm(q.value.trim()),any=false;

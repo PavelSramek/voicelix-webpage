@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Voicelix | The AI assistant that answers every call</title>
+<meta name="description" content="Voicelix answers every call your business gets, books the appointment and writes it into your calendar. Czech-speaking AI voice assistants designed and built personally by an architect with a law degree, in line with GDPR and the EU AI Act. Plus complete IT from A to Z.">
+<meta property="og:title" content="Voicelix | The AI assistant that answers every call">
+<meta property="og:description" content="Czech-speaking AI voice assistants designed and built personally by an architect with a law degree, in line with GDPR and the EU AI Act.">
+<meta property="og:url" content="https://voicelix.ai/en/">
+<link rel="canonical" href="https://voicelix.ai/en/">
+<link rel="alternate" hreflang="cs" href="https://voicelix.ai/">
+<link rel="alternate" hreflang="en" href="https://voicelix.ai/en/">
+<link rel="alternate" hreflang="x-default" href="https://voicelix.ai/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0F1E3C; --navy-deep:#0A1530; --navy-2:#16284D;
+  --teal:#00C9A7; --teal-ink:#008C75; --teal-soft:#E0F7F2;
+  --paper:#F4F7FB; --white:#FFFFFF; --line:#DDE4EE;
+  --ink:#13223F; --muted:#5B6B85; --muted-dark:#9AA9C4;
+  --r-s:8px; --r-m:14px; --r-l:22px;
+  --max:1160px;
+  --font:'Onest', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px;-webkit-text-size-adjust:100%}
+body{font-family:var(--font);color:var(--ink);background:var(--white);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+section{padding:112px 0}
+h1,h2,h3{line-height:1.1;letter-spacing:-0.025em;font-weight:700}
+h2{font-size:clamp(2rem,4vw,3rem);max-width:18ch}
+.lead{font-size:1.15rem;color:var(--muted);max-width:60ch;margin-top:18px}
+.sec-head{margin-bottom:56px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;white-space:nowrap;font:600 1rem/1 var(--font);padding:16px 24px;border-radius:var(--r-s);text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.btn svg{width:18px;height:18px;flex-shrink:0}
+.btn-primary{background:var(--teal);color:var(--navy)}
+.btn-primary:hover{background:#1DE0BD}
+.btn-ghost{border-color:rgba(255,255,255,.28);color:#fff}
+.btn-ghost:hover{border-color:var(--teal);color:var(--teal)}
+.btn-dark{background:var(--navy);color:#fff}
+.btn-dark:hover{background:var(--navy-2)}
+.btn-line{border-color:var(--line);color:var(--ink);background:#fff}
+.btn-line:hover{border-color:var(--ink)}
+
+.hdr{position:sticky;top:0;z-index:50;background:rgba(10,21,48,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08);padding-top:env(safe-area-inset-top,0px)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font-weight:700;font-size:1.25rem;letter-spacing:-0.02em}
+.logo svg{height:22px;width:auto}
+.nav{display:flex;gap:30px}
+.nav a{color:var(--muted-dark);text-decoration:none;font-size:.95rem;font-weight:500}
+.nav a{white-space:nowrap}
+@media (max-width:1180px){.nav{gap:18px}.nav a{font-size:.9rem}}
+@media (max-width:1040px){.nav{gap:14px}.t-long{display:none}}
+@media (max-width:960px){.nav a[href="#srovnani"]{display:none}}
+.nav a:hover{color:#fff}
+.hdr-right{display:flex;align-items:center;gap:6px}
+.hdr-cta{padding:11px 18px;font-size:.92rem}
+.burger{display:none;background:none;border:0;color:#fff;width:44px;height:44px;cursor:pointer}
+.burger svg{width:24px;height:24px;margin:auto}
+.mnav{display:none;background:var(--navy-deep);border-top:1px solid rgba(255,255,255,.08)}
+.mnav a{display:block;padding:16px 24px;color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.06);font-weight:500}
+.mnav.open{display:block}
+
+.hero{background:var(--navy-deep);color:#fff;padding:96px 0 104px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 420px at 85% 20%,rgba(0,201,167,.14),transparent 70%);pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;position:relative}
+.live{display:inline-flex;align-items:center;gap:10px;font-size:.9rem;color:var(--muted-dark);margin-bottom:28px}
+.live i{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(0,201,167,.2)}
+.hero h1{font-size:clamp(2.6rem,5.6vw,4.4rem);font-weight:800;letter-spacing:-0.035em;max-width:14ch}
+.hero .lead{color:#B9C6DC;font-size:1.2rem;margin-top:24px;max-width:48ch}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:38px}
+.hero-note{margin-top:22px;font-size:.9rem;color:var(--muted-dark)}
+.hero-note a{color:var(--teal);text-decoration:none;font-weight:600}
+
+.call{background:var(--navy);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-l);padding:26px;box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
+.call-top{display:flex;align-items:center;justify-content:space-between;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,.08)}
+.caller{display:flex;align-items:center;gap:12px}
+.av{width:40px;height:40px;border-radius:50%;background:var(--teal);color:var(--navy);display:grid;place-items:center;font-weight:700}
+.caller b{display:block;font-size:.98rem}
+.caller span{font-size:.82rem;color:var(--muted-dark)}
+.wave{display:flex;gap:3px;align-items:center;height:22px}
+.wave i{width:3px;border-radius:2px;background:var(--teal);height:30%;animation:w 1s ease-in-out infinite alternate}
+.wave i:nth-child(2){animation-delay:.15s}.wave i:nth-child(3){animation-delay:.3s}.wave i:nth-child(4){animation-delay:.45s}.wave i:nth-child(5){animation-delay:.6s}
+@keyframes w{to{height:100%}}
+.lines{display:flex;flex-direction:column;gap:10px;padding:20px 0;min-height:292px}
+.ln{max-width:86%;padding:11px 15px;border-radius:14px;font-size:.93rem;line-height:1.45;opacity:0;transform:translateY(6px);transition:opacity .4s,transform .4s}
+.ln.show{opacity:1;transform:none}
+.ln.k{background:rgba(0,201,167,.12);color:#DDF8F2;border-bottom-left-radius:4px}
+.ln.c{background:rgba(255,255,255,.06);color:#D5DDEB;align-self:flex-end;border-bottom-right-radius:4px}
+.ln small{display:block;font-size:.72rem;color:var(--muted-dark);margin-bottom:3px}
+.booked{display:flex;align-items:center;gap:14px;background:#fff;color:var(--ink);border-radius:var(--r-m);padding:14px 16px;opacity:0;transform:translateY(8px);transition:opacity .5s,transform .5s}
+.booked.show{opacity:1;transform:none}
+.cal{width:44px;height:48px;border-radius:8px;border:1.5px solid var(--line);text-align:center;overflow:hidden;flex-shrink:0}
+.cal b{display:block;background:var(--teal);color:var(--navy);font-size:.62rem;padding:2px 0}
+.cal span{font-size:1.15rem;font-weight:700;line-height:1.9}
+.booked strong{display:block;font-size:.95rem}
+.booked p{font-size:.82rem;color:var(--muted)}
+.call-foot{font-size:.78rem;color:var(--muted-dark);margin-top:14px;text-align:center}
+.tabs{display:flex;gap:6px;background:rgba(255,255,255,.05);border-radius:10px;padding:4px;margin-bottom:18px}
+.tabs button{flex:1;background:none;border:0;border-radius:7px;padding:9px 10px;font:600 .85rem/1.2 var(--font);color:var(--muted-dark);cursor:pointer;transition:background .2s,color .2s}
+.tabs button[aria-selected="true"]{background:var(--teal);color:var(--navy)}
+.tabs button:not([aria-selected="true"]):hover{color:#fff}
+.scenes{display:grid}
+.scn{grid-area:1/1}
+.scn.off{visibility:hidden}
+.av.out{background:#8AB4FF}
+.lead-ic{width:44px;height:48px;border-radius:8px;background:var(--teal-soft);color:var(--teal-ink);display:grid;place-items:center;flex-shrink:0}
+.lead-ic svg{width:22px;height:22px}
+
+.sectors{background:var(--navy);color:var(--muted-dark);padding:26px 0}
+.sectors .wrap{display:flex;align-items:center;gap:14px 30px;flex-wrap:wrap;justify-content:center;font-size:.95rem}
+.sectors b{color:#fff;font-weight:600}
+
+.vgrid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.vitem{padding:36px 32px 8px 0}
+.vitem+.vitem{padding-left:32px;border-left:1px solid var(--line)}
+.vicon{width:48px;height:48px;border-radius:12px;background:var(--teal-soft);color:var(--teal-ink);display:grid;place-items:center;margin-bottom:22px}
+.vicon svg{width:24px;height:24px}
+.vitem h3{font-size:1.35rem;margin-bottom:12px}
+.vitem p{color:var(--muted)}
+
+.services{background:var(--paper)}
+.svc{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;align-items:start}
+.svc details{background:#fff;border:1px solid var(--line);border-radius:var(--r-m);transition:border-color .2s}
+.svc details[open]{border-color:var(--teal)}
+.svc summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:44px 1fr auto;gap:16px;align-items:center;padding:22px}
+.svc summary::-webkit-details-marker{display:none}
+.sicon{width:44px;height:44px;border-radius:10px;background:var(--navy);color:var(--teal);display:grid;place-items:center}
+.sicon svg{width:22px;height:22px}
+.svc h3{font-size:1.08rem;letter-spacing:-0.01em}
+.svc .st{font-size:.8rem;color:var(--muted);font-weight:500;margin-top:2px}
+.svc .st.on{color:var(--teal-ink)}
+.plus{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;transition:transform .25s}
+.plus svg{width:12px;height:12px}
+.svc details[open] .plus{transform:rotate(45deg);border-color:var(--teal)}
+.sbody{padding:0 22px 24px 82px;color:var(--muted);font-size:.97rem}
+.sbody ul{margin:12px 0 0 18px}
+.sbody li{margin-bottom:4px}
+.svc-cta{margin-top:40px;display:flex;gap:14px;flex-wrap:wrap}
+
+.tk{padding:72px 0;background:#fff;border-bottom:1px solid var(--line)}
+.tk .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.tk h2{font-size:clamp(1.6rem,3vw,2.2rem);max-width:20ch}
+.tk .lead{margin-top:14px}
+.tk-cloud{display:flex;flex-wrap:wrap;gap:8px}
+.tk-cloud span{font-size:.9rem;font-weight:600;color:var(--navy);background:var(--paper);border:1px solid var(--line);padding:7px 13px;border-radius:999px}
+.tk-cloud span.more{background:var(--teal-soft);border-color:transparent;color:var(--teal-ink)}
+.tk .btn{margin-top:26px}
+@media (max-width:860px){.tk{padding:56px 0}.tk .wrap{grid-template-columns:1fr;gap:28px}}
+.how{background:var(--navy-deep);color:#fff}
+.how .lead{color:#B9C6DC}
+.flow{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);position:relative}
+.flow::before{content:"";position:absolute;top:27px;left:10%;right:10%;height:2px;background:linear-gradient(90deg,var(--teal),rgba(0,201,167,.25))}
+.flow li{position:relative;padding:0 14px;text-align:center}
+.dot{width:56px;height:56px;margin:0 auto 22px;border-radius:50%;background:var(--navy-deep);border:2px solid var(--teal);color:var(--teal);display:grid;place-items:center;position:relative;z-index:1}
+.dot svg{width:24px;height:24px}
+.flow b{display:block;font-size:.8rem;color:var(--teal);font-weight:600;margin-bottom:6px}
+.flow h3{font-size:1.08rem;margin-bottom:8px;letter-spacing:-0.01em}
+.flow p{font-size:.9rem;color:var(--muted-dark)}
+.onboard{margin-top:80px;display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;padding-top:56px;border-top:1px solid rgba(255,255,255,.1)}
+.onboard h3{font-size:1.6rem}
+.onboard>div>p{color:var(--muted-dark);margin-top:12px}
+.steps{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:24px 32px}
+.steps li{display:flex;gap:14px}
+.steps span{font-weight:700;color:var(--teal);font-size:1.1rem;min-width:22px}
+.steps strong{display:block;margin-bottom:4px}
+.steps p{font-size:.92rem;color:var(--muted-dark)}
+
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r-m)}
+table{width:100%;border-collapse:collapse;min-width:720px}
+th,td{padding:18px 22px;text-align:left;border-bottom:1px solid var(--line);font-size:.97rem;vertical-align:top}
+thead th{font-weight:600;color:var(--muted);background:var(--paper)}
+thead th.us{background:var(--navy);color:#fff}
+td.us{background:#F2FCFA;font-weight:600;color:var(--ink)}
+tbody tr:last-child td{border-bottom:0}
+td:first-child{font-weight:600;width:26%}
+.y,.n,.p{display:inline-flex;align-items:center;gap:8px}
+.y svg,.n svg,.p svg{width:18px;height:18px;flex-shrink:0}
+.y svg{color:var(--teal-ink)} .n svg{color:#C24A4A} .p svg{color:#B8921A}
+.diff{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:56px}
+.diff div{padding-top:20px;border-top:3px solid var(--teal)}
+.diff h3{font-size:1.15rem;margin-bottom:8px}
+.diff p{color:var(--muted);font-size:.97rem}
+
+.team{background:var(--paper)}
+.team-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;margin-bottom:48px}
+.tgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;align-items:start}
+.tcard{background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:24px 20px}
+.tcard.human{background:var(--navy);color:#fff;border-color:var(--navy)}
+.tav{width:52px;height:52px;border-radius:50%;background:var(--teal-soft);color:var(--teal-ink);display:grid;place-items:center;font-weight:700;font-size:1.2rem;margin-bottom:18px}
+.human .tav{background:var(--teal);color:var(--navy);overflow:hidden}
+.tav img{width:100%;height:100%;object-fit:cover}
+.tcard h3{font-size:1.2rem}
+.role{font-size:.88rem;color:var(--muted);margin:2px 0 12px}
+.human .role{color:var(--muted-dark)}
+.tcard>p{font-size:.93rem;color:var(--muted)}
+.human>p{color:#C7D2E5}
+.tcard details{margin-top:16px;font-size:.88rem}
+.tcard summary{cursor:pointer;font-weight:600;color:var(--teal-ink);list-style:none}
+.human summary{color:var(--teal)}
+.tcard summary::-webkit-details-marker{display:none}
+.tcard details p{margin-top:10px;color:var(--muted)}
+.human details p{color:#C7D2E5}
+
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.plan{border:1px solid var(--line);border-radius:var(--r-l);padding:34px 30px;display:flex;flex-direction:column}
+.plan.hl{background:var(--navy);color:#fff;border-color:var(--navy);position:relative}
+.tag{position:absolute;top:-13px;left:30px;background:var(--teal);color:var(--navy);font-size:.8rem;font-weight:700;padding:5px 12px;border-radius:20px}
+.plan h3{font-size:1.4rem}
+.plan .for{color:var(--muted);font-size:.93rem;margin-top:4px}
+.plan.hl .for,.plan.hl .setup,.plan.hl .price small{color:var(--muted-dark)}
+.price{margin:26px 0 4px;font-size:2.6rem;font-weight:800;letter-spacing:-0.03em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.price small{font-size:1rem;font-weight:500;color:var(--muted);letter-spacing:0}
+.setup{font-size:.88rem;color:var(--muted);margin-bottom:26px}
+.plan ul{list-style:none;flex:1;margin-bottom:30px}
+.plan li{display:flex;gap:10px;padding:9px 0;font-size:.96rem;border-top:1px solid var(--line)}
+.plan.hl li{border-color:rgba(255,255,255,.1)}
+.plan li svg{width:18px;height:18px;color:var(--teal-ink);flex-shrink:0;margin-top:3px}
+.plan.hl li svg{color:var(--teal)}
+.pnote{margin-top:28px;color:var(--muted);font-size:.93rem}
+@media (max-width:1100px){.plan{padding:30px 22px}.price{font-size:2.1rem}}
+
+.pilot{background:var(--teal);color:var(--navy);padding:88px 0}
+.pilot .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
+.pilot h2{max-width:20ch}
+.pilot p{margin-top:16px;font-size:1.1rem;max-width:52ch}
+.pilot .acts{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+
+.contact{background:var(--paper)}
+.booking{background:#fff}
+.bgrid{display:grid;grid-template-columns:.75fr 1.25fr;gap:56px;align-items:start}
+.bsteps{list-style:none;margin-top:28px;display:flex;flex-direction:column;gap:16px}
+.bsteps li{display:flex;gap:14px;align-items:flex-start;color:var(--muted)}
+.bsteps b{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--teal-soft);color:var(--teal-ink);display:grid;place-items:center;font-size:.85rem}
+.bcard{background:var(--navy);color:#fff;border-radius:var(--r-l);padding:44px 40px;position:relative;overflow:hidden}
+.bcard::after{content:"";position:absolute;right:-90px;top:-90px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(0,201,167,.22),transparent 70%);pointer-events:none}
+.bcard .bmeta{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+.bcard .bmeta span{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:7px 14px;font-size:.88rem;color:#D5DDEB}
+.bcard .bmeta svg{width:16px;height:16px;color:var(--teal)}
+.bcard h3{font-size:1.6rem;line-height:1.2;margin-bottom:10px}
+.bcard p{color:var(--muted-dark);max-width:46ch}
+.bcard .btn{margin-top:26px;font-size:1.05rem;padding:18px 28px}
+.bcard .balt{margin-top:18px;font-size:.92rem;color:var(--muted-dark)}
+.bcard .balt a{color:var(--teal);text-decoration:none;font-weight:600;white-space:nowrap}
+.bdlg{border:0;padding:0;border-radius:var(--r-l);width:min(980px,94vw);height:min(820px,90vh);max-width:none;max-height:none;background:#fff;box-shadow:0 30px 80px rgba(10,21,48,.45);overflow:hidden}
+.bdlg::backdrop{background:rgba(10,21,48,.72);backdrop-filter:blur(3px)}
+.bdlg-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 16px 14px 22px;background:var(--navy);color:#fff}
+.bdlg-head b{font-size:1rem}
+.bdlg-x{background:rgba(255,255,255,.1);border:0;color:#fff;width:40px;height:40px;border-radius:10px;font-size:1.4rem;line-height:1;cursor:pointer}
+.bdlg-x:hover{background:var(--teal);color:var(--navy)}
+.bdlg iframe{display:block;width:100%;height:calc(100% - 68px);border:0}
+@media (max-width:860px){.bgrid{grid-template-columns:1fr;gap:32px}.bcard{padding:36px 26px}}
+@media (max-width:600px){.bdlg{width:100vw;height:100dvh;border-radius:0}}
+.cgrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px}
+.clist{list-style:none;margin-top:36px}
+.clist li{display:flex;gap:16px;padding:18px 0;border-top:1px solid var(--line)}
+.clist svg{width:22px;height:22px;color:var(--teal-ink);flex-shrink:0;margin-top:3px}
+.clist span{display:block;font-size:.85rem;color:var(--muted)}
+.clist a{font-weight:600;text-decoration:none}
+.clist a:hover{color:var(--teal-ink)}
+form{background:#fff;border:1px solid var(--line);border-radius:var(--r-l);padding:34px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{margin-bottom:18px}
+label{display:block;font-size:.88rem;font-weight:600;margin-bottom:7px}
+input,select,textarea{width:100%;font:inherit;font-size:1rem;padding:13px 14px;border:1.5px solid var(--line);border-radius:var(--r-s);background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(0,201,167,.18)}
+textarea{min-height:110px;resize:vertical}
+.hp{position:absolute;left:-9999px}
+.fnote{font-size:.82rem;color:var(--muted);margin-top:10px}
+.fnote a,.cb-note a{color:var(--teal-ink)}
+.fok{display:none;padding:22px;border-radius:var(--r-m);background:var(--teal-soft);color:var(--teal-ink);font-weight:600}
+.ferr{display:none;color:#C24A4A;font-size:.9rem;margin-top:10px}
+
+footer{background:var(--navy-deep);color:var(--muted-dark);padding:64px 0 calc(32px + env(safe-area-inset-bottom,0px));font-size:.93rem}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.08)}
+footer h4{color:#fff;font-size:.95rem;margin-bottom:14px}
+footer ul{list-style:none}
+footer li{margin-bottom:8px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--teal)}
+.fbot{padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.85rem}
+.flegal{padding-top:24px;font-size:.82rem;line-height:1.6;color:var(--muted-dark);max-width:760px}
+.flegal b{color:#fff;font-weight:600}
+
+.founder{background:var(--navy-deep);color:#fff}
+.founder .lead{color:#B9C6DC}
+.fd{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
+.fcard{background:var(--navy);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-l);padding:32px}
+.fphoto{width:132px;height:132px;border:3px solid var(--teal);border-radius:50%;background:var(--teal);color:var(--navy);display:grid;place-items:center;font-weight:800;font-size:2rem;margin-bottom:20px;overflow:hidden}
+.fphoto img{width:100%;height:100%;object-fit:cover}
+.fcard h3{font-size:1.5rem}
+.fcard .role{color:var(--muted-dark);margin:4px 0 22px}
+.creds{list-style:none}
+.creds li{display:flex;gap:12px;padding:12px 0;border-top:1px solid rgba(255,255,255,.08);font-size:.95rem;color:#D5DDEB}
+.creds svg{width:18px;height:18px;color:var(--teal);flex-shrink:0;margin-top:4px}
+.flinks{display:flex;gap:18px;margin-top:20px;flex-wrap:wrap}
+.flinks a{color:var(--teal);text-decoration:none;font-weight:600;font-size:.95rem}
+.quote{font-size:clamp(1.35rem,2.4vw,1.8rem);font-weight:700;line-height:1.3;letter-spacing:-0.02em;padding-left:22px;border-left:3px solid var(--teal);margin-bottom:36px}
+.fpts{display:grid;grid-template-columns:1fr 1fr;gap:28px 32px}
+.fpts h3{font-size:1.1rem;margin-bottom:8px}
+.fpts p{color:var(--muted-dark);font-size:.95rem}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.trust{border:1px solid var(--line);border-radius:var(--r-m);padding:26px 22px}
+.trust .vicon{margin-bottom:18px}
+.trust h3{font-size:1.1rem;margin-bottom:8px}
+.trust p{color:var(--muted);font-size:.95rem}
+.legal{margin-top:28px;font-size:.85rem;color:var(--muted);max-width:80ch}
+@media (max-width:1024px){.trust-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:860px){.fd,.fpts{grid-template-columns:1fr;gap:32px}}
+@media (max-width:520px){.trust-grid{grid-template-columns:1fr}}
+@media (max-width:1024px){
+  .tgrid{grid-template-columns:repeat(3,1fr)}
+  .flow{grid-template-columns:1fr;gap:28px;max-width:560px}
+  .flow::before{top:0;bottom:0;left:27px;right:auto;width:2px;height:auto;background:linear-gradient(180deg,var(--teal),rgba(0,201,167,.25))}
+  .flow li{display:grid;grid-template-columns:56px 1fr;column-gap:20px;text-align:left;padding:0}
+  .dot{margin:0;grid-row:span 3}
+}
+@media (max-width:860px){
+  section{padding:80px 0}
+  .nav,.t-long{display:none}
+  .burger{display:block}
+  .hero{padding:56px 0 72px}
+  .hero .wrap,.onboard,.cgrid,.pilot .wrap{grid-template-columns:1fr;gap:40px}
+  .vgrid,.pgrid,.diff,.svc{grid-template-columns:1fr}
+  .vgrid{border-top:0}
+  .vitem,.vitem+.vitem{padding:28px 0;border-left:0;border-top:1px solid var(--line)}
+  .tgrid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr 1fr}
+  .plan.hl{order:-1;margin-top:10px}
+}
+@media (max-width:520px){
+  body{font-size:16px}
+  .wrap{padding:0 20px}
+  .hero-cta .btn{width:100%}
+  .tgrid,.frow{grid-template-columns:1fr}
+  form{padding:24px}
+  .sbody{padding-left:22px}
+  .lines{min-height:330px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .ln,.booked{opacity:1;transform:none}
+}
+
+/* ── Klára Chat ── */
+.cb-fab{position:fixed;right:22px;bottom:22px;z-index:110;display:flex;align-items:center;gap:10px;background:var(--teal);color:var(--navy);border:0;border-radius:999px;padding:14px 20px 14px 16px;font:700 .98rem/1 var(--font);cursor:pointer;box-shadow:0 12px 32px rgba(10,21,48,.28);transition:transform .2s,box-shadow .2s}
+.cb-fab:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(10,21,48,.34)}
+.cb-fab svg{width:22px;height:22px}
+.cb-dot{width:9px;height:9px;border-radius:50%;background:var(--navy);box-shadow:0 0 0 3px rgba(15,30,60,.18)}
+.cb-fab[aria-expanded="true"]{display:none}
+.cb{position:fixed;right:22px;bottom:22px;z-index:120;margin:0;width:min(400px,calc(100vw - 32px));height:min(620px,calc(100vh - 44px));background:#fff;border-radius:var(--r-l);box-shadow:0 30px 80px rgba(10,21,48,.35);display:flex;flex-direction:column;overflow:hidden;opacity:0;transform:translateY(16px) scale(.98);pointer-events:none;transition:opacity .2s,transform .2s}
+.cb.open{opacity:1;transform:none;pointer-events:auto}
+.cb-head{background:var(--navy);color:#fff;padding:16px 16px 16px 20px;display:flex;align-items:center;gap:12px}
+.cb-head .av{flex-shrink:0}
+.cb-head b{display:block;font-size:1rem}
+.cb-head small{color:var(--muted-dark);font-size:.8rem}
+.cb-x{margin-left:auto;background:rgba(255,255,255,.1);border:0;color:#fff;width:36px;height:36px;border-radius:10px;font-size:1.3rem;line-height:1;cursor:pointer}
+.cb-x:hover{background:var(--teal);color:var(--navy)}
+.cb-body{flex:1;overflow-y:auto;padding:18px 16px;display:flex;flex-direction:column;gap:10px;background:var(--paper)}
+.cb-msg{max-width:86%;padding:11px 14px;border-radius:14px;font-size:.95rem;line-height:1.5;white-space:pre-wrap;word-wrap:break-word}
+.cb-msg.a{background:#fff;border:1px solid var(--line);color:var(--ink);border-bottom-left-radius:4px;align-self:flex-start}
+.cb-msg.u{background:var(--navy);color:#fff;border-bottom-right-radius:4px;align-self:flex-end}
+.cb-msg .btn{margin-top:10px;padding:11px 16px;font-size:.92rem;white-space:normal}
+.cb-typing{align-self:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 16px;display:flex;gap:5px}
+.cb-typing i{width:7px;height:7px;border-radius:50%;background:var(--muted-dark);animation:cbt 1s infinite ease-in-out}
+.cb-typing i:nth-child(2){animation-delay:.15s}.cb-typing i:nth-child(3){animation-delay:.3s}
+@keyframes cbt{0%,80%,100%{opacity:.3;transform:translateY(0)}40%{opacity:1;transform:translateY(-3px)}}
+.cb-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:2px}
+.cb-chips button{background:#fff;border:1px solid var(--teal);color:var(--teal-ink);border-radius:999px;padding:8px 13px;font:600 .85rem/1.2 var(--font);cursor:pointer}
+.cb-chips button:hover{background:var(--teal-soft)}
+.cb-form{display:flex;gap:8px;padding:12px;margin:0;border:0;border-top:1px solid var(--line);border-radius:0;background:#fff;box-shadow:none}
+.cb-form textarea{flex:1;resize:none;border:1px solid var(--line);border-radius:12px;padding:11px 13px;font:400 .95rem/1.4 var(--font);color:var(--ink);max-height:110px;min-height:44px}
+.cb-form textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(0,201,167,.15)}
+.cb-send{flex-shrink:0;width:44px;height:44px;border-radius:12px;border:0;background:var(--teal);color:var(--navy);display:grid;place-items:center;cursor:pointer}
+.cb-send:disabled{opacity:.45;cursor:default}
+.cb-send svg{width:20px;height:20px}
+.cb-note{padding:0 14px 10px;background:#fff;font-size:.74rem;color:var(--muted);line-height:1.4}
+@media (max-width:600px){
+  .cb-fab{right:14px;bottom:14px;padding:13px}
+  .cb-fab span{display:none}
+  .cb{right:0;bottom:0;width:100vw;height:100dvh;border-radius:0}
+}
+@media (prefers-reduced-motion:reduce){.cb,.cb-fab{transition:none}.cb-typing i{animation:none}}
+
+.lang{display:inline-flex;border:1px solid rgba(255,255,255,.18);border-radius:8px;overflow:hidden;flex-shrink:0;margin-right:8px}
+.lang a{color:var(--muted-dark);text-decoration:none;font-size:.8rem;font-weight:700;letter-spacing:.04em;padding:8px 9px;line-height:1}
+.lang a:hover{color:#fff}
+.lang a[aria-current]{background:rgba(255,255,255,.12);color:#fff}
+@media (max-width:400px){.lang{margin-right:4px}.lang a{padding:8px 7px}.hdr-cta{padding:11px 12px}}
+@media (max-width:380px){.hdr-cta>span{display:none}.hdr-cta{padding:11px}}
+@media (max-width:1000px){.price{font-size:1.85rem}}
+@media (max-width:960px){.nav a[href="#why"]{display:none}}
+@media (max-width:1180px){.nav a[href="#founder"]{display:none}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-part" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M6 12h12"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 12 12"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 1v10M1 6h10"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></g></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5L12 13l8.5-6.5"/></g></symbol>
+  <symbol id="i-inbox" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l2.5-8h13L21 13v6H3z"/><path d="M3 13h5l1.5 2.5h5L16 13h5"/></g></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></g></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></g></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M21 3L3 10.5l7 2.5 2.5 7z"/></symbol>
+  <symbol id="i-ear" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 12h2l2-5 3 10 3-12 3 9 2-2h3"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.8z"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M20 14.5A8 8 0 1 1 9.5 4 6.5 6.5 0 0 0 20 14.5z"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></g></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M7 21h10M4 7h16M4 7l-2.5 6a3 3 0 0 0 5 0zM20 7l-2.5 6a3 3 0 0 0 5 0z"/></g></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></g></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></g></symbol>
+  <symbol id="i-globe2" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/></g></symbol>
+</svg>
+
+<header class="hdr">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Voicelix, home">
+      <svg viewBox="0 0 40 22" aria-hidden="true"><g fill="#00C9A7"><rect x="0" y="8" width="3" height="6" rx="1.5" opacity=".45"/><rect x="6" y="5" width="3" height="12" rx="1.5" opacity=".7"/><rect x="12" y="1" width="3" height="20" rx="1.5"/><rect x="18" y="4" width="3" height="14" rx="1.5"/><rect x="24" y="0" width="3" height="22" rx="1.5"/><rect x="30" y="6" width="3" height="10" rx="1.5" opacity=".7"/><rect x="36" y="9" width="3" height="4" rx="1.5" opacity=".45"/></g></svg>
+      Voicelix
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#services">Services</a>
+      <a href="/en/tools/">Toolkit</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#why">Why Voicelix</a>
+      <a href="#founder">Who's behind it</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="hdr-right">
+      <div class="lang" role="group" aria-label="Language"><a href="/" hreflang="cs" lang="cs" aria-label="Česky">CZ</a><a href="/en/" aria-current="true">EN</a></div>
+      <a class="btn btn-primary hdr-cta" href="tel:+420910926750"><svg><use href="#i-phone"/></svg><span>Call<span class="t-long"> Klára</span></span></a>
+      <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mnav" id="burger">
+        <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Mobile navigation">
+    <a href="#services">Services</a>
+    <a href="/en/tools/">Toolkit</a>
+    <a href="#how-it-works">How it works</a>
+    <a href="#why">Why Voicelix</a>
+    <a href="#founder">Who's behind it</a>
+    <a href="#data">Data and compliance</a>
+    <a href="#team">Team</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="live"><i></i>Klára is on the line right now. Give her a try.</div>
+      <h1>We answer every call your business gets.</h1>
+      <p class="lead">An AI receptionist takes the call, books the appointment and writes it into your calendar. Day, night and weekends. Designed and built personally by an architect with a law degree, securely and in line with GDPR and the EU AI Act.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="tel:+420910926750"><svg><use href="#i-phone"/></svg>Call Klára</a>
+        <a class="btn btn-ghost" href="#founder">Who's behind it</a>
+      </div>
+      <p class="hero-note">+420 910 926 750. Live demo, no sign-up. Klára speaks Czech: our assistants are built for Czech-speaking customers. Or <a class="js-book" href="#booking">book a consultation with Pavel</a> right away.</p>
+    </div>
+
+    <div class="call" aria-label="Sample calls with AI assistants">
+      <div class="tabs" role="tablist" aria-label="Call type">
+        <button role="tab" id="tab-in" aria-selected="true" aria-controls="scn-in">Inbound: booking</button>
+        <button role="tab" id="tab-out" aria-selected="false" aria-controls="scn-out">Outbound: sales call</button>
+      </div>
+      <div class="scenes">
+      <div class="scn" id="scn-in" role="tabpanel" aria-labelledby="tab-in">
+      <div class="call-top">
+        <div class="caller">
+          <div class="av">K</div>
+          <div><b>Klára, AI receptionist</b><span>Incoming call, 9:47 pm</span></div>
+        </div>
+        <div class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="lines">
+        <div class="ln k"><small>Klára</small>Good evening, Petra's salon, this is Klára, an AI assistant. How can I help you?</div>
+        <div class="ln c"><small>Customer</small>I'd like to book a haircut, ideally Thursday afternoon.</div>
+        <div class="ln k"><small>Klára</small>On Thursday I have 2:00 pm or 3:30 pm available. Which suits you?</div>
+        <div class="ln c"><small>Customer</small>Half past three is perfect.</div>
+        <div class="ln k"><small>Klára</small>Done, you're booked. A confirmation is on its way. Have a nice evening!</div>
+      </div>
+      <div class="booked">
+        <div class="cal"><b>THU</b><span>14</span></div>
+        <div><strong>Booking added to the calendar</strong><p>Haircut, 3:30 pm. Confirmation sent to the customer.</p></div>
+      </div>
+      </div>
+      <div class="scn off" id="scn-out" role="tabpanel" aria-labelledby="tab-out">
+      <div class="call-top">
+        <div class="caller">
+          <div class="av out">T</div>
+          <div><b>Tomáš, AI sales agent</b><span>Outgoing call, 10:15 am</span></div>
+        </div>
+        <div class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="lines">
+        <div class="ln k"><small>Tomáš</small>Hello, this is Tomáš, an AI assistant for Energo Servis. We compare energy prices for businesses free of charge. Do you have a minute?</div>
+        <div class="ln c"><small>Business owner</small>I'm interested, but I don't have time right now.</div>
+        <div class="ln k"><small>Tomáš</small>I understand. Could our sales rep call you back? Would Thursday at 10:00 or Friday at 2:00 pm work?</div>
+        <div class="ln c"><small>Business owner</small>Thursday at ten.</div>
+        <div class="ln k"><small>Tomáš</small>Great, Mr. Novák will call you on Thursday at 10:00. Have a nice day!</div>
+      </div>
+      <div class="booked">
+        <div class="lead-ic"><svg><use href="#i-send"/></svg></div>
+        <div><strong>Lead handed to a sales rep</strong><p>Callback Thu 10:00. Call summary saved to the CRM.</p></div>
+      </div>
+      </div>
+      </div>
+      <p class="call-foot">Illustrative calls, shown in English. Energo Servis is a fictional company. You can try the inbound scenario live, in Czech.</p>
+    </div>
+  </div>
+</section>
+
+<div class="sectors">
+  <div class="wrap">
+    <span>For businesses where the phone means revenue:</span>
+    <b>Hair and beauty</b><b>Medical practices</b><b>Auto services</b><b>Law firms</b><b>Tradespeople</b><b>Call centers</b>
+  </div>
+</div>
+
+<section class="value">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>What Voicelix does for you</h2>
+      <p class="lead">Every missed call is a customer who calls your competitor. Voicelix closes that gap and then takes care of the rest of your customer communication.</p>
+    </div>
+    <div class="vgrid">
+      <div class="vitem">
+        <div class="vicon"><svg><use href="#i-moon"/></svg></div>
+        <h3>No missed calls</h3>
+        <p>Klára picks up while you're cutting hair, treating a patient or asleep. The customer gets an answer right away, not the next day.</p>
+      </div>
+      <div class="vitem">
+        <div class="vicon"><svg><use href="#i-cal"/></svg></div>
+        <h3>A calendar that fills itself</h3>
+        <p>Bookings, changes and cancellations go straight into Google Calendar. In the morning you open your phone and see what's planned.</p>
+      </div>
+      <div class="vitem">
+        <div class="vicon"><svg><use href="#i-layers"/></svg></div>
+        <h3>One partner instead of five</h3>
+        <p>Voice agent, website, business email, CRM, integrations and IT support. One invoice, one contact, one point of responsibility.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Everything your business needs</h2>
+      <p class="lead">The voice agent opens the door. Then we take care of your entire IT from A to Z: website, CRM, integrations, automation and custom apps.</p>
+    </div>
+    <div class="svc">
+      <details open>
+        <summary><div class="sicon"><svg><use href="#i-phone"/></svg></div><div><h3>AI customer care by phone</h3><div class="st on">Live</div></div><span class="plus"><svg><use href="#i-plus"/></svg></span></summary>
+        <div class="sbody">Klára answers calls, Tomáš handles sales conversations and Jana collects feedback. Three agents who pass the call between them like a well-rehearsed team.
+          <ul><li>Booking, rescheduling and cancelling appointments</li><li>Answers to frequent questions about your business</li><li>Entry in Google Calendar and confirmation to the customer</li><li>Introduces itself as an AI assistant, as the AI Act requires</li></ul>
+        </div>
+      </details>
+      <details>
+        <summary><div class="sicon"><svg><use href="#i-send"/></svg></div><div><h3>AI sales agent for B2B</h3><div class="st on">Live</div></div><span class="plus"><svg><use href="#i-plus"/></svg></span></summary>
+        <div class="sbody">The agent finds suitable companies, studies their website and writes a personalized email. You approve every email before it goes out.
+          <ul><li>Company selection by industry and city</li><li>Assessment of whether the company is a good fit</li><li>Records in a CRM spreadsheet</li></ul>
+        </div>
+      </details>
+      <details>
+        <summary><div class="sicon"><svg><use href="#i-inbox"/></svg></div><div><h3>AI handling of incoming email</h3><div class="st">Custom</div></div><span class="plus"><svg><use href="#i-plus"/></svg></span></summary>
+        <div class="sbody">The agent reads and sorts your mail, drafts replies for approval or answers on its own. A good fit for e-shops, medical practices, lawyers and accountants.</div>
+      </details>
+      <details>
+        <summary><div class="sicon"><svg><use href="#i-globe"/></svg></div><div><h3>Website and digital presence</h3><div class="st on">Live</div></div><span class="plus"><svg><use href="#i-plus"/></svg></span></summary>
+        <div class="sbody">A professional website, business email on your own domain, Google Business Profile and basic SEO. Up and running in one to three days.</div>
+      </details>
+      <details>
+        <summary><div class="sicon"><svg><use href="#i-cal"/></svg></div><div><h3>Online booking on your website</h3><div class="st on">Live</div></div><span class="plus"><svg><use href="#i-plus"/></svg></span></summary>
+        <div class="sbody">A booking widget right on your website, connected to your calendar and to the voice agent. Automatic confirmations and reminders.</div>
+      </details>
+      <details>
+        <summary><div class="sicon"><svg><use href="#i-chat"/></svg></div><div><h3>AI assistant on your website</h3><div class="st">Custom</div></div><span class="plus"><svg><use href="#i-plus"/></svg></span></summary>
+        <div class="sbody">A chat or voice assistant on your website. It answers visitors' questions and guides them all the way to a booking.</div>
+      </details>
+      <details>
+        <summary><div class="sicon"><svg><use href="#i-gear"/></svg></div><div><h3>IT, integrations and custom apps</h3><div class="st on">Live</div></div><span class="plus"><svg><use href="#i-plus"/></svg></span></summary>
+        <div class="sbody">Your company's entire IT from A to Z. We connect the tools you already use, roll out new ones and build what the market is missing.
+          <ul><li>CRM rollout and administration, from a spreadsheet to Salesforce</li><li>API integrations: invoicing, accounting, e-shop, calendars</li><li>Custom internal apps and dashboards</li><li>Automation: reminders, invoicing, email marketing, replies to reviews</li><li>IT support and process audit</li></ul>
+        </div>
+      </details>
+      <details>
+        <summary><div class="sicon"><svg><use href="#i-shield"/></svg></div><div><h3>AI Act and GDPR audit</h3><div class="st">New</div></div><span class="plus"><svg><use href="#i-plus"/></svg></span></summary>
+        <div class="sbody">For companies that already use AI or automation, from us or from another vendor.
+          <ul><li>Inventory of AI systems and data flows</li><li>Transparency check under Art. 50 of the AI Act</li><li>Processing agreements, call recording and retention</li><li>Report with recommended changes</li></ul>
+          <p style="margin-top:10px;font-size:.88rem">A technical and organizational review, not a legal service.</p>
+        </div>
+      </details>
+    </div>
+    <div class="svc-cta">
+      <a class="btn btn-dark" href="#contact">Find out what fits my business</a>
+      <a class="btn btn-line" href="#pricing">See pricing</a>
+    </div>
+  </div>
+</section>
+
+<section class="tk" id="tools" aria-labelledby="tk-title">
+  <div class="wrap">
+    <div>
+      <h2 id="tk-title">Tools we connect into one system</h2>
+      <p class="lead">Phone, calendar, CRM, invoicing and email marketing. We set them up, connect them to each other and to what your business already uses, and look after them. No more copying data by hand.</p>
+      <a class="btn btn-dark" href="/en/tools/">Explore the Toolkit</a>
+    </div>
+    <div class="tk-cloud" aria-label="Examples of tools">
+      <span>Vapi</span><span>Twilio</span><span>ElevenLabs</span><span>Claude</span><span>Google Workspace</span><span>Google Calendar</span><span>Cal.com</span><span>Calendly</span><span>Relevance AI</span><span>Make.com</span><span>Salesforce</span><span>Fakturoid</span><span>iDoklad</span><span>Brevo</span><span>Mailchimp</span><span>Netlify</span><span class="more">and 10 more</span>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="how-it-works">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>How it actually works</h2>
+      <p class="lead">From the phone ringing to a booked appointment. Without you lifting a finger.</p>
+    </div>
+    <ol class="flow">
+      <li><div class="dot"><svg><use href="#i-phone"/></svg></div><b>Step 1</b><h3>A customer calls</h3><p>Your number, any time. Klára takes the call.</p></li>
+      <li><div class="dot"><svg><use href="#i-ear"/></svg></div><b>Step 2</b><h3>Klára understands</h3><p>She recognizes a booking, a change, a cancellation or a question.</p></li>
+      <li><div class="dot"><svg><use href="#i-cal"/></svg></div><b>Step 3</b><h3>Checks availability</h3><p>She looks straight into your calendar and offers free slots.</p></li>
+      <li><div class="dot"><svg><use href="#i-check"/></svg></div><b>Step 4</b><h3>Books and confirms</h3><p>The appointment goes into your calendar and both you and the customer get a confirmation.</p></li>
+      <li><div class="dot"><svg><use href="#i-star"/></svg></div><b>Step 5</b><h3>Asks about satisfaction</h3><p>At the end, Jana briefly asks how satisfied the customer was.</p></li>
+    </ol>
+
+    <div class="onboard">
+      <div>
+        <h3>How we start working together</h3>
+        <p>Nothing to install, nothing to learn. We set everything up based on how your business really works.</p>
+      </div>
+      <ol class="steps">
+        <li><span>1</span><div><strong>Intro call</strong><p>We find out how many calls you miss and what customers ask for most.</p></div></li>
+        <li><span>2</span><div><strong>Tailored setup</strong><p>We teach Klára your services, prices, opening hours and booking rules.</p></div></li>
+        <li><span>3</span><div><strong>Trial run</strong><p>We listen to the first calls together and fine-tune what's needed.</p></div></li>
+        <li><span>4</span><div><strong>Go live</strong><p>You forward your number and Klára starts answering. We keep watching over it.</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="compare" id="why">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>What makes us different</h2>
+      <p class="lead">You'll find AI receptionists and traditional call centers on the market. Voicelix builds you a whole team of agents, plus your company's digital backbone.</p>
+    </div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th scope="col"><span class="hp">Criterion</span></th><th scope="col" class="us">Voicelix</th><th scope="col">Typical AI receptionist</th><th scope="col">Receptionist or call center</th></tr></thead>
+        <tbody>
+          <tr><td>Availability</td><td class="us"><span class="y"><svg><use href="#i-check"/></svg>24/7, weekends included</span></td><td><span class="y"><svg><use href="#i-check"/></svg>24/7</span></td><td><span class="p"><svg><use href="#i-part"/></svg>Business hours</span></td></tr>
+          <tr><td>Natural Czech</td><td class="us"><span class="y"><svg><use href="#i-check"/></svg>Built for Czech</span></td><td><span class="p"><svg><use href="#i-part"/></svg>Often just a translation</span></td><td><span class="y"><svg><use href="#i-check"/></svg>Yes</span></td></tr>
+          <tr><td>Several roles in one call</td><td class="us"><span class="y"><svg><use href="#i-check"/></svg>Reception, sales, feedback</span></td><td><span class="n"><svg><use href="#i-x"/></svg>One agent</span></td><td><span class="p"><svg><use href="#i-part"/></svg>Depends on headcount</span></td></tr>
+          <tr><td>Website, email, booking, automation</td><td class="us"><span class="y"><svg><use href="#i-check"/></svg>All from one partner</span></td><td><span class="n"><svg><use href="#i-x"/></svg>Phone only</span></td><td><span class="n"><svg><use href="#i-x"/></svg>No</span></td></tr>
+          <tr><td>Calendar entries</td><td class="us"><span class="y"><svg><use href="#i-check"/></svg>Automatic</span></td><td><span class="p"><svg><use href="#i-part"/></svg>Depends on vendor</span></td><td><span class="p"><svg><use href="#i-part"/></svg>Manual</span></td></tr>
+          <tr><td>GDPR and AI Act</td><td class="us"><span class="y"><svg><use href="#i-check"/></svg>Built in from the first design</span></td><td><span class="p"><svg><use href="#i-part"/></svg>Depends on vendor</span></td><td><span class="p"><svg><use href="#i-part"/></svg>Up to the business</span></td></tr>
+          <tr><td>Who builds it</td><td class="us"><span class="y"><svg><use href="#i-check"/></svg>The founder, personally</span></td><td><span class="p"><svg><use href="#i-part"/></svg>Template and support desk</span></td><td><span class="p"><svg><use href="#i-part"/></svg>An outside company</span></td></tr>
+          <tr><td>Monthly cost</td><td class="us">from CZK 2,500</td><td>Similar, but for the phone only</td><td>Salary and payroll costs</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="diff">
+      <div><h3>A team, not a robot</h3><p>Klára, Tomáš and Jana pass the call between them depending on what the customer needs. Just like a good front desk.</p></div>
+      <div><h3>Tailored to your business</h3><p>No templates. The agent knows your services, prices and rules and speaks the way you do.</p></div>
+      <div><h3>A person who stands behind the result</h3><p>Behind every deployment is Pavel, an architect and lawyer. You know exactly who to call when you want something changed.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="founder" id="founder">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Architect and lawyer. Builds it himself.</h2>
+      <p class="lead">There are no salespeople or subcontractors behind Voicelix. Every solution is designed, built and handed over by the founder.</p>
+    </div>
+    <div class="fd">
+      <div class="fcard">
+        <div class="fphoto"><img src="/pavel-sramek.jpg" alt="Pavel Šrámek, founder of Voicelix" width="480" height="480" loading="lazy"></div>
+        <h3>Mgr. Pavel Šrámek</h3>
+        <div class="role">Founder and AI architect</div>
+        <ul class="creds">
+          <li><svg><use href="#i-scale"/></svg><span>Master of Laws: EU law, financial law, crypto-asset regulation, accounting rules</span></li>
+          <li><svg><use href="#i-shield"/></svg><span>IAPP AIGP (AI governance): certification in preparation</span></li>
+          <li><svg><use href="#i-globe2"/></svg><span>4 years at Monstarlab: product and project owner and part-time architect of a platform for 27 group companies on every continent</span></li>
+          <li><svg><use href="#i-layers"/></svg><span>Salesforce, FinancialForce and Conga integrations: resource allocation, project management, finance, forecasting and HR data</span></li>
+          <li><svg><use href="#i-star"/></svg><span>6.5 years at Allianz: client service and sales</span></li>
+          <li><svg><use href="#i-check"/></svg><span>5 years in the Czech Army, rank of first lieutenant</span></li>
+        </ul>
+        <div class="flinks"><a href="mailto:pavel@voicelix.ai">pavel@voicelix.ai</a><a href="https://linkedin.com/in/pavel-šrámek-636823b7" target="_blank" rel="noopener">LinkedIn</a></div>
+      </div>
+      <div>
+        <p class="quote">I'm not a middleman and I don't hand the work to juniors. I design, build and hand over every solution myself. And I stand behind how it treats your data.</p>
+        <div class="fpts">
+          <div><h3>A CEO who builds</h3><p>The person you talk to at the consultation is the one who builds and runs your system. No passing it on.</p></div>
+          <div><h3>A legal perspective from day one</h3><p>GDPR, the AI Act, call recording, vendor contracts. We solve problems in the design, not after an inspection.</p></div>
+          <div><h3>Enterprise experience for small businesses</h3><p>At Monstarlab (1,200+ people, listed on the Tokyo Stock Exchange) I helped build the platform that 27 group companies ran on: allocation, projects, finance and people. Today a salon, a medical practice or a B2B company gets the same discipline.</p></div>
+          <div><h3>I test it on myself</h3><p>Voicelix itself runs on its own agents. When you call our number, you talk to the same Klára you would get.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="data" id="data">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Data and compliance: compliance by design</h2>
+      <p class="lead">AI works with your customers' calls, names and phone numbers. That's why we think about the law from the very first design, not after launch.</p>
+    </div>
+    <div class="trust-grid">
+      <div class="trust"><div class="vicon"><svg><use href="#i-chat"/></svg></div><h3>Transparency under the AI Act</h3><p>From 2 August 2026, callers must know they are talking to AI (Art. 50 of the AI Act). Our assistants have met this from the start.</p></div>
+      <div class="trust"><div class="vicon"><svg><use href="#i-lock"/></svg></div><h3>GDPR in the architecture</h3><p>We collect only the data the agent needs. We set up recording, retention and access so they hold up even in an inspection.</p></div>
+      <div class="trust"><div class="vicon"><svg><use href="#i-doc"/></svg></div><h3>Contracts and documentation</h3><p>A data processing agreement is part of every engagement. We also help with records of processing activities.</p></div>
+      <div class="trust"><div class="vicon"><svg><use href="#i-shield"/></svg></div><h3>AI governance</h3><p>Pavel is preparing for the international IAPP AIGP certification. For companies that already use AI, we offer an AI Act and GDPR audit.</p></div>
+    </div>
+    <p class="legal">Voicelix does not provide legal services within the meaning of the Czech Legal Profession Act. We design solutions in line with the law. For a binding legal opinion we will recommend an attorney.</p>
+  </div>
+</section>
+
+<section class="team" id="team">
+  <div class="wrap">
+    <div class="team-head">
+      <div>
+        <h2>A team that never sleeps</h2>
+        <p class="lead">Four AI colleagues and one person who designed them and stands behind them. All AI colleagues introduce themselves as AI.</p>
+      </div>
+      <a class="btn btn-dark" href="tel:+420910926750"><svg><use href="#i-phone"/></svg>Meet Klára live</a>
+    </div>
+    <div class="tgrid">
+      <article class="tcard">
+        <div class="tav">K</div><h3>Klára</h3><div class="role">AI receptionist</div>
+        <p>Answers the phone and books appointments.</p>
+        <details><summary>More about Klára</summary><p>The first voice a customer hears. She works out what the caller wants, offers free slots and records the booking. She can also handle rescheduling and cancellations.</p></details>
+      </article>
+      <article class="tcard">
+        <div class="tav">T</div><h3>Tomáš</h3><div class="role">AI sales agent</div>
+        <p>Handles sales conversations.</p>
+        <details><summary>More about Tomáš</summary><p>Finds out what the company needs, explains options and prices, handles objections and passes the call to Klára to set up a meeting.</p></details>
+      </article>
+      <article class="tcard">
+        <div class="tav">J</div><h3>Jana</h3><div class="role">AI feedback</div>
+        <p>Checks how satisfied customers are.</p>
+        <details><summary>More about Jana</summary><p>At the end of the call she informally asks how satisfied the customer was. The results help improve the service.</p></details>
+      </article>
+      <article class="tcard">
+        <div class="tav">H</div><h3>Honza</h3><div class="role">AI B2B sales</div>
+        <p>Finds new clients by email.</p>
+        <details><summary>More about Honza</summary><p>Finds suitable companies, studies their website and writes a personal email. He openly introduces himself as AI. <a href="mailto:honza@voicelix.ai">honza@voicelix.ai</a></p></details>
+      </article>
+      <article class="tcard human">
+        <div class="tav"><img src="/pavel-sramek.jpg" alt="Pavel Šrámek" width="480" height="480" loading="lazy"></div><h3>Pavel Šrámek</h3><div class="role">Founder, architect and lawyer</div>
+        <p>Designs, builds and stands behind the result.</p>
+        <details><summary>More about Pavel</summary><p>Master of Laws focusing on EU law, financial law and crypto-asset regulation, preparing for the IAPP AIGP certification. At Monstarlab he co-created a platform for 27 group companies on every continent, and spent six and a half years at Allianz. <a href="#founder">More about Pavel</a> · <a href="https://linkedin.com/in/pavel-šrámek-636823b7" target="_blank" rel="noopener">LinkedIn</a></p></details>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Clear packages, no surprises</h2>
+      <p class="lead">One number on the invoice. Each package comes with a one-time setup fee based on scope.</p>
+    </div>
+    <div class="pgrid">
+      <div class="plan">
+        <h3>Starter</h3><p class="for">For sole traders and new businesses</p>
+        <div class="price">CZK 4,500<small> / month</small></div>
+        <p class="setup">Starting price, plus one-time setup</p>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>AI receptionist Klára</li>
+          <li><svg><use href="#i-check"/></svg>Online booking on your website</li>
+          <li><svg><use href="#i-check"/></svg>Business website and email</li>
+          <li><svg><use href="#i-check"/></svg>Google Calendar integration</li>
+        </ul>
+        <a class="btn btn-line" href="#contact">I want Starter</a>
+      </div>
+      <div class="plan hl">
+        <span class="tag">Most popular</span>
+        <h3>Business</h3><p class="for">For companies with up to ten employees</p>
+        <div class="price">CZK 8,000<small> / month</small></div>
+        <p class="setup">Starting price, plus one-time setup</p>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>Everything in Starter</li>
+          <li><svg><use href="#i-check"/></svg>CRM and automatic reminders</li>
+          <li><svg><use href="#i-check"/></svg>AI handling of incoming email</li>
+          <li><svg><use href="#i-check"/></svg>Invoicing automation</li>
+        </ul>
+        <a class="btn btn-primary" href="#contact">I want Business</a>
+      </div>
+      <div class="plan">
+        <h3>Partner</h3><p class="for">For companies that want to grow</p>
+        <div class="price">CZK 15,000<small> / month</small></div>
+        <p class="setup">Starting price, plus one-time setup</p>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>Everything in Business</li>
+          <li><svg><use href="#i-check"/></svg>AI sales agent Honza</li>
+          <li><svg><use href="#i-check"/></svg>AI assistant on your website</li>
+          <li><svg><use href="#i-check"/></svg>Reporting and priority support</li>
+        </ul>
+        <a class="btn btn-line" href="#contact">I want Partner</a>
+      </div>
+    </div>
+    <p class="pnote">Every package includes AI transparency, GDPR setup and a data processing agreement. Only need the voice agent? From CZK 2,500 a month on its own. For agencies, franchises and call centers we offer a partner program.</p>
+  </div>
+</section>
+
+<section class="pilot">
+  <div class="wrap">
+    <div>
+      <h2>We're looking for the first ten companies for a pilot</h2>
+      <p>We'll tailor Klára to you and fine-tune her on real calls during the first month. In return, you give us honest feedback.</p>
+    </div>
+    <div class="acts">
+      <a class="btn btn-dark" href="#contact">Sign up for the pilot</a>
+      <a class="btn btn-line" href="tel:+420910926750"><svg><use href="#i-phone"/></svg>+420 910 926 750</a>
+    </div>
+  </div>
+</section>
+
+<section class="booking" id="booking">
+  <div class="wrap bgrid">
+    <div>
+      <h2>Book a consultation with Pavel</h2>
+      <p class="lead">30 minutes, free, online, in Czech or English. Pick a time that suits you. The confirmation and video call link arrive by email.</p>
+      <ul class="bsteps">
+        <li><b>1</b><span>We go through where your business is losing calls, time and data.</span></li>
+        <li><b>2</b><span>I'll show you how the assistant would work for you, including data protection.</span></li>
+        <li><b>3</b><span>You get a proposal with a fixed price: technology and compliance in one document.</span></li>
+      </ul>
+    </div>
+    <div class="bcard">
+      <div class="bmeta"><span><svg><use href="#i-cal"/></svg>30 minutes</span><span><svg><use href="#i-check"/></svg>Free</span><span><svg><use href="#i-chat"/></svg>Google Meet</span></div>
+      <h3>Pick a time that suits you</h3>
+      <p>A calendar with free slots opens. After booking you'll receive a confirmation with a video call link.</p>
+      <a class="btn btn-primary js-book" href="#booking"><svg><use href="#i-cal"/></svg>Book a consultation</a>
+      <p class="balt">Prefer the phone? Klára can book it for you too, in Czech: <a href="tel:+420910926750">+420 910 926 750</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap cgrid">
+    <div>
+      <h2>Let's talk</h2>
+      <p class="lead">Write to us, or call Klára right away. We'll get back to you within one business day.</p>
+      <ul class="clist">
+        <li><svg><use href="#i-phone"/></svg><div><span>Phone, live demo (Czech)</span><a href="tel:+420910926750">+420 910 926 750</a></div></li>
+        <li><svg><use href="#i-mail"/></svg><div><span>Email</span><a href="mailto:info@voicelix.ai">info@voicelix.ai</a></div></li>
+        <li><svg><use href="#i-cal"/></svg><div><span>Consultation with Pavel, 30 minutes free</span><a class="js-book" href="#booking">Pick a time</a></div></li>
+      </ul>
+    </div>
+    <div>
+      <form name="early-access" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="leadForm">
+        <input type="hidden" name="form-name" value="early-access">
+        <input type="hidden" name="lang" value="en">
+        <p class="hp"><label>Do not fill in <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div class="frow">
+          <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="f-company">Company</label><input id="f-company" name="company" autocomplete="organization"></div>
+        </div>
+        <div class="frow">
+          <div class="field"><label for="f-email">Email</label><input id="f-email" type="email" name="email" autocomplete="email" required></div>
+          <div class="field"><label for="f-phone">Phone</label><input id="f-phone" type="tel" name="phone" autocomplete="tel"></div>
+        </div>
+        <div class="field"><label for="f-sector">Industry</label>
+          <select id="f-sector" name="sector">
+            <option value="">Choose an industry</option>
+            <option>Hair and beauty</option><option>Medical practice and healthcare</option><option>Auto service</option><option>Law firm</option><option>Tradesperson</option><option>Call center or telemarketing</option><option>B2B company or agency</option><option>Other</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-msg">How can we help?</label><textarea id="f-msg" name="message" placeholder="For example: we can't keep up with calls, we want online booking"></textarea></div>
+        <button class="btn btn-primary" type="submit" style="width:100%">Send inquiry</button>
+        <p class="fnote">We'll use your details only to reply to your inquiry. <a href="/en/privacy/">Privacy policy</a></p>
+        <p class="ferr" id="ferr">The inquiry could not be sent. Please try again or write to info@voicelix.ai.</p>
+      </form>
+      <div class="fok" id="fok" role="status">Inquiry sent. We'll get back to you within one business day.</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<dialog class="bdlg" id="bookDlg" aria-labelledby="bookDlgTitle">
+  <div class="bdlg-head"><b id="bookDlgTitle">Consultation with Pavel, 30 minutes free</b><button class="bdlg-x" type="button" aria-label="Close" data-close>&times;</button></div>
+</dialog>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a href="#top" class="logo" style="margin-bottom:14px">Voicelix</a>
+        <p>The AI assistant that answers every call. Built personally by an architect with a law degree. One partner, everything under control.</p>
+      </div>
+      <div><h4>Services</h4><ul><li><a href="#services">AI receptionist</a></li><li><a href="#services">AI sales agent</a></li><li><a href="#services">Website and email</a></li><li><a href="#services">IT and integrations</a></li><li><a href="#services">AI Act and GDPR audit</a></li><li><a href="/en/tools/">Tools and technologies</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="#how-it-works">How it works</a></li><li><a href="#why">Why Voicelix</a></li><li><a href="#founder">Who's behind it</a></li><li><a href="#data">Data and compliance</a></li><li><a href="#team">Team</a></li><li><a href="#pricing">Pricing</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="tel:+420910926750">+420 910 926 750</a></li><li><a href="mailto:info@voicelix.ai">info@voicelix.ai</a></li><li><a href="https://linkedin.com/company/112520045" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://instagram.com/voicelix.ai" target="_blank" rel="noopener">Instagram</a></li></ul></div>
+    </div>
+    <p class="flegal"><b>Operator:</b> Pavel Šrámek, Company ID (IČO) 05378567, registered office Slovanské údolí 1016/47, 318 00 Plzeň, Czech Republic. Sole trader registered in the Czech Trade Register. Contact: <a href="mailto:pavel@voicelix.ai">pavel@voicelix.ai</a>. Voicelix does not provide legal services within the meaning of the Czech Legal Profession Act.</p>
+    <div class="fbot"><span>© 2026 Voicelix · <a href="/en/privacy/">Privacy policy</a> · <a href="/">Česky</a></span><span>Our AI assistants always introduce themselves as AI.</span></div>
+  </div>
+</footer>
+
+
+<button class="cb-fab" id="cbFab" type="button" aria-controls="cb" aria-expanded="false"><i class="cb-dot" aria-hidden="true"></i><svg aria-hidden="true"><use href="#i-chat"/></svg><span>Chat with Klára</span></button>
+<div class="cb" id="cb" role="dialog" aria-modal="false" aria-labelledby="cbTitle" aria-hidden="true">
+  <div class="cb-head">
+    <div class="av">K</div>
+    <div><b id="cbTitle">Klára, AI assistant</b><small>Replies instantly, 24/7</small></div>
+    <button class="cb-x" id="cbClose" type="button" aria-label="Close chat">&times;</button>
+  </div>
+  <div class="cb-body" id="cbBody" aria-live="polite"></div>
+  <form class="cb-form" id="cbForm">
+    <label for="cbInput" class="sr-only" style="position:absolute;left:-9999px">Your message</label>
+    <textarea id="cbInput" rows="1" maxlength="1000" placeholder="Type your question…" required></textarea>
+    <button class="cb-send" id="cbSend" type="submit" aria-label="Send"><svg><use href="#i-send"/></svg></button>
+  </form>
+  <p class="cb-note">This chat is run by AI (Claude model by Anthropic). We don't store conversations. We pass your contact to Pavel only if you send it to us yourself. Please don't share sensitive data. <a href="/en/privacy/#chat" target="_blank" rel="noopener">More on data protection</a></p>
+</div>
+<form name="chat-lead" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input name="bot-field"><input name="name"><input name="contact"><input name="company"><textarea name="need"></textarea><textarea name="transcript"></textarea>
+</form>
+
+<script>
+const burger=document.getElementById('burger'),mnav=document.getElementById('mnav');
+burger.addEventListener('click',()=>{const o=mnav.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+mnav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mnav.classList.remove('open');burger.setAttribute('aria-expanded','false')}));
+
+(function(){
+  const ids=['in','out'];
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const step=1500,start=600,hold=4500;
+  let timers=[],cur=0;
+  function clear(){timers.forEach(clearTimeout);timers=[]}
+  function show(i,auto){
+    clear();cur=i;
+    ids.forEach((id,j)=>{
+      document.getElementById('scn-'+id).classList.toggle('off',j!==i);
+      document.getElementById('tab-'+id).setAttribute('aria-selected',j===i);
+    });
+    const scn=document.getElementById('scn-'+ids[i]);
+    const lines=[...scn.querySelectorAll('.ln')],booked=scn.querySelector('.booked');
+    if(reduce){lines.forEach(l=>l.classList.add('show'));booked.classList.add('show');return}
+    lines.forEach(l=>l.classList.remove('show'));booked.classList.remove('show');
+    lines.forEach((l,k)=>timers.push(setTimeout(()=>l.classList.add('show'),start+k*step)));
+    const end=start+lines.length*step;
+    timers.push(setTimeout(()=>booked.classList.add('show'),end));
+    timers.push(setTimeout(()=>show((i+1)%ids.length,true),end+hold));
+  }
+  ids.forEach((id,j)=>document.getElementById('tab-'+id).addEventListener('click',()=>show(j)));
+  show(0);
+})();
+
+// Google Calendar appointment schedule (Kalendář → Plán schůzek → Sdílet → Vložit na web)
+const BOOKING_URL='https://calendar.google.com/calendar/appointments/schedules/AcZssZ3nQrxaX6pLClvmNTXb3iJwOdpxd2n3vegHcUuWhgol2Y5yHi8WhuJrUb2ld_gTU_PM6rpve-1P?gv=true';
+(function(){
+  const dlg=document.getElementById('bookDlg');
+  const links=document.querySelectorAll('.js-book');
+  if(!dlg||typeof dlg.showModal!=='function'){
+    links.forEach(a=>{a.href=BOOKING_URL;a.target='_blank';a.rel='noopener'});return;
+  }
+  function open(e){
+    if(e)e.preventDefault();
+    if(!dlg.querySelector('iframe')){
+      const f=document.createElement('iframe');
+      f.src=BOOKING_URL;f.title='Book a consultation with Pavel Šrámek';
+      dlg.appendChild(f);
+    }
+    dlg.showModal();document.body.style.overflow='hidden';
+  }
+  function close(){dlg.close()}
+  dlg.addEventListener('close',()=>{document.body.style.overflow=''});
+  dlg.querySelector('[data-close]').addEventListener('click',close);
+  dlg.addEventListener('click',e=>{if(e.target===dlg)close()});
+  links.forEach(a=>a.addEventListener('click',open));
+})();
+
+// ── Klára Chat ──
+(function(){
+  const fab=document.getElementById('cbFab'),box=document.getElementById('cb'),body=document.getElementById('cbBody'),
+        form=document.getElementById('cbForm'),input=document.getElementById('cbInput'),send=document.getElementById('cbSend');
+  if(!fab)return;
+  const KEY='vx-chat-en';
+  let msgs=[];try{msgs=JSON.parse(sessionStorage.getItem(KEY)||'[]')}catch(e){}
+  let busy=false;
+  const GREET='Hello, I am Klára, the AI assistant of Voicelix. Ask me anything about our services, or book a consultation with Pavel right away.';
+  const CHIPS=['What can you do?','How much does it cost?','Is it GDPR compliant?','I want a consultation'];
+  function save(){try{sessionStorage.setItem(KEY,JSON.stringify(msgs.slice(-40)))}catch(e){}}
+  function bubble(role,text){
+    const d=document.createElement('div');d.className='cb-msg '+(role==='user'?'u':'a');
+    const book=/\[\[REZERVACE\]\]/.test(text);
+    d.textContent=text.replace(/\s*\[\[REZERVACE\]\]\s*/g,'').trim();
+    if(book&&role!=='user'){
+      const b=document.createElement('a');b.className='btn btn-primary js-book';b.href='#booking';
+      b.innerHTML='<svg><use href="#i-cal"/></svg>Pick a consultation time';
+      b.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector('.bcard .js-book');if(t)t.click();else location.hash='booking'});
+      d.appendChild(document.createElement('br'));d.appendChild(b);
+    }
+    body.appendChild(d);body.scrollTop=body.scrollHeight;return d;
+  }
+  function chips(){
+    const c=document.createElement('div');c.className='cb-chips';c.id='cbChips';
+    CHIPS.forEach(t=>{const b=document.createElement('button');b.type='button';b.textContent=t;b.addEventListener('click',()=>ask(t));c.appendChild(b)});
+    body.appendChild(c);
+  }
+  function render(){
+    body.innerHTML='';bubble('assistant',GREET);
+    msgs.forEach(m=>bubble(m.role,m.content));
+    if(!msgs.length)chips();
+  }
+  function setOpen(o){
+    box.classList.toggle('open',o);box.setAttribute('aria-hidden',!o);fab.setAttribute('aria-expanded',o);
+    if(o){if(!body.childElementCount)render();setTimeout(()=>input.focus(),150)}else fab.focus();
+  }
+  async function ask(text){
+    text=text.trim();if(!text||busy)return;
+    const ch=document.getElementById('cbChips');if(ch)ch.remove();
+    msgs.push({role:'user',content:text});save();bubble('user',text);
+    input.value='';busy=true;send.disabled=true;
+    const t=document.createElement('div');t.className='cb-typing';t.innerHTML='<i></i><i></i><i></i>';body.appendChild(t);body.scrollTop=body.scrollHeight;
+    let reply;
+    try{
+      const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:msgs,lang:'en'})});
+      const j=await r.json().catch(()=>({}));
+      if(r.ok&&j.reply)reply=j.reply;
+      else if(r.status===429)reply='That was a bit much for me just now. Please try again in a few minutes, or call +420 910 926 750.';
+      else reply='Sorry, the chat is unavailable right now. Please call +420 910 926 750 or write to us using the form on this page.';
+    }catch(e){reply='Sorry, I could not connect. Please call +420 910 926 750 or write to us using the form on this page.'}
+    t.remove();msgs.push({role:'assistant',content:reply});save();bubble('assistant',reply);
+    busy=false;send.disabled=false;input.focus();
+  }
+  fab.addEventListener('click',()=>setOpen(true));
+  document.getElementById('cbClose').addEventListener('click',()=>setOpen(false));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&box.classList.contains('open')&&!document.querySelector('dialog[open]'))setOpen(false)});
+  form.addEventListener('submit',e=>{e.preventDefault();ask(input.value)});
+  input.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();ask(input.value)}});
+  input.addEventListener('input',()=>{input.style.height='auto';input.style.height=Math.min(input.scrollHeight,110)+'px'});
+})();
+
+const form=document.getElementById('leadForm');
+form.addEventListener('submit',e=>{
+  e.preventDefault();
+  document.getElementById('ferr').style.display='none';
+  fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(form)).toString()})
+    .then(r=>{if(!r.ok)throw new Error();form.style.display='none';document.getElementById('fok').style.display='block'})
+    .catch(()=>{document.getElementById('ferr').style.display='block'});
+});
+</script>
+</body>
+</html>

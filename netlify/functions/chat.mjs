@@ -87,6 +87,8 @@ const TOOLS = [{
   }
 }];
 
+const EN_NOTE = `\n\n# Website language\nThe visitor is on the English version of the website. Reply in English unless they write in another language. When quoting prices in English, write them as "from CZK 4,500/month". Mention that the voice assistants and the phone demo speak Czech.`;
+
 const json = (body, status = 200) => new Response(JSON.stringify(body), {
   status, headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" }
 });
@@ -110,7 +112,7 @@ function cleanMessages(raw) {
   return msgs;
 }
 
-async function callClaude(messages) {
+async function callClaude(messages, lang) {
   const r = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: {
@@ -118,7 +120,7 @@ async function callClaude(messages) {
       "anthropic-version": "2023-06-01",
       "content-type": "application/json"
     },
-    body: JSON.stringify({ model: MODEL, max_tokens: 500, temperature: 0.4, system: SYSTEM, tools: TOOLS, messages })
+    body: JSON.stringify({ model: MODEL, max_tokens: 500, temperature: 0.4, system: SYSTEM + (lang === "en" ? EN_NOTE : ""), tools: TOOLS, messages })
   });
   if (!r.ok) throw new Error(`anthropic ${r.status}: ${(await r.text()).slice(0, 300)}`);
   return r.json();
@@ -153,13 +155,14 @@ export default async (req, context) => {
   let payload;
   try { payload = await req.json(); } catch { return json({ error: "bad_json" }, 400); }
   const messages = cleanMessages(payload.messages);
+  const lang = payload.lang === "en" ? "en" : "cs";
   if (!messages) return json({ error: "bad_messages" }, 400);
   if (messages.filter(m => m.role === "user").length > MAX_TURNS) {
-    return json({ reply: "Děkuji za rozhovor. Na další otázky vám rád odpoví přímo Pavel na konzultaci.\n[[REZERVACE]]", lead: false });
+    return json({ reply: lang === "en" ? "Thank you for the chat. Pavel will be happy to answer any further questions at a consultation.\n[[REZERVACE]]" : "Děkuji za rozhovor. Na další otázky vám rád odpoví přímo Pavel na konzultaci.\n[[REZERVACE]]", lead: false });
   }
 
   try {
-    let resp = await callClaude(messages);
+    let resp = await callClaude(messages, lang);
     let lead = false;
     if (resp.stop_reason === "tool_use") {
       const tool = resp.content.find(b => b.type === "tool_use" && b.name === "save_lead");
@@ -170,10 +173,10 @@ export default async (req, context) => {
           ...messages,
           { role: "assistant", content: resp.content },
           { role: "user", content: [{ type: "tool_result", tool_use_id: tool.id, content: lead ? "Lead saved. Pavel will get back within one business day." : "Saving failed. Ask the visitor to email info@voicelix.ai or use the contact form." }] }
-        ]);
+        ], lang);
       }
     }
-    const reply = textOf(resp) || "Omlouvám se, teď jsem nerozuměla. Můžete to prosím napsat jinak?";
+    const reply = textOf(resp) || (lang === "en" ? "Sorry, I didn't quite understand. Could you rephrase that?" : "Omlouvám se, teď jsem nerozuměla. Můžete to prosím napsat jinak?");
     return json({ reply, lead });
   } catch (e) {
     console.error(e);
