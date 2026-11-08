@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Správa rezervací (ukázka) | Sokol Plzeň-Radčice</title>
+<meta name="description" content="Ukázka pohledu správce.">
+<link rel="icon" href="../assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="mock"><b>Ukázka (mock-up).</b> Obsazenost, ceny, časy kroužků i číslo účtu jsou smyšlené. Rezervace se ukládají jen ve vašem prohlížeči.</div>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../"><img src="../assets/img/logo-180.png" alt="Logo Sokol Plzeň-Radčice" width="44" height="44"><span>Sokol Plzeň-Radčice<small>Rezervace sportovišť a kroužky</small></span></a>
+  <button class="burger" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav class="nav" id="nav" aria-label="Hlavní menu">
+    <a href="../#sportoviste">Sportoviště</a>
+    <a href="../#krouzky">Kroužky</a>
+    <a href="../#pravidla">Pravidla a ceník</a>
+    <a href="../#hospudka">Hospůdka Golf</a>
+    <a class="cta" href="../#rezervace">Rezervovat</a>
+  </nav>
+</div></header>
+
+<main id="admin">
+<section class="sub-hero" style="padding:40px 0"><div class="wrap">
+  <div class="crumb"><a href="../">Sokol Plzeň-Radčice</a> / Správa</div>
+  <h1 style="font-size:clamp(2.2rem,5vw,3.2rem)">Správa rezervací</h1>
+  <p>Ukázka pohledu správce a pokladníka. V ostrém provozu bude správa v Google Tabulce Sokola a schvalovat půjde i tlačítky přímo z e-mailu.</p>
+</div></section>
+<section style="padding-top:36px"><div class="wrap">
+  <div class="kpis">
+    <div class="kpi"><b id="k-wait">0</b><span>čeká na schválení</span></div>
+    <div class="kpi"><b id="k-ok">0</b><span>schválených rezervací</span></div>
+    <div class="kpi"><b id="k-unpaid">0 Kč</b><span>schváleno, nezaplaceno</span></div>
+    <div class="kpi"><b id="k-int">0</b><span>zájemců o kroužky</span></div>
+  </div>
+  <div class="panel">
+    <div class="weekbar"><strong>Rezervace</strong>
+      <button class="btn btn-sm btn-red" data-filter="wait">Čeká</button><button class="btn btn-sm btn-ghost" data-filter="ok">Schválené</button><button class="btn btn-sm btn-ghost" data-filter="unpaid">Nezaplacené</button><button class="btn btn-sm btn-ghost" data-filter="no">Zamítnuté</button><button class="btn btn-sm btn-ghost" data-filter="all">Vše</button></div>
+    <div style="overflow-x:auto"><table class="admin-table"><thead><tr><th>Číslo</th><th>Sportoviště</th><th>Termín</th><th>Hráč</th><th>Cena</th><th>Stav</th><th>Akce</th></tr></thead><tbody id="admin-rows"></tbody></table></div>
+    <p class="note" style="margin-top:10px">Opakovaná rezervace (série) se schvaluje celá najednou a platí se jedním variabilním symbolem.</p>
+  </div>
+  <div class="two" style="margin-top:22px">
+    <div class="panel"><h3>Uzavřít sportoviště (výluka)</h3><p class="note">Počasí, údržba nebo akce Sokola. Dotčené rezervace se zruší a hráči dostanou e-mail.</p>
+      <form id="vyluka" novalidate>
+        <div class="row"><label>Sportoviště<select name="fac"></select></label><label>Datum<input type="date" name="date"></label></div>
+        <div class="row"><label>Od<select name="from"><option value="8">8:00</option><option value="9">9:00</option><option value="10">10:00</option><option value="11">11:00</option><option value="12">12:00</option><option value="13">13:00</option><option value="14">14:00</option><option value="15">15:00</option><option value="16">16:00</option><option value="17">17:00</option><option value="18">18:00</option><option value="19">19:00</option><option value="20">20:00</option></select></label><label>Do<select name="to"><option value="9">9:00</option><option value="10">10:00</option><option value="11">11:00</option><option value="12">12:00</option><option value="13">13:00</option><option value="14">14:00</option><option value="15">15:00</option><option value="16">16:00</option><option value="17">17:00</option><option value="18">18:00</option><option value="19">19:00</option><option value="20">20:00</option><option value="21" selected>21:00</option></select></label></div>
+        <label>Důvod<input name="why" placeholder="např. Mokrý kurt po dešti"></label>
+        <button class="btn btn-red" type="submit">Uložit výluku</button>
+      </form>
+    </div>
+    <div class="panel"><h3>Co vidí pokladník v Google Tabulce</h3>
+      <p class="note">List Rezervace: číslo, série, vytvořeno, sportoviště, datum, od, do, typ, jméno, e-mail, telefon, poznámka, cena, stav, zaplaceno, způsob platby, datum platby, poznámka pokladníka.</p>
+      <p class="note">Pokladník vyplňuje jen sloupce o platbě. Platby převodem páruje podle variabilního symbolu.</p>
+      <button class="btn btn-sm btn-ghost" id="reset">Obnovit ukázková data</button>
+    </div>
+  </div>
+  <div class="panel" style="margin-top:22px"><h3>Zájemci o kroužky</h3>
+    <div style="overflow-x:auto"><table class="admin-table" style="min-width:640px"><thead><tr><th>Kroužek</th><th>Jméno</th><th>Kontakt</th><th>Věk dítěte</th><th>Poznámka</th><th>Přihlášeno</th></tr></thead><tbody id="int-rows"></tbody></table></div>
+  </div>
+</div></section>
+</main>
+<footer><div class="wrap">
+  <div><strong style="color:#fff">Sokol Plzeň-Radčice</strong><br>Sokolovna a tenisové kurty, Plzeň-Radčice<br><a href="https://umo7.plzen.eu/zivot-v-obvodu/organizace-a-instituce/#sokol" target="_blank" rel="noopener">Sokol na webu MO Plzeň 7</a></div>
+  <div><strong style="color:#fff">Rezervace</strong><br>Správce sportovišť: <a href="mailto:rezervace@example.cz">rezervace@example.cz</a> <span style="opacity:.6">(doplníme)</span><br><a href="../#pravidla">Provozní řád a ceník</a></div>
+  <div class="credit">Stránky a rezervační systém vytvořil ve spolupráci se Sokolem Pavel Šrámek, <a class="vx" href="https://voicelix.ai" target="_blank" rel="noopener"><i></i>Voicelix.ai</a></div>
+</div></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>
