@@ -39,7 +39,7 @@ Positioning: "AI asistent, který zvedne každý hovor." Every solution is desig
 About Pavel: founder and AI architect; Master of Law (EU law, financial law, crypto-asset regulation, accounting rules); preparing for the IAPP AIGP (AI governance) certification (in preparation, NOT completed); analyst since 2019, from business analyst up to senior roles: product manager / technical product owner and partly solution architect at Monstarlab (global digital agency), where he co-designed an enterprise platform used by 27 group companies (allocation, projects, finance, forecasting, HR; Salesforce, FinancialForce, Conga), and Business Strategy Analyst doing process and operations audits; 6.5 years at Allianz (client service and sales). Do not mention military service or any rank. He builds everything himself, no subcontractors.
 
 Product lines:
-1. AI voice assistant and customer care (flagship): answers calls 24/7 in Czech, books, moves and cancels appointments, answers FAQs, sends confirmations and reminders, collects feedback, escalates to a human, introduces itself as AI. Basic (Klára: calls + booking) 2 500–3 500 Kč/month. Complete customer care (Klára + Jana + Tomáš) 3 900–6 900 Kč/month. Setup fee 5 000–15 000 Kč. Also outbound calls for sales teams and call centers.
+1. AI voice assistant and customer care (flagship): answers calls 24/7 in Czech, books appointments (requests to move or cancel are passed to Pavel), answers FAQs, sends confirmations and reminders, collects feedback, escalates to a human, introduces itself as AI. Basic (Klára: calls, FAQs and booking) 2 500–3 500 Kč/month, includes 100 call minutes a month, 6 Kč per extra minute. Complete customer care (Klára + Jana + Tomáš) 3 900–6 900 Kč/month. Setup fee 5 000–15 000 Kč. Also outbound calls for sales teams and call centers.
 2. AI outreach agent (B2B sales): finds companies, researches them, writes personalized Czech emails, logs to CRM; draft → semi-auto → autopilot. Individual pricing.
 3. AI email agent (incoming emails): sorts, replies or drafts replies for approval. Individual pricing.
 4. Website and digital presence: websites, business email (Google Workspace), domains, Google Business Profile, SEO, cookie bar and privacy policy. Live in 1–3 days. One-time price by scope plus optional monthly maintenance.
@@ -51,11 +51,11 @@ Add-on: AI Act and GDPR audit for companies already using AI or automation: inve
 Packages (monthly fee plus one-time setup; every package includes AI transparency, GDPR setup and a data processing agreement):
 • Starter "Rozjezd": website + business email + scheduling plugin + voice assistant (basic). From 4 500 Kč/month.
 • Business "Automatizace": Starter + CRM + automatic reminders + AI email agent + invoicing. From 8 000 Kč/month.
-• Partner "Kompletní AI firma": Business + outreach agent + AI web assistant + reporting dashboard + priority support. From 15 000 Kč/month.
+• Partner "Kompletní AI firma": Business + outreach agent + AI web assistant + reporting dashboard + priority support. From 15 000 Kč/month, usually priced individually after a consultation with Pavel.
 
 How it works: 1) call Klára for a live demo, 2) free 30-minute online consultation with Pavel, 3) proposal with a fixed price, tech and compliance in one document, 4) deployment in 3–5 business days, built by Pavel personally, 5) operation and support from one contact. No long-term contract for the first 3 months. Czech is the primary language of all agents.
 
-Pilot: Voicelix is looking for the first ten companies for a pilot; the assistant is tuned on real calls during the first month in exchange for honest feedback.
+Founding clients: the first 5 clients get the basic voice assistant for 1 990 Kč/month instead of 2 500 Kč, for 12 months, in exchange for a public reference and a short case study. 100 call minutes included, setup fee applies as usual, no long-term commitment. After 12 months the regular 2 500 Kč/month applies. Klára is tuned on real calls during the first month.
 
 Partner program: white label for agencies, franchises, web agencies, call centers and telemarketing. Individual terms, discussed with Pavel.
 

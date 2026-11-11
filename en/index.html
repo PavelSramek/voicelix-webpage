@@ -228,6 +228,15 @@ td:first-child{font-weight:600;width:26%}
 .plan li svg{width:18px;height:18px;color:var(--teal-ink);flex-shrink:0;margin-top:3px}
 .plan.hl li svg{color:var(--teal)}
 .pnote{margin-top:28px;color:var(--muted);font-size:.93rem}
+.price sup{font-size:.5em;vertical-align:super;margin-left:2px;color:var(--teal-ink)}
+.was{font-size:1rem;color:var(--muted);margin:2px 0 4px}
+.was s{color:var(--navy);font-weight:600}
+.pstar{margin-top:18px;color:var(--muted);font-size:.9rem}
+.pbar{margin-top:18px;border:1px solid var(--line);border-radius:var(--r-l);padding:28px 30px;display:grid;grid-template-columns:1fr auto;gap:12px 32px;align-items:center}
+.pbar h3{font-size:1.25rem}
+.pbar h3 span{color:var(--muted);font-weight:500;font-size:1rem;margin-left:8px;white-space:nowrap}
+.pbar p{color:var(--muted);font-size:.95rem;margin-top:6px}
+@media (max-width:860px){.pbar{grid-template-columns:1fr;padding:26px 22px}.pbar h3 span{display:block;margin:4px 0 0}}
 @media (max-width:1100px){.plan{padding:30px 22px}.price{font-size:2.1rem}}
 
 .pilot{background:var(--teal);color:var(--navy);padding:88px 0}
@@ -337,7 +346,7 @@ footer a:hover{color:var(--teal)}
   .tgrid{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:1fr}
   .fgrid{grid-template-columns:1fr 1fr}
-  .plan.hl{order:-1;margin-top:10px}
+  .plan.hl{margin-top:10px}
 }
 @media (max-width:520px){
   body{font-size:16px}
@@ -786,10 +795,24 @@ footer a:hover{color:var(--teal)}
   <div class="wrap">
     <div class="sec-head">
       <h2>Clear packages, no surprises</h2>
-      <p class="lead">One number on the invoice. Each package comes with a one-time setup fee based on scope.</p>
+      <p class="lead">One number on the invoice. Every service comes with a one-time setup fee based on scope.</p>
     </div>
     <div class="pgrid">
       <div class="plan">
+        <h3>Voice assistant</h3><p class="for">When you mainly need every call answered</p>
+        <div class="price">CZK 1,990<sup>*</sup><small> / month</small></div>
+        <p class="was">instead of <s>CZK 2,500</s></p>
+        <p class="setup">Plus one-time setup</p>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>AI receptionist Klára answers calls 24/7</li>
+          <li><svg><use href="#i-check"/></svg>Answers questions and books appointments</li>
+          <li><svg><use href="#i-check"/></svg>100 call minutes included, CZK 6 per extra minute</li>
+          <li><svg><use href="#i-check"/></svg>Introduces herself as AI, in line with the AI Act</li>
+        </ul>
+        <a class="btn btn-line" href="#contact">I want the assistant</a>
+      </div>
+      <div class="plan hl">
+        <span class="tag">Recommended</span>
         <h3>Starter</h3><p class="for">For sole traders and new businesses</p>
         <div class="price">CZK 4,500<small> / month</small></div>
         <p class="setup">Starting price, plus one-time setup</p>
@@ -799,10 +822,9 @@ footer a:hover{color:var(--teal)}
           <li><svg><use href="#i-check"/></svg>Business website and email</li>
           <li><svg><use href="#i-check"/></svg>Google Calendar integration</li>
         </ul>
-        <a class="btn btn-line" href="#contact">I want Starter</a>
+        <a class="btn btn-primary" href="#contact">I want Starter</a>
       </div>
-      <div class="plan hl">
-        <span class="tag">Most popular</span>
+      <div class="plan">
         <h3>Business</h3><p class="for">For companies with up to ten employees</p>
         <div class="price">CZK 8,000<small> / month</small></div>
         <p class="setup">Starting price, plus one-time setup</p>
@@ -812,33 +834,29 @@ footer a:hover{color:var(--teal)}
           <li><svg><use href="#i-check"/></svg>AI handling of incoming email</li>
           <li><svg><use href="#i-check"/></svg>Invoicing automation</li>
         </ul>
-        <a class="btn btn-primary" href="#contact">I want Business</a>
-      </div>
-      <div class="plan">
-        <h3>Partner</h3><p class="for">For companies that want to grow</p>
-        <div class="price">CZK 15,000<small> / month</small></div>
-        <p class="setup">Starting price, plus one-time setup</p>
-        <ul>
-          <li><svg><use href="#i-check"/></svg>Everything in Business</li>
-          <li><svg><use href="#i-check"/></svg>AI sales agent Honza</li>
-          <li><svg><use href="#i-check"/></svg>AI assistant on your website</li>
-          <li><svg><use href="#i-check"/></svg>Reporting and priority support</li>
-        </ul>
-        <a class="btn btn-line" href="#contact">I want Partner</a>
+        <a class="btn btn-line" href="#contact">I want Business</a>
       </div>
     </div>
-    <p class="pnote">Every package includes AI transparency, GDPR setup and a data processing agreement. Only need the voice agent? From CZK 2,500 a month on its own. For agencies, franchises and call centers we offer a partner program.</p>
+    <p class="pstar">* Founding-client price for our first 5 clients, for 12 months, in exchange for a reference and a case study. The regular price is CZK 2,500 a month.</p>
+    <div class="pbar">
+      <div>
+        <h3>Partner and custom solutions <span>from CZK 15,000 / month</span></h3>
+        <p>Multiple locations, call centers, outreach, an AI assistant on your website, custom apps, AI Act and GDPR audit. Pavel prepares the proposal personally.</p>
+      </div>
+      <a class="btn btn-primary" href="#booking">Book a consultation with Pavel</a>
+    </div>
+    <p class="pnote">Every package includes AI transparency, GDPR setup and a data processing agreement. For agencies, franchises and call centers we offer a partner program.</p>
   </div>
 </section>
 
 <section class="pilot">
   <div class="wrap">
     <div>
-      <h2>We're looking for the first ten companies for a pilot</h2>
-      <p>We'll tailor Klára to you and fine-tune her on real calls during the first month. In return, you give us honest feedback.</p>
+      <h2>We're looking for our first five founding clients</h2>
+      <p>You get the voice assistant for CZK 1,990 a month instead of CZK 2,500 for 12 months. We'll tailor Klára to you and fine-tune her on real calls during the first month. In return, you let us publish a reference and we put together a short case study with you.</p>
     </div>
     <div class="acts">
-      <a class="btn btn-dark" href="#contact">Sign up for the pilot</a>
+      <a class="btn btn-dark" href="#contact">Become a founding client</a>
       <a class="btn btn-line" href="tel:+420910926750"><svg><use href="#i-phone"/></svg>+420 910 926 750</a>
     </div>
   </div>

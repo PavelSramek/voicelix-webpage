@@ -228,6 +228,15 @@ td:first-child{font-weight:600;width:26%}
 .plan li svg{width:18px;height:18px;color:var(--teal-ink);flex-shrink:0;margin-top:3px}
 .plan.hl li svg{color:var(--teal)}
 .pnote{margin-top:28px;color:var(--muted);font-size:.93rem}
+.price sup{font-size:.5em;vertical-align:super;margin-left:2px;color:var(--teal-ink)}
+.was{font-size:1rem;color:var(--muted);margin:2px 0 4px}
+.was s{color:var(--navy);font-weight:600}
+.pstar{margin-top:18px;color:var(--muted);font-size:.9rem}
+.pbar{margin-top:18px;border:1px solid var(--line);border-radius:var(--r-l);padding:28px 30px;display:grid;grid-template-columns:1fr auto;gap:12px 32px;align-items:center}
+.pbar h3{font-size:1.25rem}
+.pbar h3 span{color:var(--muted);font-weight:500;font-size:1rem;margin-left:8px;white-space:nowrap}
+.pbar p{color:var(--muted);font-size:.95rem;margin-top:6px}
+@media (max-width:860px){.pbar{grid-template-columns:1fr;padding:26px 22px}.pbar h3 span{display:block;margin:4px 0 0}}
 @media (max-width:1100px){.plan{padding:30px 22px}.price{font-size:2.1rem}}
 
 .pilot{background:var(--teal);color:var(--navy);padding:88px 0}
@@ -337,7 +346,7 @@ footer a:hover{color:var(--teal)}
   .tgrid{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:1fr}
   .fgrid{grid-template-columns:1fr 1fr}
-  .plan.hl{order:-1;margin-top:10px}
+  .plan.hl{margin-top:10px}
 }
 @media (max-width:520px){
   body{font-size:16px}
@@ -784,10 +793,24 @@ footer a:hover{color:var(--teal)}
   <div class="wrap">
     <div class="sec-head">
       <h2>Jasné balíčky, žádná překvapení</h2>
-      <p class="lead">Jedno číslo na faktuře. K balíčku se platí jednorázové nastavení podle rozsahu.</p>
+      <p class="lead">Jedno číslo na faktuře. Ke každé službě se platí jednorázové nastavení podle rozsahu.</p>
     </div>
     <div class="pgrid">
       <div class="plan">
+        <h3>Hlasový asistent</h3><p class="for">Když potřebujete hlavně zvedat hovory</p>
+        <div class="price">1 990 Kč<sup>*</sup><small> / měsíc</small></div>
+        <p class="was">místo <s>2 500 Kč</s></p>
+        <p class="setup">Plus jednorázové nastavení</p>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>AI recepční Klára zvedá hovory 24/7</li>
+          <li><svg><use href="#i-check"/></svg>Odpovídá na dotazy a rezervuje termíny</li>
+          <li><svg><use href="#i-check"/></svg>100 minut hovorů v ceně, další minuta 6 Kč</li>
+          <li><svg><use href="#i-check"/></svg>Představí se jako AI, v souladu s AI Actem</li>
+        </ul>
+        <a class="btn btn-line" href="#kontakt">Chci asistenta</a>
+      </div>
+      <div class="plan hl">
+        <span class="tag">Doporučujeme</span>
         <h3>Starter</h3><p class="for">Pro živnostníky a nové firmy</p>
         <div class="price">4 500 Kč<small> / měsíc</small></div>
         <p class="setup">Cena od, plus jednorázové nastavení</p>
@@ -797,10 +820,9 @@ footer a:hover{color:var(--teal)}
           <li><svg><use href="#i-check"/></svg>Firemní web a email</li>
           <li><svg><use href="#i-check"/></svg>Propojení s Google Kalendářem</li>
         </ul>
-        <a class="btn btn-line" href="#kontakt">Chci Starter</a>
+        <a class="btn btn-primary" href="#kontakt">Chci Starter</a>
       </div>
-      <div class="plan hl">
-        <span class="tag">Nejčastější volba</span>
+      <div class="plan">
         <h3>Business</h3><p class="for">Pro firmy do deseti zaměstnanců</p>
         <div class="price">8 000 Kč<small> / měsíc</small></div>
         <p class="setup">Cena od, plus jednorázové nastavení</p>
@@ -810,33 +832,29 @@ footer a:hover{color:var(--teal)}
           <li><svg><use href="#i-check"/></svg>AI správa příchozích emailů</li>
           <li><svg><use href="#i-check"/></svg>Automatizace fakturace</li>
         </ul>
-        <a class="btn btn-primary" href="#kontakt">Chci Business</a>
-      </div>
-      <div class="plan">
-        <h3>Partner</h3><p class="for">Pro firmy, které chtějí růst</p>
-        <div class="price">15 000 Kč<small> / měsíc</small></div>
-        <p class="setup">Cena od, plus jednorázové nastavení</p>
-        <ul>
-          <li><svg><use href="#i-check"/></svg>Vše z balíčku Business</li>
-          <li><svg><use href="#i-check"/></svg>AI obchodník Honza</li>
-          <li><svg><use href="#i-check"/></svg>AI asistent na webu</li>
-          <li><svg><use href="#i-check"/></svg>Reporting a prioritní podpora</li>
-        </ul>
-        <a class="btn btn-line" href="#kontakt">Chci Partner</a>
+        <a class="btn btn-line" href="#kontakt">Chci Business</a>
       </div>
     </div>
-    <p class="pnote">V každém balíčku: AI transparentnost, nastavení GDPR a smlouva o zpracování osobních údajů. Potřebujete jen hlasového agenta? Samostatně od 2 500 Kč měsíčně. Agenturám, franšízám a call centrům nabízíme partnerský program.</p>
+    <p class="pstar">* Zvýhodněná cena pro prvních 5 zakládajících klientů na 12 měsíců, výměnou za referenci a případovou studii. Běžná cena je 2 500 Kč měsíčně.</p>
+    <div class="pbar">
+      <div>
+        <h3>Partner a řešení na míru <span>od 15 000 Kč / měsíc</span></h3>
+        <p>Více poboček, call centra, outreach, AI asistent na webu, aplikace na míru, AI Act a GDPR audit. Nabídku připraví Pavel osobně.</p>
+      </div>
+      <a class="btn btn-primary" href="#rezervace">Domluvit konzultaci s Pavlem</a>
+    </div>
+    <p class="pnote">V každém balíčku: AI transparentnost, nastavení GDPR a smlouva o zpracování osobních údajů. Agenturám, franšízám a call centrům nabízíme partnerský program.</p>
   </div>
 </section>
 
 <section class="pilot">
   <div class="wrap">
     <div>
-      <h2>Hledáme prvních deset firem do pilotního provozu</h2>
-      <p>Nastavíme vám Kláru na míru a první měsíc ji vyladíme podle skutečných hovorů. Vy nám na oplátku dáte upřímnou zpětnou vazbu.</p>
+      <h2>Hledáme prvních pět zakládajících klientů</h2>
+      <p>Hlasového asistenta dostanete na 12 měsíců za 1 990 Kč měsíčně místo 2 500 Kč. Kláru vám nastavíme na míru a první měsíc ji vyladíme podle skutečných hovorů. Na oplátku nám dovolíte zveřejnit referenci a společně připravíme krátkou případovou studii.</p>
     </div>
     <div class="acts">
-      <a class="btn btn-dark" href="#kontakt">Přihlásit firmu do pilotu</a>
+      <a class="btn btn-dark" href="#kontakt">Chci se stát zakládajícím klientem</a>
       <a class="btn btn-line" href="tel:+420910926750"><svg><use href="#i-phone"/></svg>+420 910 926 750</a>
     </div>
   </div>
