@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Fitness Mike, Plzeň: návrh webu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{--accent:#B3261E;--ink:#141414;--paper:#F2EEE6;--muted:#D8D2C6;--soft:#BDB6AA;--line:#2E2E2E;--panel:#1D1D1D}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--paper);font-family:Inter,system-ui,sans-serif}
+a{color:var(--paper)}a:hover{color:#fff}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.oswald{font-family:Oswald,Impact,sans-serif;text-transform:uppercase}
+h1,h2,h3{font-family:Oswald,Impact,sans-serif;text-transform:uppercase;margin:0;font-weight:700}
+h2{font-size:clamp(36px,5vw,56px);line-height:1}
+.lead{font-size:18px;line-height:1.6;color:var(--muted);max-width:720px;margin:16px 0 0}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:12px 20px;border-radius:4px;font-weight:600;text-decoration:none}
+.btn-red{background:var(--accent);color:#fff}.btn-red:hover{background:#9A1F18;color:#fff}
+.btn-out{border:2px solid var(--paper);color:var(--paper)}
+.row{display:flex;flex-wrap:wrap;gap:24px}
+.ph{background:repeating-linear-gradient(135deg,#242424 0 18px,#1C1C1C 18px 36px);border:1px solid #333;border-radius:4px;display:flex;align-items:flex-end;padding:16px}
+.ph span{background:var(--ink);padding:6px 10px;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--soft)}
+section{padding:88px 0}
+.band{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.card{flex:1 1 420px;min-width:0;background:var(--ink);border:1px solid #333;border-radius:4px;overflow:hidden}
+.card .body{padding:28px}
+.card ul,.list{margin:20px 0 0;padding-left:20px;font-size:16px;line-height:1.8;color:var(--muted)}
+.tag{background:var(--paper);color:var(--ink);font-size:13px;font-weight:600;padding:4px 10px;border-radius:3px;text-transform:uppercase;letter-spacing:1px}
+.price{background:var(--paper);color:var(--ink)}
+.pbox{flex:1 1 320px;min-width:0;background:#fff;border:1px solid #D9D3C7;border-radius:4px;padding:28px}
+.pbox h3{font-size:24px;font-weight:600;margin-bottom:16px}
+.pr{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #ECE7DD}
+.pr b{font-size:18px;font-weight:600;white-space:nowrap}
+.pr .n{font-size:16px;font-weight:500}.pr .s{font-size:14px;color:#5C5650}
+.hr{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);font-size:20px}
+.stat{flex:1 1 200px}.stat .big{font-family:Oswald,Impact,sans-serif;font-weight:700;font-size:40px;color:#E0453B}
+.stat div:last-child{font-size:15px;color:var(--muted)}
+.hl{color:#E0453B}
+</style>
+</head>
+<body>
+
+<div style="background:#F2C230;color:#141414;text-align:center;font-size:14px;font-weight:600;padding:8px 16px">Návrh webu (mock-up). Fotky jsou zástupné, doplní se skutečné.</div>
+
+<header style="border-bottom:1px solid var(--line)">
+  <div class="wrap" style="padding-top:18px;padding-bottom:18px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
+    <a href="#top" class="oswald" style="font-weight:700;font-size:28px;letter-spacing:2px;text-decoration:none">Fitness <span class="hl">Mike</span></a>
+    <nav aria-label="Hlavní menu" style="display:flex;flex-wrap:wrap;gap:22px;font-size:15px;font-weight:500">
+      <a href="#pribeh" style="text-decoration:none">Příběh</a>
+      <a href="#treneri" style="text-decoration:none">Trenéři</a>
+      <a href="#cenik" style="text-decoration:none">Ceník</a>
+      <a href="#oteviraci-doba" style="text-decoration:none">Otevírací doba</a>
+      <a href="#kde-jsme" style="text-decoration:none">Kde nás najdete</a>
+    </nav>
+    <a href="tel:+420608112000" class="btn btn-red" style="min-height:44px">608 112 000</a>
+  </div>
+</header>
+
+<div id="top" class="wrap" style="padding-top:72px;padding-bottom:56px;display:flex;flex-wrap:wrap;gap:48px;align-items:center">
+  <div style="flex:1 1 460px;min-width:0">
+    <p style="margin:0 0 16px;font-size:14px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--soft)">Posilovna, Palackého třída, Plzeň</p>
+    <h1 style="font-size:clamp(48px,8vw,96px);line-height:.95">Nejsme <span class="hl">Globo Gym.</span></h1>
+    <p style="margin:24px 0 0;font-size:20px;line-height:1.55;color:var(--muted);max-width:560px">Žádná show, žádné selfie u zrcadla. Jen železo, rady od mistra republiky a rodinná atmosféra. Pro lidi, kteří chtějí cvičit, ne se předvádět.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:32px">
+      <a href="tel:+420608112000" class="btn btn-red">Václav: 608 112 000</a>
+      <a href="tel:+420602956604" class="btn btn-out">Trénink pro ženy, Radka: 602 956 604</a>
+    </div>
+  </div>
+  <div class="ph" role="img" aria-label="Zástupná fotka: interiér posilovny" style="flex:1 1 420px;min-width:0;height:440px"><span>Foto: posilovna zevnitř</span></div>
+</div>
+
+<div class="band">
+  <div class="wrap" style="padding-top:28px;padding-bottom:28px;display:flex;flex-wrap:wrap;gap:24px 48px">
+    <div class="stat"><div class="big">40 let</div><div>v oboru, cvičení i výživa</div></div>
+    <div class="stat"><div class="big">2× mistr</div><div>absolutní mistr republiky v kulturistice (1996, 1998)</div></div>
+    <div class="stat"><div class="big">7 dní</div><div>v týdnu otevřeno, i v neděli večer</div></div>
+  </div>
+</div>
+
+<section id="pribeh">
+  <div class="wrap" style="display:flex;flex-wrap:wrap;gap:48px;align-items:center">
+    <div class="ph" role="img" aria-label="Zástupná fotka: Václav Speierl na soutěži" style="flex:1 1 380px;min-width:0;height:480px"><span>Foto: Václav, soutěž 1996 nebo 1998</span></div>
+    <div style="flex:1 1 460px;min-width:0">
+      <h2>Železo je jeho řemeslo</h2>
+      <p class="lead" style="margin-top:24px;line-height:1.65">Václav Speierl se cvičení a výživě věnuje 40 let. Byl dlouholetým reprezentantem v kulturistice a v letech 1996 a 1998 se stal absolutním mistrem republiky.</p>
+      <p class="lead" style="line-height:1.65">Dnes své zkušenosti předává dál. Sestaví vám tréninkový i výživový plán, ukáže správnou techniku a pohlídá, abyste se posouvali. Bez módních výstřelků, poctivě a po staru.</p>
+      <p class="oswald hl" style="margin:24px 0 0;font-size:22px;font-weight:500;letter-spacing:1px">Oldschool posilovna. Rodinná atmosféra.</p>
+    </div>
+  </div>
+</section>
+
+<section id="treneri" class="band">
+  <div class="wrap">
+    <h2>Osobní trenéři</h2>
+    <p class="lead">Před prvním tréninkem se rádi potkáme osobně. Zavolejte, domluvíme se a probereme, co chcete zlepšit.</p>
+    <div class="row" style="margin-top:40px">
+      <article class="card">
+        <div class="ph" role="img" aria-label="Zástupná fotka: Václav Speierl" style="height:260px;border:0;border-radius:0"><span>Foto: Václav</span></div>
+        <div class="body">
+          <h3 style="font-size:30px;font-weight:600">Václav Speierl</h3>
+          <p style="margin:8px 0 0;font-size:15px;color:var(--soft)">2× absolutní mistr republiky v kulturistice</p>
+          <ul><li>Osobní tréninky</li><li>Tréninkový plán na míru</li><li>Výživový plán</li><li>Poradenství ve výživě a ve cvičení</li></ul>
+          <a href="tel:+420608112000" class="btn btn-red" style="margin-top:24px">Zavolat Václavovi: 608 112 000</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="ph" role="img" aria-label="Zástupná fotka: Radka Speierlová" style="height:260px;border:0;border-radius:0"><span>Foto: Radka</span></div>
+        <div class="body">
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px"><h3 style="font-size:30px;font-weight:600">Radka Speierlová</h3><span class="tag">Jen pro ženy</span></div>
+          <p style="margin:8px 0 0;font-size:15px;color:var(--soft)">[DOPLNIT: praxe a zkušenosti Radky]</p>
+          <ul><li>Osobní tréninky pro ženy</li><li>Tréninkový plán na míru</li><li>Výživový plán</li><li>Poradenství ve výživě a ve cvičení</li></ul>
+          <a href="tel:+420602956604" class="btn btn-red" style="margin-top:24px">Zavolat Radce: 602 956 604</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="posilovna">
+  <div class="wrap">
+    <h2>Jak to u nás vypadá</h2>
+    <p class="lead">Poctivé stroje, volné váhy a lidi, kteří přišli makat. Kdo potřebuje poradit, tomu poradíme.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:40px">
+      <div class="ph" role="img" aria-label="Zástupná fotka: stroje" style="flex:1 1 300px;height:240px"><span>Foto: stroje</span></div>
+      <div class="ph" role="img" aria-label="Zástupná fotka: volné váhy" style="flex:1 1 300px;height:240px"><span>Foto: volné váhy</span></div>
+      <div class="ph" role="img" aria-label="Zástupná fotka: posilovna zevnitř" style="flex:1 1 300px;height:240px"><span>Foto: posilovna zevnitř</span></div>
+      <div class="ph" role="img" aria-label="Zástupná fotka: šatny a sprchy" style="flex:1 1 300px;height:240px"><span>Foto: šatny a sprchy</span></div>
+      <div class="ph" role="img" aria-label="Zástupná fotka: posilovna zvenku" style="flex:1 1 300px;height:240px"><span>Foto: posilovna zvenku</span></div>
+      <div class="ph" role="img" aria-label="Zástupná fotka: šejk a doplňky" style="flex:1 1 300px;height:240px"><span>Foto: šejk a doplňky</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="cenik" class="price">
+  <div class="wrap">
+    <h2>Ceník 2026</h2>
+    <p class="lead" style="color:#3A3632">Vstupné platí na hodinu, ale stopky nemáme. Platba pouze v hotovosti.</p>
+    <div class="row" style="margin-top:40px">
+      <div class="pbox">
+        <h3>Vstupy</h3>
+        <div class="pr"><div><div class="n">Jednorázové vstupné</div><div class="s">na hodinu</div></div><b>125 Kč</b></div>
+        <div class="pr"><div><div class="n">Studenti do 15:00</div><div class="s">se studentskou kartou</div></div><b>100 Kč</b></div>
+        <div class="pr"><div><div class="n">Deset vstupů</div><div class="s">vstup vyjde na 110 Kč</div></div><b>1 100 Kč</b></div>
+      </div>
+      <div class="pbox">
+        <h3>Členství</h3>
+        <div class="pr"><div><div class="n">Měsíční</div><div class="s">1 200 Kč měsíčně</div></div><b>1 200 Kč</b></div>
+        <div class="pr"><div><div class="n">Čtvrtletní</div><div class="s">1 000 Kč měsíčně</div></div><b>3 000 Kč</b></div>
+        <div class="pr"><div><div class="n">Půlroční</div><div class="s">750 Kč měsíčně</div></div><b>4 500 Kč</b></div>
+        <div class="pr"><div><div class="n">Roční</div><div class="s">zhruba 583 Kč měsíčně</div></div><b>7 000 Kč</b></div>
+      </div>
+      <div class="pbox">
+        <h3>Trenér a bar</h3>
+        <div class="pr"><div><div class="n">Osobní trénink</div><div class="s">Václav, Radka pro ženy</div></div><b>500 Kč</b></div>
+        <div class="pr"><div><div class="n">Tréninkový plán</div><div class="s">na míru</div></div><b>500 Kč</b></div>
+        <div class="pr"><div><div class="n">Výživový plán</div><div class="s">na míru</div></div><b>500 Kč</b></div>
+        <div class="pr"><div><div class="n">Šejk</div><div class="s">namícháme na počkání</div></div><b>70 Kč</b></div>
+        <p style="margin:16px 0 0;font-size:14px;line-height:1.5;color:#5C5650">Na místě prodáváme i fitness doplňky. Zeptejte se u pultu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="oteviraci-doba">
+  <div class="wrap" style="display:flex;flex-wrap:wrap;gap:48px">
+    <div style="flex:1 1 380px;min-width:0">
+      <h2>Otevírací doba</h2>
+      <div style="margin-top:32px">
+        <div class="hr"><span>Pondělí až pátek</span><b>7:00 až 21:00</b></div>
+        <div class="hr"><span>Sobota</span><b>9:00 až 12:00</b></div>
+        <div class="hr"><span>Neděle</span><b>16:30 až 20:30</b></div>
+      </div>
+      <ul class="list" style="margin-top:32px;font-size:17px;line-height:1.9"><li>Sprchy k dispozici</li><li>Prodej doplňků a šejky na místě</li></ul>
+    </div>
+    <div id="kde-jsme" style="flex:1 1 460px;min-width:0">
+      <h2>Kde nás najdete</h2>
+      <p style="margin:32px 0 0;font-size:22px;font-weight:600;line-height:1.4">Palackého třída 16<br>301 00 Plzeň</p>
+      <ul class="list" style="margin-top:16px;font-size:17px;line-height:1.9"><li>Tramvajová zastávka hned u posilovny [DOPLNIT: název a linky]</li><li>Parkování v okolních ulicích</li></ul>
+      <div class="ph" role="img" aria-label="Zástupná fotka: vchod do posilovny" style="margin-top:24px;height:220px"><span>Foto: vchod zvenku</span></div>
+      <a href="https://www.google.com/maps/search/?api=1&query=Palack%C3%A9ho%20t%C5%99%C3%ADda%2016%2C%20Plze%C5%88" class="btn btn-out" style="margin-top:20px" target="_blank" rel="noopener">Otevřít v Mapách Google</a>
+    </div>
+  </div>
+</section>
+
+<div style="background:var(--accent);color:#fff">
+  <div class="wrap" style="padding-top:64px;padding-bottom:64px;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between">
+    <h2 style="font-size:clamp(30px,4vw,44px);line-height:1.05;flex:1 1 420px">Přijďte si zacvičit. Bez předvádění.</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:12px">
+      <a href="tel:+420608112000" class="btn" style="background:#141414;color:#fff">Václav: 608 112 000</a>
+      <a href="tel:+420602956604" class="btn" style="background:#fff;color:#141414">Radka (ženy): 602 956 604</a>
+    </div>
+  </div>
+</div>
+
+<footer style="border-top:1px solid var(--line)">
+  <div class="wrap" style="padding-top:32px;padding-bottom:32px;display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:space-between;font-size:14px;line-height:1.6;color:var(--soft)">
+    <div>
+      <div class="oswald" style="font-weight:700;font-size:20px;letter-spacing:2px;color:var(--paper)">Fitness Mike</div>
+      <div>Provozovatel: Václav Speierl, IČO 67076866</div>
+      <div>Sídlo: [DOPLNIT podle živnostenského rejstříku]</div>
+    </div>
+    <div>
+      <div>Tento web nepoužívá cookies ani analytické nástroje.</div>
+      <div>Web: <a href="https://voicelix.ai" style="color:var(--soft)">Voicelix</a></div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
