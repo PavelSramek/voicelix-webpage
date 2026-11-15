@@ -1,0 +1,27 @@
+# Voicelix
+
+> Voicelix (voicelix.ai) builds AI voice assistants and digital infrastructure for Czech small and medium-sized businesses. Its flagship is an AI receptionist that answers every call in Czech, 24/7, answers questions and books appointments straight into the business's Google Calendar. Every solution is designed and built personally by the founder, Mgr. Pavel Šrámek, an AI architect with a law degree, in line with GDPR and the EU AI Act. Based in Plzeň, Czech Republic.
+
+Czech summary: Voicelix staví hlasové AI asistenty (AI recepční) pro české firmy. Asistentka Klára zvedá hovory v češtině 24/7, odpovídá na dotazy a rezervuje termíny do Google Kalendáře. Řešení navrhuje a staví osobně zakladatel Mgr. Pavel Šrámek, AI architekt s právním vzděláním, v souladu s GDPR a AI Actem.
+
+## Key facts
+
+- Product: AI voice assistant / AI receptionist for inbound calls, in natural Czech. Books appointments into Google Calendar; requests to reschedule or cancel are passed on to the business. Answers frequent questions. Introduces itself as AI on every call (Art. 50 of the EU AI Act).
+- Pricing (CZK):voice assistant from CZK 2,500/month including 100 call minutes, CZK 6 per extra minute, plus a one-time setup fee from CZK 5,000. First 5 founding clients: CZK 1,990/month for 12 months in exchange for a reference and case study. Packages: Starter from CZK 4,500/month (website, email, online booking, voice assistant), Business from CZK 8,000/month (adds CRM, reminders, AI email handling, invoicing automation), Partner and custom solutions from CZK 15,000/month.
+- Setup time: 3 to 5 working days, then the assistant is fine-tuned on real calls during the first month.
+- Other services: AI B2B outreach agent, AI email agent, websites and Google Business Profile, online booking widgets, CRM and API integrations, automation, custom apps, IT support, and an AI Act and GDPR audit (a technical and organizational review, not a legal service).
+- Typical clients: hair and beauty salons, medical practices, auto services, law firms, tradespeople, call centers.
+- Founder: Mgr. Pavel Šrámek. Master of Laws (Faculty of Law, University of West Bohemia in Plzeň): EU law, financial law, crypto-asset regulation. Analyst since 2019, up to product owner and solution architect roles. Preparing for the IAPP AIGP (AI governance) certification.
+- Compliance: AI transparency on every call, data minimization, a data processing agreement with every client, configured recording and retention. Voicelix does not provide legal services within the meaning of the Czech Legal Profession Act.
+- Languages: the voice assistants speak Czech. Consultations in Czech or English.
+- Live demo: call Klára at +420 910 926 750 (Czech).
+- Contact: info@voicelix.ai, pavel@voicelix.ai. Free 30-minute consultation with the founder.
+
+## Pages
+
+- [Homepage (Czech)](https://voicelix.ai/): services, how it works, pricing, FAQ, founder, compliance
+- [Homepage (English)](https://voicelix.ai/en/)
+- [Toolkit (Czech)](https://voicelix.ai/tools/): tools and integrations Voicelix sets up and manages
+- [Toolkit (English)](https://voicelix.ai/en/tools/)
+- [Privacy policy (Czech, binding)](https://voicelix.ai/ochrana-osobnich-udaju.html)
+- [Privacy policy (English)](https://voicelix.ai/en/privacy/)

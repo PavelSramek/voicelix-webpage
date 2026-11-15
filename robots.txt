@@ -1,0 +1,11 @@
+# Voicelix (voicelix.ai)
+# Search engines and AI assistants are welcome to read and cite this site:
+# Googlebot, Bingbot, Seznambot, GPTBot, OAI-SearchBot, ChatGPT-User,
+# PerplexityBot, ClaudeBot, Claude-SearchBot, Google-Extended, Applebot.
+
+User-agent: *
+Allow: /
+Disallow: /projects/
+Disallow: /api/
+
+Sitemap: https://voicelix.ai/sitemap.xml
