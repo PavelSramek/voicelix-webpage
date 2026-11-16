@@ -21,6 +21,8 @@ Czech summary: Voicelix staví hlasové AI asistenty (AI recepční) pro české
 
 - [Homepage (Czech)](https://voicelix.ai/): services, how it works, pricing, FAQ, founder, compliance
 - [Homepage (English)](https://voicelix.ai/en/)
+- [AI receptionist for hair and beauty salons (Czech)](https://voicelix.ai/ai-recepcni-kadernictvi/), [English](https://voicelix.ai/en/ai-receptionist-hair-salons/)
+- [AI receptionist for medical practices (Czech)](https://voicelix.ai/ai-recepcni-ordinace/), [English](https://voicelix.ai/en/ai-receptionist-medical-practices/)
 - [Toolkit (Czech)](https://voicelix.ai/tools/): tools and integrations Voicelix sets up and manages
 - [Toolkit (English)](https://voicelix.ai/en/tools/)
 - [Privacy policy (Czech, binding)](https://voicelix.ai/ochrana-osobnich-udaju.html)
