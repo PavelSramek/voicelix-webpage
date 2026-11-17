@@ -1,8 +1,8 @@
 # Voicelix
 
-> Voicelix (voicelix.ai) builds AI voice assistants and digital infrastructure for Czech small and medium-sized businesses. Its flagship is an AI receptionist that answers every call in Czech, 24/7, answers questions and books appointments straight into the business's Google Calendar. Every solution is designed and built personally by the founder, Mgr. Pavel Šrámek, an AI architect with a law degree, in line with GDPR and the EU AI Act. Based in Plzeň, Czech Republic.
+> Voicelix (voicelix.ai) is an IT and AI partner for Czech small and medium-sized businesses: it designs, builds and manages their technology, from AI voice assistants to websites, CRM, automation and custom apps. Its flagship and showcase is an AI receptionist that answers every call in Czech, 24/7, answers questions and books appointments straight into the business's Google Calendar. Every solution is designed and built personally by the founder, Mgr. Pavel Šrámek, an AI architect with a law degree, in line with GDPR and the EU AI Act. Based in Plzeň, Czech Republic.
 
-Czech summary: Voicelix staví hlasové AI asistenty (AI recepční) pro české firmy. Asistentka Klára zvedá hovory v češtině 24/7, odpovídá na dotazy a rezervuje termíny do Google Kalendáře. Řešení navrhuje a staví osobně zakladatel Mgr. Pavel Šrámek, AI architekt s právním vzděláním, v souladu s GDPR a AI Actem.
+Czech summary: Voicelix je IT a AI partner pro české firmy. Navrhuje, staví a spravuje jejich technologie: hlasové AI asistenty (AI recepční), weby, CRM, automatizace a aplikace na míru. Asistentka Klára zvedá hovory v češtině 24/7, odpovídá na dotazy a rezervuje termíny do Google Kalendáře. Řešení navrhuje a staví osobně zakladatel Mgr. Pavel Šrámek, AI architekt s právním vzděláním, v souladu s GDPR a AI Actem.
 
 ## Key facts
 
