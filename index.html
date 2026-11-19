@@ -366,9 +366,12 @@
  ]
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" href="/fonts/onest-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/onest-latin-ext-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Onest';font-style:normal;font-weight:100 900;font-display:swap;src:url(/fonts/onest-latin-ext-wght-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Onest';font-style:normal;font-weight:100 900;font-display:swap;src:url(/fonts/onest-latin-wght-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+</style>
 <style>
 :root{
   --navy:#0F1E3C; --navy-deep:#0A1530; --navy-2:#16284D;
@@ -1371,8 +1374,8 @@ footer a:hover{color:var(--teal)}
 </footer>
 
 
-<button class="cb-fab" id="cbFab" type="button" aria-controls="cb" aria-expanded="false"><i class="cb-dot" aria-hidden="true"></i><svg aria-hidden="true"><use href="#i-chat"/></svg><span>Napište Kláře</span></button>
-<div class="cb" id="cb" role="dialog" aria-modal="false" aria-labelledby="cbTitle" aria-hidden="true">
+<button class="cb-fab" id="cbFab" type="button" aria-label="Napište Kláře" aria-controls="cb" aria-expanded="false"><i class="cb-dot" aria-hidden="true"></i><svg aria-hidden="true"><use href="#i-chat"/></svg><span>Napište Kláře</span></button>
+<div class="cb" id="cb" role="dialog" aria-modal="false" aria-labelledby="cbTitle" inert>
   <div class="cb-head">
     <div class="av">K</div>
     <div><b id="cbTitle">Klára, AI asistentka</b><small>Odpovídá hned, 24/7</small></div>
@@ -1477,7 +1480,7 @@ const BOOKING_URL='https://calendar.google.com/calendar/appointments/schedules/A
     if(!msgs.length)chips();
   }
   function setOpen(o){
-    box.classList.toggle('open',o);box.setAttribute('aria-hidden',!o);fab.setAttribute('aria-expanded',o);
+    box.classList.toggle('open',o);box.inert=!o;fab.setAttribute('aria-expanded',o);
     if(o){if(!body.childElementCount)render();setTimeout(()=>input.focus(),150)}else fab.focus();
   }
   async function ask(text){
