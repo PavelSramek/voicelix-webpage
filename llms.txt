@@ -25,5 +25,5 @@ Czech summary: Voicelix je IT a AI partner pro české firmy. Navrhuje, staví a
 - [AI receptionist for medical practices (Czech)](https://voicelix.ai/ai-recepcni-ordinace/), [English](https://voicelix.ai/en/ai-receptionist-medical-practices/)
 - [Toolkit (Czech)](https://voicelix.ai/tools/): tools and integrations Voicelix sets up and manages
 - [Toolkit (English)](https://voicelix.ai/en/tools/)
-- [Privacy policy (Czech, binding)](https://voicelix.ai/ochrana-osobnich-udaju.html)
+- [Privacy policy (Czech, binding)](https://voicelix.ai/ochrana-osobnich-udaju)
 - [Privacy policy (English)](https://voicelix.ai/en/privacy/)
