@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>SAFEREX: podklad k jednání 20. 11. 2026 | Voicelix</title>
+<meta name="description" content="Nezávislý pohled na procesy SAFEREX: mapa zakázky, systémy, hypotézy a otázky k ověření.">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/onest-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/onest-latin-ext-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Onest';font-style:normal;font-weight:100 900;font-display:swap;src:url(/fonts/onest-latin-ext-wght-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Onest';font-style:normal;font-weight:100 900;font-display:swap;src:url(/fonts/onest-latin-wght-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+:root{--navy:#0F1E3C;--navy-deep:#0A1530;--ink:#13223F;--teal:#00C9A7;--teal-ink:#008C75;--teal-soft:#E0F7F2;--blue:#8AB4FF;--blue-soft:#EEF3FF;--paper:#F4F7FB;--line:#DDE4EE;--muted:#5B6B85;--muted-dark:#9AA9C4;--amber:#F2A93B;--amber-soft:#FDF1DC;--r:16px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;font-family:Onest,system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.mock{background:var(--amber-soft);color:#6B4A0F;font-size:14px;text-align:center;padding:8px 16px}
+header.top{background:var(--navy);color:#fff;position:sticky;top:0;z-index:20}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700}
+.brand small{display:block;font-weight:500;color:var(--muted-dark);font-size:12px}
+nav.links{display:flex;gap:20px;font-size:14px}
+nav.links a{text-decoration:none;color:var(--muted-dark)}
+nav.links a:hover{color:#fff}
+@media(max-width:860px){nav.links{display:none}}
+.hero{background:linear-gradient(160deg,var(--navy),var(--navy-deep));color:#fff;padding:60px 0 68px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(0,201,167,.22),transparent 70%)}
+.kicker{display:inline-block;font-size:13px;font-weight:600;color:var(--teal);background:rgba(0,201,167,.12);padding:6px 12px;border-radius:99px;margin-bottom:18px}
+h1{font-size:clamp(30px,5vw,50px);line-height:1.08;margin:0 0 18px;font-weight:800;letter-spacing:-.5px}
+h1 em{font-style:normal;color:var(--teal)}
+.lead{font-size:18px;color:#C9D3E6;max-width:720px;margin:0 0 26px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:10px}
+.chip{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.18);border-radius:99px;padding:8px 14px;font-size:14px;color:#DCE4F2}
+section{padding:68px 0}
+section.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.eyebrow{font-size:13px;font-weight:700;color:var(--teal-ink);text-transform:uppercase;letter-spacing:1.2px;margin-bottom:8px}
+h2{font-size:clamp(25px,3.3vw,35px);line-height:1.15;margin:0 0 12px;letter-spacing:-.3px}
+.sub{color:var(--muted);max-width:740px;margin:0 0 34px;font-size:17px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r)}
+.note{font-size:13.5px;color:var(--muted);margin-top:14px}
+.sys{font-size:12px;font-weight:600;padding:3px 9px;border-radius:99px;border:1px solid var(--line);background:#fff;white-space:nowrap}
+.sys.ms{border-color:#C9D7F5;background:var(--blue-soft);color:#2F4E9C}
+.sys.nv{border-color:#F5DDB0;background:var(--amber-soft);color:#8A5A0B}
+.sys.rc{border-color:#BFEDE3;background:var(--teal-soft);color:var(--teal-ink)}
+.sys.id{border-color:#E3D2F5;background:#F5EEFD;color:#6A3FA0}
+.flow{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:22px}
+@media(max-width:900px){.flow{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:520px){.flow{grid-template-columns:repeat(2,1fr)}}
+.step{all:unset;cursor:pointer;background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:14px 12px;display:flex;flex-direction:column;gap:8px;transition:.15s}
+.step:hover{border-color:var(--teal);transform:translateY(-2px)}
+.step[aria-selected=true]{border-color:var(--teal);background:var(--teal-soft);box-shadow:0 6px 20px rgba(0,201,167,.16)}
+.step:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.step .n{width:30px;height:30px;border-radius:9px;background:var(--navy);color:var(--teal);display:grid;place-items:center;font-weight:800}
+.step .t{font-weight:700;font-size:15px;line-height:1.25}
+.ss{display:flex;flex-wrap:wrap;gap:4px}
+.heat{height:6px;border-radius:99px;background:var(--line);overflow:hidden;margin-top:auto}
+.heat i{display:block;height:100%;background:linear-gradient(90deg,var(--teal),#F2A93B)}
+.detail{display:grid;grid-template-columns:1.1fr 1fr;overflow:hidden}
+@media(max-width:780px){.detail{grid-template-columns:1fr}}
+.detail .col{padding:26px 28px}
+.detail .l{background:#FAFBFD;border-right:1px solid var(--line)}
+@media(max-width:780px){.detail .l{border-right:0;border-bottom:1px solid var(--line)}}
+.detail h3{margin:0 0 10px;font-size:22px}
+.lbl{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin:0 0 10px;color:var(--muted)}
+.r .lbl{color:var(--teal-ink)}
+.detail ul{margin:0 0 16px;padding:0;list-style:none;display:grid;gap:8px}
+.detail li{display:flex;gap:10px;font-size:15.5px}
+.detail li:before{content:"";flex:none;width:7px;height:7px;border-radius:50%;margin-top:9px;background:var(--muted-dark)}
+.r li:before{background:var(--teal)}
+.quote{font-size:15px;border-left:3px solid var(--amber);background:var(--amber-soft);padding:10px 12px;border-radius:0 8px 8px 0;margin-bottom:14px}
+.ask{font-size:14.5px;background:var(--blue-soft);border-left:3px solid var(--blue);padding:10px 12px;border-radius:0 8px 8px 0}
+.mapwrap{padding:20px}
+.mapwrap .scroll{overflow-x:auto}
+.mapwrap svg{width:100%;min-width:640px;height:auto;display:block}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:13.5px;color:var(--muted);margin-top:12px}
+.legend span{display:flex;align-items:center;gap:8px}
+.hyps{display:grid;gap:12px}
+.hyp{padding:0;overflow:hidden}
+.hyp summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:44px 1fr 20px;gap:14px;align-items:center;padding:18px 20px}
+.hyp summary::-webkit-details-marker{display:none}
+.hyp summary:focus-visible{outline:3px solid var(--blue);outline-offset:-3px}
+.hyp .no{width:44px;height:44px;border-radius:12px;background:var(--navy);color:var(--teal);display:grid;place-items:center;font-weight:800;font-size:18px}
+.hyp h3{margin:0;font-size:18px;line-height:1.3}
+.hyp .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.pill{font-size:12px;font-weight:600;padding:3px 9px;border-radius:99px;background:var(--paper);border:1px solid var(--line);color:var(--muted)}
+.pill.hi{background:var(--teal-soft);border-color:#BFEDE3;color:var(--teal-ink)}
+.pill.mid{background:var(--blue-soft);border-color:#C9D7F5;color:#2F4E9C}
+.chev{transition:.2s;color:var(--muted)}
+details[open] .chev{transform:rotate(180deg)}
+.hyp .body{padding:0 20px 20px 78px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:780px){.hyp .body{grid-template-columns:1fr;padding-left:20px}}
+.hyp .body h4{margin:0 0 6px;font-size:13px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted)}
+.hyp .body p{margin:0;font-size:15px}
+.two{display:grid;grid-template-columns:1fr 1.15fr;gap:24px;align-items:start}
+@media(max-width:900px){.two{grid-template-columns:1fr}}
+.panel{padding:22px}
+.form{display:grid;gap:14px}
+.form label{font-size:13px;font-weight:600;color:var(--muted);display:grid;gap:6px}
+select,textarea{font:inherit;color:inherit;border:1.5px solid var(--line);border-radius:10px;padding:9px 12px;background:#fff;width:100%}
+select:focus,textarea:focus{outline:none;border-color:var(--teal)}
+.checks{display:grid;gap:6px}
+.checks label{display:flex;align-items:center;gap:10px;border:1.5px solid var(--line);border-radius:10px;padding:8px 12px;font-weight:500;color:var(--ink);cursor:pointer;font-size:14.5px}
+.checks input{accent-color:var(--teal)}
+.btn{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-weight:600;font-size:15px;background:var(--teal);color:var(--navy);transition:.15s}
+.btn:hover{filter:brightness(1.05);transform:translateY(-1px)}
+.btn:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.doc{background:#fff;border:1px solid var(--line);border-radius:12px;min-height:420px;position:relative;overflow:hidden}
+.doc .bar{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 16px;border-bottom:1px solid var(--line);background:#FAFBFD;font-size:13px;color:var(--muted);flex-wrap:wrap}
+.doc .bar b{color:var(--ink)}
+.doc .tag{font-size:12px;font-weight:700;color:var(--teal-ink);background:var(--teal-soft);padding:4px 10px;border-radius:99px}
+.paper{padding:24px 26px;font-size:14.5px;overflow-x:auto}
+.paper h4{margin:0 0 2px;font-size:19px}
+.paper .meta{color:var(--muted);font-size:13px;margin-bottom:16px}
+.paper h5{margin:16px 0 6px;font-size:13.5px;text-transform:uppercase;letter-spacing:.6px;color:var(--teal-ink)}
+.paper p{margin:0 0 8px}
+.paper table{border-collapse:collapse;width:100%;font-size:13.5px;margin:6px 0}
+.paper th,.paper td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+.paper th{background:#F7F9FC;color:var(--muted);font-weight:600}
+mark{background:#FFF4CC;padding:0 3px;border-radius:3px}
+sup.src{font-size:10.5px;font-weight:700;color:#2F4E9C;background:var(--blue-soft);border-radius:4px;padding:0 4px;margin-left:2px}
+.srcs{font-size:12.5px;color:var(--muted);border-top:1px dashed var(--line);margin-top:16px;padding-top:10px}
+.empty{position:absolute;inset:44px 0 0;display:grid;place-items:center;text-align:center;color:var(--muted);padding:30px;font-size:15px}
+.empty[hidden]{display:none}
+.sig{margin-top:14px;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:900px){.grid4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.grid4{grid-template-columns:1fr}}
+.pr{padding:22px}
+.pr .ic{width:40px;height:40px;border-radius:12px;background:var(--teal-soft);color:var(--teal-ink);display:grid;place-items:center;margin-bottom:12px}
+.pr h4{margin:0 0 6px;font-size:17px}
+.pr p{margin:0;color:var(--muted);font-size:14.5px}
+.phases{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:900px){.phases{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.phases{grid-template-columns:1fr}}
+.ph{padding:22px}
+.ph .w{font-size:12.5px;font-weight:700;color:var(--teal-ink);background:var(--teal-soft);display:inline-block;padding:3px 10px;border-radius:99px;margin-bottom:10px}
+.ph h4{margin:0 0 8px;font-size:17px}
+.ph p{margin:0;font-size:14.5px;color:var(--muted)}
+.ph.now{background:var(--navy);border-color:var(--navy);color:#E8EEF8}
+.ph.now p{color:#C9D3E6}
+.ph.now .w{background:rgba(0,201,167,.15);color:var(--teal)}
+.dark{background:var(--navy);color:#fff}
+.dark .sub{color:#C9D3E6}.dark .eyebrow{color:var(--teal)}
+.qgroups{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:900px){.qgroups{grid-template-columns:1fr}}
+.qg{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:18px 20px}
+.qg h4{margin:0 0 10px;color:var(--teal);font-size:15px}
+.qg ul{margin:0;padding-left:18px;display:grid;gap:7px;font-size:15px}
+.cta-row{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:40px;padding-top:30px;border-top:1px solid rgba(255,255,255,.12)}
+.cta-row img{width:64px;height:64px;border-radius:50%;object-fit:cover;border:2px solid var(--teal)}
+.cta-row b{display:block;font-size:17px}
+.cta-row span{color:var(--muted-dark);font-size:14px}
+footer{background:var(--navy-deep);color:var(--muted-dark);font-size:13px;padding:22px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="mock"><b>Podklad k jednání 20. 11. 2026.</b> Vychází z informací od SAFEREX. Ukázka dokumentu pracuje se smyšlenými daty.</div>
+
+<header class="top"><div class="wrap">
+  <a class="brand" href="/" aria-label="Voicelix, hlavní stránka">
+    <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="9" fill="#00C9A7" fill-opacity=".14"/><g stroke="#00C9A7" stroke-width="2.6" stroke-linecap="round"><path d="M8 14v6"/><path d="M12.5 10v14"/><path d="M17 7v20"/><path d="M21.5 11v12"/><path d="M26 15v4"/></g></svg>
+    <span>Voicelix<small>Podklad pro SAFEREX s.r.o.</small></span>
+  </a>
+  <nav class="links" aria-label="Obsah stránky">
+    <a href="#proces">Proces</a><a href="#systemy">Systémy</a><a href="#prilezitosti">Příležitosti</a><a href="#ukazka">Ukázka</a><a href="#postup">Postup</a><a href="#otazky">Otázky</a>
+  </nav>
+</div></header>
+
+<main>
+<section class="hero"><div class="wrap" style="position:relative;z-index:1">
+  <span class="kicker">Jednání 20. 11. 2026, 10:00, Plzeň-Božkov</span>
+  <h1>Nezávislý pohled<br><em>na procesy SAFEREX</em></h1>
+  <p class="lead">Žádné hotové řešení. Mapa zakázky a systémů tak, jak ji popisujete, místa, kde se dnes nejspíš ztrácí čas, a předběžné hypotézy, které spolu na jednání ověříme.</p>
+  <div class="hero-meta">
+    <span class="chip">6 kroků zakázky</span>
+    <span class="chip">Microsoft 365 a 3 další systémy</span>
+    <span class="chip">6 hypotéz k ověření</span>
+  </div>
+</div></section>
+
+<section id="proces"><div class="wrap">
+  <div class="eyebrow">1. Proces</div>
+  <h2>Zakázka od poptávky po fakturu</h2>
+  <p class="sub">Podle vašeho popisu. Pruh u každého kroku ukazuje můj předběžný odhad, kolik ruční práce v kroku je. Klikněte na krok pro detail.</p>
+  <div class="flow" role="tablist" aria-label="Kroky zakázky" id="flow"></div>
+  <div class="card detail" id="detail" role="tabpanel" aria-live="polite"></div>
+</div></section>
+
+<section id="systemy" class="alt"><div class="wrap">
+  <div class="eyebrow">2. Systémy</div>
+  <h2>Kudy dnes tečou data</h2>
+  <p class="sub">Každý systém má svůj účel a to dává smysl. Informace mezi nimi ale podle vašich slov přenášíte ručně, přes dokumenty a e-maily. Právě tyto přechody bývají první místo, kde se dá ušetřit bez zásahu do odborné práce.</p>
+  <div class="card mapwrap"><div class="scroll">
+    <svg viewBox="0 0 960 430" role="img" aria-label="Mapa systémů: Microsoft 365 uprostřed, Navigo3, iDoklad, RISCON a zákazníci kolem, propojené převážně ručně">
+      <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#9AA9C4"/></marker></defs>
+      <g fill="none" stroke="#9AA9C4" stroke-width="2" stroke-dasharray="7 6" marker-end="url(#a)">
+        <path d="M300 112 C 360 112, 360 175, 392 190"/>
+        <path d="M568 190 C 600 175, 600 112, 655 112"/>
+        <path d="M800 160 L 800 268"/>
+        <path d="M568 250 C 600 270, 600 318, 655 318"/>
+        <path d="M300 318 C 360 318, 360 262, 392 250"/>
+      </g>
+      <g font-family="Onest,system-ui,sans-serif" font-size="12.5" fill="#5B6B85" text-anchor="middle">
+        <text x="345" y="140">poptávky, e-maily</text>
+        <text x="612" y="140">nabídky, zakázky</text>
+        <text x="860" y="210">podklady</text><text x="860" y="226">k fakturaci</text>
+        <text x="612" y="300">výstupy, termíny</text>
+        <text x="345" y="300">zjištění, fotky</text>
+      </g>
+      <g font-family="Onest,system-ui,sans-serif">
+        <rect x="392" y="150" width="176" height="130" rx="16" fill="#EEF3FF" stroke="#C9D7F5"/>
+        <text x="480" y="180" text-anchor="middle" font-weight="700" font-size="16" fill="#13223F">Microsoft 365</text>
+        <text x="480" y="204" text-anchor="middle" font-size="12.5" fill="#2F4E9C">Word · Excel · SharePoint</text>
+        <text x="480" y="222" text-anchor="middle" font-size="12.5" fill="#2F4E9C">Outlook · Teams</text>
+        <text x="480" y="240" text-anchor="middle" font-size="12.5" fill="#2F4E9C">Planner · To Do</text>
+        <text x="480" y="264" text-anchor="middle" font-size="11.5" fill="#5B6B85">dokumenty, komunikace, úkoly</text>
+        <rect x="655" y="64" width="290" height="96" rx="16" fill="#FDF1DC" stroke="#F5DDB0"/>
+        <text x="800" y="96" text-anchor="middle" font-weight="700" font-size="16" fill="#13223F">Navigo3</text>
+        <text x="800" y="118" text-anchor="middle" font-size="12.5" fill="#8A5A0B">zákazníci, obchodní případy, nabídky,</text>
+        <text x="800" y="136" text-anchor="middle" font-size="12.5" fill="#8A5A0B">zakázky, ekonomika, podklady k fakturaci</text>
+        <rect x="655" y="268" width="290" height="96" rx="16" fill="#F5EEFD" stroke="#E3D2F5"/>
+        <text x="800" y="306" text-anchor="middle" font-weight="700" font-size="16" fill="#13223F">iDoklad</text>
+        <text x="800" y="328" text-anchor="middle" font-size="12.5" fill="#6A3FA0">vystavování faktur zákazníkům</text>
+        <rect x="15" y="64" width="285" height="96" rx="16" fill="#FFFFFF" stroke="#DDE4EE"/>
+        <text x="157" y="96" text-anchor="middle" font-weight="700" font-size="16" fill="#13223F">Zákazníci a terén</text>
+        <text x="157" y="118" text-anchor="middle" font-size="12.5" fill="#5B6B85">poptávky, projektová dokumentace,</text>
+        <text x="157" y="136" text-anchor="middle" font-size="12.5" fill="#5B6B85">kontroly, kontrolní dny, školení</text>
+        <rect x="15" y="268" width="285" height="96" rx="16" fill="#E0F7F2" stroke="#BFEDE3"/>
+        <text x="157" y="300" text-anchor="middle" font-weight="700" font-size="16" fill="#13223F">RISCON</text>
+        <text x="157" y="322" text-anchor="middle" font-size="12.5" fill="#008C75">kontroly a inspekce BOZP a PO, neshody,</text>
+        <text x="157" y="340" text-anchor="middle" font-size="12.5" fill="#008C75">nápravná opatření, fotodokumentace</text>
+      </g>
+      <g font-family="Onest,system-ui,sans-serif" font-size="12" fill="#13223F">
+        <rect x="370" y="372" width="220" height="42" rx="10" fill="#FFF4CC"/>
+        <text x="480" y="390" text-anchor="middle" font-weight="700">Otázka na jednání:</text>
+        <text x="480" y="406" text-anchor="middle">umí Navigo3, RISCON a iDoklad API?</text>
+      </g>
+    </svg></div>
+    <div class="legend"><span><svg width="40" height="8" aria-hidden="true"><path d="M0 4h40" stroke="#9AA9C4" stroke-width="2" stroke-dasharray="7 6"/></svg>ruční přenos (dokumenty, e-maily, přepisování)</span><span>Podoba toků je předběžná, ověříme ji na ukázce vašich systémů.</span></div>
+  </div>
+</div></section>
+
+<section id="prilezitosti"><div class="wrap">
+  <div class="eyebrow">3. Příležitosti</div>
+  <h2>Hypotézy, kde může být největší přínos</h2>
+  <p class="sub">Seřazené podle vašeho popisu. Přínos a náročnost jsou předběžné odhady, na jednání je ověříme, nebo zahodíme.</p>
+  <div class="hyps" id="hyps"></div>
+</div></section>
+
+<section id="ukazka" class="alt"><div class="wrap">
+  <div class="eyebrow">4. Ukázka</div>
+  <h2>AI jako asistent při tvorbě odborné dokumentace</h2>
+  <p class="sub">Ukázka hypotézy č. 1. Specialista dodá heslovité poznámky, AI složí návrh dokumentu podle firemní šablony a u jednotlivých částí uvede zdroj. Místa, která musí doplnit nebo posoudit odborník, jsou zvýrazněná. Data jsou smyšlená.</p>
+  <div class="two">
+    <div class="card panel">
+      <form class="form" id="f" onsubmit="return false">
+        <label>Typ dokumentu
+          <select id="dt">
+            <option value="kd">Zápis z kontrolního dne (koordinátor BOZP)</option>
+            <option value="pr">Zpráva z prověrky BOZP</option>
+          </select></label>
+        <label>Poznámky specialisty z terénu
+          <textarea id="nt" rows="6"></textarea></label>
+        <div><label style="margin-bottom:8px">Zdroje, ze kterých má AI vycházet</label>
+          <div class="checks" id="srcs"></div></div>
+        <div><button class="btn" id="go">Připravit návrh dokumentu</button></div>
+      </form>
+    </div>
+    <div class="doc" id="doc">
+      <div class="bar"><span><b>Návrh dokumentu</b> · Word, firemní šablona</span><span class="tag">Návrh AI, odpovídá specialista</span></div>
+      <div class="empty" id="empty">Zkontrolujte poznámky vlevo a klikněte na „Připravit návrh dokumentu“.</div>
+      <div class="paper" id="paper" hidden></div>
+    </div>
+  </div>
+  <p class="note">V reálném nasazení by AI pracovala s vašimi šablonami a vzory ze SharePointu, s podklady z RISCONu a s firemní knihovnou předpisů. Výsledek by se uložil jako běžný dokument Word ke zakázce.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">5. Principy</div>
+  <h2>Bezpečnost a dlouhodobá udržitelnost</h2>
+  <p class="sub">Odpovídám na to, co vás podle e-mailu zajímá nejvíc.</p>
+  <div class="grid4">
+    <div class="card pr"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div><h4>Odpovědnost zůstává u specialisty</h4><p>AI připravuje návrhy a hledá v podkladech. Finální výstup kontroluje a podepisuje odborně způsobilá osoba.</p></div>
+    <div class="card pr"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div><h4>Interní data pod kontrolou</h4><p>Firemní účty místo osobních, přístupová práva podle rolí, smlouva o zpracování údajů a jasně dané, kde data jsou a kdo k nim má přístup.</p></div>
+    <div class="card pr"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg></div><h4>Stavět na tom, co máte</h4><p>Microsoft 365, Navigo3, RISCON a iDoklad zůstávají. Varianty posoudím nezávisle, včetně nástrojů, které už jsou v Microsoft 365.</p></div>
+    <div class="card pr"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg></div><h4>GDPR, AI Act a žádná závislost</h4><p>Pravidla pro používání AI ve firmě, zdokumentované řešení a žádná závislost na jednom člověku nebo nástroji.</p></div>
+  </div>
+</div></section>
+
+<section id="postup" class="alt"><div class="wrap">
+  <div class="eyebrow">6. Postup</div>
+  <h2>Jak bych postupoval</h2>
+  <p class="sub">Nejdřív porozumět, pak ověřit na malém pilotu a teprve potom rozšiřovat.</p>
+  <div class="phases">
+    <div class="card ph now"><span class="w">Dnes</span><h4>Ukázka systémů a šablon</h4><p>Projdeme Navigo3, RISCON, SharePoint a několik typických výstupů. Vybereme 2 až 3 kandidáty.</p></div>
+    <div class="card ph"><span class="w">1 až 2 týdny</span><h4>Analýza</h4><p>Rozhovory se 2 až 3 specialisty, změření času u vybraných typů dokumentů, ověření propojitelnosti systémů. Výstupem je doporučení s přínosy a riziky.</p></div>
+    <div class="card ph"><span class="w">4 až 6 týdnů</span><h4>Pilot</h4><p>Jeden proces nebo typ dokumentu, jeden tým, měřitelný cíl. Bez zásahu do ostatního fungování.</p></div>
+    <div class="card ph"><span class="w">Potom</span><h4>Vyhodnocení a rozšíření</h4><p>Pokračujeme jen tam, kde pilot prokáže reálný přínos. Postupně další procesy a dlouhodobá péče o řešení.</p></div>
+  </div>
+</div></section>
+
+<section class="dark" id="otazky"><div class="wrap">
+  <div class="eyebrow">7. Otázky</div>
+  <h2>Co bych rád na jednání zjistil</h2>
+  <p class="sub">Odpovědi rozhodnou, které hypotézy platí.</p>
+  <div class="qgroups">
+    <div class="qg"><h4>Dokumentace</h4><ul><li>Které typy dokumentů zaberou nejvíc času a kolik jich ročně vzniká?</li><li>Jak vypadají šablony a kolik obsahu se mezi zakázkami opakuje?</li><li>Kdo a jak dnes výstupy kontroluje?</li><li>Jak hlídáte aktuálnost předpisů a norem?</li></ul></div>
+    <div class="qg"><h4>Systémy a data</h4><ul><li>Které údaje se dnes přepisují ručně a mezi kterými systémy?</li><li>Umí Navigo3, RISCON a iDoklad export nebo API?</li><li>Jaké licence Microsoft 365 máte a jak je uspořádaný SharePoint?</li><li>Jaká data zákazníků jsou citlivá a co jim smluvně garantujete?</li></ul></div>
+    <div class="qg"><h4>Řízení práce</h4><ul><li>Jak dnes plánujete kapacity a přidělujete zakázky?</li><li>Kde se nejčastěji ztratí termín nebo informace?</li><li>Co s AI ve firmě už zkoušíte a s jakou zkušeností?</li><li>Podle čeho byste poznal, že pilot uspěl?</li></ul></div>
+  </div>
+  <div class="cta-row">
+    <img src="/pavel-sramek.jpg" alt="Pavel Šrámek" width="64" height="64">
+    <div><b>Mgr. Pavel Šrámek</b><span>Zakladatel Voicelixu, AI architekt s právním vzděláním</span></div>
+    <div style="margin-left:auto"><a class="btn" href="mailto:pavel@voicelix.ai">pavel@voicelix.ai</a></div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>Voicelix · Podklad připravený pro SAFEREX s.r.o.</span><span>Ukázka dokumentu pracuje se smyšlenými daty.</span></div></footer>
+
+<script>
+(function(){
+const S={ms:'Microsoft 365',nv:'Navigo3',rc:'RISCON',id:'iDoklad'};
+const chip=k=>`<span class="sys ${k}">${S[k]}</span>`;
+const L='ABCDEF';
+const steps=[
+ {t:'Poptávka a obchodní příprava',s:['ms','nv'],h:45,
+  now:['Poptávky e-mailem, telefonem a při osobním kontaktu','Posouzení služeb a rozsahu prací','Cenová nabídka a případně smlouva','Evidence obchodního případu v Navigu'],
+  q:'Poptávky přicházejí především e-mailem, telefonicky nebo prostřednictvím přímé komunikace se zákazníky.',
+  op:['Návrh nabídky z podobných minulých zakázek a ceníku','Předvyplnění obchodního případu z e-mailu','Hlídání nabídek bez odpovědi'],
+  ask:'Jak dlouho dnes trvá příprava nabídky a z čeho vychází?'},
+ {t:'Zahájení zakázky',s:['nv','ms'],h:35,
+  now:['Administrativní a organizační zahájení','Určení odpovědných pracovníků','Předání podkladů a stanovení termínů','Plánování činností'],
+  q:'Určujeme odpovědné pracovníky, předáváme podklady, stanovujeme termíny a plánujeme potřebné činnosti.',
+  op:['Automatické založení složky a úkolů ze zakázky v Navigu','Přehled kapacit specialistů na jednom místě','Předání podkladů bez ručního rozesílání'],
+  ask:'Kde dnes vidíte vytížení jednotlivých specialistů?'},
+ {t:'Odborná realizace',s:['rc','ms'],h:40,
+  now:['Kontroly a inspekce na pracovištích a staveništích','Audity a posuzování souladu','Školení, konzultace, kontrolní dny','Významná část práce v terénu'],
+  q:'Významná část práce probíhá v terénu, na který navazuje zpracování odborných výstupů.',
+  op:['Zápisy z jednání a kontrolních dnů z poznámek nebo diktátu','Rychlé dohledání ve vlastních vzorech a předpisech přímo v terénu','Odborná práce zůstává na specialistovi'],
+  ask:'Co si specialista z terénu přiváží a v jaké podobě?'},
+ {t:'Dokumentace a evidence',s:['ms','rc'],h:90,
+  now:['Většina výstupů ve Wordu, část v Excelu','Velké množství různorodých podkladů','Odborná správnost, platné předpisy, firemní šablony','Sdílení přes SharePoint, odborné evidence v RISCONu'],
+  q:'Jedná se o časově náročnou činnost, při které pracujeme s velkým množstvím různorodých podkladů.',
+  op:['AI návrh dokumentu podle šablony z poznámek a podkladů','Firemní znalostní báze nad SharePointem: vzory, minulé výstupy, předpisy','Kontrola úplnosti a konzistence před odesláním'],
+  ask:'Které tři typy dokumentů zaberou nejvíc času?'},
+ {t:'Kontrola výstupů a komunikace',s:['ms','rc'],h:55,
+  now:['Kontrola, aktualizace a předání výstupů','Sledování termínů a nápravných opatření','Plnění smluvních povinností','Komunikace s odpovědnými osobami'],
+  q:'Součástí procesu je také sledování termínů, nápravných opatření, plnění smluvních povinností a komunikace s odpovědnými osobami.',
+  op:['Jeden přehled termínů napříč zakázkami a systémy','Připomínky zákazníkům a specialistům','Návrhy průvodních e-mailů k výstupům'],
+  ask:'Kde se dnes nejčastěji ztratí termín nebo informace?'},
+ {t:'Ekonomické vyhodnocení a fakturace',s:['nv','id'],h:50,
+  now:['Sledování rozsahu služeb a odpracovaného času','Projektová a ekonomická data v Navigu','Faktury v iDokladu','Jednorázové zakázky i měsíční paušály'],
+  q:'Vedle jednorázových zakázek realizujeme také dlouhodobé smlouvy s pravidelným měsíčním plněním.',
+  op:['Přenos podkladů z Navigo3 do iDokladu bez přepisování','Automatické měsíční faktury u paušálů','Přehled ziskovosti zakázek'],
+  ask:'Přepisují se dnes údaje z Navigo3 do iDokladu ručně?'}
+];
+const flow=document.getElementById('flow'),det=document.getElementById('detail');
+steps.forEach((s,i)=>{const b=document.createElement('button');b.className='step';b.setAttribute('role','tab');b.id='s'+i;b.setAttribute('aria-controls','detail');
+ b.innerHTML=`<span class="n">${L[i]}</span><span class="t">${s.t}</span><span class="ss">${s.s.map(chip).join('')}</span><span class="heat" title="Předběžný odhad ruční práce"><i style="width:${s.h}%"></i></span>`;
+ b.onclick=()=>show(i);flow.appendChild(b)});
+function show(i){const s=steps[i];[...flow.children].forEach((c,j)=>c.setAttribute('aria-selected',j===i));det.setAttribute('aria-labelledby','s'+i);
+ det.innerHTML=`<div class="col l"><div class="lbl">Jak to popisujete</div><h3>${L[i]}. ${s.t}</h3><div class="quote">„${s.q}“</div><ul>${s.now.map(x=>`<li>${x}</li>`).join('')}</ul><div class="ss">${s.s.map(chip).join('')}</div></div>
+ <div class="col r"><div class="lbl">Kde může pomoci AI nebo propojení</div><ul>${s.op.map(x=>`<li>${x}</li>`).join('')}</ul><div class="ask"><b>Ověřit na jednání:</b> ${s.ask}</div></div>`}
+show(3);
+
+const H=[
+ ['AI asistent pro tvorbu odborné dokumentace','hi','střední','Návrhy dokumentů ve Wordu podle firemních šablon z poznámek, podkladů a vzorů. Specialista kontroluje a dopracovává.','Podle vašeho popisu nejvíc času. Struktura se opakuje, obsah je pokaždé jiný. To je typická úloha, kde AI pomáhá.','Které dokumenty, kolik času zaberou, jak jednotné jsou šablony.'],
+ ['Firemní znalostní báze nad SharePointem','hi','střední','Vyhledávání a odpovědi nad vašimi vzory, minulými výstupy, šablonami a předpisy, vždy s odkazem na zdroj.','Rychlejší práce specialistů i zaučování nových lidí, jednotnější kvalita výstupů.','Uspořádání SharePointu, oprávnění, aktuálnost vzorů.'],
+ ['Propojení Navigo3, iDokladu a RISCONu','mid','podle možností API','Přenos zakázek, podkladů k fakturaci a termínů mezi systémy bez přepisování.','Méně chyb a ruční administrativy, rychlejší fakturace.','Zda systémy mají API nebo export a co se dnes přepisuje.'],
+ ['Přehled kapacit, úkolů a termínů','mid','nízká až střední','Jeden pohled na vytížení specialistů, termíny zakázek a nápravných opatření nad daty z Navigo3, Planneru a RISCONu.','Lepší plánování a méně ztracených termínů.','Kde dnes plánujete a co v přehledu chybí.'],
+ ['Zápisy z jednání a kontrolních dnů','mid','nízká','Z poznámek, diktátu nebo záznamu jednání v Teams vznikne zápis s úkoly a termíny ve vaší šabloně.','Rychlá úspora času u opakované činnosti, vhodné na první pilot.','Formát zápisů, souhlas účastníků s nahráváním.'],
+ ['Poptávky a nabídky','mid','nízká až střední','Roztřídění poptávek z e-mailu, návrh nabídky z podobných zakázek a ceníku, připomínky u nabídek bez odpovědi.','Rychlejší reakce na poptávky, méně ztracených příležitostí.','Objem poptávek a kdo dnes nabídky připravuje.']
+];
+const hy=document.getElementById('hyps');
+H.forEach((h,i)=>{const d=document.createElement('details');d.className='card hyp';if(i===0)d.open=true;
+ d.innerHTML=`<summary><span class="no">${i+1}</span><span><h3>${h[0]}</h3><span class="tags"><span class="pill ${h[1]}">Přínos: ${h[1]==='hi'?'vysoký':'střední'}</span><span class="pill">Náročnost: ${h[2]}</span></span></span><svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+ <div class="body"><div><h4>Co to je</h4><p>${h[3]}</p></div><div><h4>Proč</h4><p>${h[4]}</p></div><div><h4>Ověřit</h4><p>${h[5]}</p></div></div>`;hy.appendChild(d)});
+
+const today=new Date();const fmt=x=>x.toLocaleDateString('cs-CZ',{day:'numeric',month:'numeric',year:'numeric'});const dd=n=>{const x=new Date(today);x.setDate(x.getDate()+n);return x};
+const NOTES={
+ kd:'stavba Bytový dům Lipová, KD č. 7\npřítomni: GD Alfa Stavby, Elektro Beta, Lešení Gama\nlešení S strana chybí zábradlí 2. patro\nprostup ve stropu 3NP nezakrytý\nrozvaděč staveniště, revize není na místě\nz KD 6: zábradlí u výtahové šachty ok',
+ pr:'Pekárna U Mlýna, prověrka BOZP\nvýrobní hala: kryt hnětače poškozený\nsklad: regály bez štítku nosnosti\nlékárnička neúplná\nškolení VZV prošlé u 2 osob\nOOPP ok, evidence ok'
+};
+const SRC=[['tpl','Firemní šablona dokumentu (SharePoint)','Š'],['prev','Předchozí zápis nebo zpráva u stejného zákazníka','P'],['rc','Zjištění a fotodokumentace z RISCONu','R'],['law','Firemní knihovna předpisů BOZP','§']];
+const sb=document.getElementById('srcs');SRC.forEach(s=>{const l=document.createElement('label');l.innerHTML=`<input type="checkbox" value="${s[0]}" checked> ${s[1]}`;sb.appendChild(l)});
+const dt=document.getElementById('dt'),nt=document.getElementById('nt');
+const setNote=()=>nt.value=NOTES[dt.value];setNote();dt.onchange=setNote;
+const esc=t=>t.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+document.getElementById('go').onclick=function(){
+ const b=this,on=new Set([...sb.querySelectorAll('input:checked')].map(x=>x.value));b.textContent='Připravuji návrh…';
+ setTimeout(()=>{b.textContent='Připravit návrh dokumentu';
+ const n=nt.value.trim();const custom=n!==NOTES[dt.value];
+ const r=k=>on.has(k)?`<sup class="src">${SRC.find(s=>s[0]===k)[2]}</sup>`:'';
+ let h='';
+ if(custom){h=`<h4>${dt.options[dt.selectedIndex].text}</h4><div class="meta">Návrh ze dne ${fmt(today)}</div><h5>Zjištění podle poznámek specialisty</h5><table><tr><th>#</th><th>Poznámka</th><th>Navržené opatření</th></tr>${n.split('\n').filter(Boolean).map((x,i)=>`<tr><td>${i+1}</td><td>${esc(x)}</td><td><mark>doplní specialista</mark></td></tr>`).join('')}</table><p style="margin-top:10px">V reálném nasazení by AI z vlastních poznámek vytvořila plný text podle šablony. Tato ukázka má plný text připravený jen pro předvyplněné poznámky.</p>`}
+ else if(dt.value==='kd'){h=`<h4>Zápis z kontrolního dne č. 7</h4><div class="meta">Stavba: Bytový dům Lipová (smyšlená) · ${fmt(today)} · Koordinátor BOZP: <mark>jméno specialisty</mark>${r('tpl')}</div>
+ <h5>Přítomní</h5><p>Alfa Stavby s.r.o. (generální dodavatel), Elektro Beta s.r.o., Lešení Gama s.r.o.</p>
+ <h5>Kontrola opatření z kontrolního dne č. 6</h5><table><tr><th>Opatření</th><th>Stav</th></tr><tr><td>Doplnit zábradlí u výtahové šachty${r('prev')}</td><td>Splněno</td></tr></table>
+ <h5>Nová zjištění</h5><table><tr><th>#</th><th>Zjištění</th><th>Opatření</th><th>Odpovídá</th><th>Termín</th></tr>
+ <tr><td>1</td><td>Lešení na severní straně: ve 2. podlaží chybí zábradlí${r('rc')}</td><td>Doplnit ochranu proti pádu před dalším užíváním lešení${r('law')}</td><td>Lešení Gama</td><td>${fmt(dd(1))}</td></tr>
+ <tr><td>2</td><td>Nezakrytý prostup ve stropní konstrukci 3. NP${r('rc')}</td><td>Zakrýt únosným a zajištěným poklopem a označit${r('law')}</td><td>Alfa Stavby</td><td>okamžitě</td></tr>
+ <tr><td>3</td><td>Na staveništi není k dispozici doklad o revizi staveništního rozvaděče</td><td>Předložit platnou revizní zprávu, další postup <mark>posoudí specialista</mark></td><td>Elektro Beta</td><td>${fmt(dd(3))}</td></tr></table>
+ <h5>Závěr</h5><p>Zhotovitelé byli se zjištěními seznámeni na místě. Splnění opatření bude ověřeno na kontrolním dni č. 8 dne ${fmt(dd(7))}.${r('tpl')}</p>`}
+ else{h=`<h4>Zpráva z prověrky BOZP</h4><div class="meta">Pekárna U Mlýna (smyšlená) · ${fmt(today)} · Zpracoval: <mark>jméno specialisty</mark>${r('tpl')}</div>
+ <h5>Shrnutí</h5><p>Prověrka zjistila 4 neshody, z toho 1 s vysokou prioritou. Evidence a přidělování OOPP jsou v pořádku${r('prev')}.</p>
+ <h5>Zjištění a návrh opatření</h5><table><tr><th>#</th><th>Pracoviště</th><th>Zjištění</th><th>Priorita</th><th>Opatření</th><th>Termín</th></tr>
+ <tr><td>1</td><td>Výrobní hala</td><td>Poškozený ochranný kryt hnětače${r('rc')}</td><td><mark>vysoká</mark></td><td>Vyřadit zařízení z provozu do opravy krytu${r('law')}</td><td>okamžitě</td></tr>
+ <tr><td>2</td><td>Sklad</td><td>Regály bez označení nosnosti${r('rc')}</td><td>střední</td><td>Označit nosnost a zařadit regály do pravidelných kontrol</td><td>${fmt(dd(30))}</td></tr>
+ <tr><td>3</td><td>Výrobní hala</td><td>Neúplně vybavená lékárnička</td><td>nízká</td><td>Doplnit podle doporučení poskytovatele pracovnělékařských služeb</td><td>${fmt(dd(14))}</td></tr>
+ <tr><td>4</td><td>Sklad</td><td>Prošlé školení obsluhy VZV u 2 zaměstnanců${r('prev')}</td><td>střední</td><td>Do přeškolení je obsluhou VZV nepověřovat, zajistit školení</td><td>${fmt(dd(21))}</td></tr></table>
+ <h5>Doporučení</h5><p>Doporučujeme zavést pravidelné kontroly regálů a sledovat termíny školení v jednom přehledu.</p>`}
+ const used=SRC.filter(s=>on.has(s[0]));
+ h+=`<div class="srcs">${used.length?used.map(s=>`<b>${s[2]}</b> ${s[1]}`).join(' · '):'Bez zvolených zdrojů by AI neměla z čeho vycházet a v reálném nasazení by návrh nevytvořila.'}<br><mark>Žlutě</mark> jsou místa, která musí doplnit nebo posoudit specialista.</div>
+ <div class="sig"><span>Návrh připravila AI podle šablony</span><span>Zkontroloval a schválil: ____________________</span></div>`;
+ document.getElementById('empty').hidden=true;const p=document.getElementById('paper');p.hidden=false;p.innerHTML=h;
+ if(window.innerWidth<900)document.getElementById('doc').scrollIntoView({behavior:'smooth',block:'start'})},800)};
+})();
+</script>
+</body>
+</html>
