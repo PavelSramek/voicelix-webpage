@@ -68,4 +68,32 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://voicelix.ai/en/ai-receptionist-medical-practices/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://voicelix.ai/ai-recepcni-ordinace/"/>
   </url>
+  <url>
+    <loc>https://voicelix.ai/ai-pro-call-centra/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://voicelix.ai/ai-pro-call-centra/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voicelix.ai/en/ai-for-call-centers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voicelix.ai/ai-pro-call-centra/"/>
+  </url>
+  <url>
+    <loc>https://voicelix.ai/en/ai-for-call-centers/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://voicelix.ai/ai-pro-call-centra/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voicelix.ai/en/ai-for-call-centers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voicelix.ai/ai-pro-call-centra/"/>
+  </url>
+  <url>
+    <loc>https://voicelix.ai/pripadove-studie/circle/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://voicelix.ai/pripadove-studie/circle/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voicelix.ai/en/case-studies/circle/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voicelix.ai/pripadove-studie/circle/"/>
+  </url>
+  <url>
+    <loc>https://voicelix.ai/en/case-studies/circle/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://voicelix.ai/pripadove-studie/circle/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voicelix.ai/en/case-studies/circle/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voicelix.ai/pripadove-studie/circle/"/>
+  </url>
 </urlset>

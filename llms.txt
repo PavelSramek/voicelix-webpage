@@ -11,6 +11,7 @@ Czech summary: Voicelix je IT a AI partner pro české firmy. Navrhuje, staví a
 - Setup time: 3 to 5 working days, then the assistant is fine-tuned on real calls during the first month.
 - Other services: AI B2B outreach agent, AI email agent, websites and Google Business Profile, online booking widgets, CRM and API integrations, automation, custom apps, IT support, and an AI Act and GDPR audit (a technical and organizational review, not a legal service).
 - Typical clients: hair and beauty salons, medical practices, auto services, law firms, tradespeople, call centers.
+- Reference: pilot for CIRCLE Company a.s. (16 to 20 November 2026): two outbound lines (B2B and B2C), 240 contacts, 391 outbound calls, 29 callbacks handled by the AI, every call result written automatically into the client's spreadsheet. Published with the client's consent.
 - Founder: Mgr. Pavel Šrámek. Master of Laws (Faculty of Law, University of West Bohemia in Plzeň): EU law, financial law, crypto-asset regulation. Analyst since 2019, up to product owner and solution architect roles. Preparing for the IAPP AIGP (AI governance) certification.
 - Compliance: AI transparency on every call, data minimization, a data processing agreement with every client, configured recording and retention. Voicelix does not provide legal services within the meaning of the Czech Legal Profession Act.
 - Languages: the voice assistants speak Czech. Consultations in Czech or English.
@@ -23,6 +24,8 @@ Czech summary: Voicelix je IT a AI partner pro české firmy. Navrhuje, staví a
 - [Homepage (English)](https://voicelix.ai/en/)
 - [AI receptionist for hair and beauty salons (Czech)](https://voicelix.ai/ai-recepcni-kadernictvi/), [English](https://voicelix.ai/en/ai-receptionist-hair-salons/)
 - [AI receptionist for medical practices (Czech)](https://voicelix.ai/ai-recepcni-ordinace/), [English](https://voicelix.ai/en/ai-receptionist-medical-practices/)
+- [AI for call centers and telemarketing (Czech)](https://voicelix.ai/ai-pro-call-centra/), [English](https://voicelix.ai/en/ai-for-call-centers/): inbound lines, lead qualification, callbacks, database cleaning, logging results into CRM
+- [Case study: CIRCLE Company a.s. (Czech)](https://voicelix.ai/pripadove-studie/circle/), [English](https://voicelix.ai/en/case-studies/circle/): AI assistant called 240 contacts in November 2026, 391 outbound calls and 29 callbacks, about 1.5 hours of total campaign time
 - [Toolkit (Czech)](https://voicelix.ai/tools/): tools and integrations Voicelix sets up and manages
 - [Toolkit (English)](https://voicelix.ai/en/tools/)
 - [Privacy policy (Czech, binding)](https://voicelix.ai/ochrana-osobnich-udaju)
