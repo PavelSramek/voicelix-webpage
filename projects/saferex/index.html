@@ -141,6 +141,24 @@ h3{letter-spacing:-.1px}
 .steps li:before{counter-increment:s;content:counter(s);width:28px;height:28px;border-radius:8px;background:var(--navy);color:var(--teal);display:grid;place-items:center;font-weight:800;font-size:14px}
 .steps b{display:block}
 .gain{margin-top:16px;font-size:14.5px;background:var(--blue-soft);border-left:3px solid var(--blue);padding:10px 12px;border-radius:0 8px 8px 0}
+.calc{margin-top:22px;padding:26px}
+.calc h3{margin:0 0 4px;font-size:22px}
+.calc .lead2{margin:0 0 20px;color:var(--muted);font-size:15px}
+.cgrid{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:start}
+@media(max-width:860px){.cgrid{grid-template-columns:1fr}}
+.cgroup{margin-bottom:18px}
+.cgroup h4{margin:0 0 10px;font-size:13px;text-transform:uppercase;letter-spacing:.8px;color:var(--teal-ink)}
+.rng{display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:center;margin-bottom:12px}
+.rng label{font-size:14.5px}
+.rng output{font-weight:700;font-size:14.5px;min-width:90px;text-align:right}
+.rng input{grid-column:1/-1;width:100%;accent-color:var(--teal)}
+.res{background:var(--navy);color:#fff;border-radius:16px;padding:24px;position:sticky;top:80px}
+.res .big{font-size:40px;font-weight:800;color:var(--teal);line-height:1.05}
+.res .lab{font-size:13px;color:#9AA9C4;margin-bottom:16px}
+.res .row{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-top:1px solid rgba(255,255,255,.1);font-size:14.5px}
+.res .row b{color:#fff}
+.res .row span{color:#C9D3E6}
+.res .fine{font-size:12.5px;color:#9AA9C4;margin-top:12px}
 /* demo */
 .two{display:grid;grid-template-columns:.85fr 1.5fr;gap:24px;align-items:start}
 @media(max-width:960px){.two{grid-template-columns:1fr}}
@@ -400,6 +418,38 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       <div class="gain"><b>Přínos:</b> podle vašeho odhadu až 600 tis. Kč ročně na výkazech, k tomu kratší fakturace a žádné zapomenuté faktury.</div>
     </div>
   </div>
+
+  <div class="card calc" id="kalkulacka">
+    <h3>Kolik času a peněz by první etapa mohla ušetřit</h3>
+    <p class="lead2">Nastavte si čísla podle sebe. Výchozí hodnoty vycházejí z toho, co zaznělo na schůzce. Čas fakturace a čísla u COREXu jsou jen můj odhad. Přesná čísla změříme v pilotu.</p>
+    <div class="cgrid">
+      <div>
+        <div class="cgroup"><h4>Ekonomika: výkazy a fakturace</h4>
+          <div class="rng"><label for="c_people">Lidí, kteří vykazují</label><output id="o_people"></output><input type="range" id="c_people" min="5" max="40" step="1" value="20"></div>
+          <div class="rng"><label for="c_hrs">Hodin na výkazy na člověka měsíčně</label><output id="o_hrs"></output><input type="range" id="c_hrs" min="0.5" max="8" step="0.5" value="3.5"></div>
+          <div class="rng"><label for="c_fak">Hodin fakturace měsíčně</label><output id="o_fak"></output><input type="range" id="c_fak" min="0" max="80" step="2" value="40"></div>
+        </div>
+        <div class="cgroup"><h4>COREX: kontrolní dny</h4>
+          <div class="rng"><label for="c_proj">Projektů s kontrolními dny</label><output id="o_proj"></output><input type="range" id="c_proj" min="0" max="60" step="1" value="15"></div>
+          <div class="rng"><label for="c_kd">Kontrolních dnů na projekt měsíčně</label><output id="o_kd"></output><input type="range" id="c_kd" min="1" max="4" step="1" value="2"></div>
+          <div class="rng"><label for="c_zap">Hodin na zápis a registr neshod po jednom kontrolním dni</label><output id="o_zap"></output><input type="range" id="c_zap" min="0.5" max="4" step="0.5" value="1.5"></div>
+        </div>
+        <div class="cgroup"><h4>Předpoklady</h4>
+          <div class="rng"><label for="c_save">O kolik AI a automatizace zkrátí tuto práci</label><output id="o_save"></output><input type="range" id="c_save" min="20" max="80" step="5" value="50"></div>
+          <div class="rng"><label for="c_rate">Náklad na hodinu práce</label><output id="o_rate"></output><input type="range" id="c_rate" min="400" max="2000" step="50" value="1250"></div>
+        </div>
+      </div>
+      <div class="res" aria-live="polite">
+        <div class="lab">Odhad úspory za rok</div>
+        <div class="big" id="r_kc"></div>
+        <div class="lab" id="r_h"></div>
+        <div class="row"><span>Ekonomika</span><b id="r_eko"></b></div>
+        <div class="row"><span>COREX</span><b id="r_cor"></b></div>
+        <div class="row"><span>Uvolněné dny specialistů ročně</span><b id="r_days"></b></div>
+        <p class="fine">Výchozí náklad na hodinu odpovídá vašemu odhadu 600 tis. Kč ročně, kdyby se čas na výkazy zkrátil na polovinu. Nezahrnuje cenu řešení, tu doplním v návrhu první etapy.</p>
+      </div>
+    </div>
+  </div>
 </div></section>
 
 <section id="ukazka" class="alt"><div class="wrap">
@@ -507,6 +557,17 @@ const mod=document.getElementById('mod');
 function sel(i){const m=M[i];[...W.querySelectorAll('.seg')].forEach((g,j)=>{g.classList.toggle('on',j===i);g.setAttribute('aria-selected',j===i)});
  mod.innerHTML=`<span class="tag ${etl[m.e][0]}">${etl[m.e][1]}</span><h3>${m.k}</h3><p class="what">${m.s}. ${m.what}</p><div class="cols"><div><h4>Co jsem slyšel</h4><ul>${m.heard.map(x=>`<li>${x}</li>`).join('')}</ul></div><div><h4>Co by dělal SAFEX</h4><ul>${m.safex.map(x=>`<li>${x}</li>`).join('')}</ul></div></div>`}
 sel(0);
+
+
+// ---------- calculator ----------
+const nf=new Intl.NumberFormat('cs-CZ');const $=id=>document.getElementById(id);
+const fmtN=(v,d)=>nf.format(Math.round(v*(d?10:1))/(d?10:1));
+function calc(){const P=+$('c_people').value,H=+$('c_hrs').value,F=+$('c_fak').value,PR=+$('c_proj').value,KD=+$('c_kd').value,Z=+$('c_zap').value,S=+$('c_save').value/100,R=+$('c_rate').value;
+ $('o_people').textContent=P;$('o_hrs').textContent=fmtN(H,1)+' h';$('o_fak').textContent=F+' h';$('o_proj').textContent=PR;$('o_kd').textContent=KD+'×';$('o_zap').textContent=fmtN(Z,1)+' h';$('o_save').textContent=Math.round(S*100)+' %';$('o_rate').textContent=nf.format(R)+' Kč';
+ const eh=(P*H+F)*12*S,ch=PR*KD*Z*12*S,th=eh+ch;
+ const k=v=>{const t=Math.round(v/1000);return t>=1000?fmtN(t/1000,1)+' mil. Kč':nf.format(t)+' tis. Kč'};
+ $('r_kc').textContent=k(th*R);$('r_h').textContent=nf.format(Math.round(th))+' hodin ročně';$('r_eko').textContent=k(eh*R)+' · '+nf.format(Math.round(eh))+' h';$('r_cor').textContent=k(ch*R)+' · '+nf.format(Math.round(ch))+' h';$('r_days').textContent=nf.format(Math.round(th/8))+' dní'}
+document.querySelectorAll('#kalkulacka input').forEach(i=>i.addEventListener('input',calc));calc();
 
 // ---------- demo ----------
 const today=new Date();const fmt=x=>x.toLocaleDateString('cs-CZ',{day:'numeric',month:'numeric',year:'numeric'});const dd=n=>{const x=new Date(today);x.setDate(x.getDate()+n);return x};
