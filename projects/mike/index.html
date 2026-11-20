@@ -44,11 +44,11 @@ section{padding:88px 0}
 </head>
 <body>
 
-<div style="background:#FFFFFF;color:#0B1A33;text-align:center;font-size:14px;font-weight:600;padding:8px 16px">Návrh webu (mock-up). Fotky jsou zástupné, doplní se skutečné.</div>
+<div style="background:#FFFFFF;color:#0B1A33;text-align:center;font-size:14px;font-weight:600;padding:8px 16px">Návrh webu (mock-up). Fotky a logo jsou zatím v nízké kvalitě, doplní se originály.</div>
 
 <header style="border-bottom:1px solid var(--line)">
   <div class="wrap" style="padding-top:18px;padding-bottom:18px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
-    <a href="#top" class="oswald" style="font-weight:700;font-size:28px;letter-spacing:2px;text-decoration:none">Fitness <span class="hl">Mike</span></a>
+    <a href="#top" style="display:inline-flex;align-items:center"><img src="img/logo.png" alt="Fitness Mike" style="height:60px;width:auto;display:block"></a>
     <nav aria-label="Hlavní menu" style="display:flex;flex-wrap:wrap;gap:22px;font-size:15px;font-weight:500">
       <a href="#pribeh" style="text-decoration:none">Příběh</a>
       <a href="#treneri" style="text-decoration:none">Trenéři</a>
@@ -70,7 +70,7 @@ section{padding:88px 0}
       <a href="tel:+420602956604" class="btn btn-out">Trénink pro ženy, Radka: 602 956 604</a>
     </div>
   </div>
-  <div class="ph" role="img" aria-label="Zástupná fotka: interiér posilovny" style="flex:1 1 420px;min-width:0;height:440px"><span>Foto: posilovna zevnitř</span></div>
+  <img src="img/hero.jpg" alt="Posilovna Fitness Mike zevnitř" loading="lazy" style="flex:1 1 420px;min-width:0;height:440px;display:block;width:100%;object-fit:cover;object-position:center;border-radius:4px">
 </div>
 
 <div class="band">
@@ -83,7 +83,7 @@ section{padding:88px 0}
 
 <section id="pribeh">
   <div class="wrap" style="display:flex;flex-wrap:wrap;gap:48px;align-items:center">
-    <div class="ph" role="img" aria-label="Zástupná fotka: Václav Speierl na soutěži" style="flex:1 1 380px;min-width:0;height:480px"><span>Foto: Václav, soutěž 1996 nebo 1998</span></div>
+    <img src="img/vaclav-soutez.jpg" alt="Václav Speierl, absolutní mistr republiky v kulturistice" loading="lazy" style="flex:1 1 380px;min-width:0;height:480px;display:block;width:100%;object-fit:cover;object-position:top;border-radius:4px">
     <div style="flex:1 1 460px;min-width:0">
       <h2>Železo je jeho řemeslo</h2>
       <p class="lead" style="margin-top:24px;line-height:1.65">Václav Speierl se cvičení a výživě věnuje 40 let. Byl dlouholetým reprezentantem v kulturistice a v letech 1996 a 1998 se stal absolutním mistrem republiky.</p>
@@ -91,6 +91,7 @@ section{padding:88px 0}
       <p class="oswald hl" style="margin:24px 0 0;font-size:22px;font-weight:500;letter-spacing:1px">Oldschool posilovna. Rodinná atmosféra.</p>
     </div>
   </div>
+  <div class="wrap" style="display:flex;flex-wrap:wrap;gap:16px;margin-top:40px"><img src="img/v1.jpg" alt="Václav Speierl" loading="lazy" style="flex:1 1 220px;min-width:0;height:320px;object-fit:cover;object-position:top;border-radius:4px;display:block"><img src="img/v2.jpg" alt="Václav Speierl" loading="lazy" style="flex:1 1 220px;min-width:0;height:320px;object-fit:cover;object-position:top;border-radius:4px;display:block"><img src="img/v3.jpg" alt="Václav Speierl" loading="lazy" style="flex:1 1 220px;min-width:0;height:320px;object-fit:cover;object-position:top;border-radius:4px;display:block"><img src="img/v4.jpg" alt="Václav Speierl" loading="lazy" style="flex:1 1 220px;min-width:0;height:320px;object-fit:cover;object-position:top;border-radius:4px;display:block"></div>
 </section>
 
 <section id="treneri" class="band">
@@ -99,7 +100,7 @@ section{padding:88px 0}
     <p class="lead">Před prvním tréninkem se rádi potkáme osobně. Zavolejte, domluvíme se a probereme, co chcete zlepšit.</p>
     <div class="row" style="margin-top:40px">
       <article class="card">
-        <div class="ph" role="img" aria-label="Zástupná fotka: Václav Speierl" style="height:260px;border:0;border-radius:0"><span>Foto: Václav</span></div>
+        <img src="img/vaclav.jpg" alt="Václav Speierl, osobní trenér" loading="lazy" style="height:260px;border-radius:0;display:block;width:100%;object-fit:cover;object-position:top;border-radius:4px">
         <div class="body">
           <h3 style="font-size:30px;font-weight:600">Václav Speierl</h3>
           <p style="margin:8px 0 0;font-size:15px;color:var(--soft)">2× absolutní mistr republiky v kulturistice</p>
@@ -149,12 +150,12 @@ section{padding:88px 0}
       </div>
     </div>
     <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:40px">
-      <div class="ph" role="img" aria-label="Zástupná fotka: stroje" style="flex:1 1 300px;height:240px"><span>Foto: stroje</span></div>
-      <div class="ph" role="img" aria-label="Zástupná fotka: volné váhy" style="flex:1 1 300px;height:240px"><span>Foto: volné váhy</span></div>
-      <div class="ph" role="img" aria-label="Zástupná fotka: posilovna zevnitř" style="flex:1 1 300px;height:240px"><span>Foto: posilovna zevnitř</span></div>
-      <div class="ph" role="img" aria-label="Zástupná fotka: šatny a sprchy" style="flex:1 1 300px;height:240px"><span>Foto: šatny a sprchy</span></div>
-      <div class="ph" role="img" aria-label="Zástupná fotka: posilovna zvenku" style="flex:1 1 300px;height:240px"><span>Foto: posilovna zvenku</span></div>
-      <div class="ph" role="img" aria-label="Zástupná fotka: šejk a doplňky" style="flex:1 1 300px;height:240px"><span>Foto: šejk a doplňky</span></div>
+      <img src="img/stroje.jpg" alt="Posilovací stroje" loading="lazy" style="flex:1 1 300px;height:240px;display:block;width:100%;object-fit:cover;object-position:center;border-radius:4px">
+      <img src="img/vahy.jpg" alt="Volné váhy a činky" loading="lazy" style="flex:1 1 300px;height:240px;display:block;width:100%;object-fit:cover;object-position:center;border-radius:4px">
+      <img src="img/interier.jpg" alt="Posilovna zevnitř" loading="lazy" style="flex:1 1 300px;height:240px;display:block;width:100%;object-fit:cover;object-position:center;border-radius:4px">
+      <img src="img/kardio.jpg" alt="Kardio zóna" loading="lazy" style="flex:1 1 300px;height:240px;display:block;width:100%;object-fit:cover;object-position:center;border-radius:4px">
+      <img src="img/posilovna2.jpg" alt="Stroje v posilovně" loading="lazy" style="flex:1 1 300px;height:240px;display:block;width:100%;object-fit:cover;object-position:center;border-radius:4px">
+      <img src="img/bar.jpg" alt="Bar s doplňky a šejky" loading="lazy" style="flex:1 1 300px;height:240px;display:block;width:100%;object-fit:cover;object-position:center;border-radius:4px">
     </div>
   </div>
 </section>
@@ -202,10 +203,10 @@ section{padding:88px 0}
     </div>
     <div id="kde-jsme" style="flex:1 1 460px;min-width:0">
       <h2>Kde nás najdete</h2>
-      <p style="margin:32px 0 0;font-size:22px;font-weight:600;line-height:1.4">Palackého třída 16<br>301 00 Plzeň</p>
+      <p style="margin:32px 0 0;font-size:22px;font-weight:600;line-height:1.4">Palackého náměstí 39/29<br>301 00 Plzeň 3</p>
       <ul class="list" style="margin-top:16px;font-size:17px;line-height:1.9"><li>Tramvajová zastávka hned u posilovny [DOPLNIT: název a linky]</li><li>Parkování v okolních ulicích</li></ul>
       <div class="ph" role="img" aria-label="Zástupná fotka: vchod do posilovny" style="margin-top:24px;height:220px"><span>Foto: vchod zvenku</span></div>
-      <a href="https://www.google.com/maps/search/?api=1&query=Palack%C3%A9ho%20t%C5%99%C3%ADda%2016%2C%20Plze%C5%88" class="btn btn-out" style="margin-top:20px" target="_blank" rel="noopener">Otevřít v Mapách Google</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Palack%C3%A9ho%20n%C3%A1m%C4%9Bst%C3%AD%2039%2F29%2C%20Plze%C5%88" class="btn btn-out" style="margin-top:20px" target="_blank" rel="noopener">Otevřít v Mapách Google</a>
     </div>
   </div>
 </section>
