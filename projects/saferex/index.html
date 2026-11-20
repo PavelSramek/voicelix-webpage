@@ -83,6 +83,23 @@ h3{letter-spacing:-.1px}
 .mod h4{margin:0 0 8px;font-size:12.5px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted)}
 .mod .cols div:last-child h4{color:var(--teal-ink)}
 .mod ul{margin:0;padding-left:18px;display:grid;gap:6px;font-size:15px}
+.emily{display:grid;grid-template-columns:1fr 1.1fr;gap:24px;align-items:start}
+@media(max-width:900px){.emily{grid-template-columns:1fr}}
+.chan{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+.chan span{font-size:13px;font-weight:600;padding:6px 12px;border-radius:99px;background:var(--navy);color:#fff}
+.caps{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.caps{grid-template-columns:1fr}}
+.cap{padding:16px 18px}
+.cap h4{margin:0 0 4px;font-size:15.5px}
+.cap p{margin:0;font-size:14px;color:var(--muted)}
+.phone{background:#0A1530;border-radius:28px;padding:16px;max-width:420px;margin:0 auto;box-shadow:0 20px 50px rgba(15,30,60,.25)}
+.phone .top{color:#C9D3E6;font-size:13px;text-align:center;padding:4px 0 12px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:12px}
+.phone .top b{color:#fff;display:block;font-size:15px}
+.bub{max-width:85%;padding:10px 12px;border-radius:14px;font-size:14px;margin:0 0 8px;line-height:1.45}
+.bub.me{margin-left:auto;background:#00C9A7;color:#0A1530;border-bottom-right-radius:4px}
+.bub.em{background:#1C2B4D;color:#E8EEF8;border-bottom-left-radius:4px}
+.bub .att{display:block;margin-top:6px;font-size:12.5px;background:rgba(255,255,255,.08);border-radius:8px;padding:6px 8px}
+.bub.me .att{background:rgba(10,21,48,.12)}
 /* architecture */
 .arch{padding:20px}
 .arch .scroll{overflow-x:auto}
@@ -176,7 +193,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <span>Voicelix<small>Pro SAFEREX s.r.o.</small></span>
   </a>
   <nav class="links" aria-label="Obsah stránky">
-    <a href="#zapis">Zápis</a><a href="#safex">SAFEX</a><a href="#architektura">Architektura</a><a href="#etapa1">První etapa</a><a href="#ukazka">Ukázka</a><a href="#postup">Postup</a><a href="#podklady">Podklady</a>
+    <a href="#zapis">Zápis</a><a href="#safex">SAFEX</a><a href="#emily">Emily</a><a href="#architektura">Architektura</a><a href="#etapa1">První etapa</a><a href="#ukazka">Ukázka</a><a href="#postup">Postup</a><a href="#podklady">Podklady</a>
   </nav>
 </div></header>
 
@@ -186,7 +203,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <h1>SAFEX<br><em>od schůzky k první etapě</em></h1>
   <p class="lead">Shrnutí toho, co jsem u vás viděl a slyšel, jak by mohl systém SAFEX fungovat nad tím, co už máte, a konkrétní návrh první etapy: COREX a ekonomika.</p>
   <div class="hero-meta">
-    <span class="chip">8 modulů a AI asistent Rex</span>
+    <span class="chip">8 modulů a AI kolegyně Emily</span>
     <span class="chip">První etapa: COREX a ekonomika</span>
     <span class="chip">Bez nového ERP od nuly</span>
   </div>
@@ -235,7 +252,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 <section id="safex" class="alt"><div class="wrap">
   <div class="eyebrow">2. Koncepce</div>
   <h2>SAFEX: jeden systém, osm modulů, jeden asistent</h2>
-  <p class="sub">Podle vašeho náčrtu. Klikněte na modul a uvidíte, co jsem k němu slyšel a co by v něm SAFEX dělal. Uprostřed je Rex, AI asistent, kterého se zeptáte na cokoli a on vás navede tam, kam potřebujete.</p>
+  <p class="sub">Podle vašeho náčrtu. Klikněte na modul a uvidíte, co jsem k němu slyšel a co by v něm SAFEX dělal. Uprostřed je Emily, AI kolegyně, které napíšete e-mail nebo zprávu a ona zařídí, dohledá nebo připomene, co potřebujete.</p>
   <div class="wheelgrid">
     <div>
       <svg id="wheel" viewBox="0 0 460 460" role="tablist" aria-label="Moduly systému SAFEX"></svg>
@@ -245,12 +262,40 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   </div>
 </div></section>
 
-<section id="architektura"><div class="wrap">
-  <div class="eyebrow">3. Architektura</div>
+<section id="emily"><div class="wrap">
+  <div class="eyebrow">3. Emily</div>
+  <h2>Emily: AI kolegyně, které napíšete jako člověku</h2>
+  <p class="sub">Žádná další aplikace k naučení. Emily má vlastní e-mail a číslo na WhatsApp, lidé jí píšou, jako by psali kolegyni, a ona pracuje se všemi systémy SAFEXu. Vždy se ale představí jako AI, to vyžaduje AI Act.</p>
+  <div class="emily">
+    <div>
+      <div class="chan"><span>E-mail</span><span>WhatsApp</span><span>Teams</span><span>Web SAFEX</span></div>
+      <div class="caps">
+        <div class="card cap"><h4>Připomíná úkoly</h4><p>Ráno každému pošle, co ho dnes čeká, seřazené podle priority. Hlídá termíny ze zápisů, RISCONu, e-mailů i Planneru.</p></div>
+        <div class="card cap"><h4>Zařazuje soubory</h4><p>Přeposlanou fakturu, výkres nebo fotky z kontrolního dne uloží ke správnému projektu a do správné složky.</p></div>
+        <div class="card cap"><h4>Generuje dokumenty</h4><p>Zápis z kontrolního dne, registr neshod, podklad k fakturaci nebo návrh nabídky podle vašich šablon.</p></div>
+        <div class="card cap"><h4>Odpovídá na dotazy</h4><p>Nejdřív podle vašich postupů a dokumentů, pak z legislativy a internetu. Junior se nemusí bát zeptat.</p></div>
+        <div class="card cap"><h4>Zakládá a vyplňuje</h4><p>Z poptávky v e-mailu založí obchodní případ v Navigo3 a doplní, co se dá.</p></div>
+        <div class="card cap"><h4>Hlídá oprávnění</h4><p>Každému odpoví jen z toho, k čemu má přístup. Ekonomická data uvidí jen ten, kdo je vidět smí.</p></div>
+      </div>
+      <p class="note">Než Emily dostane WhatsApp, domluvíme pravidla: co se smí posílat, kde se data ukládají a jak dlouho. Firemní WhatsApp Business, ne osobní účty.</p>
+    </div>
+    <div class="phone" aria-label="Ukázka konverzace s Emily přes WhatsApp, smyšlená data">
+      <div class="top"><b>Emily · SAFEREX</b>AI kolegyně</div>
+      <div class="bub em">Dobré ráno. Dnes máte 4 úkoly. Nejdřív: Elektro Beta pořád nedoložila revizi rozvaděče na Lipové, termín byl včera. Mám jim poslat urgenci?</div>
+      <div class="bub me">Jo, pošli. A tady jsou fotky z dnešního KD na Lipové.<span class="att">📷 7 fotek · 🎤 hlasová zpráva 3:12</span></div>
+      <div class="bub em">Urgence odeslána. Z fotek a hlasovky jsem připravila zápis z KD č. 8 a registr neshod: 3 nové neshody, 1 s bezprostředním ohrožením. Předpisy jsem označila k ověření.<span class="att">📄 Zapis_KD8_Lipova.docx · 📊 Registr_neshod.xlsx</span></div>
+      <div class="bub me">Díky, mrknu na to. Pošli mi to i do mailu.</div>
+      <div class="bub em">Hotovo. Fotky jsem zmenšila a uložila do projektu Lipová na SharePoint. Až zápis schválíte, rozešlu ho zhotovitelům.</div>
+    </div>
+  </div>
+</div></section>
+
+<section id="architektura" class="alt"><div class="wrap">
+  <div class="eyebrow">4. Architektura</div>
   <h2>Nové ERP od nuly nestavíme</h2>
   <p class="sub">Stejně jako vy si myslím, že je efektivnější propojit systémy, které už máte a které fungují. SAFEX bude jedna vrstva nad nimi: jedno místo, kde lidé pracují, a AI asistent, který vidí do všech systémů podle oprávnění.</p>
   <div class="card arch"><div class="scroll">
-    <svg viewBox="0 0 980 440" role="img" aria-label="Architektura: lidé pracují v SAFEX s asistentem Rex, SAFEX je napojený na Navigo3, ABRA Flexi, RISCON a Microsoft 365">
+    <svg viewBox="0 0 980 440" role="img" aria-label="Architektura: lidé pracují v SAFEX s AI kolegyní Emily, SAFEX je napojený na Navigo3, ABRA Flexi, RISCON a Microsoft 365">
       <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#00C9A7"/></marker></defs>
       <g font-family="Onest,system-ui,sans-serif">
         <rect x="330" y="18" width="320" height="70" rx="14" fill="#fff" stroke="#DDE4EE"/>
@@ -261,7 +306,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <text x="490" y="156" text-anchor="middle" font-weight="800" font-size="20" fill="#fff">SAFEX</text>
         <text x="490" y="178" text-anchor="middle" font-size="13" fill="#9AA9C4">moduly: COREX · Ekonomika · Projekty · Obchod · BOZP a PO · Revize · Akademie · Řízení firmy</text>
         <rect x="300" y="194" width="380" height="42" rx="21" fill="#00C9A7" fill-opacity=".16" stroke="#00C9A7"/>
-        <text x="490" y="221" text-anchor="middle" font-weight="700" font-size="14.5" fill="#00C9A7">Rex · AI asistent napříč systémem, podle oprávnění</text>
+        <text x="490" y="221" text-anchor="middle" font-weight="700" font-size="14.5" fill="#00C9A7">Emily · AI kolegyně napříč systémem, podle oprávnění</text>
         <g stroke="#00C9A7" stroke-width="2.5" fill="none">
           <path d="M230 254 V 300" marker-end="url(#ar)" marker-start="url(#ar)"/>
           <path d="M410 254 V 300" marker-end="url(#ar)" marker-start="url(#ar)"/>
@@ -293,14 +338,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <p class="note">iDoklad do architektury nekreslím: od ledna ho nahradí ABRA Flexi, takže napojení stavíme rovnou na ni.</p>
   </div>
   <div class="princ">
-    <div class="card pr"><h4>Jedno místo pro práci</h4><p>Místo rozklikávání šesti systémů napíšete Rexovi „chci udělat zápis z včerejšího kontrolního dne na projektu X“ a on vás tam dovede s připravenými podklady.</p></div>
+    <div class="card pr"><h4>Jedno místo pro práci</h4><p>Místo rozklikávání šesti systémů napíšete Emily „chci udělat zápis z včerejšího kontrolního dne na projektu X“ a ona vás tam dovede s připravenými podklady.</p></div>
     <div class="card pr"><h4>Data zůstávají ve vašich systémech</h4><p>Navigo3, ABRA Flexi, RISCON a SharePoint zůstávají zdrojem pravdy. SAFEX je propojuje a nic nemusí migrovat. Nikdo nebude ručně přepisovat historii do čtvrtého systému.</p></div>
-    <div class="card pr"><h4>Odpovědnost u odborníka</h4><p>AI připravuje návrhy a hlídá. Plán BOZP, zápis i neshody schvaluje a podepisuje koordinátor nebo specialista. Rex odpovídá jen z toho, k čemu má tazatel oprávnění.</p></div>
+    <div class="card pr"><h4>Odpovědnost u odborníka</h4><p>AI připravuje návrhy a hlídá. Plán BOZP, zápis i neshody schvaluje a podepisuje koordinátor nebo specialista. Emily odpovídá jen z toho, k čemu má tazatel oprávnění.</p></div>
   </div>
 </div></section>
 
-<section id="etapa1" class="alt"><div class="wrap">
-  <div class="eyebrow">4. První etapa</div>
+<section id="etapa1"><div class="wrap">
+  <div class="eyebrow">5. První etapa</div>
   <h2>COREX a ekonomika</h2>
   <p class="sub">Obě oblasti jste označil za nejdůležitější. Navrhuji je vést souběžně: COREX přinese úsporu specialistům hned, ekonomiku je potřeba stavět s ohledem na přechod na ABRA Flexi v lednu.</p>
   <div class="tracks">
@@ -325,8 +370,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   </div>
 </div></section>
 
-<section id="ukazka"><div class="wrap">
-  <div class="eyebrow">5. Ukázka</div>
+<section id="ukazka" class="alt"><div class="wrap">
+  <div class="eyebrow">6. Ukázka</div>
   <h2>COREX: z kontrolního dne zápis a registr neshod</h2>
   <p class="sub">Koordinátor po kontrolním dni nahraje poznámky nebo diktát, fotky a vybere projekt. Systém si sám dohledá zápis a neshody z minula. Data jsou smyšlená.</p>
   <div class="two">
@@ -353,20 +398,20 @@ Příští KD za 14 dní.</textarea></label>
   </div>
 </div></section>
 
-<section id="postup" class="alt"><div class="wrap">
-  <div class="eyebrow">6. Postup</div>
+<section id="postup"><div class="wrap">
+  <div class="eyebrow">7. Postup</div>
   <h2>Jak bychom postupovali</h2>
   <p class="sub">Orientační plán. Termíny upřesníme podle toho, jak rychle se podaří ověřit napojení na Navigo3 a ABRA Flexi.</p>
   <div class="plan">
     <div class="card pl now"><span class="w">Listopad až prosinec</span><h4>Analýza a návrh</h4><ul><li>Podklady a vzory od vás</li><li>Ověření API Navigo3, ABRA Flexi a exportu z RISCONu</li><li>Návrh obrazovek COREX a toku fakturace</li><li>Cena a harmonogram etapy 1</li></ul></div>
     <div class="card pl"><span class="w">Leden až únor</span><h4>Pilot COREX</h4><ul><li>Zápis a registr neshod na 1 až 2 projektech</li><li>Měření času před a po</li><li>Úpravy podle koordinátorů</li></ul></div>
     <div class="card pl"><span class="w">Leden až březen</span><h4>Ekonomika s ABRA Flexi</h4><ul><li>Výkazy za firmu najednou</li><li>Koncepty faktur a párování</li><li>Přehled stavu činností</li></ul></div>
-    <div class="card pl"><span class="w">Potom</span><h4>Další moduly a Rex</h4><ul><li>Plán BOZP ze vzorů</li><li>Úkoly a kapacity z jednoho místa</li><li>Akademie, obchod, revize</li></ul></div>
+    <div class="card pl"><span class="w">Potom</span><h4>Další moduly a Emily</h4><ul><li>Plán BOZP ze vzorů</li><li>Úkoly a kapacity z jednoho místa</li><li>Akademie, obchod, revize</li></ul></div>
   </div>
 </div></section>
 
 <section class="dark" id="podklady"><div class="wrap">
-  <div class="eyebrow">7. Další krok</div>
+  <div class="eyebrow">8. Další krok</div>
   <h2>Co od vás budu potřebovat</h2>
   <p class="sub">S tím připravím přesný návrh etapy 1 včetně ceny.</p>
   <div class="needs">
@@ -408,10 +453,10 @@ const M=[
   safex:['Sjednocení s obchodem a ekonomikou','Nabídka v řádu minut, ne dnů']},
  {k:'Akademie',s:'Školení, lektoři, příprava',e:3,what:'Interní vzdělávání a zaučení juniorů.',
   heard:['Junioři bez odborné způsobilosti, 2 měsíce s kolegy','Procesní diagramy nikdo nečte','Nejčastější dotaz: kam co zapsat a jak to tu funguje'],
-  safex:['Rex odpovídá podle vašich postupů, pak z legislativy','Interaktivní provedení základními procesy']},
+  safex:['Emily odpovídá podle vašich postupů, pak z legislativy','Interaktivní provedení základními procesy']},
  {k:'Řízení firmy',s:'Směrnice, porady, rozhodnutí',e:3,what:'Řízená dokumentace, novinky, interní komunikace.',
   heard:['Řízená dokumentace v RISCONu','Chybí intranet: novinky, noví kolegové, kontakty'],
-  safex:['Jednoduchý intranet v SAFEX','Rex nad směrnicemi a zápisy z porad']}
+  safex:['Jednoduchý intranet v SAFEX','Emily nad směrnicemi a zápisy z porad']}
 ];
 const col={1:'#00C9A7',2:'#3D5A8F',3:'#9AA9C4'},txt={1:'#0F1E3C',2:'#fff',3:'#0F1E3C'},etl={1:['e1','První etapa'],2:['e2','Druhá etapa'],3:['e3','Později']};
 const W=document.getElementById('wheel'),ns='http://www.w3.org/2000/svg',cx=230,cy=230,R=220,r=92,n=M.length;
@@ -425,7 +470,7 @@ M.forEach((m,i)=>{const a0=-Math.PI/2+(i-0.5)*2*Math.PI/n+0.012,a1=-Math.PI/2+(i
  const words=m.k.split(' ');const lines=m.k.length>11&&words.length>1?[words.slice(0,-1).join(' '),words.slice(-1)[0]]:[m.k];
  lines.forEach((l,j)=>{const ts=document.createElementNS(ns,'tspan');ts.setAttribute('x',tx);ts.setAttribute('dy',j?'16':(lines.length>1?'-4':'4'));ts.setAttribute('font-weight','700');ts.setAttribute('font-size','14');ts.textContent=l;t.appendChild(ts)});
  g.appendChild(t);g.addEventListener('click',()=>sel(i));g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();sel(i)}});W.appendChild(g)});
-const c=document.createElementNS(ns,'g');c.innerHTML=`<circle cx="${cx}" cy="${cy}" r="${r}" fill="#0F1E3C"/><circle cx="${cx}" cy="${cy}" r="${r-8}" fill="none" stroke="#00C9A7" stroke-opacity=".5" stroke-dasharray="3 5"/><text x="${cx}" y="${cy-8}" text-anchor="middle" font-family="Onest,system-ui,sans-serif" font-weight="800" font-size="30" fill="#fff">SAFEX</text><text x="${cx}" y="${cy+16}" text-anchor="middle" font-family="Onest,system-ui,sans-serif" font-weight="700" font-size="14" fill="#00C9A7">Rex</text><text x="${cx}" y="${cy+34}" text-anchor="middle" font-family="Onest,system-ui,sans-serif" font-size="11" fill="#9AA9C4">AI asistent napříč systémem</text>`;W.appendChild(c);
+const c=document.createElementNS(ns,'g');c.innerHTML=`<circle cx="${cx}" cy="${cy}" r="${r}" fill="#0F1E3C"/><circle cx="${cx}" cy="${cy}" r="${r-8}" fill="none" stroke="#00C9A7" stroke-opacity=".5" stroke-dasharray="3 5"/><text x="${cx}" y="${cy-8}" text-anchor="middle" font-family="Onest,system-ui,sans-serif" font-weight="800" font-size="30" fill="#fff">SAFEX</text><text x="${cx}" y="${cy+16}" text-anchor="middle" font-family="Onest,system-ui,sans-serif" font-weight="700" font-size="14" fill="#00C9A7">Emily</text><text x="${cx}" y="${cy+34}" text-anchor="middle" font-family="Onest,system-ui,sans-serif" font-size="11" fill="#9AA9C4">AI kolegyně napříč systémem</text>`;W.appendChild(c);
 const mod=document.getElementById('mod');
 function sel(i){const m=M[i];[...W.querySelectorAll('.seg')].forEach((g,j)=>{g.classList.toggle('on',j===i);g.setAttribute('aria-selected',j===i)});
  mod.innerHTML=`<span class="tag ${etl[m.e][0]}">${etl[m.e][1]}</span><h3>${m.k}</h3><p class="what">${m.s}. ${m.what}</p><div class="cols"><div><h4>Co jsem slyšel</h4><ul>${m.heard.map(x=>`<li>${x}</li>`).join('')}</ul></div><div><h4>Co by dělal SAFEX</h4><ul>${m.safex.map(x=>`<li>${x}</li>`).join('')}</ul></div></div>`}
