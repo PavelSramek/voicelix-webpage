@@ -21,15 +21,30 @@
     <a href="../#krouzky">Kroužky</a>
     <a href="../#pravidla">Pravidla a ceník</a>
     <a href="../#hospudka">Hospůdka Golf</a>
+    <a href="../sprava/" aria-current="page">Správa</a>
     <a class="cta" href="../#rezervace">Rezervovat</a>
   </nav>
 </div></header>
 
-<main id="admin">
+<section class="sub-hero" id="login-gate" style="padding:56px 0 64px"><div class="wrap" style="max-width:460px">
+  <div class="crumb"><a href="../">Sokol Plzeň-Radčice</a> / Správa</div>
+  <h1 style="font-size:clamp(2rem,5vw,2.8rem)">Přihlášení správce</h1>
+  <form id="loginform" class="panel" style="color:var(--ink);margin-top:18px" novalidate>
+    <label>Přihlašovací jméno<input name="login" autocomplete="username" required></label>
+    <label>Heslo<input name="heslo" type="password" autocomplete="current-password" required></label>
+    <p class="note" id="loginerr" style="color:var(--red-dark);min-height:1.2em;margin:0 0 8px"></p>
+    <button class="btn btn-red" type="submit" style="width:100%;justify-content:center">Přihlásit se</button>
+  </form>
+  <div class="panel" style="color:var(--ink);margin-top:14px;background:var(--wait-soft)">
+    <b>Přístup do ukázky</b><br>Přihlašovací jméno: <code>spravce</code><br>Heslo: <code>sokol2027</code>
+    <p class="note" style="margin:6px 0 0;color:var(--ink-2);font-size:.85rem">Jen pro mock-up. V ostrém provozu se správce přihlásí účtem Sokola.</p>
+  </div>
+</div></section>
+<main id="admin" hidden>
 <section class="sub-hero" style="padding:40px 0"><div class="wrap">
   <div class="crumb"><a href="../">Sokol Plzeň-Radčice</a> / Správa</div>
   <h1 style="font-size:clamp(2.2rem,5vw,3.2rem)">Správa rezervací</h1>
-  <p>Ukázka pohledu správce a pokladníka. V ostrém provozu bude správa v Google Tabulce Sokola a schvalovat půjde i tlačítky přímo z e-mailu.</p>
+  <p><button class="btn btn-sm btn-light" id="logout" style="float:right;margin-left:12px">Odhlásit</button>Ukázka pohledu správce a pokladníka. V ostrém provozu bude správa v Google Tabulce Sokola a schvalovat půjde i tlačítky přímo z e-mailu.</p>
 </div></section>
 <section style="padding-top:36px"><div class="wrap">
   <div class="kpis">
@@ -71,5 +86,20 @@
 </div></footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
 <script src="../assets/app.js"></script>
+<script>
+(function(){
+  var KEY='sokolSpravaLogin', gate=document.getElementById('login-gate'), main=document.getElementById('admin');
+  function show(on){ gate.hidden=on; main.hidden=!on; }
+  var ok=false; try{ ok=sessionStorage.getItem(KEY)==='1'; }catch(e){}
+  show(ok);
+  document.getElementById('loginform').addEventListener('submit',function(e){
+    e.preventDefault();
+    var l=this.elements.login.value.trim(), h=this.elements.heslo.value;
+    if(l==='spravce' && h==='sokol2027'){ try{ sessionStorage.setItem(KEY,'1'); }catch(e){} show(true); window.scrollTo(0,0); }
+    else { document.getElementById('loginerr').textContent='Nesprávné jméno nebo heslo.'; }
+  });
+  document.getElementById('logout').addEventListener('click',function(){ try{ sessionStorage.removeItem(KEY); }catch(e){} show(false); });
+})();
+</script>
 </body>
 </html>
