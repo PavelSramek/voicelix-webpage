@@ -106,71 +106,215 @@ h3{letter-spacing:-.1px}
 footer{background:var(--navy-deep);color:var(--muted-dark);font-size:13px;padding:22px 0}
 footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+.btn{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:12px;font-weight:700;font-size:15px;background:var(--teal);color:var(--navy);transition:.15s}
+.btn:hover{filter:brightness(1.06);transform:translateY(-1px)}
+.btn:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.35)}
+.btn.sm{padding:8px 14px;font-size:14px}
+@media(max-width:600px){header .btn.sm{display:none}}
+/* hero */
+.hero{padding:56px 0 72px}
+.herogrid{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center;position:relative;z-index:1}
+@media(max-width:920px){.herogrid{grid-template-columns:1fr}}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+.ticket{display:inline-flex;background:linear-gradient(135deg,#00C9A7,#00A88C);color:var(--navy);border-radius:16px;overflow:hidden;box-shadow:0 14px 40px rgba(0,201,167,.25);position:relative}
+.ticket .tl{padding:16px 22px;border-right:2px dashed rgba(15,30,60,.35)}
+.ticket .tr2{padding:16px 22px;background:rgba(255,255,255,.18)}
+.ticket span{display:block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;opacity:.75}
+.ticket b{display:block;font-size:28px;font-weight:800;line-height:1.15}
+.ticket .tr2 b{font-size:20px}
+.ticket small{display:block;font-weight:700;font-size:13px;margin-top:2px}
+.orbit{position:relative;height:430px;max-width:480px;width:100%;margin:0 auto}
+.ring{position:absolute;border-radius:50%;border:1.5px solid rgba(0,201,167,.25);left:50%;top:50%;transform:translate(-50%,-50%)}
+.r1{width:190px;height:190px}.r2{width:300px;height:300px;border-style:dashed}.r3{width:410px;height:410px;border-color:rgba(138,180,255,.15)}
+.ring{animation:pulse 4s ease-in-out infinite}.r2{animation-delay:.6s}.r3{animation-delay:1.2s}
+@keyframes pulse{0%,100%{opacity:.5;transform:translate(-50%,-50%) scale(1)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.04)}}
+.core{position:absolute;left:50%;top:50%;width:150px;height:150px;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle at 35% 30%,#1C3466,#0A1530);box-shadow:0 0 0 8px rgba(0,201,167,.12),0 20px 60px rgba(0,201,167,.3);display:grid;place-items:center;align-content:center;gap:8px}
+.core span{font-size:12px;font-weight:700;color:var(--teal);letter-spacing:.4px}
+.wave{display:flex;gap:5px;align-items:center;height:46px}
+.wave i{width:6px;border-radius:4px;background:var(--teal);height:12px;animation:wv 1.1s ease-in-out infinite}
+.wave i:nth-child(2){animation-delay:.1s}.wave i:nth-child(3){animation-delay:.2s}.wave i:nth-child(4){animation-delay:.3s}.wave i:nth-child(5){animation-delay:.4s}.wave i:nth-child(6){animation-delay:.5s}.wave i:nth-child(7){animation-delay:.6s}
+@keyframes wv{0%,100%{height:10px}50%{height:44px}}
+.float{position:absolute;display:flex;gap:10px;align-items:center;background:#fff;color:var(--ink);border-radius:14px;padding:10px 14px;box-shadow:0 14px 34px rgba(0,0,0,.3);animation:fl 6s ease-in-out infinite}
+.float b{display:block;font-size:14px}.float small{color:var(--muted);font-size:12px}
+.float .ico{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;background:var(--blue-soft);color:#2F4E9C;font-weight:800}
+.float .ico.ok{background:var(--teal-soft);color:var(--teal-ink)}.float .ico.usr{background:var(--amber-soft);color:#8A5A0B}
+.f1{left:0;top:30px}.f2{right:0;top:180px;animation-delay:2s}.f3{left:20px;bottom:24px;animation-delay:4s}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@media(max-width:520px){.orbit{height:360px}.r3{width:340px;height:340px}.r2{width:250px;height:250px}.float{padding:8px 10px}.f2{top:150px}}
+/* reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:26px 0 18px}
+@media(max-width:820px){.stats{grid-template-columns:1fr 1fr}}
+.stat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}
+.stat b{display:block;font-size:46px;font-weight:800;line-height:1;color:var(--navy);letter-spacing:-1px;margin-bottom:8px}
+.stat span{font-size:14px;color:var(--muted);line-height:1.35}
+.stat.hl{background:var(--navy);border-color:var(--navy)}.stat.hl b{color:var(--teal)}.stat.hl span{color:#C9D3E6}
+.stat.hl b:after{content:" dní";font-size:22px}
+.stat.hl b{font-size:46px}
+/* timeline */
+.timeline{padding:26px 22px;margin-bottom:18px;overflow-x:auto}
+.tlrow{display:grid;grid-template-columns:repeat(6,1fr);min-width:640px;position:relative}
+.tlrow:before{content:"";position:absolute;left:8%;right:8%;top:9px;height:4px;background:linear-gradient(90deg,var(--line),var(--teal) 40%,var(--teal));border-radius:4px}
+.tln{display:grid;justify-items:center;text-align:center;gap:4px;position:relative}
+.tln i{width:22px;height:22px;border-radius:50%;background:#fff;border:4px solid var(--teal);margin-bottom:6px}
+.tln.go i{background:var(--teal);box-shadow:0 0 0 6px rgba(0,201,167,.2)}
+.tln.end i{background:var(--navy);border-color:var(--navy)}
+.tln b{font-size:15px}.tln span{font-size:13px;color:var(--muted)}
 /* funnel */
-.funnel{padding:24px 26px;display:grid;gap:12px}
-.fhead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:4px}
-.fhead h3{margin:0;font-size:19px}.fhead span{font-size:14px;color:var(--muted)}
-.frow{display:grid;grid-template-columns:200px 1fr 56px;gap:14px;align-items:center;font-size:15px}
-.frow b{text-align:right;font-size:18px;color:var(--navy)}
-.fbar{height:16px;background:var(--paper);border-radius:99px;overflow:hidden}
-.fbar i{display:block;height:100%;min-width:8px;background:var(--navy);border-radius:99px}
-.frow.hl .fbar i{background:var(--teal)}.frow.hl b{color:var(--teal-ink)}
-@media(max-width:600px){.frow{grid-template-columns:1fr 48px}.frow .fbar{grid-column:1/-1;grid-row:2}}
-/* learnings */
-.learn{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-@media(max-width:960px){.learn{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.learn{grid-template-columns:1fr}}
-.ln{padding:22px;border-top:4px solid var(--teal)}
-.ln.warn{border-top-color:var(--amber)}
-.ln .ic{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:var(--teal-soft);color:var(--teal-ink);font-weight:800;margin-bottom:12px}
-.ln.warn .ic{background:var(--amber-soft);color:#8A5A0B}
-.ln h3{margin:0 0 6px;font-size:17px}.ln p{margin:0;font-size:14.5px;color:var(--muted)}
-/* filters */
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin:-14px 0 18px}
-.flt{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;padding:7px 14px;border-radius:99px;border:1px solid var(--line);background:#fff}
+.funnelcard{padding:22px 24px}
+.fhead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.fhead h3{margin:0;font-size:19px}.fhead span{font-size:13px;color:var(--muted)}
+#funnel{width:100%;height:auto;display:block;margin-top:8px}
+#funnel .st path{transition:opacity .2s}
+#funnel .st:hover path{opacity:.85}
+/* insight */
+.insight{display:grid;grid-template-columns:300px 1fr 230px;gap:16px;align-items:stretch;margin-top:26px}
+@media(max-width:1000px){.insight{grid-template-columns:1fr 1fr}.spectrum{grid-column:1/-1;grid-row:1}}
+@media(max-width:600px){.insight{grid-template-columns:1fr}}
+.donutcard{padding:22px;text-align:center;position:relative}
+.donut{width:190px;height:190px;display:block;margin:0 auto}
+#dn{transition:stroke-dasharray 1.4s ease}
+.dlab{position:absolute;left:0;right:0;top:82px;display:grid;gap:2px}
+.dlab b i{font-style:normal}
+.dlab b{font-size:40px;font-weight:800;color:var(--navy);line-height:1}
+.dlab span{font-size:13px;color:var(--muted);max-width:120px;margin:0 auto;line-height:1.3}
+.donutcard p{margin:14px 0 0;font-size:14.5px;font-weight:600}
+.spectrum{padding:24px 26px}
+.spectrum h3{margin:0 0 54px;font-size:19px}
+.spbar{position:relative;height:16px;border-radius:99px;background:linear-gradient(90deg,#F2A93B,#FFD88A 30%,#7FE3D2 60%,#00C9A7);margin:0 30px}
+.sp{all:unset;cursor:pointer;position:absolute;top:50%;transform:translate(-50%,-50%);display:grid;justify-items:center}
+.sp i{font-style:normal;width:42px;height:42px;border-radius:50%;background:#fff;border:3px solid var(--navy);display:grid;place-items:center;font-size:17px;transition:.2s;box-shadow:0 6px 16px rgba(15,30,60,.15)}
+.sp span{position:absolute;top:50px;font-size:13px;font-weight:700;text-align:center;white-space:nowrap;line-height:1.25}
+.sp:hover i,.sp.on i{transform:scale(1.18);background:var(--navy);color:#fff}
+.sp:focus-visible i{outline:3px solid var(--blue);outline-offset:3px}
+.pin{position:absolute;bottom:52px;font-style:normal;font-size:11.5px;font-weight:800;background:var(--amber);color:var(--navy);padding:3px 9px;border-radius:99px}
+.splabels{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted);margin:62px 0 0}
+.sptip{margin:16px 0 0;font-size:14.5px;background:var(--paper);border-radius:10px;padding:12px 14px;min-height:46px}
+.minis{display:grid;gap:16px}
+.mini{padding:20px;border-left:5px solid var(--teal)}
+.mini.warn{border-left-color:var(--amber)}
+.mini b{display:block;font-size:40px;font-weight:800;line-height:1;color:var(--navy);margin-bottom:6px}
+.mini span{font-size:14px;color:var(--muted)}
+/* filters + matrix */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+.flt{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;padding:8px 15px;border-radius:99px;border:1px solid var(--line);background:#fff}
 .flt i{width:10px;height:10px;border-radius:50%}
 .flt[aria-pressed=true]{background:var(--navy);color:#fff;border-color:var(--navy)}
 .flt:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
-/* matrix */
-.mapgrid{display:grid;grid-template-columns:1.1fr 1fr;gap:20px;align-items:stretch}
+.mapgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
 @media(max-width:920px){.mapgrid{grid-template-columns:1fr}}
-.mapbox{padding:14px}
+.mapbox{padding:12px}
 #matrix{width:100%;height:auto;display:block}
-#matrix .pt{cursor:pointer;transition:opacity .2s}
-#matrix .pt circle.c{transition:r .15s}
-#matrix .pt:hover circle.c,#matrix .pt.on circle.c{r:19}
-#matrix .pt.dim{opacity:.18;pointer-events:none}
+#matrix .pt{cursor:pointer;transition:opacity .25s}
+#matrix .pt .c{transition:transform .2s;transform-box:fill-box;transform-origin:center}
+#matrix .pt:hover .c,#matrix .pt.on .c{transform:scale(1.18)}
+#matrix .pt.on .halo{opacity:1}
+#matrix .halo{opacity:0;transition:.2s}
+#matrix .pt.dim{opacity:.15;pointer-events:none}
 #matrix .pt:focus{outline:none}
-#matrix .pt:focus-visible circle.c{stroke:#8AB4FF;stroke-width:4}
-.idea{padding:26px 28px;min-height:420px;display:flex;flex-direction:column}
+#matrix .pt:focus-visible .c{stroke:#8AB4FF;stroke-width:4}
+.idea{padding:26px;display:flex;flex-direction:column;min-height:440px}
 .idea .tag{align-self:flex-start;font-size:12px;font-weight:700;padding:4px 10px;border-radius:99px;margin-bottom:10px}
-.idea h3{margin:0 0 6px;font-size:24px;line-height:1.2}
-.idea .what{color:var(--muted);margin:0 0 16px;font-size:15.5px}
-.idea h4{margin:0 0 8px;font-size:12.5px;text-transform:uppercase;letter-spacing:.8px;color:var(--teal-ink)}
-.idea ul{margin:0 0 16px;padding-left:18px;display:grid;gap:6px;font-size:15px}
-.meters{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:auto;padding-top:14px;border-top:1px solid var(--line)}
+.idea h3{margin:0 0 4px;font-size:25px;line-height:1.2}
+.idea .s{color:var(--muted);margin:0 0 20px;font-size:15.5px}
+.flow{display:flex;align-items:flex-start;gap:0;margin:0 0 22px}
+.fs{flex:1;display:grid;justify-items:center;text-align:center;gap:8px;position:relative;animation:pop .45s both}
+.fs:not(:last-child):after{content:"";position:absolute;top:27px;left:calc(50% + 32px);right:calc(-50% + 32px);height:3px;background:repeating-linear-gradient(90deg,var(--teal) 0 6px,transparent 6px 11px);animation:dash 1s linear infinite;background-size:22px 3px}
+@keyframes dash{to{background-position:22px 0}}
+@keyframes pop{from{opacity:0;transform:translateY(10px)}}
+.fs .ib{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;background:var(--paper);border:1.5px solid var(--line)}
+.fs:first-child .ib{background:var(--blue-soft)}
+.fs:last-child .ib{background:var(--teal-soft);border-color:var(--teal)}
+.fs svg,.tile svg,.bub svg{width:26px;height:26px;fill:none;stroke:var(--navy);stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.fs span{font-size:13px;font-weight:600;line-height:1.3;max-width:110px}
+.gains{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.gains span{display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:600;background:var(--teal-soft);color:var(--teal-ink);padding:7px 12px;border-radius:99px}
+.gains span:before{content:"✓";font-weight:800}
+.idea .first{font-size:14px;color:var(--muted);margin:0 0 16px}
+.meters{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:auto;padding-top:14px;border-top:1px solid var(--line)}
 .mt span{display:block;font-size:12.5px;color:var(--muted);margin-bottom:6px}
-.mt .dots{display:flex;gap:5px}.mt .dots i{width:22px;height:8px;border-radius:99px;background:var(--line)}
-.mt .dots i.on{background:var(--teal)}.mt.ef .dots i.on{background:var(--navy)}
-.idea .first{font-size:14.5px;background:var(--blue-soft);border-left:3px solid var(--blue);padding:10px 12px;border-radius:0 8px 8px 0;margin:0 0 16px}
-/* cards */
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
-.ic2{all:unset;box-sizing:border-box;cursor:pointer;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px;display:grid;gap:6px;align-content:start;transition:.15s;border-left:5px solid var(--c)}
-.ic2:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(15,30,60,.08)}
-.ic2:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
-.ic2 .n{font-size:12.5px;font-weight:700;color:var(--muted)}
-.ic2 b{font-size:16.5px;line-height:1.3}
-.ic2 span{font-size:14px;color:var(--muted)}
-.ic2 .qw{justify-self:start;font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:99px;background:var(--teal-soft);color:var(--teal-ink);margin-top:4px}
-.ic2[hidden]{display:none}
-/* why */
-.why{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
-@media(max-width:860px){.why{grid-template-columns:1fr}}
-.wy{padding:20px 22px}.wy h4{margin:0 0 6px;font-size:16.5px}.wy p{margin:0;color:var(--muted);font-size:14.5px}
-.btn{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-weight:600;font-size:15px;background:var(--teal);color:var(--navy);transition:.15s}
-.btn:hover{filter:brightness(1.05);transform:translateY(-1px)}
-.btn:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
-.btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.35)}
+.mt .track{height:10px;border-radius:99px;background:var(--paper);overflow:hidden}
+.mt .track i{display:block;height:100%;border-radius:99px;background:var(--teal);transition:width .6s}
+.mt.ef .track i{background:var(--navy)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-top:20px}
+.tile{all:unset;box-sizing:border-box;cursor:pointer;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;gap:10px;align-content:start;transition:.15s;position:relative}
+.tile:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(15,30,60,.1)}
+.tile.on{border-color:var(--c);box-shadow:0 0 0 2px var(--c)}
+.tile:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.tile .ti{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--cs)}
+.tile b{font-size:14px;line-height:1.3}
+.tile .n{position:absolute;top:12px;right:14px;font-size:12px;font-weight:800;color:var(--muted)}
+.tile[hidden]{display:none}
+/* calc */
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+@media(max-width:860px){.calc{grid-template-columns:1fr}}
+.rng{display:grid;grid-template-columns:1fr auto;gap:6px 12px;align-items:center;margin-bottom:20px}
+.rng label{font-size:15px;color:#DCE4F2}
+.rng output{font-weight:800;font-size:18px;color:var(--teal)}
+.rng input{grid-column:1/-1;width:100%;accent-color:var(--teal);height:6px}
+.result{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:28px}
+.result .big{font-size:64px;font-weight:800;color:var(--teal);line-height:1;letter-spacing:-1px}
+.result .rl{color:#C9D3E6;margin:6px 0 22px}
+.bars{display:grid;gap:10px;margin-bottom:22px}
+.br{display:grid;grid-template-columns:52px 1fr 70px;gap:10px;align-items:center;font-size:14px;color:#C9D3E6}
+.br div{height:14px;background:rgba(255,255,255,.08);border-radius:99px;overflow:hidden}
+.br i{display:block;height:100%;background:#9AA9C4;border-radius:99px;transition:width .4s}
+.br i.t{background:var(--teal)}
+.br b{color:#fff;text-align:right}
+.fte{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding-top:16px;border-top:1px solid rgba(255,255,255,.12)}
+#people{display:flex;gap:4px;flex-wrap:wrap;max-width:260px}
+#people svg{width:22px;height:22px}
+.fte span{font-weight:700}
+.result small{display:block;color:#9AA9C4;margin-top:14px;font-size:12.5px}
+/* road */
+.road{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:34px 0 26px}
+.roadline{position:absolute;left:16%;right:16%;top:22px;width:68%;height:40px}
+.rl2{stroke-dasharray:960;stroke-dashoffset:960;transition:stroke-dashoffset 1.6s ease .3s}
+.road.in .rl2{stroke-dashoffset:0}
+.stop{position:relative;display:grid;justify-items:center;text-align:center;gap:6px}
+.bub{width:84px;height:84px;border-radius:50%;background:#fff;border:3px solid var(--teal);display:grid;place-items:center;box-shadow:0 10px 26px rgba(15,30,60,.1);margin-bottom:8px}
+.bub svg{width:34px;height:34px}
+.stop.now .bub{background:var(--navy);border-color:var(--navy)}
+.stop.now .bub svg{stroke:var(--teal)}
+.when{font-size:12.5px;font-weight:700;color:var(--teal-ink);background:var(--teal-soft);padding:3px 10px;border-radius:99px}
+.stop h4{margin:4px 0 0;font-size:19px}.stop p{margin:0;font-size:14.5px;color:var(--muted);max-width:240px}
+@media(max-width:700px){.road{grid-template-columns:1fr}.roadline{display:none}}
+.partner{display:grid;grid-template-columns:1fr 1.1fr 1fr;gap:16px;align-items:center;padding:26px}
+@media(max-width:800px){.partner{grid-template-columns:1fr}}
+.pcol ul{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:6px;font-size:14.5px;color:var(--muted)}
+.pcol li:before{content:"● ";color:var(--teal)}
+.plogo{font-weight:800;font-size:18px;padding:12px 16px;border-radius:12px;text-align:center}
+.plogo.pt{background:var(--blue-soft);color:#2F4E9C}.plogo.vx{background:var(--navy);color:var(--teal)}
+.pmid{display:grid;justify-items:center;text-align:center;gap:2px}
+.pmid svg{width:100%;max-width:220px}
+.flowl{animation:dash2 1.2s linear infinite}
+@keyframes dash2{to{stroke-dashoffset:-28}}
+.pmid b{font-size:16px}.pmid span{font-size:13.5px;color:var(--muted)}
+/* cta */
+.ctabox{display:grid;grid-template-columns:auto 1fr auto;gap:26px;align-items:center}
+@media(max-width:860px){.ctabox{grid-template-columns:1fr}}
+.ctabox img{width:96px;height:96px;border-radius:50%;object-fit:cover;border:3px solid var(--teal)}
+.ctabtns{display:flex;gap:10px;flex-wrap:wrap}
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px;padding-top:26px;border-top:1px solid rgba(255,255,255,.12)}
+@media(max-width:700px){.trust{grid-template-columns:1fr}}
+.trust div{display:grid;gap:2px}.trust b{color:#fff}.trust span{color:var(--muted-dark);font-size:14px}
+@media(prefers-reduced-motion:reduce){.ring,.wave i,.float,.fs,.fs:after,.flowl{animation:none!important}.reveal{opacity:1;transform:none}}
+@media(max-width:600px){
+.spectrum h3{margin-bottom:18px}
+.spbar{height:auto;margin:0;display:grid;gap:16px;background:linear-gradient(180deg,#F2A93B,#FFD88A 30%,#7FE3D2 60%,#00C9A7) no-repeat 19px 0/4px 100%}
+.sp{position:relative;left:auto!important;top:auto;transform:none;grid-template-columns:42px auto auto;justify-items:start;align-items:center;gap:12px}
+.sp span{position:static;text-align:left;white-space:nowrap}.sp span br{display:none}
+.pin{position:static}.splabels{display:none}
+.timeline{overflow:visible}
+.tlrow{grid-template-columns:1fr;min-width:0;gap:14px}
+.tlrow:before{left:9px;right:auto;top:8px;bottom:8px;width:4px;height:auto;background:linear-gradient(180deg,var(--line),var(--teal) 40%)}
+.tln{grid-template-columns:22px 90px 1fr;justify-items:start;text-align:left;align-items:center;gap:12px}
+.tln i{margin:0}
+.orbit{height:380px}.f1{top:0;left:0}.f2{top:auto;bottom:72px;right:0}.f3{bottom:0;left:0}
+}
 </style>
 </head>
 <body>
@@ -182,62 +326,98 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <span>Voicelix<small>Pro Present Trade a CIRCLE</small></span>
   </a>
   <nav class="links" aria-label="Obsah stránky">
-    <a href="#pilot">Pilot</a><a href="#poznatky">Poznatky</a><a href="#mapa">Mapa příležitostí</a><a href="#namety">Náměty</a><a href="#start">Jak začít</a><a href="#kontakt">Kontakt</a>
+    <a href="#pilot">Pilot</a><a href="#poznatky">Poznatky</a><a href="#mapa">Příležitosti</a><a href="#kalkulacka">Kalkulačka</a><a href="#start">Jak začít</a>
   </nav>
+  <a class="btn sm" href="#kontakt">Domluvit workshop</a>
 </div></header>
 
 <main>
-<section class="hero"><div class="wrap" style="position:relative;z-index:1">
-  <span class="kicker">Po pilotu AI asistentky Tereza · listopad 2026</span>
-  <h1>Pilot skončil.<br><em>Spolupráce může začít.</em></h1>
-  <p class="lead">Za pět dní jsme od objednávky spustili ostré hovory a za týden obvolali 240 kontaktů. Teď víme, kde AI ve vašem call centru opravdu pomůže a kde ne. Na této stránce je mapa konkrétních příležitostí pro Present Trade i CIRCLE a návrh, jak začít bez rizika.</p>
-  <div class="hero-meta">
-    <span class="chip"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Kredit 5 000 Kč do 30. 6. 2027</span>
-    <span class="chip"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Workshop pro váš tým zdarma</span>
-    <span class="chip"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Jeden partner pro IT a AI</span>
+<!-- HERO -->
+<section class="hero"><div class="wrap herogrid">
+  <div>
+    <span class="kicker">Po pilotu AI asistentky Tereza</span>
+    <h1>Pilot skončil.<br><em>Spolupráce začíná.</em></h1>
+    <p class="lead">Víme, kde AI ve vašem call centru pomůže. Tady je mapa příležitostí a cesta, jak začít bez rizika.</p>
+    <div class="hero-cta"><a class="btn" href="#mapa">Prohlédnout příležitosti</a><a class="btn ghost" href="#kontakt">Domluvit workshop</a></div>
+    <div class="ticket" aria-label="Kredit 5 000 Kč platný do 30. 6. 2027">
+      <div class="tl"><span>Kredit z pilotu</span><b>5 000 Kč</b></div>
+      <div class="tr2"><span>platí do</span><b>30. 6. 2027</b><small>+ workshop zdarma</small></div>
+    </div>
+  </div>
+  <div class="orbit" aria-hidden="true">
+    <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
+    <div class="core"><div class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span>AI asistentka</span></div>
+    <div class="float f1"><span class="ico">☎</span><div><b>Příchozí hovor</b><small>21:14 · mimo pracovní dobu</small></div></div>
+    <div class="float f2"><span class="ico ok">✓</span><div><b>Zapsáno do CRM</b><small>shrnutí a termín</small></div></div>
+    <div class="float f3"><span class="ico usr">●</span><div><b>Předáno operátorce</b><small>ráno v 8:00</small></div></div>
   </div>
 </div></section>
 
+<!-- PILOT -->
 <section id="pilot"><div class="wrap">
-  <div class="eyebrow">1. Co máme za sebou</div>
-  <h2>Pilot v číslech</h2>
-  <p class="sub">Shrnutí ze závěrečného reportu z 20. 11. 2026. Celý report a přehled kontaktů máte ve sdílené složce.</p>
-  <div class="facts">
-    <div class="card fact hl"><b>5 dní</b><span>od objednávky k prvním ostrým hovorům</span></div>
-    <div class="card fact"><b>240</b><span>kontaktů ve dvou kampaních, B2B i B2C</span></div>
-    <div class="card fact"><b>420</b><span>hovorů: 391 odchozích a 29 zpětných volání</span></div>
-    <div class="card fact"><b>118</b><span>hovorů za 35 minut v jedné kampani</span></div>
+  <div class="eyebrow">1 · Co máme za sebou</div>
+  <h2>Pilot za jeden týden</h2>
+  <div class="stats reveal">
+    <div class="stat hl"><b data-count="5">0</b><span>od objednávky<br>k ostrému startu</span></div>
+    <div class="stat"><b data-count="240">0</b><span>kontaktů<br>B2B i B2C</span></div>
+    <div class="stat"><b data-count="420">0</b><span>hovorů včetně<br>zpětných volání</span></div>
+    <div class="stat"><b data-count="118">0</b><span>hovorů<br>za 35 minut</span></div>
   </div>
-  <div class="card funnel" aria-label="Trychtýř pilotu">
-    <div class="fhead"><h3>Od kontaktu k zájemci</h3><span>Každý kontakt jednou, nejvýš tři pokusy</span></div>
-    <div class="frow"><span class="fl">Kontakty v seznamech</span><div class="fbar"><i style="width:100%"></i></div><b>240</b></div>
-    <div class="frow"><span class="fl">Hovor vzal člověk</span><div class="fbar"><i style="width:68.75%"></i></div><b>165</b></div>
-    <div class="frow"><span class="fl">Vyslechl nabídku</span><div class="fbar"><i style="width:19.2%"></i></div><b>46</b></div>
-    <div class="frow"><span class="fl">Jasná odpověď</span><div class="fbar"><i style="width:6.25%"></i></div><b>15</b></div>
-    <div class="frow hl"><span class="fl">Zájemce předaný obchodu</span><div class="fbar"><i style="width:1.5%"></i></div><b>1</b></div>
+
+  <div class="card timeline reveal" aria-label="Průběh pilotu">
+    <div class="tlrow">
+      <div class="tln"><i></i><b>11. 11.</b><span>Objednávka</span></div>
+      <div class="tln"><i></i><b>12.–13. 11.</b><span>Čísla, asistentky, testy</span></div>
+      <div class="tln go"><i></i><b>16. 11.</b><span>Ostrý start</span></div>
+      <div class="tln"><i></i><b>18. 11.</b><span>Druhá vlna</span></div>
+      <div class="tln"><i></i><b>19. 11.</b><span>Opakování</span></div>
+      <div class="tln end"><i></i><b>20. 11.</b><span>Report</span></div>
+    </div>
+  </div>
+
+  <div class="card funnelcard reveal">
+    <div class="fhead"><h3>Od kontaktu k zájemci</h3><span>každý kontakt jednou</span></div>
+    <svg id="funnel" viewBox="0 0 900 290" role="img" aria-label="Trychtýř: 240 kontaktů, 165 vzal člověk, 46 vyslechlo nabídku, 15 jasná odpověď, 1 zájemce"></svg>
   </div>
 </div></section>
 
+<!-- POZNATKY -->
 <section class="alt" id="poznatky"><div class="wrap">
-  <div class="eyebrow">2. Co jsme se naučili</div>
-  <h2>Čtyři poznatky, na kterých se dá stavět</h2>
-  <p class="sub">Pilot neukázal jen čísla. Ukázal, kde je AI silná a kde potřebuje člověka.</p>
-  <div class="learn">
-    <div class="card ln good"><span class="ic" aria-hidden="true">⚡</span><h3>Rychlost nasazení</h3><p>Nové číslo, dvě asistentky, zápis do vaší tabulky a první kampaň za pět dní. Další projekt může běžet ještě rychleji, protože už znám vaše procesy.</p></div>
-    <div class="card ln good"><span class="ic" aria-hidden="true">✓</span><h3>Spolehlivý zápis</h3><p>Každý hovor se sám zapsal do tabulky s výsledkem a důvodem. Poslední den 60 řádků bez jediného ručního zásahu. Tohle se hodí i pro vaše operátorky.</p></div>
-    <div class="card ln warn"><span class="ic" aria-hidden="true">!</span><h3>Studený seznam je těžký</h3><p>72 % lidí zavěsilo během úvodu. AI se nejvíc vyplatí tam, kde volaný hovor čeká: příchozí linky, zpětná volání, kontakty se souhlasem.</p></div>
-    <div class="card ln warn"><span class="ic" aria-hidden="true">≡</span><h3>Data rozhodují</h3><p>12 čísel v seznamech neexistovalo a část firem nepatřila do cílové skupiny. Kontrola databáze před kampaní ušetří hovory i práci operátorek.</p></div>
+  <div class="eyebrow">2 · Co jsme se naučili</div>
+  <h2>AI je silná tam, kde hovor čekáte</h2>
+  <div class="insight reveal">
+    <div class="card donutcard">
+      <svg viewBox="0 0 200 200" class="donut" aria-hidden="true"><circle cx="100" cy="100" r="78" fill="none" stroke="#EEF1F6" stroke-width="22"/><circle id="dn" cx="100" cy="100" r="78" fill="none" stroke="#F2A93B" stroke-width="22" stroke-linecap="round" stroke-dasharray="0 490" transform="rotate(-90 100 100)"/></svg>
+      <div class="dlab"><b><i class="num" data-count="72">0</i> %</b><span>zavěsilo během úvodu</span></div>
+      <p>Studený seznam je pro AI nejtěžší disciplína.</p>
+    </div>
+    <div class="card spectrum">
+      <h3>Kde se AI vyplatí nejvíc</h3>
+      <div class="spbar"><div class="spfill"></div>
+        <button class="sp" style="left:6%" data-t="Lidé hovor nečekají a nezvedají ho rádi. Tady jsme pilotovali."><i>❄</i><span>Studený <br>seznam</span><em class="pin">Pilot</em></button>
+        <button class="sp" style="left:36%" data-t="Lidé s voláním souhlasili. AI dělá první kontakt, operátorka uzavírá."><i>✓</i><span>Databáze <br>se souhlasem</span></button>
+        <button class="sp" style="left:65%" data-t="Člověk sám projevil zájem. Hovor do pár minut má největší šanci."><i>⚡</i><span>Zpětné volání <br>na poptávku</span></button>
+        <button class="sp" style="left:93%" data-t="Volající chce věc vyřešit. AI zvedne každý hovor, i v noci."><i>☎</i><span>Příchozí <br>hovor</span></button>
+      </div>
+      <div class="splabels"><span>volaný hovor nečeká</span><span>volaný hovor chce</span></div>
+      <p class="sptip" id="sptip">Klikněte na bod na škále.</p>
+    </div>
+    <div class="minis">
+      <div class="card mini"><b data-count="60">0</b><span>řádků poslední den zapsaných bez ručního zásahu</span></div>
+      <div class="card mini warn"><b data-count="12">0</b><span>neexistujících čísel v seznamech</span></div>
+    </div>
   </div>
 </div></section>
 
+<!-- MAPA -->
 <section id="mapa"><div class="wrap">
-  <div class="eyebrow">3. Mapa příležitostí</div>
+  <div class="eyebrow">3 · Mapa příležitostí</div>
   <h2>Kde vám můžu pomoct</h2>
-  <p class="sub">Jedenáct námětů seřazených podle přínosu a náročnosti zavedení. Vlevo nahoře jsou rychlé výhry, vpravo nahoře větší projekty s velkým dopadem. Klikněte na bod a uvidíte detail.</p>
+  <p class="sub">Vyberte bod na mapě nebo dlaždici. Velikost bodu ukazuje přínos.</p>
   <div class="filters" role="group" aria-label="Filtrovat náměty">
     <button class="flt" data-f="all" aria-pressed="true">Vše</button>
     <button class="flt" data-f="cc" aria-pressed="false"><i style="background:#00C9A7"></i>Call centrum</button>
-    <button class="flt" data-f="op" aria-pressed="false"><i style="background:#3D5A8F"></i>Operátorky a kvalita</button>
+    <button class="flt" data-f="op" aria-pressed="false"><i style="background:#3D5A8F"></i>Operátorky</button>
     <button class="flt" data-f="ci" aria-pressed="false"><i style="background:#F2A93B"></i>CIRCLE</button>
     <button class="flt" data-f="pa" aria-pressed="false"><i style="background:#8AB4FF"></i>Partnerství</button>
   </div>
@@ -245,161 +425,208 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <div class="card mapbox"><svg id="matrix" viewBox="0 0 520 440" role="group" aria-label="Mapa námětů podle přínosu a náročnosti"></svg></div>
     <div class="card idea" id="detail" aria-live="polite"></div>
   </div>
+  <div class="tiles" id="tiles"></div>
 </div></section>
 
-<section class="alt" id="namety"><div class="wrap">
-  <div class="eyebrow">4. Všechny náměty</div>
-  <h2>Přehled na jednom místě</h2>
-  <p class="sub">Ceny stanovím vždy předem a pevně podle rozsahu. Kredit 5 000 Kč z pilotu můžete použít na kterýkoli z námětů.</p>
-  <div class="cards" id="cards"></div>
+<!-- KALKULACKA -->
+<section class="dark" id="kalkulacka"><div class="wrap">
+  <div class="eyebrow">4 · Spočítejte si</div>
+  <h2>Kolik času vrátí automatický zápis hovorů</h2>
+  <p class="sub">Zadejte svá čísla. Výpočet běží jen z nich.</p>
+  <div class="calc">
+    <div class="sliders">
+      <div class="rng"><label for="c1">Operátorky</label><output id="o1"></output><input id="c1" type="range" min="1" max="60" value="12"></div>
+      <div class="rng"><label for="c2">Hovorů denně na operátorku</label><output id="o2"></output><input id="c2" type="range" min="10" max="200" step="5" value="60"></div>
+      <div class="rng"><label for="c3">Minut na zápis po hovoru</label><output id="o3"></output><input id="c3" type="range" min="0.5" max="5" step="0.5" value="1.5"></div>
+      <div class="rng"><label for="c4">O kolik se zápis zkrátí</label><output id="o4"></output><input id="c4" type="range" min="20" max="90" step="5" value="70"></div>
+    </div>
+    <div class="result">
+      <div class="big"><span id="rH">0</span> h</div><div class="rl">vrácených hodin měsíčně</div>
+      <div class="bars">
+        <div class="br"><span>Dnes</span><div><i id="bA"></i></div><b id="tA"></b></div>
+        <div class="br"><span>S AI</span><div><i id="bB" class="t"></i></div><b id="tB"></b></div>
+      </div>
+      <div class="fte"><div id="people"></div><span id="rF"></span></div>
+      <small>21 pracovních dní, úvazek 160 hodin měsíčně.</small>
+    </div>
+  </div>
 </div></section>
 
+<!-- START -->
 <section id="start"><div class="wrap">
-  <div class="eyebrow">5. Jak začít</div>
+  <div class="eyebrow">5 · Jak začít</div>
   <h2>Tři kroky bez rizika</h2>
-  <p class="sub">Žádná velká investice předem. Nejdřív společně vybereme, co má smysl, pak to ověříme v malém.</p>
-  <div class="plan">
-    <div class="card pl now"><span class="w">Krok 1 · zdarma</span><h4>Workshop pro váš tým</h4><ul><li>2 hodiny u vás nebo online</li><li>Co AI v call centru umí dnes a co ne</li><li>Ukázky na vašich hovorech a datech</li><li>Výběr 1 až 2 námětů</li></ul></div>
-    <div class="card pl"><span class="w">Krok 2 · do 4 týdnů</span><h4>Malý ověřovací projekt</h4><ul><li>Jeden námět, jasný cíl a metrika</li><li>Pevná cena předem</li><li>Kredit 5 000 Kč se odečte</li><li>Na konci report jako po pilotu</li></ul></div>
-    <div class="card pl"><span class="w">Krok 3 · provoz</span><h4>Běžný provoz a rozvoj</h4><ul><li>Co funguje, nasadíme natrvalo</li><li>Správa, úpravy a podpora ode mě</li><li>Měsíční přehled výsledků</li><li>Další náměty podle priorit</li></ul></div>
-    <div class="card pl"><span class="w">Volitelně</span><h4>Partnerství</h4><ul><li>Hlasová AI pro klienty Present Trade</li><li>Pod vaší značkou</li><li>Vy obchod a vztah s klientem</li><li>Já technologie a compliance</li></ul></div>
+  <div class="road reveal">
+    <svg class="roadline" viewBox="0 0 1000 40" preserveAspectRatio="none" aria-hidden="true"><path d="M20 20 H980" stroke="#DDE4EE" stroke-width="6" stroke-linecap="round"/><path class="rl2" d="M20 20 H980" stroke="#00C9A7" stroke-width="6" stroke-linecap="round"/></svg>
+    <div class="stop now"><div class="bub"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M16 4.5a3 3 0 0 1 0 6M21 20c0-2.6-1.7-4.8-4-5.6"/></svg></div><span class="when">Prosinec · zdarma</span><h4>Workshop</h4><p>2 hodiny, vaše hovory a data, výběr námětů</p></div>
+    <div class="stop"><div class="bub"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div><span class="when">Do 4 týdnů</span><h4>Ověření v malém</h4><p>Jeden námět, pevná cena, kredit se odečte</p></div>
+    <div class="stop"><div class="bub"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><span class="when">Potom</span><h4>Provoz a rozvoj</h4><p>Co funguje, běží natrvalo. Správa ode mě.</p></div>
   </div>
-  <div class="why">
-    <div class="card wy"><h4>Znám vaše procesy</h4><p>Pilot mi ukázal, jak pracujete s daty, kampaněmi a zájemci. Nezačínáme od nuly.</p></div>
-    <div class="card wy"><h4>Staví osobně architekt</h4><p>Žádní subdodavatelé. S jednou osobou řešíte návrh, stavbu i provoz.</p></div>
-    <div class="card wy"><h4>Compliance od začátku</h4><p>AI se vždy představí jako AI, nahrávání a GDPR řešíme v návrhu, ne až potom.</p></div>
+
+  <div class="card partner reveal">
+    <div class="pcol"><div class="plogo pt">Present Trade</div><ul><li>Obchod a klienti</li><li>Vaše značka</li><li>Operátorky</li></ul></div>
+    <div class="pmid"><svg viewBox="0 0 160 60" aria-hidden="true"><path class="flowl" d="M10 30 H150" stroke="#00C9A7" stroke-width="3" stroke-dasharray="6 8" fill="none"/><path d="M140 22l10 8-10 8" fill="none" stroke="#00C9A7" stroke-width="3"/></svg><b>Volitelně: partnerství</b><span>hlasová AI pro vaše klienty</span></div>
+    <div class="pcol"><div class="plogo vx">Voicelix</div><ul><li>Technologie a provoz</li><li>Compliance by design</li><li>Podpora a úpravy</li></ul></div>
   </div>
 </div></section>
 
+<!-- KONTAKT -->
 <section class="dark" id="kontakt"><div class="wrap">
-  <div class="eyebrow">6. Další krok</div>
-  <h2>Domluvme si workshop</h2>
-  <p class="sub">Stačí odpovědět na e-mail nebo zavolat. Termín přizpůsobím vám.</p>
-  <div class="needs">
-    <div class="nd"><h4>Na workshop se hodí</h4><ul><li>Vedoucí call centra a 1 až 2 operátorky</li><li>Ukázka skriptu a typické kampaně</li><li>Kde dnes ztrácíte nejvíc času</li></ul></div>
-    <div class="nd"><h4>Pokud chcete začít hned</h4><ul><li>Průzkum mezi těmi, kdo zavěsili: připravím skript a vyhodnocení</li><li>Kontrola databáze před další kampaní</li></ul></div>
-    <div class="nd"><h4>Kredit z pilotu</h4><ul><li>5 000 Kč na jakýkoli další projekt</li><li>Platí do 30. 6. 2027</li><li>Workshop je zdarma a kredit nečerpá</li></ul></div>
+  <div class="ctabox">
+    <img src="/pavel-sramek.jpg" alt="Pavel Šrámek" width="96" height="96">
+    <div><div class="eyebrow">6 · Další krok</div><h2>Domluvme si workshop</h2><p class="sub" style="margin:0">Termín přizpůsobím vám. U vás v Petřvaldu, nebo online.</p></div>
+    <div class="ctabtns"><a class="btn" href="mailto:pavel@voicelix.ai?subject=Workshop%20Present%20Trade">Napsat Pavlovi</a><a class="btn ghost" href="tel:+420910926750">+420 910 926 750</a></div>
   </div>
-  <div class="cta-row">
-    <img src="/pavel-sramek.jpg" alt="Pavel Šrámek" width="64" height="64">
-    <div><b>Mgr. Pavel Šrámek</b><span>Zakladatel Voicelixu, AI architekt s právním vzděláním</span></div>
-    <div style="margin-left:auto;display:flex;gap:10px;flex-wrap:wrap"><a class="btn" href="mailto:pavel@voicelix.ai?subject=Workshop%20Present%20Trade">Domluvit workshop</a><a class="btn ghost" href="tel:+420910926750">+420 910 926 750</a></div>
+  <div class="trust">
+    <div><b>Znám vaše procesy</b><span>z pilotu</span></div>
+    <div><b>Staví osobně</b><span>bez subdodavatelů</span></div>
+    <div><b>AI se představí jako AI</b><span>AI Act a GDPR v návrhu</span></div>
   </div>
 </div></section>
 </main>
 
-<footer><div class="wrap"><span>Voicelix · Připraveno pro Present Trade s.r.o. a CIRCLE Company a.s. · listopad 2026</span><span>Řešení navrhujeme v souladu s legislativou. Nejde o právní službu.</span></div></footer>
+<footer><div class="wrap"><span>Voicelix · Pro Present Trade s.r.o. a CIRCLE Company a.s. · listopad 2026</span><span>Řešení navrhujeme v souladu s legislativou. Nejde o právní službu.</span></div></footer>
 
 <script>
 (function(){
-const CAT={cc:['Call centrum','#00C9A7','#E0F7F2','#008C75'],op:['Operátorky a kvalita','#3D5A8F','#EEF3FF','#2F4E9C'],ci:['CIRCLE','#F2A93B','#FDF1DC','#8A5A0B'],pa:['Partnerství','#8AB4FF','#EEF3FF','#2F4E9C']};
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const IC={
+phone:'<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/>',
+moon:'<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>',
+clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+doc:'<path d="M14 3H6v18h12V7zM14 3v4h4M9 13h6M9 17h6"/>',
+check:'<path d="M20 6 9 17l-5-5"/>',
+star:'<path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3l-5.5 2.9 1-6.2L3 9.6l6.2-.9z"/>',
+filter:'<path d="M3 5h18l-7 8v6l-4 2v-8z"/>',
+shield:'<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/>',
+users:'<circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M16 4.5a3 3 0 0 1 0 6M21 20c0-2.6-1.7-4.8-4-5.6"/>',
+user:'<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/>',
+cart:'<path d="M3 4h2l2.5 11h11L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/>',
+link:'<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>',
+chart:'<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',
+bolt:'<path d="M13 2 4 14h7l-1 8 9-12h-7z"/>',
+mic:'<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/>',
+ai:'<rect x="5" y="5" width="14" height="14" rx="3"/><path d="M9 9h6v6H9zM9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/>',
+mail:'<path d="M4 5h16v14H4zM4 7l8 6 8-6"/>',
+search:'<circle cx="11" cy="11" r="7"/><path d="m21 21-5-5"/>'};
+const ico=(k,col)=>'<svg viewBox="0 0 24 24"'+(col?' style="stroke:'+col+'"':'')+'>'+IC[k]+'</svg>';
+const CAT={cc:['Call centrum','#00C9A7','#E0F7F2','#008C75'],op:['Operátorky','#3D5A8F','#EEF3FF','#2F4E9C'],ci:['CIRCLE','#F2A93B','#FDF1DC','#8A5A0B'],pa:['Partnerství','#8AB4FF','#EEF3FF','#2F4E9C']};
 const I=[
-{t:'Průzkum mezi těmi, kdo zavěsili',c:'op',imp:2.8,eff:1.3,
- s:'Podpora operátorek při obvolávání kontaktů z pilotu.',
- what:'Vaše operátorky obvolají lidi, kteří Terezu během úvodu položili. Připravím k tomu krátký skript, tabulku a vyhodnocení.',
- how:['Skript na 2 minuty s otázkami, proč volaný zavěsil','Tabulka napojená na přehled kontaktů po pilotu','Automatické shrnutí odpovědí po skončení'],
- gain:['Víte, jestli vadí AI, nabídka, nebo čas hovoru','Podklad pro další kampaně i pro CIRCLE'],
- first:'Navazuje na Přehled kontaktů po pilotu (150 kontaktů vhodných pro průzkum).'},
-{t:'Kontrola databáze před kampaní',c:'cc',imp:3.4,eff:1.4,
- s:'Neexistující čísla, duplicity a seznam „nevolat" pryč dřív, než se začne volat.',
- what:'Každá databáze projde kontrolou formátu, duplicit, seznamu „nevolat" a cílové skupiny. Výsledkem je čistý seznam a zpráva, co bylo vyřazeno a proč.',
- how:['Sjednocení formátu čísel a odstranění duplicit','Porovnání se seznamem „nevolat" a s minulými výsledky','Kontrola, zda firma patří do cílové skupiny (obor, IČO)'],
- gain:['Méně zbytečných hovorů','Operátorky volají jen tam, kde to má smysl'],
- first:'V pilotu jsme našli 12 neexistujících čísel a firmy mimo obor.'},
-{t:'Automatický zápis a shrnutí hovorů',c:'op',imp:3.6,eff:2.2,
- s:'Výsledek hovoru se zapíše sám, jako u Terezy.',
- what:'Po každém hovoru operátorky se do tabulky nebo CRM zapíše výsledek, termín zpětného volání a krátké shrnutí. Operátorka jen zkontroluje.',
- how:['Přepis hovoru a shrnutí do tří vět','Zápis výsledku podle vašich kategorií','Připomínka zpětného volání'],
- gain:['Méně času mezi hovory','Jednotná data pro reporting klientům'],
- first:'Stejný princip zápisu běžel v pilotu bez ručních zásahů.'},
-{t:'Hodnocení kvality hovorů',c:'op',imp:4.0,eff:3.3,
- s:'Kontrola všech hovorů, ne jen náhodného vzorku.',
- what:'AI projde nahrávky hovorů operátorek a ohodnotí je podle vašeho skriptu: představení, nabídka, námitky, uzavření. Vedoucí vidí, kde kdo potřebuje pomoct.',
- how:['Hodnoticí karta podle vašeho skriptu','Přehled po operátorkách a kampaních','Konkrétní tipy pro koučink s ukázkou z hovoru'],
- gain:['Rychlejší zaučení nových operátorek','Kvalita měřitelná pro vaše klienty'],
- first:'Začít lze na jedné kampani a pár desítkách nahrávek.'},
-{t:'AI na příchozí lince mimo pracovní dobu',c:'cc',imp:4.4,eff:2.5,
- s:'Večer, o víkendu a ve špičce hovor vezme AI asistentka.',
- what:'Když operátorky nestíhají nebo už nejsou v práci, hovor vezme AI asistentka. Představí se jako AI, zjistí, co volající potřebuje, a předá vše ráno operátorce.',
- how:['Přesměrování při obsazení nebo mimo pracovní dobu','Zápis požadavku a kontaktu do tabulky nebo CRM','Okamžité upozornění na naléhavé hovory'],
- gain:['Žádný zmeškaný hovor','Služba, kterou můžete nabídnout svým klientům'],
- first:'Tady je AI nejsilnější: volající hovor čeká a chce ho vyřešit.'},
-{t:'Zpětné volání do 5 minut na poptávku',c:'cc',imp:4.6,eff:3.4,
- s:'Kdo vyplní formulář nebo reaguje na reklamu, má hovor hned.',
- what:'Lidé, kteří sami projeví zájem a dají souhlas, dostanou hovor do pár minut. AI ověří zájem a čas, operátorka pak volá připravenému zájemci.',
- how:['Napojení na formulář, web nebo reklamu','Souhlas s hovorem včetně AI přímo ve formuláři','Předání zájemce operátorce s poznámkou'],
- gain:['Teplý kontakt místo studeného seznamu','Výrazně vyšší šance, že zájemce hovor vezme'],
- first:'Řeší hlavní poznatek pilotu: studený seznam je pro AI nejtěžší.'},
-{t:'Kampaň na databázi se souhlasem',c:'cc',imp:3.9,eff:2.8,
- s:'Test AI na kontaktech, které s voláním souhlasily.',
- what:'Malý test na vzorku vaší databáze se souhlasem: dvě verze úvodu, operátorky přebírají zájemce. Porovnáme výsledky s lidským voláním.',
- how:['Ověření znění souhlasu pro automatizované volání','Vzorek kontaktů a dvě verze úvodu','Report: kdo zvedl, kdo vyslechl, kdo má zájem'],
- gain:['Férové srovnání AI a operátorek na stejných datech','Jasné rozhodnutí, kde AI nasadit'],
- first:'Úvod upravíme podle toho, co nám pilot ukázal.'},
-{t:'Kontrola souladu kampaní',c:'cc',imp:3.0,eff:2.1,
- s:'Souhlasy, AI Act, nahrávání a GDPR před startem kampaně.',
- what:'Před každou kampaní projdu technické a organizační nastavení: odkud jsou kontakty a s čím souhlasily, jak se AI představuje, jak se nahrává a jak dlouho se data drží.',
- how:['Kontrolní seznam pro každou kampaň','Návrh úvodu a informace o nahrávání','Doporučení k uchování a mazání dat'],
- gain:['Méně rizika pro vás i vaše klienty','Argument při jednání s klienty'],
- first:'Technicko-organizační posouzení, nejde o právní službu.'},
-{t:'Workshop a školení AI',c:'op',imp:3.5,eff:1.1,
- s:'Co AI umí dnes, ukázáno na vaší práci.',
- what:'Praktický workshop pro vedení a operátorky: jak AI používat při přípravě kampaní, skriptů, e-mailů a reportů. První workshop je zdarma.',
- how:['Ukázky na vašich skriptech a datech','Bezpečné používání AI s osobními údaji','Návazná školení podle potřeby'],
- gain:['Tým, který AI rozumí a používá ji','Společný výběr dalších námětů'],
- first:'Workshop zdarma je součástí poděkování za pilot.'},
-{t:'Objednávky a péče o prodejce CIRCLE',c:'ci',imp:3.4,eff:3.7,
- s:'Jednoduché objednávání a evidence pro firmy, které CIRCLE prodávají.',
- what:'Prodejci CIRCLE si mohou objednat zboží přes formulář nebo chat, objednávka se zapíše do přehledu a připomínky doobjednání chodí samy.',
- how:['Objednávkový formulář nebo chat na webu','Přehled prodejců a objednávek (CRM)','Automatické připomínky a potvrzení'],
- gain:['Méně ruční práce s objednávkami','Přehled, kdo prodává a kdo usnul'],
- first:'Rozsah navrhneme podle toho, jak dnes s prodejci pracujete.'},
-{t:'Hlasová AI pro klienty Present Trade',c:'pa',imp:4.8,eff:4.5,
- s:'Nová služba pod vaší značkou.',
- what:'Present Trade nabídne hlasovou AI svým klientům jako vlastní službu. Vy máte obchod a vztah s klientem, já dodám technologii, provoz a compliance.',
- how:['Asistenti pod vaší značkou a na vašich číslech','Společný postup od pilotu k provozu','Reporting pro vaše klienty'],
- gain:['Nový zdroj příjmů bez vývoje','Náskok před call centry bez AI'],
- first:'Nejdřív ověřit na jednom námětu výše, pak rozšířit.'}
-];
-I.forEach((x,i)=>x.n=i+1);
+{t:'Průzkum mezi těmi, kdo zavěsili',c:'op',i:'search',imp:2.8,eff:1.3,s:'Podpora operátorek při obvolávání kontaktů z pilotu.',
+ f:[['users','150 kontaktů z pilotu'],['phone','Operátorka volá se skriptem'],['doc','Odpovědi do tabulky'],['chart','Vyhodnocení']],
+ g:['Víte, proč lidé zavěsili','Podklad pro další kampaně'],x:'Navazuje na přehled kontaktů po pilotu.'},
+{t:'Kontrola databáze před kampaní',c:'cc',i:'filter',imp:3.4,eff:1.4,s:'Neexistující čísla, duplicity a „nevolat" pryč dřív, než se volá.',
+ f:[['doc','Vaše databáze'],['filter','Formát, duplicity, nevolat'],['search','Cílová skupina'],['check','Čistý seznam']],
+ g:['Méně zbytečných hovorů','Operátorky volají tam, kde to má smysl'],x:'V pilotu jsme našli 12 neexistujících čísel.'},
+{t:'Automatický zápis a shrnutí hovorů',c:'op',i:'doc',imp:3.6,eff:2.2,s:'Výsledek hovoru operátorky se zapíše sám, jako u Terezy.',
+ f:[['phone','Hovor operátorky'],['ai','Přepis a shrnutí'],['doc','Zápis do CRM'],['clock','Připomínka']],
+ g:['Méně času mezi hovory','Jednotná data pro klienty'],x:'Spočítejte si úsporu v kalkulačce níže.'},
+{t:'Hodnocení kvality hovorů',c:'op',i:'star',imp:4.0,eff:3.3,s:'Kontrola všech hovorů podle vašeho skriptu, ne jen vzorku.',
+ f:[['mic','Nahrávky'],['ai','Hodnocení podle skriptu'],['chart','Přehled týmu'],['users','Koučink']],
+ g:['Rychlejší zaučení','Měřitelná kvalita pro klienty'],x:'Začít lze na jedné kampani.'},
+{t:'AI na příchozí lince mimo pracovní dobu',c:'cc',i:'moon',imp:4.4,eff:2.5,s:'Večer, o víkendu a ve špičce hovor vezme AI asistentka.',
+ f:[['moon','Večer, víkend, špička'],['ai','AI asistentka'],['doc','Požadavek zapsán'],['user','Ráno operátorka']],
+ g:['Žádný zmeškaný hovor','Nová služba pro vaše klienty'],x:'Tady je AI nejsilnější: volající hovor chce.'},
+{t:'Zpětné volání do 5 minut na poptávku',c:'cc',i:'bolt',imp:4.6,eff:3.4,s:'Kdo vyplní formulář a dá souhlas, má hovor hned.',
+ f:[['mail','Formulář se souhlasem'],['bolt','Do 5 minut'],['ai','Ověření zájmu'],['user','Operátorka uzavírá']],
+ g:['Teplý kontakt','Vyšší šance, že hovor vezme'],x:'Řeší hlavní poznatek pilotu.'},
+{t:'Kampaň na databázi se souhlasem',c:'cc',i:'shield',imp:3.9,eff:2.8,s:'Férový test AI a operátorek na stejných datech.',
+ f:[['shield','Ověření souhlasu'],['ai','Dvě verze úvodu'],['user','Zájemci operátorkám'],['chart','Srovnání']],
+ g:['Jasné rozhodnutí, kde AI nasadit','Úvod upravený podle pilotu'],x:'Malý vzorek, report jako po pilotu.'},
+{t:'Kontrola souladu kampaní',c:'cc',i:'check',imp:3.0,eff:2.1,s:'Souhlasy, AI Act, nahrávání a GDPR před startem.',
+ f:[['doc','Kampaň'],['shield','Souhlasy, AI Act, GDPR'],['check','Kontrolní seznam']],
+ g:['Méně rizika','Argument při jednání s klienty'],x:'Technicko-organizační posouzení, ne právní služba.'},
+{t:'Workshop a školení AI',c:'op',i:'users',imp:3.5,eff:1.1,s:'Co AI umí dnes, ukázané na vaší práci. První zdarma.',
+ f:[['users','Váš tým'],['star','Ukázky na vašich datech'],['check','Výběr námětů']],
+ g:['Tým, který AI rozumí','Společný plán'],x:'Součást poděkování za pilot.'},
+{t:'Objednávky a péče o prodejce CIRCLE',c:'ci',i:'cart',imp:3.4,eff:3.7,s:'Jednoduché objednávání a přehled prodejců.',
+ f:[['cart','Objednávka prodejce'],['doc','Přehled prodejců'],['clock','Připomínky']],
+ g:['Méně ruční práce','Víte, kdo prodává'],x:'Rozsah podle toho, jak s prodejci pracujete dnes.'},
+{t:'Hlasová AI pod značkou Present Trade',c:'pa',i:'link',imp:4.8,eff:4.5,s:'Nová služba pro vaše klienty. Vy obchod, já technologie.',
+ f:[['users','Klient Present Trade'],['link','Vaše značka a obchod'],['ai','Technologie Voicelix']],
+ g:['Nový zdroj příjmů','Náskok před konkurencí'],x:'Nejdřív ověřit jeden námět, pak rozšířit.'}];
+I.forEach((x,k)=>x.n=k+1);
+
+/* matrix */
 const svg=document.getElementById('matrix'),ns='http://www.w3.org/2000/svg';
 const X0=60,X1=500,Y0=24,Y1=380,sx=v=>X0+22+(v-1)/4*(X1-X0-44),sy=v=>Y1-34-(v-1)/4*(Y1-Y0-68);
 const el=(n,a,p)=>{const e=document.createElementNS(ns,n);for(const k in a)e.setAttribute(k,a[k]);(p||svg).appendChild(e);return e};
 const mx=(X0+X1)/2,my=(Y0+Y1)/2;
-el('rect',{x:X0,y:Y0,width:mx-X0,height:my-Y0,fill:'#E0F7F2',rx:10});
-el('rect',{x:mx,y:Y0,width:X1-mx,height:my-Y0,fill:'#EEF3FF',rx:10});
-el('rect',{x:X0,y:my,width:mx-X0,height:Y1-my,fill:'#F4F7FB',rx:10});
-el('rect',{x:mx,y:my,width:X1-mx,height:Y1-my,fill:'#F4F7FB',rx:10});
-const lab=(x,y,t,o)=>{const e=el('text',Object.assign({x,y,'font-family':'Onest,system-ui,sans-serif','font-size':12,'font-weight':700,fill:'#5B6B85'},o||{}));e.textContent=t;return e};
-lab(X0+12,Y0+20,'RYCHLÉ VÝHRY',{fill:'#008C75'});
-lab(X1-12,Y0+20,'VELKÉ PROJEKTY',{fill:'#2F4E9C','text-anchor':'end'});
-lab(X0+12,Y1-12,'DROBNOSTI');
-lab(X1-12,Y1-12,'AŽ POZDĚJI',{'text-anchor':'end'});
+const df=el('defs',{});const gr=el('radialGradient',{id:'gq'},df);el('stop',{offset:'0','stop-color':'#00C9A7','stop-opacity':'.22'},gr);el('stop',{offset:'1','stop-color':'#00C9A7','stop-opacity':'0'},gr);
+const mk=el('marker',{id:'ar',viewBox:'0 0 10 10',refX:8,refY:5,markerWidth:7,markerHeight:7,orient:'auto-start-reverse'},df);el('path',{d:'M0 0L10 5L0 10z',fill:'#9AA9C4'},mk);
+el('rect',{x:X0,y:Y0,width:mx-X0-3,height:my-Y0-3,fill:'#E0F7F2',rx:12});
+el('rect',{x:mx+3,y:Y0,width:X1-mx-3,height:my-Y0-3,fill:'#EEF3FF',rx:12});
+el('rect',{x:X0,y:my+3,width:mx-X0-3,height:Y1-my-3,fill:'#F4F7FB',rx:12});
+el('rect',{x:mx+3,y:my+3,width:X1-mx-3,height:Y1-my-3,fill:'#F4F7FB',rx:12});
+el('circle',{cx:X0+60,cy:Y0+60,r:120,fill:'url(#gq)'});
+const lab=(x,y,t,o)=>{const e=el('text',Object.assign({x,y,'font-family':'Onest,system-ui,sans-serif','font-size':12,'font-weight':800,fill:'#5B6B85','letter-spacing':'.6'},o||{}));e.textContent=t;return e};
+lab(X0+14,Y0+22,'⚡ RYCHLÉ VÝHRY',{fill:'#008C75'});lab(X1-14,Y0+22,'VELKÉ PROJEKTY',{fill:'#2F4E9C','text-anchor':'end'});
+lab(X0+14,Y1-14,'DROBNOSTI');lab(X1-14,Y1-14,'AŽ POZDĚJI',{'text-anchor':'end'});
 el('line',{x1:X0,y1:Y1+14,x2:X1,y2:Y1+14,stroke:'#9AA9C4','stroke-width':1.5,'marker-end':'url(#ar)'});
 el('line',{x1:X0-22,y1:Y1,x2:X0-22,y2:Y0,stroke:'#9AA9C4','stroke-width':1.5,'marker-end':'url(#ar)'});
-const d=el('defs',{});const m=el('marker',{id:'ar',viewBox:'0 0 10 10',refX:8,refY:5,markerWidth:7,markerHeight:7,orient:'auto-start-reverse'},d);el('path',{d:'M0 0L10 5L0 10z',fill:'#9AA9C4'},m);
-lab(mx,Y1+36,'Náročnost zavedení →',{'text-anchor':'middle','font-weight':600,'font-size':13});
-lab(X0-30,my,'Přínos →',{'text-anchor':'middle','font-weight':600,'font-size':13,transform:`rotate(-90 ${X0-30} ${my})`});
+lab(mx,Y1+38,'Náročnost zavedení',{'text-anchor':'middle','font-weight':600,'font-size':13,'letter-spacing':0});
+lab(X0-30,my,'Přínos',{'text-anchor':'middle','font-weight':600,'font-size':13,'letter-spacing':0,transform:`rotate(-90 ${X0-30} ${my})`});
 const pts=[];
-I.forEach((x,i)=>{const g=el('g',{class:'pt',tabindex:0,role:'button','aria-label':x.n+'. '+x.t});
- const cx=sx(x.eff),cy=sy(x.imp);
- el('circle',{class:'c',cx,cy,r:15,fill:CAT[x.c][1],stroke:'#fff','stroke-width':3},g);
- const t=el('text',{x:cx,y:cy+5,'text-anchor':'middle','font-family':'Onest,system-ui,sans-serif','font-size':13,'font-weight':800,fill:x.c==='pa'||x.c==='ci'||x.c==='cc'?'#0F1E3C':'#fff','pointer-events':'none'},g);t.textContent=x.n;
- g.addEventListener('click',()=>sel(i));g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();sel(i)}});pts.push(g)});
-const D=document.getElementById('detail');
-const dots=(v,cls)=>'<div class="mt '+cls+'"><span>'+(cls==='ef'?'Náročnost':'Přínos')+'</span><div class="dots">'+[1,2,3,4,5].map(k=>'<i class="'+(k<=Math.round(v)?'on':'')+'"></i>').join('')+'</div></div>';
-function sel(i){const x=I[i],c=CAT[x.c];pts.forEach((p,j)=>p.classList.toggle('on',j===i));
- D.innerHTML='<span class="tag" style="background:'+c[2]+';color:'+c[3]+'">'+x.n+' · '+c[0]+'</span><h3>'+x.t+'</h3><p class="what">'+x.what+'</p><h4>Jak to funguje</h4><ul>'+x.how.map(h=>'<li>'+h+'</li>').join('')+'</ul><h4>Co vám to přinese</h4><ul>'+x.gain.map(h=>'<li>'+h+'</li>').join('')+'</ul><p class="first">'+x.first+'</p><div class="meters">'+dots(x.imp,'im')+dots(x.eff,'ef')+'</div>'}
-const C=document.getElementById('cards');
-I.forEach((x,i)=>{const b=document.createElement('button');b.className='ic2';b.dataset.c=x.c;b.style.setProperty('--c',CAT[x.c][1]);
- b.innerHTML='<span class="n">'+x.n+' · '+CAT[x.c][0]+'</span><b>'+x.t+'</b><span>'+x.s+'</span>'+(x.imp>=3&&x.eff<3?'<span class="qw">Rychlá výhra</span>':'');
- b.addEventListener('click',()=>{sel(i);document.getElementById('mapa').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})});C.appendChild(b)});
+I.forEach((x,k)=>{const g=el('g',{class:'pt',tabindex:0,role:'button','aria-label':x.n+'. '+x.t});
+ const cx=sx(x.eff),cy=sy(x.imp),r=9+x.imp*2.6;
+ el('circle',{class:'halo',cx,cy,r:r+10,fill:CAT[x.c][1],'fill-opacity':.2},g);
+ el('circle',{class:'c',cx,cy,r,fill:CAT[x.c][1],stroke:'#fff','stroke-width':3},g);
+ const t=el('text',{x:cx,y:cy+5,'text-anchor':'middle','font-family':'Onest,system-ui,sans-serif','font-size':14,'font-weight':800,fill:x.c==='op'?'#fff':'#0F1E3C','pointer-events':'none'},g);t.textContent=x.n;
+ g.style.opacity=0;g.style.transition='opacity .4s '+(k*60)+'ms';
+ g.addEventListener('click',()=>sel(k));g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();sel(k)}});pts.push(g)});
+const D=document.getElementById('detail'),T=document.getElementById('tiles');
+const tiles=I.map((x,k)=>{const b=document.createElement('button');b.className='tile';b.dataset.c=x.c;b.style.setProperty('--c',CAT[x.c][1]);b.style.setProperty('--cs',CAT[x.c][2]);
+ b.innerHTML='<span class="n">'+x.n+'</span><span class="ti">'+ico(x.i,CAT[x.c][3])+'</span><b>'+x.t+'</b>';
+ b.addEventListener('click',()=>{sel(k);if(innerWidth<920)D.scrollIntoView({behavior:RM?'auto':'smooth',block:'start'})});T.appendChild(b);return b});
+function sel(k){const x=I[k],c=CAT[x.c];pts.forEach((p,j)=>p.classList.toggle('on',j===k));tiles.forEach((p,j)=>p.classList.toggle('on',j===k));
+ D.innerHTML='<span class="tag" style="background:'+c[2]+';color:'+c[3]+'">'+x.n+' · '+c[0]+'</span><h3>'+x.t+'</h3><p class="s">'+x.s+'</p>'+
+ '<div class="flow">'+x.f.map((s,j)=>'<div class="fs" style="animation-delay:'+(j*90)+'ms"><span class="ib">'+ico(s[0])+'</span><span>'+s[1]+'</span></div>').join('')+'</div>'+
+ '<div class="gains">'+x.g.map(s=>'<span>'+s+'</span>').join('')+'</div><p class="first">'+x.x+'</p>'+
+ '<div class="meters"><div class="mt"><span>Přínos</span><div class="track"><i style="width:0"></i></div></div><div class="mt ef"><span>Náročnost</span><div class="track"><i style="width:0"></i></div></div></div>';
+ const tr=D.querySelectorAll('.track i');requestAnimationFrame(()=>requestAnimationFrame(()=>{tr[0].style.width=(x.imp/5*100)+'%';tr[1].style.width=(x.eff/5*100)+'%'}))}
 document.querySelectorAll('.flt').forEach(f=>f.addEventListener('click',()=>{const v=f.dataset.f;
  document.querySelectorAll('.flt').forEach(o=>o.setAttribute('aria-pressed',o===f));
- pts.forEach((p,j)=>p.classList.toggle('dim',v!=='all'&&I[j].c!==v));
- C.querySelectorAll('.ic2').forEach(b=>b.hidden=v!=='all'&&b.dataset.c!==v);
- if(v!=='all'){const k=I.findIndex(x=>x.c===v);if(k>=0)sel(k)}}));
+ pts.forEach((p,j)=>p.classList.toggle('dim',v!=='all'&&I[j].c!==v));tiles.forEach((b,j)=>b.hidden=v!=='all'&&I[j].c!==v);
+ if(v!=='all')sel(I.findIndex(x=>x.c===v))}));
 sel(4);
+
+/* funnel */
+const F=document.getElementById('funnel'),FD=[['Kontakty v seznamech',240],['Hovor vzal člověk',165],['Vyslechl nabídku',46],['Jasná odpověď',15],['Zájemce předaný obchodu',1]];
+const MOB=innerWidth<600,FC=['#0F1E3C','#1C3466','#3D5A8F','#6F8FCB','#00C9A7'],W=MOB?v=>220+Math.sqrt(v/240)*170:v=>100+Math.sqrt(v/240)*420,cxF=MOB?200:390,h=MOB?62:50,gap=6;
+if(MOB)F.setAttribute('viewBox','0 0 400 '+(5*(h+gap)+4));
+FD.forEach((d,k)=>{const y=k*(h+gap)+4,w1=W(d[1]),w2=k<FD.length-1?W(FD[k+1][1]):w1*0.8;
+ const g=document.createElementNS(ns,'g');g.setAttribute('class','st');F.appendChild(g);
+ const p=document.createElementNS(ns,'path');p.setAttribute('d',`M${cxF-w1/2} ${y}H${cxF+w1/2}L${cxF+w2/2} ${y+h}H${cxF-w2/2}Z`);p.setAttribute('fill',FC[k]);g.appendChild(p);
+ const t=document.createElementNS(ns,'text');t.setAttribute('x',cxF);t.setAttribute('y',y+(MOB?27:32));t.setAttribute('text-anchor','middle');t.setAttribute('font-family','Onest,system-ui,sans-serif');t.setAttribute('font-weight','800');t.setAttribute('font-size','20');t.setAttribute('fill',k===4?'#0F1E3C':'#fff');t.textContent=d[1];g.appendChild(t);
+ const l=document.createElementNS(ns,'text');l.setAttribute("x",MOB?cxF:670);l.setAttribute('y',y+(MOB?48:31));if(MOB){l.setAttribute('text-anchor','middle');}l.setAttribute('font-family','Onest,system-ui,sans-serif');l.setAttribute('font-size',MOB?'13':'15');l.setAttribute('font-weight',k===4?'800':'600');l.setAttribute('fill',MOB?(k===4?'#0F1E3C':'#DCE4F2'):(k===4?'#008C75':'#13223F'));l.textContent=d[0]+(MOB&&k>0?' · '+(Math.round(d[1]/240*1000)/10).toString().replace('.',',')+' %':'');g.appendChild(l);
+ if(k>0&&!MOB){const pc=document.createElementNS(ns,'text');pc.setAttribute("x",20);pc.setAttribute('y',y+31);pc.setAttribute('font-family','Onest,system-ui,sans-serif');pc.setAttribute('font-size','14');pc.setAttribute('font-weight','700');pc.setAttribute('fill','#5B6B85');pc.textContent=(Math.round(d[1]/240*1000)/10).toString().replace('.',',')+' %';g.appendChild(pc)}
+ g.style.opacity=0;g.style.transform='translateX(-20px)';g.style.transition='opacity .5s '+(k*150)+'ms, transform .5s '+(k*150)+'ms'});
+
+/* spectrum */
+const tip=document.getElementById('sptip');
+document.querySelectorAll('.sp').forEach(b=>{const go=()=>{document.querySelectorAll('.sp').forEach(o=>o.classList.toggle('on',o===b));tip.textContent=b.dataset.t};b.addEventListener('click',go);b.addEventListener('mouseenter',go)});
+
+/* counters + reveal */
+function count(e){const to=+e.dataset.count;if(RM){e.textContent=to;return}const t0=performance.now(),d=1200;
+ (function f(t){const p=Math.min(1,(t-t0)/d),v=Math.round(to*(1-Math.pow(1-p,3)));e.textContent=v.toLocaleString('cs-CZ');if(p<1)requestAnimationFrame(f)})(t0)}
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(!en.isIntersecting)return;const e=en.target;io.unobserve(e);e.classList.add('in');
+ e.querySelectorAll('[data-count]').forEach(count);
+ if(e.id==='funnel')F.querySelectorAll('.st').forEach(g=>{g.style.opacity=1;g.style.transform='none'});
+ if(e.classList.contains('donutcard'))document.getElementById('dn').setAttribute('stroke-dasharray',(0.72*490)+' 490');
+ if(e.id==='matrix')pts.forEach(p=>p.style.opacity='')}),{threshold:.25});
+document.querySelectorAll('.reveal,.donutcard,#funnel,#matrix,.minis').forEach(e=>io.observe(e));
+
+/* calculator */
+const $=id=>document.getElementById(id),nf=v=>Math.round(v).toLocaleString('cs-CZ');
+const P='<svg viewBox="0 0 24 24" fill="#00C9A7"><circle cx="12" cy="7" r="4"/><path d="M4 22c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg>',PH='<svg viewBox="0 0 24 24" fill="#00C9A7" opacity=".35"><circle cx="12" cy="7" r="4"/><path d="M4 22c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg>';
+function calc(){const a=+$('c1').value,b=+$('c2').value,m=+$('c3').value,r=+$('c4').value/100;
+ $('o1').textContent=a;$('o2').textContent=b;$('o3').textContent=String(m).replace('.',',')+' min';$('o4').textContent=Math.round(r*100)+' %';
+ const now=a*b*m*21/60,ai=now*(1-r),save=now-ai,fte=save/160;
+ $('rH').textContent=nf(save);$('tA').textContent=nf(now)+' h';$('tB').textContent=nf(ai)+' h';
+ $('bA').style.width='100%';$('bB').style.width=(now?ai/now*100:0)+'%';
+ const full=Math.floor(fte),part=fte-full>=.25;let s='';for(let k=0;k<Math.min(full,20);k++)s+=P;if(part&&full<20)s+=PH;$('people').innerHTML=s;
+ $('rF').textContent='≈ '+fte.toLocaleString('cs-CZ',{maximumFractionDigits:1})+' úvazku'}
+['c1','c2','c3','c4'].forEach(k=>$(k).addEventListener('input',calc));calc();
 })();
 </script>
 </body>
