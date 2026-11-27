@@ -13,6 +13,7 @@ Czech summary: Voicelix je IT a AI partner pro české firmy. Navrhuje, staví a
 - Typical clients: hair and beauty salons, medical practices, auto services, law firms, tradespeople, call centers.
 - Reference: pilot for CIRCLE Company a.s. (16 to 20 November 2026): two outbound lines (B2B and B2C), 240 contacts, 391 outbound calls, 29 callbacks handled by the AI, every call result written automatically into the client's spreadsheet. Published with the client's consent.
 - Founder: Mgr. Pavel Šrámek. Master of Laws (Faculty of Law, University of West Bohemia in Plzeň): EU law, financial law, crypto-asset regulation. Analyst since 2019, up to product owner and solution architect roles. Preparing for the IAPP AIGP (AI governance) certification.
+- Operator: Voicelix.ai s.r.o., Company ID (IČO) 26378914, Slovanské údolí 1016/47, 318 00 Plzeň, Czech Republic.
 - Compliance: AI transparency on every call, data minimization, a data processing agreement with every client, configured recording and retention. Voicelix does not provide legal services within the meaning of the Czech Legal Profession Act.
 - Languages: the voice assistants speak Czech. Consultations in Czech or English.
 - Live demo: call Klára at +420 910 926 750 (Czech).

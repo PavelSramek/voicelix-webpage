@@ -2,41 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://voicelix.ai/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-30</lastmod>
     <xhtml:link rel="alternate" hreflang="cs" href="https://voicelix.ai/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://voicelix.ai/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://voicelix.ai/"/>
   </url>
   <url>
     <loc>https://voicelix.ai/en/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-30</lastmod>
     <xhtml:link rel="alternate" hreflang="cs" href="https://voicelix.ai/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://voicelix.ai/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://voicelix.ai/"/>
   </url>
   <url>
     <loc>https://voicelix.ai/tools/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-30</lastmod>
     <xhtml:link rel="alternate" hreflang="cs" href="https://voicelix.ai/tools/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://voicelix.ai/en/tools/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://voicelix.ai/tools/"/>
   </url>
   <url>
     <loc>https://voicelix.ai/en/tools/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-30</lastmod>
     <xhtml:link rel="alternate" hreflang="cs" href="https://voicelix.ai/tools/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://voicelix.ai/en/tools/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://voicelix.ai/tools/"/>
   </url>
   <url>
     <loc>https://voicelix.ai/ochrana-osobnich-udaju</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-30</lastmod>
     <xhtml:link rel="alternate" hreflang="cs" href="https://voicelix.ai/ochrana-osobnich-udaju"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://voicelix.ai/en/privacy/"/>
   </url>
   <url>
     <loc>https://voicelix.ai/en/privacy/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-30</lastmod>
     <xhtml:link rel="alternate" hreflang="cs" href="https://voicelix.ai/ochrana-osobnich-udaju"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://voicelix.ai/en/privacy/"/>
   </url>
