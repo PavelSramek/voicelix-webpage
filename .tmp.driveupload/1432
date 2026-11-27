@@ -1,0 +1,46 @@
+0000000000000000000000000000000000000000 960d34343ee69c7dc51909a9b2ba7e33644ccf4b Pavel Šrámek <sramekpavel@icloud.com> 1790464493 +0200	clone: from https://github.com/PavelSramek/voicelix-webpage.git
+960d34343ee69c7dc51909a9b2ba7e33644ccf4b 8e640f55232f1888ede9c9dad3eb0f602cde23f4 Pavel Šrámek <sramekpavel@icloud.com> 1790464679 +0200	commit: Webpage upgrade
+8e640f55232f1888ede9c9dad3eb0f602cde23f4 83a9b850b2cf82687d6c1d01eacb09eccf30ee11 Pavel Šrámek <sramekpavel@icloud.com> 1793654692 +0100	commit: Update index.html
+83a9b850b2cf82687d6c1d01eacb09eccf30ee11 bb14e9c4e3993231137504403479196f3db206e3 Pavel Šrámek <sramekpavel@icloud.com> 1793659107 +0100	commit: New photo
+bb14e9c4e3993231137504403479196f3db206e3 cb2866e96ad4c613560a3fea53fdca3fc8e05ec8 Pavel Šrámek <sramekpavel@icloud.com> 1793660279 +0100	commit: Update index.html
+cb2866e96ad4c613560a3fea53fdca3fc8e05ec8 5211266262b39b1c7682e3605f275f0a7859a462 Pavel Šrámek <sramekpavel@icloud.com> 1793747912 +0100	commit: Update index.html
+5211266262b39b1c7682e3605f275f0a7859a462 9c6f66bb979afe14e920a35189d31bcb3d7c9105 Pavel Šrámek <sramekpavel@icloud.com> 1793835609 +0100	commit: New scheduler.
+9c6f66bb979afe14e920a35189d31bcb3d7c9105 21bb35fcca787e2cea6562edbf7e3391e65bdbac Pavel Šrámek <sramekpavel@icloud.com> 1793836285 +0100	commit: Update index.html
+21bb35fcca787e2cea6562edbf7e3391e65bdbac b8e20a71e6f049a8fadce28702ef26e89714ad4f Pavel Šrámek <sramekpavel@icloud.com> 1793836624 +0100	commit: Update index.html
+b8e20a71e6f049a8fadce28702ef26e89714ad4f d264ee7d870b1dd10517a42d9e39499eb3799c92 Pavel Šrámek <sramekpavel@icloud.com> 1793837481 +0100	commit: Chatbot
+d264ee7d870b1dd10517a42d9e39499eb3799c92 072682bbc17716b4ced62a44c5f984d68f093ae9 Pavel Šrámek <sramekpavel@icloud.com> 1793837959 +0100	commit: Update index.html
+072682bbc17716b4ced62a44c5f984d68f093ae9 ba5e2d4674d80e26b09039e7a1a7f8590c544e0d Pavel Šrámek <sramekpavel@icloud.com> 1793839807 +0100	commit: Ochrana osobních údajů
+ba5e2d4674d80e26b09039e7a1a7f8590c544e0d 0cf35a4ff084f3ed2b6f6cb33895b27d7288a45e Pavel Šrámek <sramekpavel@icloud.com> 1793916750 +0100	commit: Seznam toolů
+0cf35a4ff084f3ed2b6f6cb33895b27d7288a45e 59cfdc8cf3200ed6edbf2cfd278b061fa1284b5b Pavel Šrámek <sramekpavel@icloud.com> 1793917144 +0100	commit: Tools page upgrade
+59cfdc8cf3200ed6edbf2cfd278b061fa1284b5b aaa2a9f4f54d63bd959943277d40e606dbae419c Pavel Šrámek <sramekpavel@icloud.com> 1793917431 +0100	commit: Update index.html
+aaa2a9f4f54d63bd959943277d40e606dbae419c 23b428f05f2590927ea3bcba1a782fa1b54f8e95 Pavel Šrámek <sramekpavel@icloud.com> 1793917831 +0100	commit: Update index.html
+23b428f05f2590927ea3bcba1a782fa1b54f8e95 aba74dbb2d1bbf65f527733b7f3e8fef5af406b6 Pavel Šrámek <sramekpavel@icloud.com> 1793945707 +0100	commit: EN page
+aba74dbb2d1bbf65f527733b7f3e8fef5af406b6 b61f8a17e07b89cfeb9e99a3b2156d93adce2aeb Pavel Šrámek <sramekpavel@icloud.com> 1793981082 +0100	commit: Small changes
+b61f8a17e07b89cfeb9e99a3b2156d93adce2aeb 27696c0f56be5d6171df127b5e1e7413b9703c50 Pavel Šrámek <sramekpavel@icloud.com> 1793986649 +0100	commit: Icons of agents
+27696c0f56be5d6171df127b5e1e7413b9703c50 09cdd7edf4ce692f5ff2718cfb14f62811b38a27 Pavel Šrámek <sramekpavel@icloud.com> 1794145633 +0100	commit: Mock-up pro Sokol Radčice
+09cdd7edf4ce692f5ff2718cfb14f62811b38a27 283f9950d63fb070ad5848ab9937cba4e7eebf2b Pavel Šrámek <sramekpavel@icloud.com> 1794441509 +0100	commit: New offer
+283f9950d63fb070ad5848ab9937cba4e7eebf2b f73fc61b1abc9bcaafaf1e6d9b0dac5ca40cdff9 Pavel Šrámek <sramekpavel@icloud.com> 1794565886 +0100	commit: Create index.html
+f73fc61b1abc9bcaafaf1e6d9b0dac5ca40cdff9 acb928e7cbb7ac0c9e03bf5f9da992f8609fba70 Pavel Šrámek <sramekpavel@icloud.com> 1794781431 +0000	commit: SEO and AI search: sitemap, robots, llms.txt, JSON-LD, FAQ, share images, favicons
+acb928e7cbb7ac0c9e03bf5f9da992f8609fba70 50ba48128e52ad50fde9d20aa1ecf7ab60894222 Pavel Šrámek <sramekpavel@icloud.com> 1794782361 +0100	commit: SEO: titulek s AI recepční
+50ba48128e52ad50fde9d20aa1ecf7ab60894222 30b6538deefab059ba64c0c13b1beea8e165e87f Pavel Šrámek <sramekpavel@icloud.com> 1794787314 +0100	commit: Oborové stránky
+30b6538deefab059ba64c0c13b1beea8e165e87f f03db241a9d222be8a8c73ea3c9b37570a146ace Pavel Šrámek <sramekpavel@icloud.com> 1794953587 +0100	commit: Marketing update
+f03db241a9d222be8a8c73ea3c9b37570a146ace b9b5b5cabdcad2fd879c7aca9d913b345025c160 Pavel Šrámek <sramekpavel@icloud.com> 1795112250 +0100	commit: Index correction
+b9b5b5cabdcad2fd879c7aca9d913b345025c160 70e2d8cc11bf5923967b07f363b1bd36a7b5f9fa Pavel Šrámek <sramekpavel@icloud.com> 1795118393 +0100	commit: Saferex offer
+70e2d8cc11bf5923967b07f363b1bd36a7b5f9fa a730079fe75b1f14bd8da699ad10cc48104ffdb8 Pavel Šrámek <sramekpavel@icloud.com> 1795118613 +0100	commit: Saferex offer
+a730079fe75b1f14bd8da699ad10cc48104ffdb8 5a5fa385cf02b8fc012ac5e3cf21646ee2d568da Pavel Šrámek <sramekpavel@icloud.com> 1795179011 +0100	commit: Google index req
+5a5fa385cf02b8fc012ac5e3cf21646ee2d568da f5e7474ec2b572bcd51ee17f25a975dd1dbfe267 Pavel Šrámek <sramekpavel@icloud.com> 1795179822 +0100	commit: Update index.html
+f5e7474ec2b572bcd51ee17f25a975dd1dbfe267 72b528c4ab0040f9d9d2e60577ee4c2a3d9163c5 Pavel Šrámek <sramekpavel@icloud.com> 1795183028 +0100	commit: Update index.html
+72b528c4ab0040f9d9d2e60577ee4c2a3d9163c5 a5f0a6ec5be86810e5d610afdb5d833b9f99ad56 Pavel Šrámek <sramekpavel@icloud.com> 1795183332 +0100	commit: Update index.html
+a5f0a6ec5be86810e5d610afdb5d833b9f99ad56 3b942280110665e60f080a1d1826b5e844d12106 Pavel Šrámek <sramekpavel@icloud.com> 1795183451 +0100	commit: Update index.html
+3b942280110665e60f080a1d1826b5e844d12106 99327f0c6ba5d2804bfb52bb95d5ef60ef10c91a Pavel Šrámek <sramekpavel@icloud.com> 1795183611 +0100	commit: Update index.html
+99327f0c6ba5d2804bfb52bb95d5ef60ef10c91a 1afeb38aeb8149d6cb93db380698ff32e358b874 Pavel Šrámek <sramekpavel@icloud.com> 1795186062 +0100	commit: Update index.html
+1afeb38aeb8149d6cb93db380698ff32e358b874 b127ec84a65641328578d11e3df65f9137b1ae85 Pavel Šrámek <sramekpavel@icloud.com> 1795186278 +0100	commit: Update index.html
+b127ec84a65641328578d11e3df65f9137b1ae85 f1316f35dd00443d9de5b4923cd3bde24adfd86e Pavel Šrámek <sramekpavel@icloud.com> 1795201989 +0100	commit: CIRCLE study
+f1316f35dd00443d9de5b4923cd3bde24adfd86e f7d53a1ca6cd4269ae63f8af030c70543fd256d3 Pavel Šrámek <sramekpavel@icloud.com> 1795202573 +0100	commit: mike
+f7d53a1ca6cd4269ae63f8af030c70543fd256d3 05af9e09043d84e075af07b08fb078f667825986 Pavel Šrámek <sramekpavel@icloud.com> 1795505838 +0100	commit: sokol update
+05af9e09043d84e075af07b08fb078f667825986 5854df51dd01bd95f0d13a2f103579a8120e89b0 Pavel Šrámek <sramekpavel@icloud.com> 1795702110 +0100	commit: Create index.html
+5854df51dd01bd95f0d13a2f103579a8120e89b0 c769f3591c70fa48ac652ff32e0effc81be17ce5 Pavel Šrámek <sramekpavel@icloud.com> 1795720398 +0100	commit: Update index.html
+c769f3591c70fa48ac652ff32e0effc81be17ce5 72a90c686dc7fe10d84f173a4df9b3ea9f86fa94 Pavel Šrámek <sramekpavel@icloud.com> 1795766606 +0100	commit: Update index.html
+72a90c686dc7fe10d84f173a4df9b3ea9f86fa94 2879c459cf8c861f0c698d7d651a2b862fcffd99 Pavel Šrámek <sramekpavel@icloud.com> 1795766938 +0100	commit: Update index.html
+2879c459cf8c861f0c698d7d651a2b862fcffd99 293cb9206711da8ca6b29b34f0508984bac2bc82 Pavel Šrámek <sramekpavel@icloud.com> 1795790081 +0100	commit: New company
+293cb9206711da8ca6b29b34f0508984bac2bc82 f04639ce831bd37c3dd2b62217985289d13b7d42 PavelSramek <pavel@voicelix.ai> 1795813042 +0000	commit: Klára Chat: fix empty reply after saved lead
