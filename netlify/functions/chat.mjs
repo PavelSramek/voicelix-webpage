@@ -3,6 +3,11 @@
 //   ANTHROPIC_API_KEY  (required)
 //   CHAT_MODEL         (optional, default claude-sonnet-4-6)
 // Netlify sets URL automatically (used to submit leads to Netlify Forms).
+//
+// 2026-11-27: fix empty replies after a saved lead ("Děkuji." → "Omlouvám se, teď jsem nerozuměla").
+//   - frontend sends leadSaved; then save_lead is not offered again (no duplicate leads)
+//   - small-talk rule in the prompt (thanks, goodbye, greetings)
+//   - empty model reply → one retry without tools, then a context-aware fallback
 
 const MODEL = process.env.CHAT_MODEL || "claude-sonnet-4-6";
 const MAX_TURNS = 20;          // user messages per conversation
@@ -19,6 +24,13 @@ You are Klára, the AI chat assistant on voicelix.ai, the website of Voicelix, a
 - Keep replies short: 1–3 sentences, plain text, no markdown headings, no tables. A short list with "•" is fine when listing options.
 - Czech typography: never use the long dash "—". Use a comma, period or colon instead.
 - Friendly, professional, concrete. No hype.
+- Always reply with at least one short sentence. Never send an empty reply.
+
+# Small talk
+- Thanks ("děkuji", "díky", "thank you"): reply warmly in one sentence, e.g. "Rádo se stalo. Kdybyste ještě něco potřebovali, jsem tady." Do not repeat what was already said and do not start a new sales pitch.
+- Goodbye ("na shledanou", "hezký den", "bye"): say goodbye in one sentence, e.g. "Děkuji za zprávu a hezký den!" Never use "Sbohem".
+- Greetings, "ok", "dobře", emoji and similar short messages: answer briefly and naturally, then offer help in a few words.
+- Never say you did not understand a message that is clearly thanks, a greeting, a goodbye or an acknowledgement.
 
 # AI transparency (EU AI Act, Art. 50)
 You are an AI assistant and you never deny it. If asked whether you are a person, say you are Klára, an AI assistant, and that a real person (Pavel, the founder) handles consultations.
@@ -89,6 +101,23 @@ const TOOLS = [{
 
 const EN_NOTE = `\n\n# Website language\nThe visitor is on the English version of the website. Reply in English unless they write in another language. When quoting prices in English, write them as "from CZK 4,500/month". Mention that the voice assistants and the phone demo speak Czech.`;
 
+const LEAD_NOTE = `\n\n# Contact already saved\nThe visitor's contact was already saved earlier in this conversation and Pavel will get back to them within one business day. Do not ask for the contact again and do not save it again. If the visitor adds new information for Pavel, say you will pass it on together with the contact.`;
+
+const RETRY_NOTE = `\n\n# Reply required\nYour previous attempt was empty. Write a short, natural reply to the visitor's last message now, in one or two sentences.`;
+
+// Last-resort replies when the model returns no text even after a retry.
+const SMALLTALK = /^(d[eě]kuj[ui]|d[ií]ky|d[ií]k|thanks?|thank you|super|ok(ay)?|dob[rř]e|v[yý]born[eě]|skv[eě]l[eé]|na shledanou|hezk[yý] den|bye|goodbye|ahoj|čau|cau)\b/i;
+const FALLBACK = {
+  cs: {
+    thanks: "Rádo se stalo. Kdybyste ještě něco potřebovali, jsem tady.",
+    generic: "Omlouvám se, teď jsem nerozuměla. Můžete to prosím napsat jinak?"
+  },
+  en: {
+    thanks: "You're welcome. If you need anything else, I'm here.",
+    generic: "Sorry, I didn't quite understand. Could you rephrase that?"
+  }
+};
+
 const json = (body, status = 200) => new Response(JSON.stringify(body), {
   status, headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" }
 });
@@ -112,7 +141,15 @@ function cleanMessages(raw) {
   return msgs;
 }
 
-async function callClaude(messages, lang) {
+async function callClaude(messages, { lang, withTools = true, extra = "" }) {
+  const body = {
+    model: MODEL,
+    max_tokens: 500,
+    temperature: 0.4,
+    system: SYSTEM + (lang === "en" ? EN_NOTE : "") + extra,
+    messages
+  };
+  if (withTools) body.tools = TOOLS;
   const r = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: {
@@ -120,7 +157,7 @@ async function callClaude(messages, lang) {
       "anthropic-version": "2023-06-01",
       "content-type": "application/json"
     },
-    body: JSON.stringify({ model: MODEL, max_tokens: 500, temperature: 0.4, system: SYSTEM + (lang === "en" ? EN_NOTE : ""), tools: TOOLS, messages })
+    body: JSON.stringify(body)
   });
   if (!r.ok) throw new Error(`anthropic ${r.status}: ${(await r.text()).slice(0, 300)}`);
   return r.json();
@@ -156,13 +193,17 @@ export default async (req, context) => {
   try { payload = await req.json(); } catch { return json({ error: "bad_json" }, 400); }
   const messages = cleanMessages(payload.messages);
   const lang = payload.lang === "en" ? "en" : "cs";
+  const leadSaved = payload.leadSaved === true;
   if (!messages) return json({ error: "bad_messages" }, 400);
   if (messages.filter(m => m.role === "user").length > MAX_TURNS) {
     return json({ reply: lang === "en" ? "Thank you for the chat. Pavel will be happy to answer any further questions at a consultation.\n[[REZERVACE]]" : "Děkuji za rozhovor. Na další otázky vám rád odpoví přímo Pavel na konzultaci.\n[[REZERVACE]]", lead: false });
   }
 
+  const leadNote = leadSaved ? LEAD_NOTE : "";
+
   try {
-    let resp = await callClaude(messages, lang);
+    // Once the contact is saved, save_lead is not offered again (prevents duplicate leads).
+    let resp = await callClaude(messages, { lang, withTools: !leadSaved, extra: leadNote });
     let lead = false;
     if (resp.stop_reason === "tool_use") {
       const tool = resp.content.find(b => b.type === "tool_use" && b.name === "save_lead");
@@ -173,10 +214,22 @@ export default async (req, context) => {
           ...messages,
           { role: "assistant", content: resp.content },
           { role: "user", content: [{ type: "tool_result", tool_use_id: tool.id, content: lead ? "Lead saved. Pavel will get back within one business day." : "Saving failed. Ask the visitor to email info@voicelix.ai or use the contact form." }] }
-        ], lang);
+        ], { lang });
       }
     }
-    const reply = textOf(resp) || (lang === "en" ? "Sorry, I didn't quite understand. Could you rephrase that?" : "Omlouvám se, teď jsem nerozuměla. Můžete to prosím napsat jinak?");
+
+    let reply = textOf(resp);
+    if (!reply) {
+      console.warn("empty reply, retrying", { stop_reason: resp.stop_reason, leadSaved, lead });
+      try {
+        const retry = await callClaude(messages, { lang, withTools: false, extra: leadNote + (lead ? LEAD_NOTE : "") + RETRY_NOTE });
+        reply = textOf(retry);
+      } catch (e) { console.error("retry", e); }
+    }
+    if (!reply) {
+      const last = messages[messages.length - 1].content;
+      reply = SMALLTALK.test(last) ? FALLBACK[lang].thanks : FALLBACK[lang].generic;
+    }
     return json({ reply, lead });
   } catch (e) {
     console.error(e);

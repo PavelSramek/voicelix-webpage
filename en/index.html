@@ -1459,6 +1459,8 @@ const BOOKING_URL='https://calendar.google.com/calendar/appointments/schedules/A
   const KEY='vx-chat-en';
   let msgs=[];try{msgs=JSON.parse(sessionStorage.getItem(KEY)||'[]')}catch(e){}
   let busy=false;
+  const LEAD_KEY='vx-chat-lead';
+  let leadSaved=false;try{leadSaved=sessionStorage.getItem(LEAD_KEY)==='1'}catch(e){}
   const GREET='Hello, I am Klára, the AI assistant of Voicelix. Ask me anything about our services, or book a consultation with Pavel right away.';
   const CHIPS=['What can you do?','How much does it cost?','Is it GDPR compliant?','I want a consultation'];
   function save(){try{sessionStorage.setItem(KEY,JSON.stringify(msgs.slice(-40)))}catch(e){}}
@@ -1496,9 +1498,10 @@ const BOOKING_URL='https://calendar.google.com/calendar/appointments/schedules/A
     const t=document.createElement('div');t.className='cb-typing';t.innerHTML='<i></i><i></i><i></i>';body.appendChild(t);body.scrollTop=body.scrollHeight;
     let reply;
     try{
-      const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:msgs,lang:'en'})});
+      const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:msgs,lang:'en',leadSaved})});
       const j=await r.json().catch(()=>({}));
       if(r.ok&&j.reply)reply=j.reply;
+      if(r.ok&&j.lead){leadSaved=true;try{sessionStorage.setItem(LEAD_KEY,'1')}catch(e){}}
       else if(r.status===429)reply='That was a bit much for me just now. Please try again in a few minutes, or call +420 910 926 750.';
       else reply='Sorry, the chat is unavailable right now. Please call +420 910 926 750 or write to us using the form on this page.';
     }catch(e){reply='Sorry, I could not connect. Please call +420 910 926 750 or write to us using the form on this page.'}
