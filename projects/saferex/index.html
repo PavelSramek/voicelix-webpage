@@ -220,6 +220,39 @@ mark{background:#FFF4CC;padding:0 3px;border-radius:3px}
 footer{background:var(--navy-deep);color:var(--muted-dark);font-size:13px;padding:22px 0}
 footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+
+/* hero interactive (2026-11-27) */
+.hgrid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:40px;align-items:center}
+@media(max-width:900px){.hgrid{grid-template-columns:1fr;gap:28px}}
+a.chip{text-decoration:none;transition:background .2s,border-color .2s,color .2s}
+a.chip:hover,a.chip:focus-visible{background:rgba(0,201,167,.14);border-color:var(--teal);color:#fff;outline:none}
+a.chip:after{content:"↓";font-size:12px;opacity:.6}
+.hphone{background:#0B1830;border:1px solid rgba(255,255,255,.12);border-radius:22px;box-shadow:0 24px 60px rgba(0,0,0,.35);overflow:hidden;max-width:400px;width:100%;justify-self:end}
+@media(max-width:900px){.hphone{justify-self:start}}
+.ph-top{display:flex;align-items:center;gap:10px;padding:12px 16px;background:rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.08)}
+.ph-av{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--blue));display:grid;place-items:center;font-weight:800;color:var(--navy);font-size:15px}
+.ph-top b{display:block;font-size:14px;color:#fff}.ph-top span{font-size:12px;color:var(--teal)}
+.ph-body{height:300px;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 40px);mask-image:linear-gradient(to bottom,transparent 0,#000 40px);padding:14px;display:flex;flex-direction:column;gap:8px;overflow:hidden;justify-content:flex-end}
+.msg{max-width:86%;padding:9px 12px;border-radius:14px;font-size:13.5px;line-height:1.4;animation:msgin .35s ease both}
+.msg.e{background:rgba(255,255,255,.08);color:#E6ECF6;border-bottom-left-radius:4px;align-self:flex-start}
+.msg.u{background:var(--teal);color:var(--navy);border-bottom-right-radius:4px;align-self:flex-end;font-weight:600}
+.msg small{display:block;font-size:11px;opacity:.6;margin-top:3px}
+.typing{align-self:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:10px 12px;display:flex;gap:4px}
+.typing i{width:6px;height:6px;border-radius:50%;background:#9AA9C4;animation:dot 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes dot{0%,60%,100%{opacity:.3;transform:none}30%{opacity:1;transform:translateY(-3px)}}
+@keyframes msgin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.ph-note{font-size:11.5px;color:var(--muted-dark);padding:8px 16px 12px;border-top:1px solid rgba(255,255,255,.06)}
+.flow{margin-top:42px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:900px){.flow{grid-template-columns:1fr}}
+.fl-g{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:12px 14px}
+.fl-g h4{margin:0 0 10px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}
+.fl-steps{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.fst{font-size:13px;padding:7px 11px;border-radius:99px;border:1px solid rgba(255,255,255,.14);color:#AFBCD3;transition:background .4s,color .4s,border-color .4s,box-shadow .4s}
+.fst.on{background:var(--teal);border-color:var(--teal);color:var(--navy);font-weight:700;box-shadow:0 0 0 4px rgba(0,201,167,.18)}
+.fst.done{border-color:rgba(0,201,167,.5);color:#E6ECF6}
+.ar{color:#5B6B85;font-size:13px}
+@media(prefers-reduced-motion:reduce){.msg,.typing i{animation:none!important}}
 </style>
 </head>
 <body>
@@ -237,14 +270,29 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
 <main>
 <section class="hero"><div class="wrap" style="position:relative;z-index:1">
+ <div class="hgrid">
+  <div>
+
   <span class="kicker">Úvodní schůzka 20. 11. 2026 · Lukáš Hodaň, Veronika Brožíková, Pavel Šrámek</span>
   <h1>SAFEX<br><em>od schůzky k první etapě</em></h1>
   <p class="lead">Shrnutí toho, co jsem u vás viděl a slyšel, jak by mohl systém SAFEX fungovat nad tím, co už máte, a konkrétní návrh první etapy: COREX a ekonomika.</p>
   <div class="hero-meta">
-    <span class="chip">8 modulů a AI kolegyně Emily</span>
-    <span class="chip">První etapa: COREX a ekonomika</span>
-    <span class="chip">Bez nového ERP od nuly</span>
+    <a class="chip" href="#safex">8 modulů a AI kolegyně Emily</a>
+    <a class="chip" href="#etapa1">První etapa: COREX a ekonomika</a>
+    <a class="chip" href="#architektura">Bez nového ERP od nuly</a>
   </div>
+
+  </div>
+  <div class="hphone" aria-label="Ukázka: Emily, AI asistentka SAFEX, v chatu">
+   <div class="ph-top"><div class="ph-av" aria-hidden="true">E</div><div><b>Emily · AI asistentka SAFEX</b><span id="emStatus">online</span></div></div>
+   <div class="ph-body" id="emBody" aria-live="off"></div>
+   <div class="ph-note">Ukázka. Emily se vždy představí jako AI.</div>
+  </div>
+ </div>
+ <div class="flow" aria-label="První etapa v kostce">
+  <div class="fl-g"><h4>COREX</h4><div class="fl-steps"><span class="fst">Kontrolní den</span><span class="ar" aria-hidden="true">→</span><span class="fst">Diktát a fotky</span><span class="ar" aria-hidden="true">→</span><span class="fst">Zápis a registr neshod</span></div></div>
+  <div class="fl-g"><h4>Ekonomika</h4><div class="fl-steps"><span class="fst">Výkaz z Navigo3</span><span class="ar" aria-hidden="true">→</span><span class="fst">Faktura v ABRA Flexi</span><span class="ar" aria-hidden="true">→</span><span class="fst">Uhrazeno</span></div></div>
+ </div>
 </div></section>
 
 <section id="zapis"><div class="wrap">
@@ -598,6 +646,53 @@ document.getElementById('go').onclick=function(){const b=this;b.textContent='Př
  </tbody></table>
  <p class="note" style="margin-top:10px">Předpisy AI navrhne jen z vaší knihovny předpisů a vždy je potvrdí koordinátor. Fotky se při nahrání automaticky zmenší.</p>`;
  ready=true;show();if(window.innerWidth<960)document.querySelector('.doc').scrollIntoView({behavior:'smooth',block:'start'})},800)};
+})();
+
+/* hero interactive (2026-11-27) */
+(function(){
+ var RM=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ var body=document.getElementById('emBody'),st=document.getElementById('emStatus');
+ var M=[
+  ['e','Dobré ráno. Zápis z kontrolního dne č. 8 (Bytový dům Lipová) je hotový: 12 bodů, 3 nové neshody. Mám ho poslat zhotovitelům?','7:58'],
+  ['u','Ano, pošli.','7:59'],
+  ['e','Odesláno 3 zhotovitelům. Termíny odstranění jsem zapsala do registru neshod.','7:59'],
+  ['e','Výkazy za listopad jsou kompletní. Připravila jsem 14 návrhů faktur v ABRA Flexi ke schválení.','8:02'],
+  ['e','Připomínka: zítra v 9:00 kontrolní den, Bytový dům Lipová.','8:03']
+ ];
+ function add(m){var d=document.createElement('div');d.className='msg '+m[0];d.textContent=m[1];var t=document.createElement('small');t.textContent=m[2];d.appendChild(t);body.appendChild(d);while(body.children.length>5)body.removeChild(body.firstChild);}
+ if(body){
+  if(RM){M.slice(1).forEach(add);}
+  else{
+   var i=0;
+   (function next(){
+    if(i>=M.length){setTimeout(function(){body.innerHTML='';i=0;next();},5000);return;}
+    var m=M[i];
+    if(m[0]==='e'){
+     var ty=document.createElement('div');ty.className='typing';ty.innerHTML='<i></i><i></i><i></i>';body.appendChild(ty);st.textContent='píše…';
+     setTimeout(function(){body.removeChild(ty);st.textContent='online';add(m);i++;setTimeout(next,1700);},1300);
+    } else {setTimeout(function(){add(m);i++;next();},700);}
+   })();
+  }
+ }
+ var steps=[].slice.call(document.querySelectorAll('.flow .fst'));
+ if(steps.length){
+  if(RM){steps.forEach(function(x){x.classList.add('done')});}
+  else{var k=0;setInterval(function(){
+   steps.forEach(function(x,j){x.classList.toggle('on',j===k);x.classList.toggle('done',j<k);});
+   k=(k+1)%(steps.length+1);
+  },1100);}
+ }
+ var facts=[].slice.call(document.querySelectorAll('.fact b'));
+ if(!RM&&'IntersectionObserver' in window){
+  facts.forEach(function(b){
+   var txt=b.textContent,mm=txt.match(/^(\D*)(\d+)(.*)$/);if(!mm)return;
+   var pre=mm[1],n=+mm[2],suf=mm[3];b.textContent=pre+'0'+suf;
+   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;io.disconnect();
+    var t0=null;function f(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/1200,1),v=Math.round(n*(1-Math.pow(1-p,3)));b.textContent=pre+v+suf;if(p<1)requestAnimationFrame(f);else b.textContent=txt;}
+    requestAnimationFrame(f);});},{threshold:.6});
+   io.observe(b);
+  });
+ }
 })();
 </script>
 </body>
