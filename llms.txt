@@ -26,6 +26,8 @@ Czech summary: Voicelix je IT a AI partner pro české firmy. Navrhuje, staví a
 - [AI receptionist for hair and beauty salons (Czech)](https://voicelix.ai/ai-recepcni-kadernictvi/), [English](https://voicelix.ai/en/ai-receptionist-hair-salons/)
 - [AI receptionist for medical practices (Czech)](https://voicelix.ai/ai-recepcni-ordinace/), [English](https://voicelix.ai/en/ai-receptionist-medical-practices/)
 - [AI for call centers and telemarketing (Czech)](https://voicelix.ai/ai-pro-call-centra/), [English](https://voicelix.ai/en/ai-for-call-centers/): inbound lines, lead qualification, callbacks, database cleaning, logging results into CRM
+- [AI receptionist for garages and tyre shops (Czech)](https://voicelix.ai/ai-recepcni-autoservisy/), [English](https://voicelix.ai/en/ai-receptionist-garages/): booking tyre changes, servicing and diagnostics, noting make, model and fault
+- [How much does an AI receptionist cost (Czech article)](https://voicelix.ai/clanky/kolik-stoji-ai-recepcni/), [English](https://voicelix.ai/en/articles/ai-receptionist-cost/): price components, three worked examples (CZK 2,500 / 3,400 / 4,300 a month), what to ask a provider
 - [Case study: CIRCLE Company a.s. (Czech)](https://voicelix.ai/pripadove-studie/circle/), [English](https://voicelix.ai/en/case-studies/circle/): AI assistant called 240 contacts in November 2026, 391 outbound calls and 29 callbacks, about 1.5 hours of total campaign time
 - [Toolkit (Czech)](https://voicelix.ai/tools/): tools and integrations Voicelix sets up and manages
 - [Toolkit (English)](https://voicelix.ai/en/tools/)
